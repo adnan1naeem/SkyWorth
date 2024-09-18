@@ -59,7 +59,7 @@ const Navbar = () => {
         <Link href="/">
           <Image
             className={styles.logo}
-            src={require("../../assets/navbar-Techtiz-Logo-White.webp")}
+            src={require("../../public/navbar-Techtiz-Logo-White.webp")}
             alt=""
           />
         </Link>
