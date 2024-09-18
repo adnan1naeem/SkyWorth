@@ -4,18 +4,29 @@
 }
 
 .textNavLabel {
-  color: #f8f8f8;
+  position: relative;
+  color: black;
   cursor: pointer;
-  transition: color 0.3s;
-  /* Smooth transition for hover effect */
   font-size: 16px;
   font-weight: 800;
-
+  text-decoration: none;
 }
 
-.textNavLabel:hover {
-  color: #18b0e6;
+.textNavLabel::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px; /* Thickness of the underline */
+  background-color: black;
+  left: 0;
+  bottom: -4px; /* Adjust to place the underline just below the text */
+  transition: width 0.3s ease-in-out;
 }
+
+.textNavLabel:hover::after {
+  width: 100%; /* On hover, the underline will expand across the text */
+}
+
 
 @media screen and (max-width:1080px) {
   .textNavLabel {

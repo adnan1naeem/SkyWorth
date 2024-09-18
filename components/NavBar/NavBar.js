@@ -59,8 +59,9 @@ const Navbar = () => {
         <Link href="/">
           <Image
             className={styles.logo}
-            src={require("../../public/navbar-Techtiz-Logo-White.webp")}
+            src={require("../../assets/logo.png")}
             alt=""
+          
           />
         </Link>
 
@@ -79,7 +80,7 @@ const Navbar = () => {
             </li>}
           <li className={router.pathname === "/about" ? styles.menu : ""}>
             <Link href="/about" onClick={closeMenu}>
-              <TextNav label="About" isActive={router.pathname === "/about"} />
+              <TextNav label="Home" isActive={router.pathname === "/about"} />
             </Link>
           </li>
           <div className={styles.dropdown}>
@@ -88,27 +89,9 @@ const Navbar = () => {
               className={styles.dropbtn}
               onClick={toggleDropdown}
             >
-              <TextNav label="Services" />
+              <TextNav label="Product" />
 
-              {isArrowUp ? (
-                <IoMdArrowDropup
-                  style={{
-                    color: "white",
-                    cursor: "pointer",
-                    transition: "opacity 0.3s ease-in-out",
-                  }}
-                  className={click ? styles.services : styles["services-menu"]}
-                />
-              ) : (
-                <MdArrowDropDown
-                  style={{
-                    color: "white",
-                    cursor: "pointer",
-                    transition: "opacity 0.3s ease-in-out",
-                  }}
-                  className={click ? styles.services : styles["services-menu"]}
-                />
-              )}
+            
             </li>
             {isWideScreen && (
               <div className={styles["dropdown-content"]}>
@@ -130,22 +113,22 @@ const Navbar = () => {
               <ul style={{ padding: "0" }}>
                 <li className={router.pathname === "/mobile-application" ? styles.menu : styles.drop}>
                   <Link href="/mobile-application" onClick={closeMenu}>
-                    <TextNav label="Mobile Application" />
+                    <TextNav label="ABOUT US" />
                   </Link>
                 </li>
                 <li className={router.pathname === "/website" ? styles.menu : styles.drop}>
                   <Link href="/website" onClick={closeMenu}>
-                    <TextNav label="Web Development Services" />
+                    <TextNav label="WHERE TO BUY" />
                   </Link>
                 </li>
                 <li className={router.pathname === "/ui-ux-design" ? styles.menu : styles.drop}>
                   <Link href="/ui-ux-design" onClick={closeMenu}>
-                    <TextNav label="UI/UX Design" />
+                    <TextNav label="WARRANTY" />
                   </Link>
                 </li>
                 <li className={router.pathname === "/SQA" ? styles.menu : styles.drop}>
                   <Link href="/sqa" onClick={closeMenu}>
-                    <TextNav label="SQA" />
+                    <TextNav label="FAQ" />
                   </Link>
                 </li>
               </ul>
@@ -155,7 +138,7 @@ const Navbar = () => {
           <li className={router.pathname === "/industries" ? styles.menu : ""}>
             <Link href="/industries" onClick={closeMenu}>
               <TextNav
-                label="Industries"
+                label="ABOUT US"
                 isActive={router.pathname === "/industries"}
               />
             </Link>
@@ -163,32 +146,52 @@ const Navbar = () => {
           <li className={router.pathname === "/portfolios" ? styles.menu : ""}>
             <Link href="/portfolios" onClick={closeMenu}>
               <TextNav
-                label="Case Studies"
+                label="WHERE TO BUY"
                 isActive={router.pathname === "/portfolios"}
               />
             </Link>
           </li>
           <li className={router.pathname === "/blogs" ? styles.menu : ""}>
             <Link href="https://blog.techtiz.co " onClick={closeMenu}>
-              <TextNav label="Blog" isActive={router.pathname === "/blogs"} />
+              <TextNav label="WARRANTY" isActive={router.pathname === "/blogs"} />
             </Link>
           </li>
 
           <li className={router.pathname === "/career" ? styles.menu : ""}>
             <Link href="/career" onClick={closeMenu}>
               <TextNav
-                label="Careers"
+                label="FAQ"
+                isActive={router.pathname === "/career"}
+              />
+            </Link>
+          </li>
+          <li className={router.pathname === "/career" ? styles.menu : ""}>
+            <Link href="/career" onClick={closeMenu}>
+              <TextNav
+                label="AWARDS"
+                isActive={router.pathname === "/career"}
+              />
+            </Link>
+          </li>
+          <li className={router.pathname === "/career" ? styles.menu : ""}>
+            <Link href="/career" onClick={closeMenu}>
+              <TextNav
+                label="NEWS & EVENT"
+                isActive={router.pathname === "/career"}
+              />
+            </Link>
+          </li>
+          <li className={router.pathname === "/career" ? styles.menu : ""}>
+            <Link href="/career" onClick={closeMenu}>
+              <TextNav
+                label="CONTACT US"
                 isActive={router.pathname === "/career"}
               />
             </Link>
           </li>
         </ul>
 
-          <div className={styles.contactUs} style={{ marginRight: "2%" }}>
-            <Link href={{ pathname: "/contact-us" }}>
-              <ButtonHover textButton="Contact Us" />
-            </Link>
-          </div>
+        
         <div className={styles.hamburger} onClick={handleClick}>
           {click ? (
             <FaTimes size={20} style={{ color: "white" }} />
