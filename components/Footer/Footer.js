@@ -10,7 +10,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <Box sx={{ background: "#00224d", paddingTop: "3%", width:'100%',position: 'absolute', paddingBottom: '100px',bottom:0 }}>
+    <Box sx={{ background: "#00224d", paddingTop: "3%", width:'100%', paddingBottom: '100px',bottom:0 }}>
       <Box
         sx={{
           display: "flex",

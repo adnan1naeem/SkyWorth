@@ -150,11 +150,11 @@ const Navbar = () => {
             )}
           </div>
 
-          <li className={router.pathname === "/industries" ? styles.menu : ""}>
-            <Link href="/industries" onClick={closeMenu}>
+          <li className={router.pathname === "/aboutUs" ? styles.menu : ""}>
+            <Link href="/aboutUs" onClick={closeMenu}>
               <TextNav
                 label="ABOUT US"
-                isActive={router.pathname === "/industries"}
+                isActive={router.pathname === "/aboutUs"}
               />
             </Link>
           </li>

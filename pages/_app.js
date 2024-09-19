@@ -1,14 +1,14 @@
 import "../styles/global.css";
+
 import Footer from "../components/Footer/Footer";
-import Navbar from "../components/NavBar/NavBar";
+// import '@/styles/globals.css'
+import Navbar from "../components/Navbar/Navbar";
 
 export default function App({ Component, pageProps }) {
   return (
     <div>
       <Navbar />
-      <div style={{ paddingTop: '100px' }}>
       <Component {...pageProps} />
-      </div>
       <Footer />
       <style jsx global>{`
         html,
