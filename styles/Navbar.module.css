@@ -58,7 +58,9 @@
     display: none;
     cursor: pointer;
 }
-
+.searchIcon{
+    display: flex;
+}
 .services-menu {
     margin-top: -5%;
     font-size: 30px;
@@ -84,7 +86,48 @@
     transition: opacity 0.3s ease-in-out;
 
 }
-
+.blurBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+  }
+  
+  .searchContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideDown 0.1s ease; 
+    z-index: 1000;
+  }
+  
+  .searchBottomText {
+    width: 70%;
+    align-self: center;
+    margin-top: 10px;
+    color: #6b6969;
+    font-weight: 550;
+    font-size: 14px;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100px); 
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0); 
+      opacity: 1;
+    }
+  }
 @media screen and (max-width:1285px) {
     .nav-menu {
         display: flex;
@@ -141,7 +184,6 @@
     .header {
         height: 73px;
     }
-
     .logo {
         width: 30%;
         height: auto;
@@ -212,6 +254,9 @@
 
 
     }
+    .searchIcon {
+        display: none;
+    }
 
     .nav-menu {
         position: absolute;
@@ -220,10 +265,9 @@
         top: 50px;
         right: -100%;
         width: 100%;
-        height: 110vh;
         transition: 0.4s;
         z-index: 2;
-        background: #18B0E6;
+        background: #fff;
         text-align: start;
         padding: 5%;
         overflow: none;
@@ -241,26 +285,26 @@
     }
 
     .nav-menu li:hover {
-        background-color: #153A5F;
+        /* background-color: #153A5F; */
         width: 100%;
         border: none;
     }
 
     .drop Link:hover {
-        background-color: #153A5F;
+        /* background-color: #153A5F; */
         width: 100%;
         border: none;
     }
 
     .menu {
-        background-color: #153A5F;
+        /* background-color: #153A5F; */
         width: 100%;
         border: none;
         color: white;
     }
 
     .activeMenu {
-        background-color: #153A5F;
+        /* background-color: #153A5F; */
         width: 100%;
         border: none;
         color: white;

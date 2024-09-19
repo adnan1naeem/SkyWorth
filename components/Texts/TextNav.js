@@ -5,9 +5,9 @@ import { Typography } from "@mui/material";
 function TextNav({ label, isActive, color }) {
   return (
     <div className={Styles.TextNav}>
-      <span
-        className={Styles.textNavLabel}
-        style={{ color: isActive ? '#18B0E6' : color, fontFamily: "'Mont-Regular', sans-serif",fontWeight: 500, fontSize: '14px' }}
+     <span
+        className={`${Styles.textNavLabel} ${isActive ? Styles.active : ''}`}
+        style={{ color: color, fontFamily: "'Mont-Regular', sans-serif", fontWeight: 500, fontSize: '14px' }}
       >
         {label}
       </span>

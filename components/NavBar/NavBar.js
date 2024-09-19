@@ -2,13 +2,11 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa"; // Import FaSearch
 import styles from "../../styles/Navbar.module.css";
 import TextNav from "../Texts/TextNav";
-
 import Link from "next/link";
-import { MdArrowDropDown } from "react-icons/md";
-import { IoMdArrowDropup } from "react-icons/io";
 import { useRouter } from "next/router";
 import Image from "next/image";
-
+import { IconButton, InputAdornment, TextField } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 const Navbar = () => {
   const router = useRouter();
 
@@ -17,7 +15,7 @@ const Navbar = () => {
   const [isWideScreen, setIsWideScreen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isArrowUp, setIsArrowUp] = useState(false);
-
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   useEffect(() => {
     if (typeof window !== "undefined") {
       setIsWideScreen(window.innerWidth > 990);
@@ -52,7 +50,13 @@ const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
     setIsArrowUp(!isArrowUp);
   };
-
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen); // Toggle search bar
+  };
+  const handleCloseClick = () => {
+    setIsSearchOpen(!isSearchOpen);
+    console.log('Close button clicked');
+  };
   return (
     <div className={styles.header}>
       <div className={styles.container}>
@@ -71,16 +75,9 @@ const Navbar = () => {
               : styles["nav-menu"]
           }
         >
-          {click && (
-            <li className={router.pathname === "/" ? styles.menu : ""}>
-              <Link href="/" onClick={closeHomeMenu}>
-                <TextNav label="Home" isActive={router.pathname === "/"} />
-              </Link>
-            </li>
-          )}
-          <li className={router.pathname === "/about" ? styles.menu : ""}>
-            <Link href="/about" onClick={closeMenu}>
-              <TextNav label="HOME" isActive={router.pathname === "/about"} />
+          <li className={router.pathname === "/" ? styles.menu : ""}>
+            <Link href="/" onClick={closeHomeMenu}>
+              <TextNav label="HOME" isActive={router.pathname === "/"} />
             </Link>
           </li>
           <div className={styles.dropdown}>
@@ -94,21 +91,21 @@ const Navbar = () => {
             {isWideScreen && (
               <div className={styles["dropdown-content"]}>
                 <Link href="/mobile-application" onClick={closeMenu}>
-                  Mobile Application
+                ALL PRODUCTS
                 </Link>
                 <Link href="/website" onClick={closeMenu}>
-                  Web Development Services
+                TELEVISION
                 </Link>
                 <Link href="/ui-ux-design" onClick={closeMenu}>
-                  UI/UX Design
+                  FREEZER
                 </Link>
                 <Link href="/sqa" onClick={closeMenu}>
-                  SQA
+                  AIR CONDITIONER
                 </Link>
               </div>
             )}
             {!isWideScreen && isDropdownOpen && (
-              <ul style={{ padding: "0" }}>
+              <ul style={{ paddingLeft: "10px" }}>
                 <li
                   className={
                     router.pathname === "/mobile-application"
@@ -117,7 +114,7 @@ const Navbar = () => {
                   }
                 >
                   <Link href="/mobile-application" onClick={closeMenu}>
-                    <TextNav label="ABOUT US" />
+                    <TextNav label="ALL PRODUCTS" />
                   </Link>
                 </li>
                 <li
@@ -126,7 +123,7 @@ const Navbar = () => {
                   }
                 >
                   <Link href="/website" onClick={closeMenu}>
-                    <TextNav label="WHERE TO BUY" />
+                    <TextNav label="TELEVISION" />
                   </Link>
                 </li>
                 <li
@@ -137,7 +134,7 @@ const Navbar = () => {
                   }
                 >
                   <Link href="/ui-ux-design" onClick={closeMenu}>
-                    <TextNav label="WARRANTY" />
+                    <TextNav label="FREEZER" />
                   </Link>
                 </li>
                 <li
@@ -146,11 +143,9 @@ const Navbar = () => {
                   }
                 >
                   <Link href="/sqa" onClick={closeMenu}>
-                    <TextNav label="FAQ" />
+                    <TextNav label="AIR CONDITIONER" />
                   </Link>
                 </li>
-                
-
               </ul>
             )}
           </div>
@@ -209,29 +204,80 @@ const Navbar = () => {
               />
             </Link>
           </li>
-          <li>
-          <FaSearch fontSize={16}/>
+          <li className={styles.searchIcon}>
+            <FaSearch fontSize={16} onClick={toggleSearch} />
           </li>
-
-      
         </ul>
 
-        <div className={styles.hamburger} onClick={handleClick}>
+        <div className={styles.hamburger} >
           {click ? (
-            <FaTimes size={20} style={{ color: "black" }} />
+          <>
+            <FaSearch fontSize={16} style={{marginRight:12,marginTop:2}} onClick={toggleSearch} />
+            <FaTimes size={20} style={{ color: "black" }} onClick={handleClick} />
+            </>
           ) : (
-            <FaBars
-              size={25}
-              style={{
-                color: "black",
-                position: "absolute",
-                right: 0,
-                marginRight: 25,
-                top: 20,
-              }}
-            />
+            <>
+              <FaBars onClick={handleClick}
+                size={25}
+                style={{
+                  color: "black",
+                  position: "absolute",
+                  right: 0,
+                  marginRight: 25,
+                  top: 20,
+                }}
+              />
+              <FaSearch
+                size={24}
+                style={{
+                  color: "black",
+                  position: "absolute",
+                  right: 70,
+                  marginRight: 0,
+                  top: 20,
+                }} onClick={toggleSearch} /> </>
           )}
         </div>
+        {isSearchOpen && <div className={styles.blurBackground} />}
+        {isSearchOpen && (
+          <div className={styles.searchContainer}>
+            <TextField
+              id="standard-basic"
+              label="Search"
+              variant="standard"
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton
+                      edge="end"
+                      onClick={handleCloseClick}
+                      aria-label="close"
+                      sx={{ backgroundColor: '#9c9a9a20', height: 35, width: 35, marginRight: '2px', marginBottom: '15px' }}
+                    >
+                      <CloseIcon />
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }}
+              sx={{
+                alignSelf: 'center',
+                width: '70%',
+                borderRadius: '8px',
+                fontSize: '16px',
+                '& .MuiInput-underline:before': {
+                  borderBottom: '2px solid #ccc',
+                },
+                '& .MuiInput-underline:after': {
+                  borderBottom: '2px solid #000',
+                },
+                '& .MuiInput-underline:hover:before': {
+                  borderBottom: '2px solid #000',
+                },
+              }}
+            />
+            <p className={styles.searchBottomText}>Hit enter to search or ESC to close</p>
+          </div>
+        )}
       </div>
     </div>
   );
