@@ -1,0 +1,16 @@
+.footerImage {
+    float: left;
+    width: 10rem;
+    height: auto;
+    padding-bottom: 5%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .footerImage {
+        width: 15rem;
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        padding-bottom: 3%;
+    }
+}
