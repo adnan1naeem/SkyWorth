@@ -1,14 +1,11 @@
-.TextNav {
-  /* Add any container styles if needed */
-  font-weight: 100;
-}
+
 
 .textNavLabel {
   position: relative;
   color: black;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 600;
   text-decoration: none;
 }
 

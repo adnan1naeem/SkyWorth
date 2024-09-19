@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaSearch } from "react-icons/fa"; // Import FaSearch
 import styles from "../../styles/Navbar.module.css";
 import TextNav from "../Texts/TextNav";
-import ButtonHover from "../Texts/ButtonHover";
+
 import Link from "next/link";
 import { MdArrowDropDown } from "react-icons/md";
 import { IoMdArrowDropup } from "react-icons/io";
@@ -61,7 +61,6 @@ const Navbar = () => {
             className={styles.logo}
             src={require("../../assets/logo.png")}
             alt=""
-          
           />
         </Link>
 
@@ -72,15 +71,16 @@ const Navbar = () => {
               : styles["nav-menu"]
           }
         >
-          {click &&
+          {click && (
             <li className={router.pathname === "/" ? styles.menu : ""}>
               <Link href="/" onClick={closeHomeMenu}>
                 <TextNav label="Home" isActive={router.pathname === "/"} />
               </Link>
-            </li>}
+            </li>
+          )}
           <li className={router.pathname === "/about" ? styles.menu : ""}>
             <Link href="/about" onClick={closeMenu}>
-              <TextNav label="Home" isActive={router.pathname === "/about"} />
+              <TextNav label="HOME" isActive={router.pathname === "/about"} />
             </Link>
           </li>
           <div className={styles.dropdown}>
@@ -89,9 +89,7 @@ const Navbar = () => {
               className={styles.dropbtn}
               onClick={toggleDropdown}
             >
-              <TextNav label="Product" />
-
-            
+              <TextNav label="PRODUCT" />
             </li>
             {isWideScreen && (
               <div className={styles["dropdown-content"]}>
@@ -111,26 +109,48 @@ const Navbar = () => {
             )}
             {!isWideScreen && isDropdownOpen && (
               <ul style={{ padding: "0" }}>
-                <li className={router.pathname === "/mobile-application" ? styles.menu : styles.drop}>
+                <li
+                  className={
+                    router.pathname === "/mobile-application"
+                      ? styles.menu
+                      : styles.drop
+                  }
+                >
                   <Link href="/mobile-application" onClick={closeMenu}>
                     <TextNav label="ABOUT US" />
                   </Link>
                 </li>
-                <li className={router.pathname === "/website" ? styles.menu : styles.drop}>
+                <li
+                  className={
+                    router.pathname === "/website" ? styles.menu : styles.drop
+                  }
+                >
                   <Link href="/website" onClick={closeMenu}>
                     <TextNav label="WHERE TO BUY" />
                   </Link>
                 </li>
-                <li className={router.pathname === "/ui-ux-design" ? styles.menu : styles.drop}>
+                <li
+                  className={
+                    router.pathname === "/ui-ux-design"
+                      ? styles.menu
+                      : styles.drop
+                  }
+                >
                   <Link href="/ui-ux-design" onClick={closeMenu}>
                     <TextNav label="WARRANTY" />
                   </Link>
                 </li>
-                <li className={router.pathname === "/SQA" ? styles.menu : styles.drop}>
+                <li
+                  className={
+                    router.pathname === "/SQA" ? styles.menu : styles.drop
+                  }
+                >
                   <Link href="/sqa" onClick={closeMenu}>
                     <TextNav label="FAQ" />
                   </Link>
                 </li>
+                
+
               </ul>
             )}
           </div>
@@ -153,16 +173,16 @@ const Navbar = () => {
           </li>
           <li className={router.pathname === "/blogs" ? styles.menu : ""}>
             <Link href="https://blog.techtiz.co " onClick={closeMenu}>
-              <TextNav label="WARRANTY" isActive={router.pathname === "/blogs"} />
+              <TextNav
+                label="WARRANTY"
+                isActive={router.pathname === "/blogs"}
+              />
             </Link>
           </li>
 
           <li className={router.pathname === "/career" ? styles.menu : ""}>
             <Link href="/career" onClick={closeMenu}>
-              <TextNav
-                label="FAQ"
-                isActive={router.pathname === "/career"}
-              />
+              <TextNav label="FAQ" isActive={router.pathname === "/career"} />
             </Link>
           </li>
           <li className={router.pathname === "/career" ? styles.menu : ""}>
@@ -189,17 +209,27 @@ const Navbar = () => {
               />
             </Link>
           </li>
+          <li>
+          <FaSearch fontSize={16}/>
+          </li>
+
+      
         </ul>
 
-        
         <div className={styles.hamburger} onClick={handleClick}>
           {click ? (
-            <FaTimes size={20} style={{ color: "white" }} />
+            <FaTimes size={20} style={{ color: "black" }} />
           ) : (
-            <FaBars size={25} style={{
-              color: "white", position: 'absolute', right: 0, marginRight: 25,
-              top: 20,
-            }} />
+            <FaBars
+              size={25}
+              style={{
+                color: "black",
+                position: "absolute",
+                right: 0,
+                marginRight: 25,
+                top: 20,
+              }}
+            />
           )}
         </div>
       </div>

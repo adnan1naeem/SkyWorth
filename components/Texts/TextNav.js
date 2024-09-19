@@ -7,7 +7,7 @@ function TextNav({ label, isActive, color }) {
     <div className={Styles.TextNav}>
       <span
         className={Styles.textNavLabel}
-        style={{ color: isActive ? '#18B0E6' : color, fontFamily: "'Mont-Regular', sans-serif", }}
+        style={{ color: isActive ? '#18B0E6' : color, fontFamily: "'Mont-Regular', sans-serif",fontWeight: 500, fontSize: '14px' }}
       >
         {label}
       </span>
