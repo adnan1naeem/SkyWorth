@@ -65,7 +65,7 @@ function Footer() {
             text2="Product Support"
             href_two="https://blog.techtiz.co"
             text3="Warranty Policy"
-            href_three="/portfolios"
+            href_three="/WarrentyPolicy"
             text4="Privacy Policy"
             href_four="/contact-us"
             text5="Terms of Service"

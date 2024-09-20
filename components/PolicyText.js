@@ -1,8 +1,10 @@
 import React from 'react';
 import { Box, Container, Typography, List, ListItem, Link } from '@mui/material';
+import Breadcrumb from './BreadCrumb';
 
-const PrivacyPolicyText= ({
+const PrivacyPolicyText = ({
     heading,
+    breadcrumb,
     description1,
     description2,
     description3,
@@ -15,24 +17,26 @@ const PrivacyPolicyText= ({
         <Box
             sx={{ textAlign: 'left' }}
         >
+
             <Container maxWidth="lg">
+                {breadcrumb && <Breadcrumb />}
                 <Box sx={{ mb: 6 }}>
-                    <Typography fontSize={{ lg: '48px' }} color={"#2A2A2A"} sx={{ fontWeight:'', mb: 2 }} fontFamily= {"SKSans, sans-serif"}>
+                    <Typography fontSize={{ lg: '48px' }} color={"#2A2A2A"} sx={{ fontWeight: '', mb: 2 }} fontFamily={"SKSans, sans-serif"}>
                         {heading}
                     </Typography>
 
-                    <Typography fontSize={{ lg: '16px' }} fontFamily= {"SKSans, sans-serif"} sx={{ color: '#2A2A2A' }}>
+                    <Typography fontSize={{ lg: '20px' }} fontFamily={"SKSans, sans-serif"} sx={{ color: '#2A2A2A' }}>
                         {description1}
                     </Typography>
 
                     {description2 && (
-                        <Typography fontSize={{ lg: '16px' }} fontFamily= {"SKSans, sans-serif"} sx={{ color: '#2A2A2A' }}>
+                        <Typography fontSize={{ lg: '20px' }} fontFamily={"SKSans, sans-serif"} sx={{ color: '#2A2A2A' }}>
                             {description2}
                         </Typography>
                     )}
 
                     {description3 && (
-                        <Typography fontSize={{ lg: '16px' }} fontFamily= {"SKSans, sans-serif"} sx={{ color: '#2A2A2A' }}>
+                        <Typography fontSize={{ lg: '16px' }} fontFamily={"SKSans, sans-serif"} sx={{ color: '#2A2A2A' }}>
                             {description3}
                         </Typography>
                     )}
