@@ -10,7 +10,7 @@ import BackgrondImages from './../../assets/backgroundImage.webp'
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
 function HomeScreen() {
   return (
-    <div>
+    <div style={{marginTop:'55px'}}>
       <TVProductCard/>
       <CenteredImageWithText
         imageSrc={TVImage}
