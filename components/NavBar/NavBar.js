@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaSearch } from "react-icons/fa"; // Import FaSearch
+import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import styles from "../../styles/Navbar.module.css";
 import TextNav from "../Texts/TextNav";
 import Link from "next/link";
@@ -51,11 +51,10 @@ const Navbar = () => {
     setIsArrowUp(!isArrowUp);
   };
   const toggleSearch = () => {
-    setIsSearchOpen(!isSearchOpen); // Toggle search bar
+    setIsSearchOpen(!isSearchOpen);
   };
   const handleCloseClick = () => {
     setIsSearchOpen(!isSearchOpen);
-    console.log('Close button clicked');
   };
   return (
     <div className={styles.header}>
