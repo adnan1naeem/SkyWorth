@@ -22,12 +22,12 @@ const styles = {
   },
 };
 
-function Retailer() {
+function Retailer({ title = "RETAILER", description = "Locate your nearest retail shops in our list of authorised retailers by state." }) {
   return (
     <Box sx={styles.container}>
-      <Typography {...styles.heading}>RETAILER</Typography>
+      <Typography {...styles.heading}>{title}</Typography>
       <Typography variant="body1" sx={styles.paragraph}>
-        Locate your nearest retail shops in our list of authorised retailers by state.
+        {description}
       </Typography>
     </Box>
   );

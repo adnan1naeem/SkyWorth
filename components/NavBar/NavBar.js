@@ -174,9 +174,9 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <li className={router.pathname === "/career" ? styles.menu : ""}>
-            <Link href="/career" onClick={closeMenu}>
-              <TextNav label="FAQ" isActive={router.pathname === "/career"} />
+          <li className={router.pathname === "/faq" ? styles.menu : ""}>
+            <Link href="/faq" onClick={closeMenu}>
+              <TextNav label="FAQ" isActive={router.pathname === "/faq"} />
             </Link>
           </li>
           <li className={router.pathname === "/career" ? styles.menu : ""}>

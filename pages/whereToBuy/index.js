@@ -5,7 +5,10 @@ import Cities from "../../components/WhereToBuy/Cities";
 function WhereToBuy() {
   return (
     <Box>
-    <Retailer/>
+    <Retailer 
+        title="Find Your Retailer" 
+        description="Discover authorized retailers in your area." 
+      />
     <Cities/>
      
     </Box>
