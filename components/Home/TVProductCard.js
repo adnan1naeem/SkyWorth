@@ -69,7 +69,7 @@ const TVProductCard = ({ title, description, image, buttonText }) => (
 );
 
 const ResponsiveTVProductGrid = () => (
-  <Container sx={{ padding: '40px 0' }}>
+  <Container sx={{ padding: '40px 0',marginTop:'50px' }}>
     <Typography variant="h4" sx={{fontWeight:'light',padding:'10px'}} align="center" gutterBottom>
       Choosing the right SKYWORTH TV for you.
     </Typography>
