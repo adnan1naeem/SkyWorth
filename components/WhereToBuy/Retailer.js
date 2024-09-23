@@ -21,6 +21,7 @@ const styles = {
     opacity: 0, // Start as invisible
     transform: 'translateY(20px)', // Start slightly below
     transition: 'opacity 0.5s ease, transform 0.5s ease', // Transition for both opacity and transform
+    textAlign: "center",
   },
   paragraph: {
     textAlign: "center",
@@ -30,6 +31,7 @@ const styles = {
     opacity: 0, // Start as invisible
     transform: 'translateY(20px)', // Start slightly below
     transition: 'opacity 0.5s ease, transform 0.5s ease', // Transition for both opacity and transform
+    width:{xs:'100%', sm:"70%"}
   },
 };
 

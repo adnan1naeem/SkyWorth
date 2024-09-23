@@ -6,9 +6,15 @@ import Image3 from './../../assets/awardImage3.jpg';
 import Image4 from './../../assets/awardImage4.jpg';
 import Image5 from './../../assets/Image5.jpg';
 import Image6 from './../../assets/awardImage6.jpg';
+import { Box } from '@mui/material';
+import Retailer from '../../components/WhereToBuy/Retailer';
 const App = () => {
   return (
-    <>
+    <Box>
+     <Retailer
+        title="AWARD" 
+        description="Discover the recognition and milestones that define our commitment to excellence and innovation. We’re grateful for this accolade and look forward to continuing to exceed expectations and set new standards in our field." 
+      />
       <AwardSection
         bgColor="#f5f5f5"
         flexDirection="row-reverse"
@@ -90,7 +96,7 @@ const App = () => {
         awardDescription="The AIoT Smart Technology of China Refrigerator Industry Award is a prestigious award that recognizes the achievements of Chinese companies in the development of AIoT smart technology for refrigerators. It is a testament to the country’s growing technological capabilities in this field."
         buttonText="Shop Now"
       />
-    </>
+    </Box>
   );
 };
 
