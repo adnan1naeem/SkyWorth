@@ -223,6 +223,7 @@ const styles = {
     };
   
     return (
+      
       <Box sx={{ mt: "8%", mb: "8%" }}>
         {cityData.map((cityInfo, index) => (
           <Box key={index}>
@@ -257,7 +258,7 @@ const styles = {
   
             {openCity === cityInfo.city && (
               <Box sx={{ mx: '1.5%' }}>
-                <Grid container spacing={2}>
+                <Grid container spacing={1}>
                   {cityInfo.branches.map((branch, idx) => (
                     <Grid item xs={12} sm={6} md={4} key={idx} sx={{ display: "flex", justifyContent: "center" }}>
                       <CityBox branches={[branch]} />

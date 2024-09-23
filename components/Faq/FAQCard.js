@@ -8,13 +8,13 @@ const FAQCard = ({ title, badgeNumber }) => {
         borderRadius: "4px",
         padding: "20px",
         textAlign: "center",
-        width: "55vh",
+        width: "52vh",
         height: "20vh",
         position: "relative",
-        transition: "all 0.3s ease", // Smooth transition
+        transition: "all 0.3s ease", 
         "&:hover": {
-          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", // Shadow on hover
-          transform: "translateY(-5px)", // Slight lift effect
+          boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", 
+          transform: "translateY(-5px)", 
         },
       }}
     >
