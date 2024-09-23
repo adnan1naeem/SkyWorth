@@ -71,6 +71,7 @@ const AwardSection = ({
                 textAlign: { xs: 'center', lg: 'left' },
                 width: '100%',
                 minHeight: '9vh',
+                padding:{xs:'80px 30px',sm:'80px 30px',md:'30px 30px',lg:'30px 0px'},
                 position: 'relative',
             }}
         >
