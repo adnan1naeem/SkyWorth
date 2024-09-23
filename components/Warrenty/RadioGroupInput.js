@@ -2,18 +2,22 @@ import { FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Typography
 
 const RadioGroupInput = ({ label, name, value, onChange,required, options }) => (
   <FormControl component="fieldset" sx={{ marginBottom: '20px' }}>
-    <Typography variant="body2" sx={{ marginBottom: '4px',fontSize:16 }}>
+    <Typography variant="body2" sx={{ marginBottom: '4px',fontSize:16,fontFamily:'Kanit',fontWeight:'400', }}>
             {label}
             {required && <span style={{ color: 'red' }}> *</span>}
         </Typography>
-    <RadioGroup name={name} value={value} onChange={onChange} sx={{ display: 'flex', flexDirection: 'column' }}>
+    <RadioGroup name={name} value={value} onChange={onChange} sx={{ display: 'flex', flexDirection: 'column', }}>
       {options.map((option) => (
         <FormControlLabel 
           key={option.value} 
           value={option.value} 
-          control={<Radio sx={{ color: 'black', '&.Mui-checked': { color: 'primary' } }} />} 
-          label={option.label} 
-          sx={{ color: 'primary.main' }} // Set the label color to primary
+          control={<Radio sx={{ color: 'black', '&.Mui-checked': { color: '#0069c8' } }} />} 
+          label={
+            <Typography sx={{ fontFamily: 'Kanit', fontWeight: '400', color: '#0069c8' }}>
+              {option.label}
+            </Typography>
+          }
+          sx={{ color: '#0069c8' }}
         />
       ))}
     </RadioGroup>

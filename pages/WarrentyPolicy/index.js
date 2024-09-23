@@ -7,7 +7,7 @@ import CheckboxGroup from './../../components/Warrenty/CheckBoxGroup';
 import FileUpload from './../../components/Warrenty/FileUpload';
 import { motion } from 'framer-motion';
 import WarrantyCards from '../../components/Warrenty/WarrentyBottomCard';
-
+import Retailer from "../../components/WhereToBuy/RETAILER";
 const countries = [
   { label: 'Malaysia', value: 'Malaysia' },
   { label: 'United States', value: 'United States' },
@@ -47,6 +47,10 @@ const Index = () => {
 
   return (
     <Box sx={{ marginTop: '100px' }}>
+      <Retailer
+        title="WARRANTY" 
+        description="Register your product warranty card by filling in the form below." 
+      />
       <Box sx={{
         padding: '20px',
         marginTop: '150px',
@@ -56,8 +60,8 @@ const Index = () => {
       }}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
-            <Grid item xs={12} component={motion.div} transition={{ delay: 0.3 }}  variants={animationVariants}>
-              <h1>Warranty Registration Form</h1>
+            <Grid item xs={12} component={motion.div} transition={{ delay: 0.3 }} variants={animationVariants}>
+              <h1 style={{fontFamily:'Kanit',fontWeight:'500',textAlign:'center'}}>Warranty Registration Form</h1>
             </Grid>
 
             <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
@@ -109,7 +113,7 @@ const Index = () => {
             </Grid>
 
             <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <Typography fontSize={18}>Address</Typography>
+              <Typography fontSize={18} sx={{fontFamily:'Kanit',fontWeight:'500',}}>Address</Typography>
             </Grid>
             <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput

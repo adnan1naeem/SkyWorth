@@ -165,11 +165,11 @@ const Navbar = () => {
               />
             </Link>
           </li>
-          <li className={router.pathname === "/blogs" ? styles.menu : ""}>
-            <Link href="https://blog.techtiz.co " onClick={closeMenu}>
+          <li className={router.pathname === "/WarrentyPolicy" ? styles.menu : ""}>
+            <Link href="/WarrentyPolicy" onClick={closeMenu}>
               <TextNav
                 label="WARRANTY"
-                isActive={router.pathname === "/blogs"}
+                isActive={router.pathname === "/WarrentyPolicy"}
               />
             </Link>
           </li>
@@ -179,11 +179,11 @@ const Navbar = () => {
               <TextNav label="FAQ" isActive={router.pathname === "/faq"} />
             </Link>
           </li>
-          <li className={router.pathname === "/career" ? styles.menu : ""}>
-            <Link href="/career" onClick={closeMenu}>
+          <li className={router.pathname === "/award" ? styles.menu : ""}>
+            <Link href="/award" onClick={closeMenu}>
               <TextNav
                 label="AWARDS"
-                isActive={router.pathname === "/career"}
+                isActive={router.pathname === "/award"}
               />
             </Link>
           </li>
@@ -199,7 +199,7 @@ const Navbar = () => {
             <Link href="/career" onClick={closeMenu}>
               <TextNav
                 label="CONTACT US"
-                isActive={router.pathname === "/career"}
+                isActive={router.pathname === "/award"}
               />
             </Link>
           </li>

@@ -3,7 +3,7 @@ import { TextField, Typography } from '@mui/material';
 
 const TextInput = ({ label, name, value = '', onChange, required, type = 'text' }) => (
     <>
-        <Typography variant="body2" sx={{ marginBottom: '4px',fontSize:16 }}>
+        <Typography variant="body2" sx={{ marginBottom: '4px',fontSize:16,fontFamily:'Kanit',fontWeight:'400', }}>
             {label}
             {required && <span style={{ color: 'red' }}> *</span>}
         </Typography>

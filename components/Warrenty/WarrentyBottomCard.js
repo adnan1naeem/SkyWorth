@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography, Box, useMediaQuery, useTheme } from '@mui/material';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const warrantyData = [
@@ -77,7 +77,7 @@ const WarrantyCards = () => {
 
     return (
         <Box sx={{ p: 3, marginBottom: '5%' }}>
-            <Typography variant="h4" align="center" sx={{ mb: 7, padding: {xs:'0px 2%',sm:'0px 20%',md:'0px 20%',lg:'0px 30%',xl:'0px 34%'} }}>
+            <Typography variant="h4" align="center" sx={{color:'#676767',fontFamily:'Kanit',fontWeight:'500', mb: 7, padding: {xs:'0px 2%',sm:'0px 20%',md:'0px 20%',lg:'0px 30%',xl:'0px 34%'} }}>
                 Below is the warranty details of TV and HA:
             </Typography>
             <motion.div
@@ -127,7 +127,7 @@ const WarrantyCards = () => {
                                 animate="visible"
                             ></motion.div>
                             <CardContent>
-                                <Typography variant="h3" sx={{ mb: 3, fontSize: 16, fontWeight: 700 }} gutterBottom>
+                                <Typography variant="h3" sx={{ mb: 3, fontSize: 22, fontFamily:'Kanit',fontWeight:'500',color:'#676767' }} gutterBottom>
                                     {item.title}
                                 </Typography>
                                 {item.warranties.map((warranty, idx) => (
@@ -141,7 +141,7 @@ const WarrantyCards = () => {
                                         }}
                                     >
                                         <CheckCircleIcon sx={{ color: '#0069c8', mr: 1, height: 15, mt: '2px' }} />
-                                        <Typography variant="body2" sx={{ fontSize: 14, color: 'black' }}>
+                                        <Typography  sx={{ fontFamily:'Kanit',fontWeight:'400',fontSize: 14, color: '#676767' }}>
                                             {warranty}
                                         </Typography>
                                     </Box>

@@ -13,12 +13,17 @@ const styles = {
     color: "white", 
     padding: 2, 
   },
-  heading: {
+heading: {
     variant: "h3",
     gutterBottom: true,
+    fontFamily: 'Kanit', 
+    fontWeight: '500',
   },
   paragraph: {
     textAlign: "center",
+    fontSize:'16px',
+    fontFamily: 'Kanit', 
+    fontWeight: '400',
   },
 };
 

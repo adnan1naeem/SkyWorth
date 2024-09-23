@@ -2,7 +2,7 @@ import { TextField, MenuItem, Typography, Box } from '@mui/material';
 
 const SelectInput = ({ label, name, value, onChange, options, required }) => (
   <Box sx={{ marginBottom: '20px' }}>
-    <Typography variant="body2" sx={{ marginBottom: '4px',fontSize:16 }}>
+    <Typography variant="body2" sx={{ marginBottom: '4px',fontSize:16 ,fontFamily:'Kanit',fontWeight:'400',}}>
       {label}
       {required && <span style={{ color: 'red' }}> *</span>}
     </Typography>
@@ -14,6 +14,7 @@ const SelectInput = ({ label, name, value, onChange, options, required }) => (
       onChange={onChange}
       sx={{
         backgroundColor: '#F5F5F5', // Light gray background
+        fontFamily:'Kanit',fontWeight:'500',
         '& .MuiOutlinedInput-root': {
           borderRadius: '10px',
           color: '#AAABAC'

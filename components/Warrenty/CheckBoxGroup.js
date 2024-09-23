@@ -5,7 +5,7 @@ const CheckboxGroup = ({ label, options, selectedValues, onChange, required }) =
 
   return (
     <FormControl component="fieldset">
-      <Typography variant="body2" sx={{ marginBottom: '4px', fontSize: 16 }}>
+      <Typography variant="body2" sx={{ marginBottom: '4px', fontSize: 16, fontFamily: 'Kanit', fontWeight: '400' }}>
         {label}
         {required && <span style={{ color: 'red' }}> *</span>}
       </Typography>
@@ -18,14 +18,14 @@ const CheckboxGroup = ({ label, options, selectedValues, onChange, required }) =
                 onChange={(e) => onChange(e, options)}
               />
             }
-            label={options}
-            sx={{ color: '#0069CB' }} // Set label color to blue
+            label={<Typography sx={{ fontFamily: 'Kanit', fontWeight: '400', color: '#0069c8' }}>
+              {options}
+            </Typography>}
           />
         ) : (
           options?.map((option) => (
             <FormControlLabel
               key={option}
-              sx={{ color: 'primary.main' }}
               control={
                 <Checkbox
                   value={option}
@@ -33,7 +33,9 @@ const CheckboxGroup = ({ label, options, selectedValues, onChange, required }) =
                   onChange={onChange}
                 />
               }
-              label={option}
+              label={<Typography sx={{ color: '#0069c8', fontFamily: 'Kanit', fontWeight: '400', }}>
+              {option}
+            </Typography>}
             />
           ))
         )}

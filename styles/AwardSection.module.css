@@ -1,0 +1,38 @@
+.award-section {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .award-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .image-container {
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .award-image {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-container:hover .award-image {
+    transform: scale(1.1);
+  }
+  
+  .reverse .award-image {
+    order: 2;
+  }
+  
+  @media (max-width: 600px) {
+    .award-section {
+      flex-direction: column !important;
+    }
+  }
+  

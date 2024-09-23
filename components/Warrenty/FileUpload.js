@@ -21,7 +21,7 @@ const FileUpload = ({ label, onChange, required }) => {
 
   return (
     <Box>
-      <Typography variant="body2" sx={{ marginBottom: '4px', fontSize: 16 }}>
+      <Typography variant="body2" sx={{ marginBottom: '4px', fontSize: 16,fontFamily: 'Kanit', fontWeight: '400', }}>
         {label}
         {required && <span style={{ color: 'red' }}> *</span>}
       </Typography>
@@ -39,6 +39,7 @@ const FileUpload = ({ label, onChange, required }) => {
             color: 'white',
             padding: '10px 20px',
             borderRadius: 0,
+            fontFamily: 'Kanit', fontWeight: '400',
             marginTop: '10px',
             marginBottom: '50px',
             textTransform: 'capitalize',
