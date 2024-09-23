@@ -74,17 +74,19 @@ const AwardSection = ({
                 position: 'relative',
             }}
         >
-            <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: { xs: 'column', md: flexDirection || 'row' } }}>
+            <Container maxWidth="lg" sx={{ display: 'flex', flexDirection: { xs: 'column-reverse', md: flexDirection || 'row' } }}>
                 <Box
                     sx={{
                         flex: 1,
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
-                        alignItems: { xs: 'center', md: 'flex-start' },
-                        textAlign: { xs: 'center', md: 'left' },
-                        p: { xs: 2, md: 10 },
+                        alignItems: { xs: 'left', md: 'flex-start' },
+                        textAlign: { xs: 'left', md: 'left' },
+                        paddingLeft:isBlackBackground?0:{md:"60px",lg:'60px'},
+                        paddingRight:isBlackBackground?{md:"60px",lg:'60px'}:0,
                         maxWidth: { md: '60%' },
+                        marginTop:{xs:"30px",sm:'30px',md:'30px',lg:0}
                     }}
                 >
                     <Typography variant="h6" sx={{
@@ -98,10 +100,11 @@ const AwardSection = ({
                         transition: "opacity 1s ease-in-out",
                         fontFamily: 'Kanit', fontWeight: '500',
                         opacity: 1,
+                        marginTop:{md:'30px'}
                     }}>
                         {awardYear}
                     </Typography>
-                    <Typography variant="h4" sx={{ fontSize:"30px",lineHeight:'52px', color: isBlackBackground ? 'white' : 'inherit', mb: 2,fontFamily: 'Kanit', fontWeight: '500',paddingRight:'25%' }}>
+                    <Typography variant="h4" sx={{ fontSize:"30px",lineHeight:'52px', color: isBlackBackground ? 'white' : 'inherit', mb: 2,fontFamily: 'Kanit', fontWeight: '500',paddingRight:{xs:'0%',sm:0,md:'10%',lg:'25%'} }}>
                         {awardTitle}
                     </Typography>
                     <Typography variant="body1" sx={{ color: isBlackBackground ? 'white' : 'inherit', mb: 3,fontSize:16,lineHeight:'30px',fontFamily: 'Kanit', fontWeight: '400', }}>
