@@ -5,7 +5,7 @@ import TextNav from "../Texts/TextNav";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { IconButton, InputAdornment, TextField } from "@mui/material";
+import { Container, IconButton, InputAdornment, TextField } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 const Navbar = () => {
   const router = useRouter();
@@ -58,7 +58,7 @@ const Navbar = () => {
   };
   return (
     <div className={styles.header}>
-      <div className={styles.container}>
+      <Container maxWidth= 'xl' sx={{ display: 'flex', justifyContent:{md:"flex-start",lg: 'space-between'},alignItems:'center' }}>
         <Link href="/">
           <Image
             className={styles.logo}
@@ -277,7 +277,7 @@ const Navbar = () => {
             <p className={styles.searchBottomText}>Hit enter to search or ESC to close</p>
           </div>
         )}
-      </div>
+      </Container>
     </div>
   );
 };
