@@ -14,7 +14,7 @@ const FAQCard = ({ title, badgeNumber }) => {
         transition: "all 0.3s ease", 
         "&:hover": {
           boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.3)", 
-          transform: "translateY(-5px)", 
+          transform: "translateY(-2px)", 
         },
       }}
     >

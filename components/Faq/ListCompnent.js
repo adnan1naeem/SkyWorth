@@ -40,7 +40,7 @@ const ListComponent = ({ text, color }) => {
         margin: '0 auto', 
         opacity: isVisible ? 1 : 0, 
         transform: isVisible ? 'translateX(0)' : 'translateX(-20px)', // Slide effect
-        transition: 'opacity 0.5s ease, transform 0.5s ease', // Transition for both opacity and transform
+        transition: 'opacity 0.7s ease, transform 0.5s ease', // Transition for both opacity and transform
       }}
     >
       <List>

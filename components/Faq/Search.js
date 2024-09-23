@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Box, TextField, IconButton, Paper, Tooltip, Typography } from "@mui/material";
+import { Box, TextField, IconButton, Paper, Tooltip, Typography, Modal, Button, MenuItem, Select, FormControl, InputLabel } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
+import TextInput from "../Warrenty/TextInput";
 
 const styles = {
   container: {
@@ -43,22 +44,53 @@ const styles = {
     backgroundColor: "white",
     padding: "10px",
     boxShadow: "0 2px 10px rgba(0, 0, 0, 0.2)",
-    width: "20vh", // Set width for the tooltip
+    width: "20vh",
     textAlign: "center",
     height: 'auto',
   },
   tooltipText: {
     fontSize: "1rem",
-    color: "black", // Ensure text color is black for visibility
+    color: "black",
+  },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  modalPaper: {
+    width: { xs: "80%", sm: "30%" },
+    padding: 2,
+    borderRadius: 4,
+  },
+  textField: {
+    marginBottom: 2,
+  },
+  formControl: {
+    marginBottom: 2,
+    width: '100%',
   },
 };
 
 function Search() {
   const [isFocused, setIsFocused] = useState(false);
   const [searchClicked, setSearchClicked] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [category, setCategory] = useState('');
 
   const handleSearchClick = () => {
     setSearchClicked(true);
+  };
+
+  const handleTooltipClick = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
+  const handleCategoryChange = (event) => {
+    setCategory(event.target.value);
   };
 
   return (
@@ -88,9 +120,6 @@ function Search() {
         </IconButton>
       </Paper>
       <Tooltip
-   
-      
-   
         title={
           <Paper sx={styles.tooltipPaper}>
             <Typography sx={styles.tooltipText}>
@@ -100,11 +129,7 @@ function Search() {
         }
         arrow
         placement="bottom"
-        sx={{
-          tooltip: {
-            backgroundColor: "white",
-          },
-        }}
+        onClick={handleTooltipClick}
       >
         <Paper elevation={3} sx={styles.paper}>
           <IconButton sx={styles.iconButton}>
@@ -112,6 +137,48 @@ function Search() {
           </IconButton>
         </Paper>
       </Tooltip>
+
+
+      <Modal open={openModal} onClose={handleCloseModal} sx={styles.modal}>
+        <Paper sx={styles.modalPaper}>
+         
+      <TextInput label ="Question/Title:" name="Question/Title:"/>
+          <TextField
+            fullWidth
+            variant="outlined"
+            label="Email"
+            placeholder="Enter your Email"
+            sx={styles.textField}
+          />
+          <FormControl variant="outlined" sx={styles.formControl}>
+            <InputLabel>Select a Category</InputLabel>
+            <Select
+              value={category}
+              onChange={handleCategoryChange}
+              label="Select a Category"
+              placeholder="Select a Category"
+            >
+              <MenuItem value="red">Red</MenuItem>
+              <MenuItem value="white">White</MenuItem>
+              <MenuItem value="blue">Blue</MenuItem>
+            </Select>
+          </FormControl>
+          <TextField
+            fullWidth
+            variant="outlined"
+            label="Answer/Details"
+            placeholder="Details"
+            multiline
+            rows={4}
+            sx={styles.textField}
+          />
+          <Box display="flex" justifyContent="flex-start">
+            <Button variant="contained" color="primary">
+              Submit
+            </Button>
+          </Box>
+        </Paper>
+      </Modal>
     </Box>
   );
 }
