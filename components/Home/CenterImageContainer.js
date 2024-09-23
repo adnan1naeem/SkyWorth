@@ -24,8 +24,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, ButtonText,heading }) => 
                 backgroundColor: 'white',
                 width: '100%',
                 height: 'auto',
-                padding: '20px',
-                borderRadius: 2
+                borderRadius: 2,marginBottom:'20px'
             }}
         >
             <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px' }} align="center" gutterBottom>
@@ -36,7 +35,6 @@ const CenteredImageWithText = ({ imageSrc, text, body, ButtonText,heading }) => 
                 alt="Centered"
                 style={{
                     width: imageWidth,
-                    height: '650px',
                     objectFit: 'contain',
                     marginBottom: '20px'
                 }}
@@ -52,7 +50,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, ButtonText,heading }) => 
             >
                 {text}
             </Typography>
-            <Typography
+          {body&&  <Typography
                 component="div"
                 sx={{
                     width: { sm: "80%", md: "80%", lg: '49%' },
@@ -64,7 +62,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, ButtonText,heading }) => 
                 }}
             >
                 {body}
-            </Typography>
+            </Typography>}
            {ButtonText && <Button
                 variant="outlined"
                 sx={{
