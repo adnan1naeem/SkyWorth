@@ -5,12 +5,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/bundle';
 import Image1 from './../../assets/swiper1.webp';
-import Image2 from './../../assets/swiperImage2.webp';
 import Image3 from './../../assets/Image3.webp';
 import { Box, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ChevronLeft';
 import ArrowForwardIcon from '@mui/icons-material/ChevronRight';
-import Image from 'next/image';
 
 const ImageSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);

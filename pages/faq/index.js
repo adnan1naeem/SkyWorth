@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import Retailer from "../../components/WhereToBuy/RETAILER";
+import Retailer from "./../../components/WhereToBuy/Retailer";
 import Search from "../../components/Faq/Search";
 import FAQList from "../../components/Faq/FAQList";
 function Faq() {

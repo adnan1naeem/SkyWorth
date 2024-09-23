@@ -7,7 +7,7 @@ import CheckboxGroup from './../../components/Warrenty/CheckBoxGroup';
 import FileUpload from './../../components/Warrenty/FileUpload';
 import { motion } from 'framer-motion';
 import WarrantyCards from '../../components/Warrenty/WarrentyBottomCard';
-import Retailer from "../../components/WhereToBuy/RETAILER";
+import Retailer from "./../../components/WhereToBuy/Retailer";
 const countries = [
   { label: 'Malaysia', value: 'Malaysia' },
   { label: 'United States', value: 'United States' },
