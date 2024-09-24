@@ -24,7 +24,7 @@ function Footer() {
           <FooterCard
             title="Televisions"
             text1="Lifestyle TVs"
-            href_one="/about"
+            href_one="/product"
             text2="Companion Portable 24P100"
             href_two="/industries"
             text3="UE7600 Series 4K Google TV"

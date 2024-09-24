@@ -5,21 +5,20 @@ import { Box, Typography, Breadcrumbs } from '@mui/material';
 const Breadcrumb = () => {
   const router = useRouter();
   
-  // Get the current path segments
   const pathParts = router.pathname.split('/').filter((part) => part);
 
   return (
-    <Box sx={{ marginTop: '20px', marginBottom: '20px' }}>
+    <Box sx={{ paddingTop:{xs: '25%',sm: '18%',md: '12%',lg: '12%'}, marginBottom: '20px',width:'10%' }}>
       <Breadcrumbs aria-label="breadcrumb">
         <Link href="/" passHref>
-          <Typography sx={{fontSize:20,}} color='primary'>Home</Typography>
+          <Typography sx={{fontSize:18,fontFamily:'SKSans,sans-serif',fontWeight:400}} color='#015ccb'>Home</Typography>
         </Link>
         {pathParts.map((part, index) => {
           const href = `/${pathParts.slice(0, index + 1).join('/')}`;
 
           return (
-            <Link key={index} href={href} passHref>
-              <Typography sx={{fontSize:20,}}>
+            <Link key={index} href={href} style={{color:'black'}} passHref>
+              <Typography sx={{fontSize:18,fontFamily:'SKSans,sans-serif',color:'#000000',fontWeight:400}}>
                 {part.charAt(0).toUpperCase() + part.slice(1)}
               </Typography>
             </Link>

@@ -1,45 +1,33 @@
 import React from 'react';
-import { Box, Button, Typography, useMediaQuery } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
 const CenteredImageWithText = ({ imageSrc, text, body, ButtonText,heading }) => {
-    const isXs = useMediaQuery('(max-width:599px)');
-    const isSm = useMediaQuery('(min-width:600px) and (max-width:959px)');
-    const isMd = useMediaQuery('(min-width:960px) and (max-width:1279px)');
-    let imageWidth = '80%';
 
-    if (isXs) {
-        imageWidth = '95%';
-    } else if (isSm) {
-        imageWidth = '95%';
-    } else if (isMd) {
-        imageWidth = '90%';
-    }
     return (
         <Box
             sx={{
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                justifyContent: 'center',
                 backgroundColor: 'white',
                 width: '100%',
                 height: 'auto',
                 borderRadius: 2,marginBottom:'20px'
             }}
         >
-            <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px' }} align="center" gutterBottom>
+           {heading&& <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px' }} align="center" gutterBottom>
                {heading}
-            </Typography>
+            </Typography>}
             <Image
                 src={imageSrc}
                 alt="Centered"
                 style={{
-                    width: imageWidth,
+                    width: "100%",
                     objectFit: 'contain',
                     marginBottom: '20px'
                 }}
             />
-            <Typography
+           {text&& <Typography
                 sx={{
                     fontSize: '1.5rem',
                     color: '#0c3034',
@@ -49,7 +37,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, ButtonText,heading }) => 
                 }}
             >
                 {text}
-            </Typography>
+            </Typography>}
           {body&&  <Typography
                 component="div"
                 sx={{
