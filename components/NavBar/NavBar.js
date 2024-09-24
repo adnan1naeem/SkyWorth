@@ -187,11 +187,11 @@ const Navbar = () => {
               />
             </Link>
           </li>
-          <li className={router.pathname === "/career" ? styles.menu : ""}>
-            <Link href="/career" onClick={closeMenu}>
+          <li className={router.pathname === "/news-events" ? styles.menu : ""}>
+            <Link href="/news-events" onClick={closeMenu}>
               <TextNav
                 label="NEWS & EVENT"
-                isActive={router.pathname === "/career"}
+                isActive={router.pathname === "/news-events"}
               />
             </Link>
           </li>
@@ -199,7 +199,7 @@ const Navbar = () => {
             <Link href="/career" onClick={closeMenu}>
               <TextNav
                 label="CONTACT US"
-                isActive={router.pathname === "/award"}
+                isActive={router.pathname === "/contact"}
               />
             </Link>
           </li>
