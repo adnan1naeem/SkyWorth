@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Grid, Container, Box } from '@mui/material';
-import Breadcrumb from '../BreadCrumb';
+import React from 'react';
+import { Box } from '@mui/material';
 import ProductDisplay from './ProductDisplay';
 
 const ProductDetail = (product) => {
