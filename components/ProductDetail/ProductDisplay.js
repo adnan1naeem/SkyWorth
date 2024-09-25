@@ -6,7 +6,7 @@ const ProductDisplay = (product) => {
     const [mainImage, setMainImage] = useState(data.image[0]);
 
     return (
-        <Grid container spacing={4} sx={{ maxWidth: '1200px',margin:{xs:'none',md:'auto'}, padding: 2 }}>
+        <Grid container spacing={4} sx={{ maxWidth: '1200px', margin: { xs: 'none', md: 'auto' }, padding: 2 }}>
             <Grid item xs={12} md={6} sx={{ marginBottom: 2, paddingRight: { xs: 0, md: '32px' } }}>
                 <Card sx={{ padding: "20px", borderRadius: 0 }}>
                     <CardMedia
@@ -38,26 +38,31 @@ const ProductDisplay = (product) => {
             </Grid>
             <Grid item xs={12} md={6} sx={{ paddingLeft: { xs: 0, md: 2 } }}>
                 <Card sx={{ padding: { xs: 0, md: 2 }, boxShadow: 'none', background: 'transparent' }}>
-                    <CardContent sx={{paddingLeft:0}}>
+                    <CardContent sx={{ paddingLeft: 0 }}>
                         <Typography sx={{ fontSize: 14, fontWeight: 400, backgroundColor: '#BEFFDA', padding: '5px 10px', width: 80, borderRadius: 20, textAlign: 'center', marginBottom: '20px' }} gutterBottom>
                             {"In Stock"}
                         </Typography>
-                        <Typography sx={{ fontSize: {xs:"30px",sm:'35px',md:'40px',lg:'48px'}, lineHeight: 1, fontWeight: 400 }} gutterBottom>
+                        <Typography sx={{ fontSize: { xs: "30px", sm: '35px', md: '40px', lg: '48px' }, lineHeight: 1, fontWeight: 400 }} gutterBottom>
                             {data?.name}
                         </Typography>
                         <Typography variant="body1" sx={{ color: '#2969B0', fontSize: 14, fontWeight: 400 }} gutterBottom>
                             Available Now
                         </Typography>
-                        <Typography variant="h6" component="h2" gutterBottom>
-                            Features:
-                        </Typography>
-                        <ul style={{ marginLeft: 20, paddingLeft: 0 }}>
+                        {data?.description &&
+                            <Typography fontSize={14} gutterBottom>
+                                {data?.description}
+                            </Typography>}
+                        {data?.features?.length > 0 && <ul style={{ marginLeft: 20, paddingLeft: 0 }}>
+                            <Typography variant="h6" component="h2" gutterBottom>
+                                Features:
+                            </Typography>
+
                             {data?.features?.map((feature, index) => (
                                 <li key={index}>
                                     <Typography fontSize={'14px'} sx={{ marginBottom: '5px' }}>{feature}</Typography>
                                 </li>
                             ))}
-                        </ul>
+                        </ul>}
                     </CardContent>
                 </Card>
             </Grid>

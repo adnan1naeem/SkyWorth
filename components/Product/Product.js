@@ -73,7 +73,7 @@ const ProductGrid = () => {
   }
   return (
     <Container maxWidth="xl">
-      <Breadcrumb />
+      <Breadcrumb paddingTop={{xs: '25%',sm: '18%',md: '10%',lg: '8%',xl:'5%'}}/>
       <BackgroundImageComponent
         src={TVImage}
         title="Find the Perfect Match for Your Home"
@@ -84,7 +84,7 @@ const ProductGrid = () => {
           <FilterSection onFilterChange={handleFilterChange} />
         </Grid>
         <Grid item xs={12} sm={9}>
-          <Grid container spacing={3}>
+          <Grid container spacing={3} >
             {paginatedProducts.map((product) => (
               <Grid item xs={12} sm={6} md={4} key={product.id}>
                 <ProductCard product={product} onClick={() => handleOpenModal(product)} handleNavigation={()=>handleNavigation(product)} />

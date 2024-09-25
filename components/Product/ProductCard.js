@@ -10,10 +10,11 @@ const ProductCard = ({ product,onClick,handleNavigation }) => {
         <Card
             sx={{
                 maxWidth: 345,
-                height: '354px',
+                height: {sm:"320px",md:'354px'},
                 boxShadow: 'none',
                 position: 'relative',
                 overflow: 'hidden',
+                textAlign:'-webkit-center'
             }}
             onClick={handleNavigation}
             onMouseEnter={handleMouseEnter}
@@ -80,11 +81,11 @@ const ProductCard = ({ product,onClick,handleNavigation }) => {
                     </Button>
                 </Box>
             </Box>
-            <CardContent onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                <Typography gutterBottom variant="h6" component="div">
+            <CardContent sx={{padding:"10px 0px"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                <Typography sx={{fontSize:{md:"20px",lg:"24px",textAlign:'left'}}} component="div">
                     {product.name}
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" sx={{textAlign:'left'}} color="text.secondary">
                     {product.price}
                 </Typography>
             </CardContent>

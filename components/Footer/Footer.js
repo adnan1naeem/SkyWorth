@@ -18,7 +18,7 @@ function Footer() {
           gap: { xs: "2%", md: "2%", lg: "4%" },
           justifyContent: "center",
           flexWrap: "wrap",
-          maxWidth: '100vw',  // Ensure the container does not overflow horizontally
+          maxWidth: '100vw',
         }}>
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: "0%" }}>
           <FooterCard
@@ -26,13 +26,13 @@ function Footer() {
             text1="Lifestyle TVs"
             href_one="/product"
             text2="Companion Portable 24P100"
-            href_two="/industries"
+            href_two="/product/3"
             text3="UE7600 Series 4K Google TV"
-            href_three="/portfolios"
+            href_three="/product/5"
             text4="UD7300 Series 4K Google TV"
-            href_four="/contact-us"
+            href_four="/product/6"
             text5="75UD6300 Series 4K Google TV"
-            href_five="/privacypolicy"
+            href_five="/product/11"
             mt={{ xs: '10%', sm: 0 }}
           />
           <FooterCard

@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Typography, Grid, Button, Tabs, Tab, Paper, Divider, Link } from '@mui/material';
-import { products } from './../Product/ProductData';
 
-const ProductDetailPage = () => {
+const ProductDetailPage = ({product}) => {
     const [tabValue, setTabValue] = useState(0);
-    const product = products[0];
-
+    console.log(product)
     const handleTabChange = (event, newValue) => {
         setTabValue(newValue);
     };
@@ -43,17 +41,17 @@ const ProductDetailPage = () => {
                         <Box sx={{ padding: '16px 30px', borderLeft: '1px solid #e0e0e0', borderRight: '1px solid #e0e0e0', background: 'white', borderBottom: '1px solid #e0e0e0', flex: 1 }}>
                             {tabValue === 0 && (
                                 <Typography variant="body1" fontSize={'16px'} paragraph>
-                                    {product.overview}
+                                    {product?.overview}
                                 </Typography>
                             )}
                             {tabValue === 1 && (
                                 <Typography variant="body1" fontSize={'16px'} paragraph>
-                                    {product.specifications}
+                                    {product?.specifications}
                                 </Typography>
                             )}
                             {tabValue === 2 && (
                                 <Typography variant="body1" fontSize={'16px'} paragraph>
-                                    {product.downloads}
+                                    {product?.downloads}
                                 </Typography>
                             )}
                         </Box>
