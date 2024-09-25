@@ -2,8 +2,11 @@ import { useRouter } from 'next/router';
 import { Box, Typography } from '@mui/material';
 import EventBanner from '../../components/EventDetails/Banner';
 import ImageGallery from '../../components/EventDetails/ImageGallery';
-import eventsData from "../../components/EventsNews/Events.json"; 
+import eventsData from "../../components/EventsNews/Events.json";
 import { useRef, useState } from 'react';
+import LeaveComment from '../../components/EventDetails/LeaveComment';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ProfileItem from '../../components/EventDetails/ProfileItem';
 
 function EventsDetail() {
   const router = useRouter();
@@ -39,7 +42,16 @@ function EventsDetail() {
             {paragraph}
           </Typography>
         ))}
+
       </Box>
+      <Box sx={styles.paragraphContainer1}>
+      <ProfileItem
+        iconUrl={'https://secure.gravatar.com/avatar/bccaa7edd010a1778059e202c747d9b2?s=160&d=mm&r=g'}
+        text="Skyworth"
+        iconSize={80}
+      />
+      </Box>
+      <LeaveComment />
     </Box>
   );
 }
@@ -55,14 +67,21 @@ const styles = {
     margin: '0 auto',
     mb: 10
   },
+  paragraphContainer1: {
+    mt: 4,
+    pt: 2,
+    pb: 2,
+    maxWidth: '1000px',
+    margin: '0 auto',
+    mb: 10
+  },
   paragraph: {
     fontSize: '16px',
     lineHeight: '1.6',
+    fontFamily: 'Kanit',
     mt: 6,
     mb: 6,
-   
     transition: "opacity 1.5s ease, transform 1.5s ease",
-   
   }
 };
 

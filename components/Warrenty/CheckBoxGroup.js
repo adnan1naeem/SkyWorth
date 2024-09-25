@@ -1,6 +1,6 @@
 import { FormControl, FormLabel, FormGroup, FormControlLabel, Checkbox, Typography } from '@mui/material';
 
-const CheckboxGroup = ({ label, options, selectedValues, onChange, required }) => {
+const CheckboxGroup = ({ label, options, selectedValues, onChange, required,textcolor }) => {
   const isSingleOption = typeof options === 'string';
 
   return (
@@ -18,7 +18,7 @@ const CheckboxGroup = ({ label, options, selectedValues, onChange, required }) =
                 onChange={(e) => onChange(e, options)}
               />
             }
-            label={<Typography sx={{ fontFamily: 'Kanit', fontWeight: '400', color: '#0069c8' }}>
+            label={<Typography sx={{ fontFamily: 'Kanit', fontWeight: '400', color: textcolor?textcolor:'#0069c8' }}>
               {options}
             </Typography>}
           />

@@ -52,30 +52,30 @@ function EventCard() {
 
         {/* Bottom Section (Icons and Info) */}
         <Box
-  sx={{
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    p: 2,
-    borderTop: "1px solid grey",   // Adding top border
-    borderBottom: "1px solid grey", // Adding bottom border
-  }}
->
-  <Box sx={{ display: "flex", alignItems: "center" }}>
-    <PersonOutlineIcon sx={{ fontSize: 16, mr: 1 }} />
-    <Typography variant="body2">skyworth</Typography>
-  </Box>
-  <Box sx={{ display: "flex", alignItems: "center" }}>
-    <IconButton size="small">
-      <ChatBubbleOutlineIcon sx={{ fontSize: 16 }} />
-    </IconButton>
-    <Typography variant="body2">0</Typography>
-    <IconButton size="small" sx={{ ml: 2 }}>
-      <FavoriteBorderIcon sx={{ fontSize: 16 }} />
-    </IconButton>
-    <Typography variant="body2">0</Typography>
-  </Box>
-</Box>
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            p: 2,
+            borderTop: "1px solid grey",   // Adding top border
+            borderBottom: "1px solid grey", // Adding bottom border
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <PersonOutlineIcon sx={{ fontSize: 16, mr: 1 }} />
+            <Typography variant="body2">skyworth</Typography>
+          </Box>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <IconButton size="small">
+              <ChatBubbleOutlineIcon sx={{ fontSize: 16 }} />
+            </IconButton>
+            <Typography variant="body2">0</Typography>
+            <IconButton size="small" sx={{ ml: 2 }}>
+              <FavoriteBorderIcon sx={{ fontSize: 16 }} />
+            </IconButton>
+            <Typography variant="body2">0</Typography>
+          </Box>
+        </Box>
 
       </Card>
     </Box>
