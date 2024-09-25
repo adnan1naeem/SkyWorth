@@ -3,6 +3,7 @@ import { Card, CardContent, Typography, Box } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { styled } from "@mui/system";
+import Link from "next/link";
 
 const ZoomableImageContainer = styled(Box)({
   position: "relative",
@@ -78,60 +79,70 @@ export default function EventCard({ heading, image }) {
               transition: "opacity 1.5s ease, transform 1.5s ease", // Transition for both opacity and transform
             }}
           >
-            <Typography variant="body2">Events</Typography>
+            <Typography variant="body2" sx={{fontFamily: "Kanit",}}>Events</Typography>
           </Box>
         </Box>
 
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            mb: 2,
-            cursor: "pointer",
-            "&:hover": { color: "#0069c8" },
-            transition: "color 0.3s ease",
-          }}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-        >
-          <Typography
-            variant="h6"
-            component="h1"
-            sx={{
-              fontSize: { xs: "14px", sm: "16px" },
-              width: "80%",
-              color: hovered ? "#0069c8" : "black",
-              mt: 2.5,
-              fontWeight: "bold",
-              transition: "color 0.3s ease",
+        <Link
+            href={{
+              pathname: '/event-detail',
+              query: { title: encodeURIComponent(heading) },
             }}
+            passHref
           >
-            {heading}
-          </Typography>
-
-          {hovered ? (
-            <ArrowRightAltIcon
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              mb: 2,
+              cursor: "pointer",
+              "&:hover": { color: "#0069c8" },
+              transition: "opacity 1.5s ease, transform 1.5s ease", 
+            }}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            <Typography
+              variant="h6"
+              component="h6"
               sx={{
-                fontSize: "30px",
-                color: "#0069c8",
-                transition: "0.3s ease",
-              }}
-            />
-          ) : (
-            <ArrowForwardIosIcon
-              sx={{
-                fontSize: { xs: "20px", sm: "25px" },
-                border: "2px solid black",
-                borderRadius: "50%",
-                padding: "4px",
+                fontSize: { xs: "15px", sm: "18px" },
+                width: "80%",
                 color: hovered ? "#0069c8" : "black",
-                transition: "all 0.3s ease",
-                marginTop: 1,
+                mt: 2.5,
+                fontWeight: "500",
+                transition: "color 0.3s ease",
+                fontFamily: "Kanit",
+
               }}
-            />
-          )}
-        </Box>
+            >
+              {heading}
+            </Typography>
+
+            {hovered ? (
+              <ArrowRightAltIcon
+                sx={{
+                  fontSize: "30px",
+                  color: "#0069c8",
+                  transition: "0.3s ease",
+                }}
+              />
+            ) : (
+              <ArrowForwardIosIcon
+                sx={{
+                  fontSize: { xs: "20px", sm: "25px" },
+                  border: "2px solid black",
+                  borderRadius: "50%",
+                  padding: "4px",
+                  color: hovered ? "#0069c8" : "black",
+                  transition: "all 0.3s ease",
+                  marginTop: 1,
+                }}
+              />
+            )}
+          </Box>
+        </Link>
       </CardContent>
     </Card>
   );

@@ -75,6 +75,7 @@ function Retailer({ title = "RETAILER", description = "Locate your nearest retai
           ...styles.heading,
           opacity: isVisible ? 1 : 0, // Fade in when visible
           transform: isVisible ? 'translateY(0)' : 'translateY(20px)', // Slide effect from below
+          
         }}
       >
         {title}
