@@ -8,7 +8,7 @@ const Index = () => {
 
 
   return (
-    <Box sx={{ marginTop: '100px' }}>
+    <Box sx={{ marginTop: {xs:'70px',md:"70px",lg:'90px'} }}>
       <Retailer
         title="Contact Us" 
         description="" 

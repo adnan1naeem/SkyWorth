@@ -1,18 +1,18 @@
-import { Grid, Box, Button, Typography, Rating } from '@mui/material';
+import { Grid, Box, Button, Typography, Rating, FormControlLabel, Checkbox } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import TextInput from './../Warrenty/TextInput';
-import CheckboxGroup from './../Warrenty/CheckBoxGroup';
 import { motion, useInView } from 'framer-motion';
 import { brandOptions } from './contactData';
 import { useRef } from 'react';
 
 const FeedBackForm = () => {
-    const tabContentRef = useRef(null); // Create a ref
-    const isInView = useInView(tabContentRef, { once: true }); // Use isInView for the ref
+    const tabContentRef = useRef(null);
+    const isInView = useInView(tabContentRef, { once: true });
 
     const { register, handleSubmit, setValue, formState: { errors }, watch } = useForm();
 
     const onSubmit = (data) => {
+        console.log(errors)
         console.log(data);
     };
 
@@ -82,14 +82,23 @@ const FeedBackForm = () => {
                                     {errors.comments && <Typography color="error">{errors.comments.message}</Typography>}
                                 </Grid>
                                 <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.3 }} variants={animationVariants}>
-                                    <CheckboxGroup
-                                        required={true}
-                                        label="How did you find out about our brand?"
-                                        options={brandOptions}
-                                        {...register('brandSource', { validate: value => value?.length > 0 || 'Select at least one option' })}
-                                        value={watch('brandSource')}
-                                        onChange={(e) => setValue('brandSource', e.target.value)}
-                                    />
+                                    <Typography variant="body2" sx={{ marginBottom: '4px', fontSize: 16, fontFamily: 'Kanit', fontWeight: '400', }}>
+                                        How did you find out about our brand?<span style={{ color: 'red' }}> *</span>
+                                    </Typography>
+                                    <Grid container direction="column" spacing={1}sx={{paddingLeft:'10px'}}>
+                                    {brandOptions.map((option, index) => (
+                                        <FormControlLabel
+                                            key={index}
+                                            control={
+                                                <Checkbox
+                                                    checked={watch('brandSource') === option}
+                                                    onChange={() => setValue('brandSource', option)}
+                                                />
+                                            }
+                                            label={option}
+                                        />
+                                    ))}
+                                    </Grid>
                                     {errors.brandSource && <Typography color="error">{errors.brandSource.message}</Typography>}
                                 </Grid>
                                 <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.5 }} variants={animationVariants}>

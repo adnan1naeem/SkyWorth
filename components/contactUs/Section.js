@@ -73,11 +73,12 @@ const ProductDetailPage = ({ product }) => {
                         align="center"
                         gutterBottom
                         fontFamily={"Kanit"}
+                        
                         sx={{ marginBottom: 0, marginTop: '5%' }}
                     >
                         Our Service Center Location
                     </Typography>
-                </motion.div>
+
 
                 <Typography
                     align="center"
@@ -86,7 +87,7 @@ const ProductDetailPage = ({ product }) => {
                 >
                     Kindly contact our service centers in your location below for support and service.
                 </Typography>
-
+                </motion.div>
                 <Grid container spacing={4}>
                     <Grid item xs={12}>
                         <Paper elevation={0} sx={{ background: 'none', padding: { xs: '0px', md: '16px' } }}>
