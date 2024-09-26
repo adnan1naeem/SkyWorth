@@ -38,7 +38,7 @@ function Footer() {
           <FooterCard
             title="Media Center"
             text1="News"
-            href_one="/about"
+            href_one="/news-events"
             text2="Media Registration"
             href_two="/industries"
             text3="Resources for Download"

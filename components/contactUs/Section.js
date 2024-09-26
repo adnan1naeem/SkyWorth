@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Box, Typography, Grid, Tabs, Tab, Paper } from '@mui/material';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { tabContent, tabLabels } from './contactData'
+
 const ProductDetailPage = ({ product }) => {
     const [tabValue, setTabValue] = useState(0);
+    const tabContentRef = useRef(null);
+    const isInView = useInView(tabContentRef, { once: true });
+
     const handleTabChange = (event, newValue) => {
         setTabValue(newValue);
     };
@@ -11,20 +15,22 @@ const ProductDetailPage = ({ product }) => {
     const renderBoxes = (content) => {
         const boxes = content.map((item, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
-                <Box sx={{
-                    padding: { xs: "20px", md: "20px", lg: "40px" },
-                    border: '1px solid #e0e0e0',
-                    minHeight: '300px',
-                    backgroundColor: 'white',
-                    boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.1)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                }}>
+                <Box
+                    sx={{
+                        padding: { xs: "20px", md: "20px", lg: "40px" },
+                        border: '1px solid #e0e0e0',
+                        minHeight: '300px',
+                        backgroundColor: 'white',
+                        boxShadow: '0px 5px 10px rgba(0, 0, 0, 0.1)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'space-between',
+                    }}
+                >
                     <motion.div
                         key={tabValue}
                         initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
                         transition={{ duration: 0.9, ease: "easeInOut" }}
                     >
                         <Typography variant="h6" fontSize={'20px'} fontFamily={"Kanit"} fontWeight="400" color='#0069CB' paragraph>
@@ -59,7 +65,7 @@ const ProductDetailPage = ({ product }) => {
             <Box container spacing={4} sx={{ margin: { xs: "none", md: 'auto' }, padding: 2 }} maxWidth={"xl"}>
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50, }}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
                     <Typography
@@ -124,8 +130,9 @@ const ProductDetailPage = ({ product }) => {
                             </Tabs>
                             <motion.div
                                 key={tabValue}
+                                ref={tabContentRef} // Adding ref to the animated container
                                 initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
+                                animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }} // Animate based on in-view
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
                             >
                                 <Box sx={{

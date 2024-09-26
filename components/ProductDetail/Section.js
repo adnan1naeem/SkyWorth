@@ -81,7 +81,7 @@ const ProductDetailPage = ({product}) => {
                                 Our experts are ready to help you with any questions you have.
                             </Typography>
                             <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between', }}>
-                            <Button sx={{ fontSize: { sm:'10px',md: '12px', lg: '16px' }, padding: {sm:'12px 30px'}, border: '2px solid #cccccc', color: 'black', borderRadius: 30, marginTop: '10px',alignSelf:'center' }} fontFamily={'SKSans,sans-serif'}>
+                            <Button href='./../contactUs' sx={{ fontSize: { sm:'10px',md: '12px', lg: '16px' }, padding: {sm:'12px 30px'}, border: '2px solid #cccccc', color: 'black', borderRadius: 30, marginTop: '10px',alignSelf:'center' }} fontFamily={'SKSans,sans-serif'}>
                                 Contact Us
                             </Button>
 

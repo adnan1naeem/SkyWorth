@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Grid, Typography, Card, CardMedia, CardContent } from '@mui/material';
 
 const ProductDisplay = (product) => {
-    const data = product?.product?.product;
-    const [mainImage, setMainImage] = useState(data.image[0]);
+    let data = '';
+    data = product?.product?.product;
+    const [mainImage, setMainImage] = useState(null);
+    useEffect(() => {
+        setMainImage(data?.image[0])
+    }, [product])
 
     return (
         <Grid container spacing={4} sx={{ maxWidth: '1200px', margin: { xs: 'none', md: 'auto' }, padding: 2 }}>
