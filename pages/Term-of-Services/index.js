@@ -1,18 +1,15 @@
 import React from "react";
 import PrivacyPolicyText from "../../components/PolicyText";
-import Breadcrumb from "../../components/BreadCrumb";
-import { Box, Container } from "@mui/material";
-import ReturnPolicy from './ReturnPolicy.json'
+import { Box } from "@mui/material";
+import TermServices from './TermServices.json'
 function Index() {
   return (
     <div>
-      <Container maxWidth="xl">
-        <Breadcrumb paddingTop={{ xs: '25%', sm: '18%', md: '12%', lg: '5%' }} />
-      </Container>
-      <Box sx={{ marginTop: '3%' }}></Box>
+      <Box paddingTop={{ xs: '20%', sm: '15%', md: '8%', lg: '5%' }}></Box>
 
-      {ReturnPolicy.map((item, index) => (
+      {TermServices.map((item, index) => (
         <PrivacyPolicyText
+          termsOfServices={true}
           key={index}
           heading={item.heading}
           description1={item.description1}
@@ -20,6 +17,8 @@ function Index() {
           contactInfo={item.contactInfo}
           strongText={item.strongText}
           phoneNumber={item?.phoneNumber}
+          textwithLink={item?.textwithLink}
+          link={item?.link}
         />
       ))}
       <Box sx={{ marginTop: '5%' }}></Box>

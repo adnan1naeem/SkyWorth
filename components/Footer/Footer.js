@@ -1,4 +1,4 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, IconButton, Link, Typography } from "@mui/material";
 import React from "react";
 import FooterCard from "../FooterCard/FooterCard";
 import FooterReach from "../FooterCard/FooterReach";
@@ -10,7 +10,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <Box sx={{ background: "#00224d", paddingTop: "3%", width:'100%', paddingBottom: '100px',bottom:0 }}>
+    <Box sx={{ background: "#00224d", paddingTop: "3%", width: '100%', paddingBottom: '100px', bottom: 0 }}>
       <Box
         sx={{
           display: "flex",
@@ -44,7 +44,7 @@ function Footer() {
             text3="Resources for Download"
             href_three="/portfolios"
             text4="Skyworth Press Releases"
-            href_four="/contact-us"
+            href_four="/contactUs"
             mt={{ xs: '10%', sm: 0 }}
           />
           <FooterCard
@@ -63,13 +63,13 @@ function Footer() {
             text1="FAQ"
             href_one="/career"
             text2="Product Support"
-            href_two="https://blog.techtiz.co"
+            href_two="/contactUs"
             text3="Warranty Policy"
-            href_three="/WarrentyPolicy"
+            href_three="/Warrenty"
             text4="Privacy Policy"
-            href_four="/contact-us"
+            href_four="/Privacy-Policy"
             text5="Terms of Service"
-            href_five='/ReturnPolicy'
+            href_five='/Term-of-Services'
             mt={{ xs: '12%', sm: 0 }}
           />
           <FooterReach />
@@ -120,7 +120,7 @@ function Footer() {
             alt="Skyworth Logo"
             style={{
               width: "120px",
-              marginBottom:'20px',
+              marginBottom: '20px',
             }}
           />
           <Typography
@@ -142,23 +142,27 @@ function Footer() {
             justifyContent: { xs: 'center', sm: 'center', md: 'center', lg: 'flex-end' },
           }}
         >
-          <Typography
-            sx={{
-              color: "#ffffff",
-              "&:hover": {
-                color: '#bdbdbd',
-              },
-              cursor: "pointer",
-              fontSize: "15px",
-              fontFamily: "Mont-Regular, Sans-serif",
-              fontWeight: 300,
-              "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
-                fontSize: "13px",
-              },
-            }}
-          >
-            Terms of Service
-          </Typography>
+          <Link href="/Term-of-Services">
+            <Typography
+
+              sx={{
+                color: "#ffffff",
+                "&:hover": {
+                  color: '#bdbdbd',
+                },
+                cursor: "pointer",
+                fontSize: "15px",
+                fontFamily: "Mont-Regular, Sans-serif",
+                fontWeight: 300,
+                "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
+                  fontSize: "13px",
+                },
+              }}
+            >
+              Terms of Service
+            </Typography>
+          </Link>
+          <Link href='/Privacy-Policy'>
           <Typography
             sx={{
               color: "#ffffff",
@@ -176,6 +180,7 @@ function Footer() {
           >
             Privacy Policy
           </Typography>
+          </Link>
           <Typography
             sx={{
               color: "#ffffff",
