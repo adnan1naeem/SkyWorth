@@ -73,13 +73,10 @@ const ProductDetailPage = ({ product }) => {
                         align="center"
                         gutterBottom
                         fontFamily={"Kanit"}
-                        
                         sx={{ marginBottom: 0, marginTop: '5%' }}
                     >
                         Our Service Center Location
                     </Typography>
-
-
                 <Typography
                     align="center"
                     fontFamily={"Kanit"}

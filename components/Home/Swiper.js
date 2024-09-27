@@ -4,8 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/bundle';
-import Image1 from './../../assets/swiper1.webp';
-import Image3 from './../../assets/Image3.webp';
+import Image1 from './../../assets/SliderImage1.png';
+import Image2 from './../../assets/SliderImage2.png';
+import Image3 from './../../assets/SliderImage3.png';
+import Image4 from './../../assets/SliderImage4.png';
+import Image5 from './../../assets/SliderImage5.png';
 import { Box, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ChevronLeft';
 import ArrowForwardIcon from '@mui/icons-material/ChevronRight';
@@ -15,31 +18,20 @@ const ImageSwiper = () => {
   const swiperRef = useRef(null);
 
   const slides = [
-    {
-      image: Image1,
-      title: 'Companion P100 Portable Display',
-      desc: 'AVAILABLE NOW',
-      buttonText: 'Buy Now!',
-    },
-    {
-      image: Image3,
-      title:'',
-      buttonText: 'Shop Now',
-    },
-    {
-      image: Image1,
-      title: '',
-      buttonText: 'Shop Now',
-    },
-    {
-      image: Image3,
-      title:'',
-      buttonText: 'Shop Now',
-    },
+    { image: Image1 },
+    { image: Image2 },
+    { image: Image3 },
+    { image: Image4 },
+    { image: Image5 },
   ];
 
   return (
-    <Box sx={{ position: 'relative', width: { xs: '100%', sm: '100%', md: '100%', lg: '80%' }, margin: 'auto', marginTop: { xs: '11%', sm: '8%', md: '7%', lg: '7%', xl: '5%' } }}>
+    <Box sx={{ 
+      position: 'relative', 
+      width: { xs: '100%', sm: '100%', md: '100%', lg: '80%' }, 
+      margin: 'auto', 
+      marginTop: { xs: '15%', sm: '10%', md: '5%', lg: '3%' }
+    }}>
       <Swiper
         modules={[Navigation, A11y]}
         spaceBetween={30}
@@ -54,50 +46,51 @@ const ImageSwiper = () => {
               sx={{
                 display: 'flex',
                 alignItems: 'center',
-                height: {xs:'500px',sm:'500px',md:'600px',lg:'680px',xl:'680px'},  // Set a fixed height for the background container
+                justifyContent: 'center',
+                height: { xs: '220px', sm: '320px', md: '420px', lg: '650px', xl: '700px' },
                 backgroundImage: `url(${slide.image.src})`,
                 backgroundPosition: 'center',
-                backgroundSize: 'cover',
+                backgroundSize: { xs: 'contain', sm: 'cover' },
                 backgroundRepeat: 'no-repeat',
               }}
             >
               <Box
                 sx={{
-                  padding: '20px',
-                  marginLeft:"60px",
-                  borderRadius: '10px', // Optional: Rounded corners
+                  padding: { xs: '10px', md: '20px' },
+                  marginLeft: { xs: '10px', md: '60px' },
+                  borderRadius: '10px', 
                 }}
               >
-                <Typography
-                  variant="h4"
-                  sx={{
-                    width:'60%',
-                    fontSize: { xs: 30, lg: 42 },  // 30px for mobile, 42px for large screens
-                    color: 'white',
-                    fontWeight: '400',
-                  }}
-                >
-                  {slide.title}
-                </Typography>
-
-                <button
-                  style={{
-                    padding: '15px 30px',
-                    borderRadius: 50,
-                    backgroundColor: '#fff',
-                    color: '#212121',
-                    border: 'none',
-                    border: '2px solid #cccccc',
-                    fontSize: 16,
-                    marginTop: slide.title?'20px':'160px',
-                  }}
-                >
-                  {slide.buttonText}
-                </button>
+                {slide?.title && (
+                  <Typography
+                    variant="h4"
+                    sx={{
+                      fontSize: { xs: 24, sm: 30, lg: 42 },
+                      color: 'white',
+                      fontWeight: '400',
+                    }}
+                  >
+                    {slide?.title}
+                  </Typography>
+                )}
+                {slide?.buttonText && (
+                  <button
+                    style={{
+                      padding: '10px 20px',
+                      borderRadius: 50,
+                      backgroundColor: '#fff',
+                      color: '#212121',
+                      border: 'none',
+                      fontSize: 14,
+                      marginTop: slide.title ? '10px' : '120px',
+                    }}
+                  >
+                    {slide.buttonText}
+                  </button>
+                )}
               </Box>
             </Box>
           </SwiperSlide>
-
         ))}
       </Swiper>
       <Box sx={{ position: 'absolute', top: 'calc(100% + 1%)', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

@@ -12,7 +12,6 @@ const FeedBackForm = () => {
     const { register, handleSubmit, setValue, formState: { errors }, watch } = useForm();
 
     const onSubmit = (data) => {
-        console.log(errors)
         console.log(data);
     };
 
