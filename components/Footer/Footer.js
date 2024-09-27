@@ -9,38 +9,43 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <Box sx={{ background: "#00224d", paddingTop: "1%", width: '100%', paddingBottom: '30px', bottom: 0 }}>
+    <Box sx={{ background: "#00224d", pt: "1%", pb: '30px', width: '100%', bottom: 0 }}>
       <Box
         sx={{
-          marginTop: "1%",
+          mt: "1%",
           display: "flex",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          paddingLeft: { xs: "8%", lg: "5.5%", xl: "16%" },
-          paddingRight: { xs: "10%", lg: "10.5%" },
-          paddingBottom: "0.5%",
+          px: { xs: "8%", lg: "5.5%", xl: "16%" },
+          pb: "0.5%",
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: { xs: "20px", md: "50px" },
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
-          <FooterCard
-            title="About"
-            text1="About Us"
-            href_one="/aboutUs"
-            text2="Contact Us"
-            href_two="/contactUs"
-            text3="Service Center"
-            href_three="/contactUs"
-            text4="FAQ"
-            href_four="/faq"
-          />
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: { xs: "20px", md: "50px" }, justifyContent: "space-between", width: "100%" }}>
+          <Box>
+            <FooterCard
+              title="About"
+              text1="About Us"
+              href_one="/aboutUs"
+              text2="Contact Us"
+              href_two="/contactUs"
+              text3="Service Center"
+              href_three="/contactUs"
+              text4="FAQ"
+              href_four="/faq"
+            />
+            <Box sx={{ display: { xs: "none", lg: "block" }, mt: 6 }}>
+              <Image
+                src={require('./../../assets/skyworth-white-logo.svg')}
+                alt="Skyworth Logo"
+                width={120} 
+                height={40}
+                style={{
+                  alignSelf: "center",
+                  mb: "20px",
+                }}
+              />
+            </Box>
+          </Box>
           <FooterCard
             title="Product"
             text1="All Products"
@@ -55,103 +60,106 @@ function Footer() {
             href_five="/product/11"
             mt={{ xs: '10%', sm: 0 }}
           />
-          <FooterCard
-            title="Service & Support"
-            text1="Where to Buy"
-            href_one="/whereToBuy"
-            text2="Warranty Information"
-            href_two="/Warrenty"
-            text3="Privacy Policy"
-            href_three="/Privacy-Policy"
-          />
-        </Box>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          flexDirection: { xs: "column", md: 'row' },
-          flexWrap: "wrap",
-          paddingLeft: { xs: "8.6%", lg: "5.7%", xl: "16.2%" },
-          paddingRight: { xs: "10%", lg: "10.5%" },
-          alignItems: "center", 
-        }}
-      >
-        <Box sx={{ flex: 1, alignSelf: { xs: "flex-start", md: 'self-end' } }}>
-          <Image
-            src={require('./../../assets/skyworth-white-logo.svg')}
-            alt="Skyworth Logo"
-            style={{
-              width: "120px",
-              alignContent: "center",
-              marginBottom: "20px",
-              "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
-                fontSize: "13px",
-                ml: "-10%",
-              },
-            }}
-          />
-        </Box>
-        <Box sx={{ textAlign: { xs: 'start', md: "center" }, alignSelf: { xs: "flex-start", md: "center" }, width: "100%", maxWidth: "400px" }}>
-          <Typography variant="h6" sx={{ color: "#fff", marginBottom: "1rem", fontSize: "21px",fontWeight: 600, }}>
-            Our Social Media
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              gap: "1rem",
-              float: { xs: 'inline-start', md: "none" },
-              justifyContent: "center",
-              "@media screen and (min-width: 100px) and (max-width: 467px)": {
-                marginTop: "3%",
-              },
-            }}
-          >
-            <IconButton sx={{ color: "#fff", border: "1px solid #fff", borderRadius: "50%", height: 55, width: 55 }}>
-              <FacebookIcon />
-            </IconButton>
-            <IconButton sx={{ color: "#fff", border: "1px solid #fff", borderRadius: "50%", height: 55, width: 55 }}>
-              <TwitterIcon />
-            </IconButton>
-            <IconButton sx={{ color: "#fff", border: "1px solid #fff", borderRadius: "50%", height: 55, width: 55 }}>
-              <InstagramIcon />
-            </IconButton>
-            <IconButton sx={{ color: "#fff", border: "1px solid #fff", borderRadius: "50%", height: 55, width: 55 }}>
-              <YouTubeIcon />
-            </IconButton>
+          <Box>
+            <FooterCard
+              title="Service & Support"
+              text1="Where to Buy"
+              href_one="/whereToBuy"
+              text2="Warranty Information"
+              href_two="/Warrenty"
+              text3="Privacy Policy"
+              href_three="/Privacy-Policy"
+            />
+            <Box sx={{ display: { xs: "none", lg: "block" }, mt: 2 }}>
+              <Typography variant="h6" sx={{ color: "#fff", mb: 2, fontSize: "21px", fontWeight: 600 }}>
+                Our Social Media
+              </Typography>
+              <Box sx={{ display: "flex", gap: 2 }}>
+                <SocialIcon icon={<FacebookIcon />} />
+                <SocialIcon icon={<TwitterIcon />} />
+                <SocialIcon icon={<InstagramIcon />} />
+                <SocialIcon icon={<YouTubeIcon />} />
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>
       <Box
         sx={{
-          marginTop: "2%",
+          display: { xs: "flex", lg: "none" },
+          justifyContent: "space-between",
+          flexDirection: { xs: "column", md: 'row' },
+          flexWrap: "wrap",
+          px: { xs: "8.6%", lg: "5.7%", xl: "16.2%" },
+          alignItems: "center",
+          mt: 2
+        }}
+      >
+        <Box sx={{textAlign:'flex-start',width:'100%'}}>
+          <Image
+            src={require('./../../assets/skyworth-white-logo.svg')}
+            alt="Skyworth Logo"
+            width={120}
+            height={40}
+          />
+        </Box>
+
+        <Box sx={{ textAlign: 'start', width: "100%",marginTop:'20px' }}>
+          <Typography variant="h6" sx={{ color: "#fff", mb: 2, fontSize: "21px", fontWeight: 600 }}>
+            Our Social Media
+          </Typography>
+          <Box sx={{ display: "flex", gap: 2, justifyContent:'start' }}>
+            <SocialIcon icon={<FacebookIcon />} />
+            <SocialIcon icon={<TwitterIcon />} />
+            <SocialIcon icon={<InstagramIcon />} />
+            <SocialIcon icon={<YouTubeIcon />} />
+          </Box>
+        </Box>
+      </Box>
+
+      {/* Footer Bottom: Copyright */}
+      <Box
+        sx={{
+          mt: "2%",
           borderTop: "1.5px solid #ccc",
           display: "flex",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          paddingLeft: { xs: "8%", lg: "5.5%", xl: "16%" },
-          paddingRight: { xs: "10%", lg: "10.5%" },
-          paddingTop: "2%",
+          px: { xs: "8%", lg: "5.5%", xl: "16%" },
+          pt: "2%",
         }}
       >
-        <Box>
-          <Typography
-            sx={{
-              color: "white",
-              fontWeight: 400,
-              fontSize: "14px",
-              fontFamily: "Mont-Regular, Sans-serif",
-              "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
-                fontSize: "13px",
-                ml: '-10%',
-              },
-            }}>
-            © 2024 SkyWoth
-          </Typography>
-        </Box>
+        <Typography
+          sx={{
+            color: "white",
+            fontWeight: 400,
+            fontSize: "14px",
+            fontFamily: "Mont-Regular, Sans-serif",
+            "@media (min-width: 1200px) and (max-width: 1300px)": {
+              fontSize: "13px",
+              ml: '-10%',
+            },
+          }}>
+          © 2024 SkyWorth
+        </Typography>
       </Box>
     </Box>
   );
 }
+
+// SocialIcon helper component for reusable styling
+const SocialIcon = ({ icon }) => (
+  <IconButton
+    sx={{
+      color: "#fff",
+      border: "1px solid #fff",
+      borderRadius: "50%",
+      height: 55,
+      width: 55,
+    }}
+  >
+    {icon}
+  </IconButton>
+);
 
 export default Footer;

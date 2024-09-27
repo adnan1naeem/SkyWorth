@@ -5,7 +5,7 @@ import TVProductCard from '../../components/Home/TVProductCard'
 import { Container } from '@mui/material';
 import BackgrondImages from './../../assets/select.jpg'
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
-import HomePage1 from './../../assets/HomePage1.jpeg'
+import HomePage1 from './../../assets/homePage1.jpg'
 import HomePage2 from './../../assets/homePage2.png'
 import ResponsiveTVProductGrid from "./CardData";
 function HomeScreen() {
