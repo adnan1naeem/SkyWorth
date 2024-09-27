@@ -49,10 +49,14 @@ const TVProductCard = ({ title, description, image, buttonText }) => (
       sx={{ objectFit: 'contain', padding: '16px', height: '200px' }}
     />
     <CardContent>
-      <Typography gutterBottom variant="h7" component="div">
+      <Typography gutterBottom sx={{
+        fontSize: '1.5rem',
+        color: '#0c3034',
+        fontWeight: 400,
+      }} component="div">
         {title}
       </Typography>
-      <Typography sx={{fontSize:{xs:18,sm:18,md:18,lg:20},fontWeight:'light'}}color="black">
+      <Typography sx={{ fontSize: { xs: 18, sm: 18, md: 18, lg: 20 }, fontWeight: 'light' }} color="black">
         {description}
       </Typography>
       <Button
@@ -76,11 +80,11 @@ const TVProductCard = ({ title, description, image, buttonText }) => (
 );
 
 const ResponsiveTVProductGrid = () => (
-  <Container sx={{marginTop:'50px'}} maxWidth={"xl"}>
-    <Typography variant="h4" sx={{fontWeight:'light',padding:'10px'}} align="center" gutterBottom>
+  <Container sx={{ marginTop: '50px' }} maxWidth={"xl"}>
+    <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px' }} align="center" gutterBottom>
       Choosing the right SKYWORTH TV for you.
     </Typography>
-    <Grid container spacing={2} justifyContent={{xs:"center"}}>
+    <Grid container spacing={2} justifyContent={{ xs: "center" }}>
       {tvProducts.map((product, index) => (
         <Grid item margin={0} key={index}>
           <TVProductCard {...product} />

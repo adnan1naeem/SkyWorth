@@ -3,7 +3,7 @@ import ImageSlider from "./../../components/Home/Swiper";
 import CenteredImageWithText from "../../components/Home/CenterImageContainer";
 import TVProductCard from '../../components/Home/TVProductCard'
 import { Container } from '@mui/material';
-import BackgrondImages from './../../assets/backgroundImage.webp'
+import BackgrondImages from './../../assets/select.jpg'
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
 import HomePage1 from './../../assets/HomePage1.jpeg'
 import HomePage2 from './../../assets/homePage2.png'
@@ -19,19 +19,17 @@ function HomeScreen() {
         ButtonText={"Read More"}
       />
       <TVProductCard />
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{marginTop:'50px'}}>
         <CenteredImageWithText imageSrc={HomePage1} />
-      </Container>
-      <Container maxWidth={"lg"}>
-      <CenteredImageWithText
-        imageSrc={HomePage2}
-        text="Say hello to a smarter TV"
-        body="Simplify your entertainment experience with Android TV. Discover 700,000+* movies and shows in one place. Ask Google to control your TV with your voice. And cast your photos, videos, and music from devices to your TV easily with Chromecast built-in."
-        ButtonText={"Learn More"}
-      />
+        <CenteredImageWithText
+          imageSrc={HomePage2}
+          text="Say hello to a smarter TV"
+          body="Simplify your entertainment experience with Android TV. Discover 700,000+* movies and shows in one place. Ask Google to control your TV with your voice. And cast your photos, videos, and music from devices to your TV easily with Chromecast built-in."
+          ButtonText={"Learn More"}
+        />
       </Container>
       <Container maxWidth="xl">
-        <ResponsiveTVProductGrid/>
+        <ResponsiveTVProductGrid />
       </Container>
       <LeftAlignedBoxWithBackground backgroundImage={BackgrondImages} buttonText={"Shop All SKYWORTH TVs"} />
     </div>

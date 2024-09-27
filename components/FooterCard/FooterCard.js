@@ -17,8 +17,8 @@ function FooterCard({...props}) {
           <Typography
             sx={{
               color: "#ffffff",
-              fontSize: "22px",
-              fontWeight: "350",
+              fontSize: "21px",
+              fontWeight: 600,
               paddingBottom: "10%",
               fontFamily: "Mont-Bold, Sans-serif",
             }}
@@ -38,11 +38,11 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "15px",
+                fontSize: "18px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 300,
+                fontWeight: 400,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
-                  fontSize: "13px",
+                  fontSize: "17px",
                 },
               }}
             >
@@ -62,11 +62,11 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "15px",
+                fontSize: "18px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 300,
+                fontWeight: 400,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
-                  fontSize: "13px",
+                  fontSize: "17px",
                 },
               }}
             >
@@ -86,11 +86,11 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "15px",
+                fontSize: "18px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 300,
+                fontWeight: 400,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
-                  fontSize: "13px",
+                  fontSize: "17px",
                 },
               }}
             >
@@ -110,11 +110,11 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "15px",
+                fontSize: "18px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 300,
+                fontWeight: 400,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
-                  fontSize: "13px",
+                  fontSize: "17px",
                 },
               }}
             >
@@ -133,11 +133,11 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "15px",
+                fontSize: "18px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 300,
+                fontWeight: 400,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
-                  fontSize: "13px",
+                  fontSize: "17px",
                 },
               }}
             >
