@@ -28,21 +28,19 @@ const ImageSwiper = () => {
 
   const handleNextSlide = () => {
     if (activeIndex === slides.length - 1) {
-      // If we're on the last slide, go back to the first slide
       swiperRef.current.slideTo(0);
-      setActiveIndex(0); // Reset the index
+      setActiveIndex(0);
     } else {
-      swiperRef.current.slideNext(); // Move to the next slide
+      swiperRef.current.slideNext();
     }
   };
 
   const handlePrevSlide = () => {
     if (activeIndex === 0) {
-      // Optional: You can handle if on first slide and click back to go to the last slide.
       swiperRef.current.slideTo(slides.length - 1);
       setActiveIndex(slides.length - 1);
     } else {
-      swiperRef.current.slidePrev(); // Move to the previous slide
+      swiperRef.current.slidePrev();
     }
   };
 

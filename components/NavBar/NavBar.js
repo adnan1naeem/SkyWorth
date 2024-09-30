@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { Container, IconButton, InputAdornment, TextField } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 const Navbar = () => {
   const router = useRouter();
 
@@ -95,11 +96,12 @@ const Navbar = () => {
           </li>
           <div className={styles.dropdown}>
             <li
-              style={{ display: "flex" }}
+              style={{ display: "flex",alignItems:'center' }}
               className={styles.dropbtn}
               onClick={toggleDropdown}
             >
               <TextNav label="PRODUCT" />
+              <ArrowDropDownIcon style={{ marginLeft: '2px',fill:'black' }} />
             </li>
             {isWideScreen && (
               <div className={styles["dropdown-content"]}>
@@ -124,42 +126,51 @@ const Navbar = () => {
               <ul style={{ paddingLeft: "10px" }}>
                 <li
                   className={
-                    router.pathname === "/mobile-application"
+                    router.pathname === "/product"
                       ? styles.menu
                       : styles.drop
                   }
                 >
-                  <Link href="/mobile-application" onClick={closeMenu}>
+                  <Link href="/product" onClick={closeMenu}>
                     <TextNav label="ALL PRODUCTS" />
                   </Link>
                 </li>
                 <li
                   className={
-                    router.pathname === "/website" ? styles.menu : styles.drop
+                    router.pathname === "/product/3" ? styles.menu : styles.drop
                   }
                 >
-                  <Link href="/website" onClick={closeMenu}>
-                    <TextNav label="TELEVISION" />
+                  <Link href="/product/3" onClick={closeMenu}>
+                    <TextNav label="QLED Mini" />
                   </Link>
                 </li>
                 <li
                   className={
-                    router.pathname === "/ui-ux-design"
+                    router.pathname === "/product/5"
                       ? styles.menu
                       : styles.drop
                   }
                 >
-                  <Link href="/ui-ux-design" onClick={closeMenu}>
-                    <TextNav label="FREEZER" />
+                  <Link href="/product/5" onClick={closeMenu}>
+                    <TextNav label="QLED" />
                   </Link>
                 </li>
                 <li
                   className={
-                    router.pathname === "/SQA" ? styles.menu : styles.drop
+                    router.pathname === "/product/6" ? styles.menu : styles.drop
                   }
                 >
-                  <Link href="/sqa" onClick={closeMenu}>
-                    <TextNav label="AIR CONDITIONER" />
+                  <Link href="/product/6" onClick={closeMenu}>
+                    <TextNav label="UHD" />
+                  </Link>
+                </li>
+                <li
+                  className={
+                    router.pathname === "/product/11" ? styles.menu : styles.drop
+                  }
+                >
+                  <Link href="/product/11" onClick={closeMenu}>
+                    <TextNav label="FHD/HD" />
                   </Link>
                 </li>
               </ul>
