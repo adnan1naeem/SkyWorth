@@ -2,18 +2,17 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 
 const containerStyles = {
-  width: {xs:"50vh", sm:'53vh' },
-  height: {xs:"25vh", md:'23vh', lg:'20vh'},
-  border: "2px solid #b3b3b3", // Outer border
+  width: {xs:"50vh", sm:'65vh' },
+  height: {xs:"25vh", md:'16vh', lg:'14vh'},
+  border: "2px solid #CCCCCC80", // Outer border
   position: "relative",
-  padding: "20px",
   boxSizing: "border-box",
 };
 
 const innerBoxStyles = {
   width: "calc(100% - 8px)", // Adjust width to account for outer border thickness
   height: "calc(100% - 8px)", // Adjust height to account for outer border thickness
-  border: "2px solid #b3b3b3", // Inner border
+  border: "2px solid #CCCCCC80", // Inner border
   display: "flex",
   flexDirection: "column",
   position: "absolute",
@@ -26,6 +25,7 @@ const headingStyles = {
   fontWeight: "bold",
   marginBottom: "8px",
   marginLeft: '24px',
+  fontFamily:"Kanit",
   marginTop:'35px',
   color:'#0062b1'
 };
@@ -33,6 +33,7 @@ const headingStyles = {
 const paragraphStyles = {
   marginLeft: '24px',
   color:'#666666',
+  fontFamily:"Kanit",
   marginTop:'7px',
 };
 

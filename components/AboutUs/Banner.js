@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-
+import AboutImage from './../../assets/AboutImage1.png';
 // Define styles as objects
 const bannerContainerStyles = {
   height: {
@@ -30,7 +30,7 @@ function Banner() {
     <Box sx={bannerContainerStyles}>
       <Box sx={imageContainerStyles}>
         <img
-          src="https://skyworth.com.my/wp-content/uploads/2023/08/beautiful-architecture-building-exterior-cityscape-singapore-city-skyline.jpg"
+          src={AboutImage?.src}
           alt="main"
           style={imageStyles}
         />

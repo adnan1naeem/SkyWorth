@@ -1,13 +1,13 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 
-const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText }) => {
+const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, description }) => {
     return (
         <Box
             sx={{
                 width: '100%',
                 height: '640px',
-                backgroundImage: `url(${backgroundImage.src || backgroundImage})`, // handles both local import and URL
+                backgroundImage: `url(${backgroundImage.src || backgroundImage})`,
                 background: 'linear-gradient(90deg, #000000fe, #0000007 49%, #00000002)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
@@ -22,10 +22,22 @@ const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText }) => {
                 sx={{
                     padding: '20px',
                     borderRadius: '8px',
-                    maxWidth: '550px',
+                    maxWidth: '600px',
                 }}
             >
-                <Typography
+                {title ? <Typography
+                    component="div"
+                    sx={{
+                        fontWeight: '500',
+                        fontSize: { xs: 22, sm: 22, md: 26, lg: 26 },
+                        color: 'white',
+                        fontFamily:'kanit',
+                        marginBottom: '28px',
+                        lineHeight: '1.2',
+                    }}
+                >
+                    {title}
+                </Typography> : <Typography
                     component="div"
                     sx={{
                         fontWeight: 'medium',
@@ -38,8 +50,23 @@ const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText }) => {
                     Unmatched quality and
                     <br />
                     unbeatable prices.
-                </Typography>
-                <Button
+                </Typography>}
+                {description &&
+                    <Typography
+                        component="div"
+                        sx={{
+                            fontWeight: '300',
+                            fontSize: { xs: 14, sm: 14, md: 16, lg: 16 },
+                            color: 'white',
+                            fontFamily:'kanit',
+                            marginBottom: '26px',
+                            lineHeight: '1.5',
+                        }}
+                    >
+                        {description}
+                    </Typography>
+                }
+                {buttonText && <Button
                     variant="contained"
                     sx={{
                         backgroundColor: 'white',
@@ -55,7 +82,7 @@ const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText }) => {
                     }}
                 >
                     {buttonText}
-                </Button>
+                </Button>}
             </Box>
         </Box>
     );

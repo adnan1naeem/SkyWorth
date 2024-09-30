@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import React from "react";
 import {
   VerticalTimeline,
@@ -30,12 +31,13 @@ const EventContainer = styled.div`
 const YearBox = styled.div`
   background-color: #0062b1;
   color: white;
-  height: 10vh;
+  height: 7vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 300;
+  padding-left:20px;
+  font-family: 'Kanit';
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 `;
@@ -45,13 +47,20 @@ const DescriptionBox = styled.div`
   color: #474b51;
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 20px;
   font-size: 16px;
+  font-family: 'Kanit';
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 `;
-
+const Heading={
+  marginTop: '5%',
+  textAlign: "center",
+  fontFamily: 'kanit',
+  marginBottom: "20px",
+  fontWeight: "400",
+  fontSize: "2rem",
+};
 const DateStyled = styled.span`
   color: #0062b1;
   font-weight: bold;
@@ -94,67 +103,64 @@ const timelineData = [
     description: "SKYWORTH Group was founded in April.",
   },
   {
-    date: "1999",
-    title: "1999",
-    description:
-      "Established SKYWORTH Lab in Silicon Valley, USA. Listed on the HK Stock Exchange in April (Stock Code: 0751).",
+    date: "1988",
+    title: "1988",
+    description: "Ranked 4th in China sales volume",
   },
   {
     date: "2000",
     title: "2000",
-    description: "Listed on HK stock in 2000. (Stock Code: 0751)",
+    description: "Listed on HongKong Stock Exchange",
   },
   {
     date: "2007",
     title: "2007",
-    description:
-      "Became the co-partner and sponsor of Chinese Space Craft. Awarded as the special products for Chinese Space Craft.",
+    description: "Co Partner of China Aerospace",
   },
   {
-    date: "2013",
-    title: "2013",
-    description:
-      "Launched the world’s first full color gamut TV and the first OLED TV in China.",
+    date: "2014",
+    title: "2014",
+    description: "Skyworth Digital was listed on Shenzen Stock Echange",
   },
   {
     date: "2015",
     title: "2015",
-    description: "Acquired Metz and Strong Media for entrance into EU market.",
+    description: "Acquried METZ and Strong",
   },
   {
     date: "2016",
     title: "2016",
-    description:
-      "Merged Toshiba Indonesia factory to facilitate supply chain in Southeast Asia.",
+    description: "Merged Toshiba Indonesia factory",
   },
   {
-    date: "2018",
-    title: "2018",
-    description:
-      "Set up a new brand METZ blue and landed in Europe, India, and Hong Kong, China.",
+    date: "2020",
+    title: "2020",
+    description: "Skyworth Photovoltaic was founded",
   },
   {
-    date: "2019",
-    title: "2019",
-    description:
-      "Announced the new global brand strategy, 'Open, Share, Win-win'. SKYWORTH will integrate 'Hardware, System, Content, and AIOT' into an intelligent solution.",
+    date: "2022",
+    title: "2022",
+    description: "Ranked Fortune China 500",
   },
 ];
 
 const CustomTimeline = () => {
   return (
-    <TimelineContainer>
-      <VerticalTimeline>
-        {timelineData.map((event, index) => (
-          <TimelineEvent
-            key={index}
-            date={event.date}
-            title={event.title}
-            description={event.description}
-          />
-        ))}
-      </VerticalTimeline>
-    </TimelineContainer>
+    <>
+      <Typography sx={Heading}>SKYWORTH'S COMPANY MILESTONE</Typography>
+      <TimelineContainer>
+        <VerticalTimeline>
+          {timelineData.map((event, index) => (
+            <TimelineEvent
+              key={index}
+              date={event.date}
+              title={event.title}
+              description={event.description}
+            />
+          ))}
+        </VerticalTimeline>
+      </TimelineContainer>
+    </>
   );
 };
 

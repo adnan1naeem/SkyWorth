@@ -14,8 +14,9 @@ const brandData = [
 const headingStyles = {
   textAlign: "center",
   marginBottom: "20px",
-  fontWeight: "bold",
-  fontSize: "2.3rem", // Adjust as needed
+  fontWeight: "400",
+  fontFamily: 'kanit',
+  fontSize: "2rem", // Adjust as needed
 };
 
 const containerStyles = {
@@ -25,12 +26,11 @@ const containerStyles = {
   width: "100%",
   marginTop: '4%',
   marginBottom: '4%',
-  paddingLeft: '20px', // Add padding for left side
-  paddingRight: '20px', // Add padding for right side
+  padding: '0',
 };
 
 const itemStyles = {
-  padding: '0 16px', // Add horizontal padding to space out the grid items
+  padding: '0 16px',
   display: 'flex',
   justifyContent: 'center',
 };
@@ -39,10 +39,9 @@ function BrandValueGrid() {
   return (
     <Box sx={containerStyles}>
       <Typography sx={headingStyles}>SKYWORTH’S BRAND VALUE</Typography>
-
-      <Grid container spacing={4} justifyContent="center" sx={{ mt: '2%' }}>
+      <Grid container spacing={4} justifyContent="center" maxWidth={"1400px"} sx={{ mt: '2%' }}>
         {brandData.map((data, index) => (
-          <Grid item key={index} xs={12} sm={6} md={4} lg={4} xl={3}>
+          <Grid item key={index} xs={12} sm={6} md={4} lg={4}>
             <Box sx={itemStyles}>
               <BrandValue year={data.year} value={data.value} />
             </Box>

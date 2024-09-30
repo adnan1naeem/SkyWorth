@@ -9,19 +9,23 @@ const containerStyles = {
   width: "100%",
   height: "100%",
   textAlign: "center",
+  fontFamily:"Kanit",
   padding: "20px",
 };
 
 const headingStyles = {
   fontWeight: "bold",
   color: "black",
+  fontFamily:"Kanit",
   marginBottom: "16px",
 };
 
 const paragraphStyles = {
   color: "black",
   width: "20rem",
-  lineHeight: 1.9, // Adjust line height as needed
+  lineHeight: 1.9,
+  fontFamily:"Kanit",
+  whiteSpace: 'pre-line',
 };
 
 function Vision({ title, text }) {

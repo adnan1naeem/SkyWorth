@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-
+import Aboutbackground from './../../assets/Aboutbackground.jpg'
 function AllStat() {
   const stats = [
     { title: "2", text: "Listed SKYWORTH Company" },
@@ -13,7 +13,7 @@ function AllStat() {
   const styles = {
     container: {
       position: "relative",
-      backgroundImage: `url(https://skyworth.com.my/wp-content/uploads/2023/08/image-53_11zon.jpg)`,
+      backgroundImage: `url(${Aboutbackground?.src})`, 
       backgroundSize: "cover",
       backgroundPosition: "center",
       height: { xs: "165vh", md: "60vh", lg: "50vh" },
@@ -87,6 +87,7 @@ function AllStat() {
     },
     text: {
       lineHeight: 1.7,
+      fontFamily:"Kanit",
       width: "10rem",
     },
   };
