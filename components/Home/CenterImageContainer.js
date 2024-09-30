@@ -34,7 +34,8 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                     fontWeight: 400,
                     textAlign: 'center',
                     textTransform:'capitalize',
-                    marginTop: body2 ? '70px' : '20px'
+                    marginTop: body2 ? '70px' : '20px',
+                    padding:{xs:"0px 10px",md:0}
                 }}
             >
                 {text}
@@ -45,7 +46,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                     width:  "80%",
                     fontWeight: 250,
                     fontSize: '1.1rem',
-                    textAlign: 'center',
+                    textAlign: {xs:'left',md:'center'},
                     marginTop: '10px',
                     marginBottom: body2 ? 0 : '30px'
                 }}
@@ -58,7 +59,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                     width:  "80%",
                     fontWeight: 250,
                     fontSize: '1.1rem',
-                    textAlign: 'center',
+                    textAlign: {xs:'left',md:'center'},
                     marginBottom: '30px'
                 }}
             >

@@ -1,24 +1,25 @@
 import React from 'react';
 import { Card, CardContent, Typography, Button, Box } from '@mui/material';
 
-const CardComponent = ({ title, description, buttonText,onClick }) => {
+const CardComponent = ({ title, description, buttonText, onClick }) => {
     return (
         <Card
             sx={{
                 width: '100%',
-                height: {xs:"380px",sm:'400px'},
+                minHeight: { xs: "400px", sm: '540px', md: "500px",lg:"400px" }, // Set minHeight for responsiveness
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 boxShadow: 0,
-                border: '2px solid #CCCCCC'
+                border: '2px solid #CCCCCC',
+                transition: 'height 0.3s ease-in-out', // Smooth transition for height changes
             }}
         >
-            <CardContent sx={{padding:{xs:"30px 30px 30px",sm:'50px 30px 30px'}}}>
+            <CardContent sx={{ padding: { xs: "30px 30px 0px", sm: '50px 30px 0px' } }}>
                 <Typography
                     color='#0c3034'
                     fontFamily={"SKSans, sans-serif"}
-                    sx={{ fontWeight: '400',fontSize:26, marginBottom: '10px' }}
+                    sx={{ fontWeight: '400', fontSize: 26, marginBottom: '10px' }}
                 >
                     {title}
                 </Typography>
@@ -26,7 +27,7 @@ const CardComponent = ({ title, description, buttonText,onClick }) => {
                     variant="body2"
                     color='#0c3034'
                     fontFamily={"SKSans, sans-serif"}
-                    sx={{ flexGrow: 1, marginBottom: '20px',fontWeight: '250',fontSize:18, color: 'black' }}
+                    sx={{ flexGrow: 1, marginBottom: '20px', fontWeight: '250', fontSize: 18, color: 'black' }}
                 >
                     {description}
                 </Typography>
