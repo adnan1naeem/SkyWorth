@@ -18,7 +18,7 @@ function HomeScreen() {
   const handleLearnMore=()=>{
     router.push('product');
   }
-  //Home Page
+
   return (
     <div >
       <ImageSlider />
