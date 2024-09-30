@@ -72,7 +72,7 @@ const Navbar = () => {
   };
   return (
     <div className={styles.header} style={{ height: `${navbarHeight}px`, transition: "height 0.3s ease", }}>
-      <Container maxWidth='xl' sx={{ display: 'flex', justifyContent: { xs: "space-between", lg: 'space-between' }, alignItems: 'center' }}>
+      <Container maxWidth='xl' sx={{ display: 'flex', justifyContent:'space-between', alignItems: 'center' }}>
         <Link href="/">
           <Image
             className={styles.logo}
