@@ -53,10 +53,15 @@ const TVProductCard = ({ title, description, image, buttonText }) => (
         fontSize: '1.5rem',
         color: '#0c3034',
         fontWeight: 400,
+        textAlign: 'center',
       }} component="div">
         {title}
       </Typography>
-      <Typography sx={{ fontSize: { xs: 18, sm: 18, md: 18, lg: 20 }, fontWeight: 'light' }} color="black">
+      <Typography sx={{
+        height: { md: "12vh", lg: "17vh", xl: "14vh", },
+        fontWeight: 250,
+        fontSize: '1.1rem',
+      }} color="black">
         {description}
       </Typography>
       <Button
@@ -81,7 +86,13 @@ const TVProductCard = ({ title, description, image, buttonText }) => (
 
 const ResponsiveTVProductGrid = () => (
   <Container sx={{ marginTop: '50px' }} maxWidth={"xl"}>
-    <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px' }} align="center" gutterBottom>
+    <Typography sx={{
+      fontSize: '1.5rem',
+      color: '#0c3034',
+      fontWeight: 400,
+      textAlign: 'center',
+      textTransform: 'capitalize',
+    }} align="center" gutterBottom>
       Choosing the right SKYWORTH TV for you.
     </Typography>
     <Grid container spacing={2} justifyContent={{ xs: "center" }}>

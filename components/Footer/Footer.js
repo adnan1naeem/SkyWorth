@@ -28,12 +28,12 @@ function Footer() {
               href_one="/aboutUs"
               text2="Contact Us"
               href_two="/contactUs"
-              text3="Service Center"
+              text3="Customer Service"
               href_three="/contactUs"
               text4="FAQ"
               href_four="/faq"
             />
-            <Box sx={{ display: { xs: "none", lg: "block" }, mt: 6 }}>
+            <Box sx={{ display: { xs: "none", lg: "block" } }}>
               <Image
                 src={require('./../../assets/skyworth-white-logo.svg')}
                 alt="Skyworth Logo"
@@ -70,12 +70,12 @@ function Footer() {
               text3="Privacy Policy"
               href_three="/Privacy-Policy"
             />
-            <Box sx={{ display: { xs: "none", lg: "block" }, mt: 2 }}>
+            <Box sx={{ display: { xs: "none", lg: "block" } }}>
               <Typography variant="h6" sx={{ color: "#fff", mb: 2, fontSize: "21px", fontWeight: 600 }}>
                 Our Social Media
               </Typography>
               <Box sx={{ display: "flex", gap: 2 }}>
-                <SocialIcon icon={<FacebookIcon />} />
+                <SocialIcon icon={<FacebookIcon/>} />
                 <SocialIcon icon={<TwitterIcon />} />
                 <SocialIcon icon={<InstagramIcon />} />
                 <SocialIcon icon={<YouTubeIcon />} />
@@ -108,7 +108,7 @@ function Footer() {
           <Typography variant="h6" sx={{ color: "#fff", mb: 2, fontSize: "21px", fontWeight: 600 }}>
             Our Social Media
           </Typography>
-          <Box sx={{ display: "flex", gap: 2, justifyContent:'start' }}>
+          <Box sx={{ display: "flex", gap: 1,marginBottom:"10px", justifyContent:'start' }}>
             <SocialIcon icon={<FacebookIcon />} />
             <SocialIcon icon={<TwitterIcon />} />
             <SocialIcon icon={<InstagramIcon />} />
@@ -116,8 +116,6 @@ function Footer() {
           </Box>
         </Box>
       </Box>
-
-      {/* Footer Bottom: Copyright */}
       <Box
         sx={{
           mt: "2%",
@@ -127,6 +125,7 @@ function Footer() {
           flexWrap: "wrap",
           px: { xs: "8%", lg: "5.5%", xl: "16%" },
           pt: "2%",
+          placeContent:'center'
         }}
       >
         <Typography
@@ -140,7 +139,7 @@ function Footer() {
               ml: '-10%',
             },
           }}>
-          © 2024 SkyWorth
+          © 2024 SkyWorthPakistan.com
         </Typography>
       </Box>
     </Box>
@@ -154,8 +153,8 @@ const SocialIcon = ({ icon }) => (
       color: "#fff",
       border: "1px solid #fff",
       borderRadius: "50%",
-      height: 55,
-      width: 55,
+      height: {xs:40,md:40,lg:55},
+      width: {xs:40,md:40,lg:55},
     }}
   >
     {icon}

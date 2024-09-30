@@ -16,6 +16,7 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isArrowUp, setIsArrowUp] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState(100);
   useEffect(() => {
     if (typeof window !== "undefined") {
       setIsWideScreen(window.innerWidth > 990);
@@ -33,7 +34,20 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setNavbarHeight(80);
+      } else {
+        setNavbarHeight(100);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
 
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const closeMenu = () => {
     setClick(false);
     setIsDropdownOpen(false);
@@ -57,12 +71,12 @@ const Navbar = () => {
     setIsSearchOpen(!isSearchOpen);
   };
   return (
-    <div className={styles.header}>
+    <div className={styles.header} style={{height: `${navbarHeight}px`,transition: "height 0.3s ease",}}>
       <Container maxWidth= 'xl' sx={{ display: 'flex', justifyContent:{md:"flex-start",lg: 'space-between'},alignItems:'center' }}>
         <Link href="/">
           <Image
             className={styles.logo}
-            src={require("../../assets/logo.svg")}
+            src={require("../../assets/newlogo.svg")}
             alt=""
           />
         </Link>

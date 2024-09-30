@@ -19,7 +19,7 @@ const sections = [
   },
   {
     title: "core value",
-    text: "Adhere to technology leadership, quality first\nAdhere to management innovation, efficiency priority\nAdhere to the user first, service home\nAdhere to employee-oriented, results sharing",
+    text: "Technology leadership, quality first, innovation, efficiency, user first, employee-oriented, and results sharing",
   },
 ];
 

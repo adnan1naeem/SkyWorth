@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 
 const containerStyles = {
   width: {xs:"50vh", sm:'65vh' },
-  height: {xs:"25vh", md:'16vh', lg:'14vh'},
+  height: {xs:"25vh", md:'18vh', lg:'18vh'},
   border: "2px solid #CCCCCC80", // Outer border
   position: "relative",
   boxSizing: "border-box",

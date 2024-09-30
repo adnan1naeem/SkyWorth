@@ -28,7 +28,7 @@ const ImageSwiper = () => {
   return (
     <Box sx={{ 
       position: 'relative', 
-      width: { xs: '100%', sm: '100%', md: '100%', lg: '80%' }, 
+      width: { xs: '100%', sm: '100%', md: '100%', lg: '95%' }, 
       margin: 'auto', 
       marginTop: { xs: '15%', sm: '10%', md: '5%', lg: '3%' }
     }}>

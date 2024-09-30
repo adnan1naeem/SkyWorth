@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 
-const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, description }) => {
+const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, description,onClick }) => {
     return (
         <Box
             sx={{
                 width: '100%',
-                height: '640px',
+                height: '400px',
                 backgroundImage: `url(${backgroundImage.src || backgroundImage})`,
                 background: 'linear-gradient(90deg, #000000fe, #0000007 49%, #00000002)',
                 backgroundSize: 'cover',
@@ -68,12 +68,13 @@ const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, desc
                 }
                 {buttonText && <Button
                     variant="contained"
+                    onClick={onClick}
                     sx={{
                         backgroundColor: 'white',
                         color: '#000',
                         fontWeight: 'light',
                         padding: '15px 35px',
-                        borderRadius: '50px',
+                        borderRadius: '10px',
                         border: '2px solid #CCCCCC',
                         '&:hover': {
                             backgroundColor: '#016AC8',

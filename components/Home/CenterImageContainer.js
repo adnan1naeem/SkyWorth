@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
-const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, heading }) => {
+const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, heading,onClick }) => {
 
     return (
         <Box
@@ -12,10 +12,10 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                 backgroundColor: 'white',
                 width: '100%',
                 height: 'auto',
-                borderRadius: 2, marginBottom: '20px'
+                borderRadius: 2
             }}
         >
-            {heading && <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px' }} align="center" gutterBottom>
+            {heading && <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px' }}  gutterBottom>
                 {heading}
             </Typography>}
             {imageSrc && <Image
@@ -24,7 +24,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                 style={{
                     width: "100%",
                     objectFit: 'contain',
-                    marginBottom: '20px'
+                    marginBottom: '40px'
                 }}
             />}
             {text && <Typography
@@ -33,6 +33,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                     color: '#0c3034',
                     fontWeight: 400,
                     textAlign: 'center',
+                    textTransform:'capitalize',
                     marginTop: body2 ? '70px' : '20px'
                 }}
             >
@@ -41,8 +42,8 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
             {body && <Typography
                 component="div"
                 sx={{
-                    width: { sm: "80%", md: "80%", lg: '49%' },
-                    fontWeight: 500,
+                    width:  "80%",
+                    fontWeight: 250,
                     fontSize: '1.1rem',
                     textAlign: 'center',
                     marginTop: '10px',
@@ -54,8 +55,8 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
             {body2 && <Typography
                 component="div"
                 sx={{
-                    width: { sm: "80%", md: "80%", lg: '49%' },
-                    fontWeight: 500,
+                    width:  "80%",
+                    fontWeight: 250,
                     fontSize: '1.1rem',
                     textAlign: 'center',
                     marginBottom: '30px'
@@ -65,6 +66,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
             </Typography>}
             {ButtonText && <Button
                 variant="outlined"
+                onClick={onClick}
                 sx={{
                     fontSize: '16px',
                     borderRadius: '10px',

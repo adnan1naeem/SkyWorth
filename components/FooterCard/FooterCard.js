@@ -4,10 +4,10 @@ import Link from "next/link";
 
 function FooterCard({...props}) {
   return (
-    <Box>
+    <Box >
       <Card
         sx={{
-          height: { sx: "17rem", sm: "18rem", md: "19rem", lg: "17rem" },
+          height: { sx: "17rem", sm: "15rem", md: "15rem", lg: "15rem" },
           width: { sx: "12rem", sm: "14rem", md: "16rem", lg: "18rem" },
           background: "none",
           boxShadow: "none",
@@ -38,9 +38,9 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "18px",
+                fontSize: "15px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 400,
+                fontWeight: 250,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
                   fontSize: "17px",
                 },
@@ -62,9 +62,9 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "18px",
+                fontSize: "15px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 400,
+                fontWeight: 250,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
                   fontSize: "17px",
                 },
@@ -86,9 +86,9 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "18px",
+                fontSize: "15px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 400,
+                fontWeight: 250,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
                   fontSize: "17px",
                 },
@@ -110,9 +110,9 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "18px",
+                fontSize: "15px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 400,
+                fontWeight: 250,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
                   fontSize: "17px",
                 },
@@ -133,9 +133,9 @@ function FooterCard({...props}) {
                   color:'#bdbdbd',
                 },
                 cursor: "pointer",
-                fontSize: "18px",
+                fontSize: "15px",
                 fontFamily: "Mont-Regular, Sans-serif",
-                fontWeight: 400,
+                fontWeight: 250,
                 "@media screen and (min-width: 1200px) and (max-width: 1300px)": {
                   fontSize: "17px",
                 },
