@@ -26,6 +26,8 @@ const paragraphStyles = {
   lineHeight: 1.9,
   fontFamily:"Kanit",
   whiteSpace: 'pre-line',
+  height:{md:'80px',lg:'100px'},
+  fontWeight:250,
 };
 
 function Vision({ title, text }) {

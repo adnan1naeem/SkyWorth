@@ -71,8 +71,8 @@ const Navbar = () => {
     setIsSearchOpen(!isSearchOpen);
   };
   return (
-    <div className={styles.header} style={{height: `${navbarHeight}px`,transition: "height 0.3s ease",}}>
-      <Container maxWidth= 'xl' sx={{ display: 'flex', justifyContent:{md:"flex-start",lg: 'space-between'},alignItems:'center' }}>
+    <div className={styles.header} style={{ height: `${navbarHeight}px`, transition: "height 0.3s ease", }}>
+      <Container maxWidth='xl' sx={{ display: 'flex', justifyContent: { md: "flex-start", lg: 'space-between' }, alignItems: 'center' }}>
         <Link href="/">
           <Image
             className={styles.logo}
@@ -103,17 +103,20 @@ const Navbar = () => {
             </li>
             {isWideScreen && (
               <div className={styles["dropdown-content"]}>
-                <Link href="/mobile-application" onClick={closeMenu}>
-                ALL PRODUCTS
+                <Link href="/product" onClick={closeMenu}>
+                  ALL PRODUCTS
                 </Link>
-                <Link href="/website" onClick={closeMenu}>
-                TELEVISION
+                <Link href="/product/3" onClick={closeMenu}>
+                  QLED Mini
                 </Link>
-                <Link href="/ui-ux-design" onClick={closeMenu}>
-                  FREEZER
+                <Link href="/product/5" onClick={closeMenu}>
+                  QLED
                 </Link>
-                <Link href="/sqa" onClick={closeMenu}>
-                  AIR CONDITIONER
+                <Link href="/product/6" onClick={closeMenu}>
+                  UHD
+                </Link>
+                <Link href="/product/11" onClick={closeMenu}>
+                  FHD/HD
                 </Link>
               </div>
             )}
@@ -224,9 +227,9 @@ const Navbar = () => {
 
         <div className={styles.hamburger} >
           {click ? (
-          <>
-            <FaSearch fontSize={16} style={{marginRight:12,marginTop:2}} onClick={toggleSearch} />
-            <FaTimes size={20} style={{ color: "black" }} onClick={handleClick} />
+            <>
+              <FaSearch fontSize={16} style={{ marginRight: 12, marginTop: 2 }} onClick={toggleSearch} />
+              <FaTimes size={20} style={{ color: "black" }} onClick={handleClick} />
             </>
           ) : (
             <>
@@ -237,7 +240,8 @@ const Navbar = () => {
                   position: "absolute",
                   right: 0,
                   marginRight: 25,
-                  top: 20,
+                  top: navbarHeight==100?34:26,
+                  transition: "height 0.3s ease",
                 }}
               />
               <FaSearch
@@ -247,7 +251,7 @@ const Navbar = () => {
                   position: "absolute",
                   right: 70,
                   marginRight: 0,
-                  top: 20,
+                  top: navbarHeight==100?34:26,
                 }} onClick={toggleSearch} /> </>
           )}
         </div>

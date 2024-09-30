@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Navigation, A11y } from 'swiper/modules';
+import { Navigation, A11y, Autoplay } from 'swiper/modules'; // Import Autoplay module
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,6 +12,7 @@ import Image5 from './../../assets/SliderImage5.png';
 import { Box, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ChevronLeft';
 import ArrowForwardIcon from '@mui/icons-material/ChevronRight';
+import { SiTruenas } from 'react-icons/si';
 
 const ImageSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -25,6 +26,26 @@ const ImageSwiper = () => {
     { image: Image5 },
   ];
 
+  const handleNextSlide = () => {
+    if (activeIndex === slides.length - 1) {
+      // If we're on the last slide, go back to the first slide
+      swiperRef.current.slideTo(0);
+      setActiveIndex(0); // Reset the index
+    } else {
+      swiperRef.current.slideNext(); // Move to the next slide
+    }
+  };
+
+  const handlePrevSlide = () => {
+    if (activeIndex === 0) {
+      // Optional: You can handle if on first slide and click back to go to the last slide.
+      swiperRef.current.slideTo(slides.length - 1);
+      setActiveIndex(slides.length - 1);
+    } else {
+      swiperRef.current.slidePrev(); // Move to the previous slide
+    }
+  };
+
   return (
     <Box sx={{ 
       position: 'relative', 
@@ -33,12 +54,17 @@ const ImageSwiper = () => {
       marginTop: { xs: '15%', sm: '10%', md: '5%', lg: '3%' }
     }}>
       <Swiper
-        modules={[Navigation, A11y]}
+        modules={[Navigation, A11y, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         loop={false}
+        autoplay={{ 
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        speed={1000}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
@@ -93,8 +119,9 @@ const ImageSwiper = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
       <Box sx={{ position: 'absolute', top: 'calc(100% + 1%)', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <ArrowBackIcon fontSize='inherit' style={{ fontSize: '4rem', color: "#CCCCCC" }} onClick={() => swiperRef.current.slidePrev()} />
+        <ArrowBackIcon fontSize='inherit' style={{ fontSize: '4rem', color: "#CCCCCC" }} onClick={handlePrevSlide} />
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
           {slides.map((_, index) => (
             <div
@@ -114,7 +141,7 @@ const ImageSwiper = () => {
             />
           ))}
         </Box>
-        <ArrowForwardIcon fontSize='inherit' style={{ fontSize: '4rem', color: "#CCCCCC" }} onClick={() => swiperRef.current.slideNext()} />
+        <ArrowForwardIcon fontSize='inherit' style={{ fontSize: '4rem', color: "#CCCCCC" }} onClick={handleNextSlide} />
       </Box>
 
       <style jsx>{`

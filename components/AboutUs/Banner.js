@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import AboutImage from './../../assets/AboutImage1.png';
+import AboutImage from './../../assets/AboutMainImage.jpg';
 // Define styles as objects
 const bannerContainerStyles = {
   height: {

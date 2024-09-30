@@ -50,6 +50,7 @@ const DescriptionBox = styled.div`
   padding: 20px;
   font-size: 16px;
   font-family: 'Kanit';
+  font-weight:250;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 `;
@@ -103,44 +104,58 @@ const timelineData = [
     description: "SKYWORTH Group was founded in April.",
   },
   {
-    date: "1988",
-    title: "1988",
-    description: "Ranked 4th in China sales volume",
+    date: "1999",
+    title: "1999",
+    description: "Established SKYWORTH Lab in Silicon Valley, USA. Listed on the HK Stock Exchange in April (Stock Code: 0751).",
   },
   {
     date: "2000",
     title: "2000",
-    description: "Listed on HongKong Stock Exchange",
+    description: "Listed on HK stock in 2000. (Stock Code: 0751)",
   },
   {
     date: "2007",
     title: "2007",
-    description: "Co Partner of China Aerospace",
+    description: "Became the co-partner and sponsor of Chinese Space Craft. Awarded as the special products for Chinese Space Craft.",
   },
   {
-    date: "2014",
-    title: "2014",
-    description: "Skyworth Digital was listed on Shenzen Stock Echange",
+    date: "2013",
+    title: "2013",
+    description: "Launched the world's first full color gamut TV and the first OLED TV in China.",
   },
   {
     date: "2015",
     title: "2015",
-    description: "Acquried METZ and Strong",
+    description: "Acquired Metz and Strong Media for entrance into EU market.",
   },
   {
     date: "2016",
     title: "2016",
-    description: "Merged Toshiba Indonesia factory",
+    description: "Merged Toshiba Indonesia factory to facilitate supply chain in Southeast Asia.",
+  },
+  {
+    date: "2018",
+    title: "2018",
+    description: "Set up a new brand METZ blue and landed in Europe, India, and Hong Kong, China.",
+  },
+  {
+    date: "2019",
+    title: "2019",
+    description: "Announced the new global brand strategy, “Open, Share, Win-win”. SKYWORTH will integrate “Hardware, System, Content, and AIOT” into an intelligent solution.",
   },
   {
     date: "2020",
     title: "2020",
-    description: "Skyworth Photovoltaic was founded",
+    description: "Acquired Metz and Strong Media for entrance into EU market.",
   },
   {
+    date: "2021",
+    title: "2021",
+    description: "Merged Toshiba Indonesia factory to facilitate supply chain in Southeast Asia.",
+  },  {
     date: "2022",
     title: "2022",
-    description: "Ranked Fortune China 500",
+    description: "Set up a new brand METZ blue and landed in Europe, India, and Hong Kong, China.",
   },
 ];
 

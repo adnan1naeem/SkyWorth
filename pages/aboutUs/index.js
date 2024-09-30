@@ -18,7 +18,7 @@ const sections = [
     text: "Become a global leader in smart appliances and information technology",
   },
   {
-    title: "core value",
+    title: "Core value",
     text: "Technology leadership, quality first, innovation, efficiency, user first, employee-oriented, and results sharing",
   },
 ];

@@ -343,13 +343,14 @@
     text-decoration: none;
     display: block;
     text-align: left;
+    font-weight: 250;
     font-family: "Mont-Regular", Sans-serif;
     font-size: 14px;
 }
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #153A5F;
+    background-color: #0263B2;
     color: white
 }
 

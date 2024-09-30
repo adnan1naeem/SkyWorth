@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid, Card, CardMedia, CardContent, Typography, Button, Container } from '@mui/material';
-import Image1 from './../../assets/QLED1.png';
-import Image2 from './../../assets/QLED.png';
-import Image3 from './../../assets/UHD.png';
-import Image4 from './../../assets/FHD.png';
+import Image1 from './../../assets/QLED-mini.jpg';
+import Image2 from './../../assets/QLED.jpg';
+import Image3 from './../../assets/UHD.jpg';
+import Image4 from './../../assets/FHD.jpg';
 const tvProducts = [
   {
     title: 'QLED Mini',
