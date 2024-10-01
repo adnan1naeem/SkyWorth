@@ -12,7 +12,7 @@ import HomePage1 from './../../assets/AboutImage2.jpg'
 import LeftAlignedBoxWithBackground from '../../components/Home/LeftAlignedBoxWithBackground';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { countries, brandOptions, itemCategories } from './Data';
+import { countries, brandOptions, itemCategories } from '../WarrentyPolicy/Data';
 import { useState } from 'react';
 const Index = () => {
   const { register, handleSubmit, setValue, formState: { errors }, watch } = useForm();
