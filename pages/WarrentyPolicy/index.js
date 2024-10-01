@@ -12,8 +12,25 @@ import HomePage1 from './../../assets/AboutImage2.jpg'
 import LeftAlignedBoxWithBackground from '../../components/Home/LeftAlignedBoxWithBackground';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { countries, brandOptions, itemCategories } from '../WarrentyPolicy/Data';
 import { useState } from 'react';
+ const countries = [
+  { label: 'Malaysia', value: 'Malaysia' },
+  { label: 'United States', value: 'United States' },
+  { label: 'Canada', value: 'Canada' },
+];
+
+ const brandOptions = [
+  'Television', 'Billboard', 'Social media',
+  'Promotional videos', 'Search engines', 'Customers testimonials',
+  'Peer referral', 'Others'
+];
+
+ const itemCategories = [
+  { label: 'QLED Mini', value: 'QLED Mini' },
+  { label: 'QLED', value: 'QLED' },
+  { label: 'UHD', value: 'UHD' },
+  { label: 'FHD/HD', value: 'FHD/HD' },
+];
 const Index = () => {
   const { register, handleSubmit, setValue, formState: { errors }, watch } = useForm();
   const [TermandCondition, setTermandCondition] = useState(true);
