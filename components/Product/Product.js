@@ -9,6 +9,7 @@ import ProductModal from './ProductModal';
 import FilterSection from './FilterSection';
 import PaginationComponent from './PaginationComponent';
 import { useRouter } from 'next/router';
+
 const ProductGrid = () => {
   const router = useRouter();
   const [page, setPage] = useState(1);
@@ -18,21 +19,26 @@ const ProductGrid = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [selectedFilters, setSelectedFilters] = useState({
     resolution: [],
-    productType: [],
+    productSize: [],
+    feature: [], // Initialize feature filter
   });
 
   const handleFilterChange = (updatedFilters) => {
     setSelectedFilters(updatedFilters);
     setPage(1);
   };
+
   const filteredProducts = products.filter((product) => {
     const matchesResolution = selectedFilters.resolution.length === 0 ||
       selectedFilters.resolution.includes(product.resolution);
-    
-    const matchesProductType = selectedFilters.productType.length === 0 ||
-      selectedFilters.productType.includes(product.productType);
 
-    return matchesResolution && matchesProductType;
+    const matchesProductSize = selectedFilters.productSize.length === 0 ||
+      selectedFilters.productSize.includes(product.productSize);
+
+    const matchesFeature = selectedFilters?.feature?.length === 0 ||
+      selectedFilters.feature.some((feature) => product?.features?.includes(feature));
+
+    return matchesResolution && matchesProductSize && matchesFeature;
   });
 
   // Paginate filtered products
@@ -67,13 +73,15 @@ const ProductGrid = () => {
       prevIndex === selectedProduct.image.length - 1 ? 0 : prevIndex + 1
     );
   };
-  const handleNavigation=(product)=>{
-    console.log(product?.id)
+
+  const handleNavigation = (product) => {
+    console.log(product?.id);
     router.push(`/product/${product.id}`);
-  }
+  };
+
   return (
     <Container maxWidth="xl">
-      <Breadcrumb paddingTop={{xs: '25%',sm: '18%',md: '10%',lg: '8%',xl:'5%'}}/>
+      <Breadcrumb paddingTop={{xs: '25%', sm: '18%', md: '10%', lg: '5%', xl: '2%'}}/>
       <BackgroundImageComponent
         src={TVImage}
         title="Find the Perfect Match for Your Home"
@@ -84,10 +92,10 @@ const ProductGrid = () => {
           <FilterSection onFilterChange={handleFilterChange} />
         </Grid>
         <Grid item xs={12} sm={9}>
-          <Grid container spacing={3} >
+          <Grid container spacing={3}>
             {paginatedProducts.map((product) => (
-              <Grid item xs={12} sm={6} md={4} key={product.id}>
-                <ProductCard product={product} onClick={() => handleOpenModal(product)} handleNavigation={()=>handleNavigation(product)} />
+              <Grid item xs={12} sm={6} md={4} sx={{textAlign:'-webkit-center'}} key={product.id}>
+                <ProductCard product={product} onClick={() => handleOpenModal(product)} handleNavigation={() => handleNavigation(product)} />
               </Grid>
             ))}
           </Grid>

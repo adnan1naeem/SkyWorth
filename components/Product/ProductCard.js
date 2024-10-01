@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardMedia, Typography, Button, Box } from '@mui/material';
 
-const ProductCard = ({ product,onClick,handleNavigation }) => {
+const ProductCard = ({ product, onClick, handleNavigation }) => {
     const [hover, setHover] = useState(false);
     const handleMouseEnter = () => setHover(true);
     const handleMouseLeave = () => setHover(false);
@@ -10,16 +10,18 @@ const ProductCard = ({ product,onClick,handleNavigation }) => {
         <Card
             sx={{
                 maxWidth: 345,
-                height: {sm:"320px",md:'354px'},
+                minHeight: { sm: "370px", md: '350px',lg:"420px",xl:'354px' },
                 boxShadow: 'none',
                 position: 'relative',
                 overflow: 'hidden',
-                textAlign:'-webkit-center'
+                display: 'flex',
+                flexDirection: 'column', // Use flexbox for alignment
+                justifyContent: 'space-between', // Align items within the card
+                textAlign: 'center'
             }}
             onClick={handleNavigation}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            
         >
             <Box
                 sx={{
@@ -28,12 +30,10 @@ const ProductCard = ({ product,onClick,handleNavigation }) => {
                         boxShadow: '0 1px 0px rgba(11, 95, 1, 0.5)',
                     },
                 }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
             >
                 <CardMedia
                     component="img"
-                    image={product?.image}
+                    image={product?.image[0]?.src}
                     alt={product.name}
                     sx={{
                         height: '200px',
@@ -81,14 +81,51 @@ const ProductCard = ({ product,onClick,handleNavigation }) => {
                     </Button>
                 </Box>
             </Box>
-            <CardContent sx={{padding:"10px 0px"}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                <Typography sx={{fontSize:{md:"20px",lg:"24px",textAlign:'left'}}} component="div">
+            <CardContent
+                sx={{
+                    padding: "10px 0px",
+                    flexGrow: 1, // Ensures content expands to fill space
+                    cursor: 'pointer',
+                }}
+            >
+                <Typography 
+                    sx={{
+                        fontSize: { md: "20px", lg: "24px" }, 
+                        textAlign: 'left', 
+                        fontFamily: 'Kanit', 
+                        fontWeight: '300',
+                        cursor: 'pointer'
+                    }}
+                    component="div"
+                >
                     {product.name}
                 </Typography>
-                <Typography variant="body2" sx={{textAlign:'left'}} color="text.secondary">
-                    {product.price}
-                </Typography>
             </CardContent>
+            <Box sx={{ marginTop: 'auto', padding: '20px 0' }}> {/* Ensures button stays aligned */}
+                <Button
+                    variant="outlined"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    sx={{
+                        fontSize: '14px',
+                        borderRadius: '50px',
+                        borderWidth: '1px',
+                        borderColor: '#212121',
+                        textTransform: 'none',
+                        border: '0.7px solid black',
+                        backgroundColor: 'white',
+                        color: '#212121',
+                        fontFamily: 'Kanit',
+                        fontWeight: '300',
+                        padding: '10px 30px',
+                        '&:hover': {
+                            backgroundColor: '#CCCCCC20',
+                        },
+                    }}
+                >
+                    View Product
+                </Button>
+            </Box>
         </Card>
     );
 };

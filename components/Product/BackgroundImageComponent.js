@@ -19,10 +19,10 @@ const BackgroundImageComponent = ({ src,title,desc }) => {
       }}
     >
       <Box sx={{ color: 'white', zIndex: 1,width:{xs:"90%",sm:"70%",md:'50%',lg:'35%'},marginLeft:'7%', }}>
-        <Typography sx={{fontFamily:'Sky',fontSize:{xs:30,sm:30,md:40,lg:48},lineHeight:1}}>
+        <Typography sx={{fontFamily:'Kanit',fontWeight:"250",fontSize:{xs:30,sm:30,md:40,lg:48},lineHeight:1}}>
           {title}
         </Typography>
-        <Typography variant="body1">
+        <Typography variant="body1" fontFamily={'Kanit'} fontWeight={"250"}>
           {desc}
         </Typography>
       </Box>
