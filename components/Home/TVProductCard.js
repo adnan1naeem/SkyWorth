@@ -4,6 +4,7 @@ import Image1 from './../../assets/QLED-mini.jpg';
 import Image2 from './../../assets/QLED.jpg';
 import Image3 from './../../assets/UHD.jpg';
 import Image4 from './../../assets/FHD.jpg';
+import { useRouter } from 'next/router';
 const tvProducts = [
   {
     title: 'QLED Mini',
@@ -31,7 +32,16 @@ const tvProducts = [
   }
 ];
 
-const TVProductCard = ({ title, description, image, buttonText }) => (
+const TVProductCard = ({ title, description, image,OnClick }) => {
+  const router = useRouter();
+  const handleCardClick = (title) => {
+    router.push({
+      pathname: '/product',
+      query: { title },
+    });
+
+  };
+  return(
   <Card
     sx={{
       maxWidth: 335,
@@ -40,6 +50,7 @@ const TVProductCard = ({ title, description, image, buttonText }) => (
       backgroundColor: 'transparent',
       textAlign: 'center',
     }}
+    onClick={()=>{handleCardClick(title)}}
   >
     <CardMedia
       component="img"
@@ -78,13 +89,18 @@ const TVProductCard = ({ title, description, image, buttonText }) => (
           },
         }}
       >
-        {buttonText}
+        View Product
       </Button>
     </CardContent>
   </Card>
-);
+  )
+};
 
-const ResponsiveTVProductGrid = () => (
+const ResponsiveTVProductGrid = () => {
+
+
+
+  return(
   <Container sx={{ marginTop: '50px' }} maxWidth={"xl"}>
     <Typography sx={{
       fontSize: '1.5rem',
@@ -98,11 +114,12 @@ const ResponsiveTVProductGrid = () => (
     <Grid container spacing={2} justifyContent={{ xs: "center" }}>
       {tvProducts.map((product, index) => (
         <Grid item margin={0} key={index}>
-          <TVProductCard {...product} />
+          <TVProductCard {...product} OnClick={()=>handleCardClick()} />
         </Grid>
       ))}
     </Grid>
   </Container>
-);
+  )
+};
 
 export default ResponsiveTVProductGrid;

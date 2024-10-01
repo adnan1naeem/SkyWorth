@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Typography, Checkbox, FormControlLabel, Box } from '@mui/material';
 import { filters } from './ProductData';
+import { useRouter } from 'next/router';
 
 const FilterSection = ({ onFilterChange }) => {
+  const router = useRouter();
+  const { title } = router.query;
   const [selectedFilters, setSelectedFilters] = useState({
     resolution: [],
     productSize: [],
@@ -21,8 +24,16 @@ const FilterSection = ({ onFilterChange }) => {
     onFilterChange(updatedFilters);
   };
 
+  useEffect(() => {
+    if (title && filters.resolution.includes(title?.toUpperCase())) {
+      const updatedFilters = { ...selectedFilters, resolution: [title?.toUpperCase()] };
+      setSelectedFilters(updatedFilters);
+      onFilterChange(updatedFilters);
+    }
+  }, [title]);
+
   return (
-    <Box marginLeft={{md:'0px',lg:"30px"}}>
+    <Box marginLeft={{ md: '0px', lg: '30px' }}>
       <Typography sx={{ fontSize: 20, fontWeight: '250', fontFamily: 'Kanit', mb: 1 }}>
         Filter by Resolution
       </Typography>
@@ -58,6 +69,7 @@ const FilterSection = ({ onFilterChange }) => {
           sx={{ display: 'block', fontSize: 20 }} 
         />
       ))}
+
       <Typography sx={{ fontSize: 20, fontWeight: '250', fontFamily: 'Kanit', mb: 1, mt: 2 }}>
         Filter by Feature
       </Typography>

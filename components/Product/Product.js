@@ -14,13 +14,13 @@ const ProductGrid = () => {
   const router = useRouter();
   const [page, setPage] = useState(1);
   const [open, setOpen] = useState(false);
-  const productsPerPage = 8;
+  const productsPerPage = 18;
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [selectedFilters, setSelectedFilters] = useState({
     resolution: [],
     productSize: [],
-    feature: [], // Initialize feature filter
+    feature: [],
   });
 
   const handleFilterChange = (updatedFilters) => {
@@ -41,7 +41,6 @@ const ProductGrid = () => {
     return matchesResolution && matchesProductSize && matchesFeature;
   });
 
-  // Paginate filtered products
   const paginatedProducts = filteredProducts.slice(
     (page - 1) * productsPerPage,
     page * productsPerPage
