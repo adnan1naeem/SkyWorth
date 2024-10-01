@@ -16,7 +16,7 @@ function HomeScreen() {
     router.push('/aboutUs');
   };
   const handleLearnMore=()=>{
-    router.push('product');
+    router.push('/product');
   }
 
   return (
@@ -45,7 +45,7 @@ function HomeScreen() {
       <Container maxWidth="xl">
         <ResponsiveTVProductGrid />
       </Container>
-      <LeftAlignedBoxWithBackground backgroundImage={BackgrondImages} buttonText={"View All SKYWORTH TVs"} onClick={handleLearnMore}/>
+      <LeftAlignedBoxWithBackground bordershown={true} backgroundImage={BackgrondImages} buttonText={"View All SKYWORTH TVs"} onClick={handleLearnMore}/>
     </div>
   );
 }

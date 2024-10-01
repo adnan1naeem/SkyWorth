@@ -85,6 +85,7 @@ const LeaveComment = () => {
                                 options="Save my name, email, and website in this browser for the next time I comment."
                                 value={watch('termsAccepted')}
                                 onChange={(e) => setValue('termsAccepted', e.target.value)}
+                                singleOption={true}
                             />
                             {errors.termsAccepted && <Typography color="error">{errors.termsAccepted.message}</Typography>}
                         </Grid>

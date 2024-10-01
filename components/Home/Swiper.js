@@ -1,14 +1,14 @@
 import React, { useState, useRef } from 'react';
-import { Navigation, A11y, Autoplay } from 'swiper/modules'; // Import Autoplay module
+import { Navigation, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/bundle';
-import Image1 from './../../assets/SliderImage1.png';
-import Image2 from './../../assets/SliderImage2.png';
-import Image3 from './../../assets/SliderImage3.png';
-import Image4 from './../../assets/SliderImage4.png';
-import Image5 from './../../assets/SliderImage5.png';
+import Image1 from './../../assets/SliderImage1.jpg';
+import Image2 from './../../assets/SliderImage2.jpg';
+import Image3 from './../../assets/SliderImage3.jpg';
+import Image4 from './../../assets/SliderImage4.jpg';
+import Image5 from './../../assets/SliderImage5.jpg';
 import { Box, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ChevronLeft';
 import ArrowForwardIcon from '@mui/icons-material/ChevronRight';

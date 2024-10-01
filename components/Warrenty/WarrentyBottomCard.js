@@ -5,11 +5,11 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const warrantyData = [
     {
-        title: 'Television',
+        title: 'QLED Mini',
         warranties: ['2 years warranty for all model'],
     },
     {
-        title: 'Top Load Washer',
+        title: 'QLED',
         warranties: [
             '2 years general warranty',
             '3 years control panel warranty',
@@ -17,31 +17,12 @@ const warrantyData = [
         ],
     },
     {
-        title: 'Chest Freezer',
+        title: 'UHD',
         warranties: ['1 year general warranty', '5 years compressor warranty'],
     },
     {
-        title: 'Multi Door Refrigerator',
-        warranties: ['2 years general part warranty', '12 years inverter compressor warranty'],
-    },
-    {
-        title: 'Side by Side Refrigerator',
-        warranties: ['2 years general part warranty', '12 years inverter compressor warranty'],
-    },
-    {
-        title: 'Double Door Refrigerator',
-        warranties: ['2 years general part warranty', '10 years compressor warranty'],
-    },
-    {
-        title: 'Air Conditioner',
-        warranties: [
-            '2 years general warranty + additional 1 year (Upon online warranty registration before 31st March 2025)',
-            '5 years compressor warranty',
-        ],
-    },
-    {
-        title: 'Upright Freezer',
-        warranties: ['2 years general warranty', '12 years inverter compressor warranty'],
+        title: 'FHD/HD',
+        warranties: ['1 year general warranty', '5 years compressor warranty'],
     },
 ];
 
@@ -74,11 +55,29 @@ const WarrantyCards = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
     const isMedium = useMediaQuery(theme.breakpoints.between('sm', 'md'));
+    const isLarge = useMediaQuery(theme.breakpoints.between('md', 'lg'));
+    const isXL = useMediaQuery(theme.breakpoints.up('xl'));
 
     return (
-        <Box sx={{ p: 3, marginBottom: '5%' }}>
-            <Typography variant="h4" align="center" sx={{color:'#676767',fontFamily:'Kanit',fontWeight:'500', mb: 7, padding: {xs:'0px 2%',sm:'0px 20%',md:'0px 20%',lg:'0px 30%',xl:'0px 34%'} }}>
-                Below is the warranty details of TV and HA:
+        <Box sx={{ p: 3, marginBottom: '2%' }}>
+            <Typography
+                variant="h4"
+                align="center"
+                sx={{
+                    color: '#676767',
+                    fontFamily: 'Kanit',
+                    fontWeight: '400',
+                    mb: 7,
+                    padding: {
+                        xs: '0px 2%',
+                        sm: '0px 20%',
+                        md: '0px 20%',
+                        lg: '0px 30%',
+                        xl: '0px 34%',
+                    },
+                }}
+            >
+                Below are the warranty details of TV and HA:
             </Typography>
             <motion.div
                 variants={containerVariants}
@@ -86,13 +85,16 @@ const WarrantyCards = () => {
                 animate="visible"
                 style={{
                     display: 'grid',
-                    maxWidth: '1200px',
-                    margin: 'auto',
+                    margin: isXL?'0px 100px':isLarge?'0px 1%':'0px',
                     gridTemplateColumns: isMobile
                         ? 'repeat(1, 1fr)'
                         : isMedium
-                            ? 'repeat(2, 1fr)'
-                            : 'repeat(3, 1fr)',
+                        ? 'repeat(2, 1fr)'
+                        : isLarge
+                        ? 'repeat(3, 1fr)'
+                        : isXL
+                        ? 'repeat(4, 1fr)' // 4 columns for xl devices
+                        : 'repeat(4, 1fr)', // Default to 3 columns
                     gap: '20px',
                 }}
             >
@@ -127,7 +129,17 @@ const WarrantyCards = () => {
                                 animate="visible"
                             ></motion.div>
                             <CardContent>
-                                <Typography variant="h3" sx={{ mb: 3, fontSize: 22, fontFamily:'Kanit',fontWeight:'500',color:'#676767' }} gutterBottom>
+                                <Typography
+                                    variant="h3"
+                                    sx={{
+                                        mb: 3,
+                                        fontSize: 22,
+                                        fontFamily: 'Kanit',
+                                        fontWeight: '300',
+                                        color: '#676767',
+                                    }}
+                                    gutterBottom
+                                >
                                     {item.title}
                                 </Typography>
                                 {item.warranties.map((warranty, idx) => (
@@ -135,13 +147,27 @@ const WarrantyCards = () => {
                                         key={idx}
                                         sx={{
                                             display: 'flex',
-                                            alignItems: 'flex-start', // Align icon and text at the start
+                                            alignItems: 'flex-start',
                                             mb: 1.5,
-                                            textAlign: 'left', // Ensure text is aligned left
+                                            textAlign: 'left',
                                         }}
                                     >
-                                        <CheckCircleIcon sx={{ color: '#0069c8', mr: 1, height: 15, mt: '2px' }} />
-                                        <Typography  sx={{ fontFamily:'Kanit',fontWeight:'400',fontSize: 14, color: '#676767' }}>
+                                        <CheckCircleIcon
+                                            sx={{
+                                                color: '#0069c8',
+                                                mr: 1,
+                                                height: 15,
+                                                mt: '2px',
+                                            }}
+                                        />
+                                        <Typography
+                                            sx={{
+                                                fontFamily: 'Kanit',
+                                                fontWeight: '250',
+                                                fontSize: 14,
+                                                color: '#676767',
+                                            }}
+                                        >
                                             {warranty}
                                         </Typography>
                                     </Box>

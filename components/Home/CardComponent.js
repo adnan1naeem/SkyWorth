@@ -6,13 +6,13 @@ const CardComponent = ({ title, description, buttonText, onClick }) => {
         <Card
             sx={{
                 width: '100%',
-                minHeight: { xs: "400px", sm: '540px', md: "500px",lg:"400px" }, // Set minHeight for responsiveness
+                minHeight: { xs: "400px", sm: '540px', md: "500px",lg:"400px" },
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 boxShadow: 0,
                 border: '2px solid #CCCCCC',
-                transition: 'height 0.3s ease-in-out', // Smooth transition for height changes
+                transition: 'height 0.3s ease-in-out',
             }}
         >
             <CardContent sx={{ padding: { xs: "30px 30px 0px", sm: '50px 30px 0px' } }}>

@@ -1,6 +1,6 @@
-import { FormControl, FormLabel, FormGroup, FormControlLabel, Checkbox, Typography } from '@mui/material';
+import { FormControl, FormGroup, FormControlLabel, Checkbox, Typography } from '@mui/material';
 
-const CheckboxGroup = ({ label, options, selectedValues, onChange, required,textcolor }) => {
+const CheckboxGroup = ({ label, options, selectedValues, onChange, required, textcolor,singleOption }) => {
   const isSingleOption = typeof options === 'string';
 
   return (
@@ -9,7 +9,13 @@ const CheckboxGroup = ({ label, options, selectedValues, onChange, required,text
         {label}
         {required && <span style={{ color: 'red' }}> *</span>}
       </Typography>
-      <FormGroup>
+      <FormGroup
+        sx={{
+          display:singleOption?"flex": 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '10px',
+        }}
+      >
         {isSingleOption ? (
           <FormControlLabel
             control={
@@ -18,9 +24,10 @@ const CheckboxGroup = ({ label, options, selectedValues, onChange, required,text
                 onChange={(e) => onChange(e, options)}
               />
             }
-            label={<Typography sx={{ fontFamily: 'Kanit', fontWeight: '400', color: textcolor?textcolor:'#0069c8' }}>
-              {options}
-            </Typography>}
+            label={<Typography sx={{ fontFamily: 'Kanit', fontWeight: '400', color: textcolor ? textcolor : '#0069c8' }}>
+                {options}
+              </Typography>
+            }
           />
         ) : (
           options?.map((option) => (
@@ -33,9 +40,11 @@ const CheckboxGroup = ({ label, options, selectedValues, onChange, required,text
                   onChange={onChange}
                 />
               }
-              label={<Typography sx={{ color: '#0069c8', fontFamily: 'Kanit', fontWeight: '400', }}>
-              {option}
-            </Typography>}
+              label={
+                <Typography sx={{ color: '#0069c8', fontFamily: 'Kanit', fontWeight: '400' }}>
+                  {option}
+                </Typography>
+              }
             />
           ))
         )}
