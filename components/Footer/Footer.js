@@ -9,7 +9,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <Box sx={{ background: "#00224d", pt: "1%", pb: '30px', width: '100%', bottom: 0 }}>
+    <Box sx={{ background: "#00224d", pt: "1%", pb: '30px', width: '100%', bottom: 0, borderTop:"20px solid #0263B2" }}>
       <Box
         sx={{
           mt: "1%",
@@ -139,7 +139,7 @@ function Footer() {
               ml: '-10%',
             },
           }}>
-          © 2024 SkyWorthPakistan.com
+          © 2024 SkyWorthPakistan
         </Typography>
       </Box>
     </Box>

@@ -15,7 +15,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                 borderRadius: 2
             }}
         >
-            {heading && <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px' }}  gutterBottom>
+            {heading && <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px',marginTop:'20px' }}  gutterBottom>
                 {heading}
             </Typography>}
             {imageSrc && <Image

@@ -35,14 +35,14 @@ function HomeScreen() {
       <Container maxWidth="xl" sx={{marginTop:'40px'}}>
         <CenteredImageWithText imageSrc={HomePage1} />
         <CenteredImageWithText
+          heading={"Personalize your TV"}
           imageSrc={HomePage2}
-          text="Say hello to a smarter TV"
           body="Simplify your entertainment experience with Android TV. Discover 700,000+* movies and shows in one place. Ask Google to control your TV with your voice. And cast your photos, videos, and music from devices to your TV easily with Chromecast built-in."
           ButtonText={"Learn More"}
           onClick={handleLearnMore}
         />
       </Container>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{marginTop:"20px"}}>
         <ResponsiveTVProductGrid />
       </Container>
       <LeftAlignedBoxWithBackground bordershown={true} backgroundImage={BackgrondImages} buttonText={"View All SKYWORTH TVs"} onClick={handleLearnMore}/>
