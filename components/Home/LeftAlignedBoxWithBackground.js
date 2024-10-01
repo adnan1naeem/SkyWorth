@@ -71,15 +71,18 @@ const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, desc
                     variant="contained"
                     onClick={onClick}
                     sx={{
-                        backgroundColor: 'white',
-                        color: '#000',
+                        backgroundColor: 'transparent',
+                        color: 'white',
                         fontWeight: 'light',
-                        padding: '15px 35px',
-                        borderRadius: '10px',
+                        padding: '8px 15px',
+                     
+                        borderRadius: '50px',
                         border: '2px solid #CCCCCC',
+                   
                         '&:hover': {
                             backgroundColor: '#016AC8',
                             color: 'white',
+                            border: '2px solid black',
                         },
                     }}
                 >

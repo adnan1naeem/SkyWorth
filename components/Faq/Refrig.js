@@ -41,7 +41,7 @@ const Refrig = () => {
             mb: "4%",
           }}
         >
-          Care and Maintenance For Refrigerator
+          Care and Maintenance For Google TV
         </Typography>
 
         <Grid container spacing={1} mb={10}>

@@ -1,6 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
-const FAQCard = ({ title, badgeNumber }) => {
+import questionsData from "../kbSection/QuestionData";
+
+const FAQCard = ({ title }) => {
+  // Get the number of questions matching the title from questionsData
+  const badgeNumber = (questionsData[title]?.length || 0).toString().padStart(2, '0');
+
   return (
     <Box
       sx={{
@@ -9,7 +14,7 @@ const FAQCard = ({ title, badgeNumber }) => {
         padding: "20px",
         textAlign: "center",
         width: "52vh",
-        height: "20vh",
+        height: "9.5rem",
         position: "relative",
         transition: "all 0.3s ease",
         "&:hover": {
@@ -18,7 +23,7 @@ const FAQCard = ({ title, badgeNumber }) => {
         },
       }}
     >
-    <Link href={`/kbSection?title=${encodeURIComponent(title)}`}>
+      <Link href={`/kbSection?title=${encodeURIComponent(title)}`}>
         <Box
           sx={{
             position: "absolute",
@@ -36,10 +41,7 @@ const FAQCard = ({ title, badgeNumber }) => {
         </Box>
 
         {/* Title */}
-        <Typography
-          variant="h6"
-          sx={{ mt: 5, color: "#0069c8", fontWeight: "bold" }}
-        >
+        <Typography variant="body1" sx={{ mt: 5, color: "#808080" }}>
           {title}
         </Typography>
       </Link>

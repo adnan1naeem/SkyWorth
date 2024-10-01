@@ -1,6 +1,6 @@
 // questions.js
 const questionsData = {
-    Television: [
+  "QELD Mini": [
       {
         text: "If found static charges built up on the TV casing?",
         popularity: 5,
@@ -13,9 +13,15 @@ const questionsData = {
         views: 90,
         des: "We do not recommend to plug in the appliance into a multi socket adaptor which does not have a power cable.",
       },
+      {
+        text: "How to pair the Remote Controller for Google Assistant capable model TV?",
+        popularity: 4,
+        views: 90,
+        des: "We do not recommend to plug in the appliance into a multi socket adaptor which does not have a power cable.",
+      },
       // Add more Television questions...
     ],
-    Refrigerator: [
+    QLED: [
       {
         text: "Why is my refrigerator not cooling properly?",
         popularity: 3,
@@ -24,7 +30,7 @@ const questionsData = {
       },
       // Add more Refrigerator questions...
     ],
-    ChestFreezer: [
+    UHD: [
       {
         text: "How to defrost my chest freezer?",
         popularity: 2,
@@ -33,7 +39,7 @@ const questionsData = {
       },
       // Add more Chest Freezer questions...
     ],
-    AC: [
+    "FHD / HD": [
       {
         text: "Why is my AC blowing warm air?",
         popularity: 6,

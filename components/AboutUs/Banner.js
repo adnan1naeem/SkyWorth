@@ -6,6 +6,7 @@ const bannerContainerStyles = {
   height: {
     xs: "70vh",
     lg: "60vh",
+  
   },
   display: "flex",
   justifyContent: "center",

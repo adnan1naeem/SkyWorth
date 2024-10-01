@@ -126,13 +126,14 @@ function KnowledgeBase() {
           mt: { xs: 2, sm: 4 },
           color: "#212f3e",
           fontSize: { xs: "14px", sm: "16px" },
+          mb:'10%'
         }}
       >
         {description}
       </Typography>
 
       {/* Article Actions */}
-      <ArticleActions />
+      {/* <ArticleActions /> */}
     </Box>
   );
 }
