@@ -40,17 +40,17 @@ const ProductDetailPage = ({product}) => {
 
                         <Box sx={{ padding: '16px 30px', borderLeft: '1px solid #e0e0e0', borderRight: '1px solid #e0e0e0', background: 'white', borderBottom: '1px solid #e0e0e0', flex: 1 }}>
                             {tabValue === 0 && (
-                                <Typography variant="body1" fontSize={'16px'} paragraph>
+                                <Typography variant="body1" fontSize={'14px'} fontWeight={"300"}  paragraph>
                                     {product?.overview}
                                 </Typography>
                             )}
                             {tabValue === 1 && (
-                                <Typography variant="body1" fontSize={'16px'} paragraph>
+                                <Typography variant="body1" fontSize={'14px'} fontWeight={"300"}  paragraph>
                                     {product?.specifications}
                                 </Typography>
                             )}
                             {tabValue === 2 && (
-                                <Typography variant="body1" fontSize={'16px'} paragraph>
+                                <Typography variant="body1" fontSize={'14px'} fontWeight={"300"}  paragraph>
                                     {product?.downloads}
                                 </Typography>
                             )}
@@ -59,29 +59,29 @@ const ProductDetailPage = ({product}) => {
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ paddingRight: { md: 0, lg: '7%' } }}>
                     <Typography variant="body2" sx={{ textAlign: 'center' }}>
-                        <Link href="#" underline="none" color="inherit" sx={{ marginRight: '8px', fontSize: '14px' }}>
+                        <Link href="#" underline="none" color="inherit" sx={{ marginRight: '8px', fontSize: '14px', }} fontWeight={"300"}>
                             Free Shipping & Returns
                         </Link>
                         |
-                        <Link href="#" underline="none" color="inherit" sx={{ marginX: '8px', fontSize: '14px' }}>
+                        <Link href="#" underline="none" color="inherit" sx={{ marginX: '8px', fontSize: '14px' }} fontWeight={"300"}>
                             One Year Warranty
                         </Link>
                         |
-                        <Link href="#" underline="none" color="inherit" sx={{ marginLeft: '8px', fontSize: '14px' }}>
+                        <Link href="#" underline="none" color="inherit" sx={{ marginLeft: '8px', fontSize: '14px' }} fontWeight={"300"}>
                             Support Center
                         </Link>
                     </Typography>
                     <Divider sx={{ marginY: 2 }} />
                     <Box sx={{ border: '2px solid #cccccc', borderRadius: '0px', marginTop: '30px', }}>
                         <Box sx={{ flex: 1, padding: {xs:'20px 0px 10px 10px',md:'40px 0px 10px 30px'} }}>
-                            <Typography variant="h6" fontSize={"22px"} fontFamily={'SKSans,sans-serif'} fontWeight={"400"} gutterBottom>
+                            <Typography variant="h6" fontSize={"22px"} fontFamily={'SKSans,sans-serif'} fontWeight={"300"} gutterBottom>
                                 Have A Question?
                             </Typography>
-                            <Typography variant="body2" fontSize={"18px"} fontFamily={'SKSans,sans-serif'} fontWeight={400} paragraph>
+                            <Typography variant="body2" fontSize={'14px'} fontWeight={"300"}  fontFamily={'SKSans,sans-serif'} paragraph>
                                 Our experts are ready to help you with any questions you have.
                             </Typography>
                             <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between', }}>
-                            <Button href='./../contactUs' sx={{ fontSize: { sm:'10px',md: '12px', lg: '16px' }, padding: {sm:'12px 30px'}, border: '2px solid #cccccc', color: 'black', borderRadius: 30, marginTop: '10px',alignSelf:'center' }} fontFamily={'SKSans,sans-serif'}>
+                            <Button href='./../contactUs' sx={{ fontSize: { sm:'10px',md: '12px', lg: '14px' }, padding: {sm:'12px 30px'}, border: '1.5px solid #cccccc', color: '#00000090', borderRadius: 30, marginTop: '10px',alignSelf:'center' }} fontFamily={'SKSans,sans-serif'}>
                                 Contact Us
                             </Button>
 

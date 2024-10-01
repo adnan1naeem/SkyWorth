@@ -15,8 +15,8 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
                 position: 'relative',
                 overflow: 'hidden',
                 display: 'flex',
-                flexDirection: 'column', // Use flexbox for alignment
-                justifyContent: 'space-between', // Align items within the card
+                flexDirection: 'column',
+                justifyContent: 'space-between',
                 textAlign: 'center'
             }}
             onClick={handleNavigation}
@@ -84,7 +84,7 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
             <CardContent
                 sx={{
                     padding: "10px 0px",
-                    flexGrow: 1, // Ensures content expands to fill space
+                    flexGrow: 1,
                     cursor: 'pointer',
                 }}
             >
@@ -101,7 +101,7 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
                     {product.name}
                 </Typography>
             </CardContent>
-            <Box sx={{ marginTop: 'auto', padding: '20px 0' }}> {/* Ensures button stays aligned */}
+            <Box sx={{ marginTop: 'auto', padding: '20px 0' }}>
                 <Button
                     variant="outlined"
                     onMouseEnter={handleMouseEnter}

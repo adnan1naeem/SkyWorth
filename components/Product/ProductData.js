@@ -2,6 +2,11 @@ import localImage from './../../assets/FHD.jpg';
 import QLEDMini from './../../assets/QLED-mini.jpg';
 import QLED from './../../assets/QLED.jpg';
 import UHD from './../../assets/UHD.jpg';
+import Image1 from './../../assets/SliderImage1.jpg';
+import Image2 from './../../assets/SliderImage2.jpg';
+import Image3 from './../../assets/SliderImage3.jpg';
+import Image4 from './../../assets/SliderImage4.jpg';
+import Image5 from './../../assets/SliderImage5.jpg';
 export const products = [
     {
         id: 1, name: "QLED 65Q7700G Google TV Quantum Dot, HDR10+ & 120Hzs", price: "$1,199.00 - $1,599.00",
@@ -35,10 +40,10 @@ export const products = [
             "Bidirectional Bluetooth 5.0"
         ],
         detailImages: [
-            localImage,
-            QLEDMini,
-            QLED,
-            UHD,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ]
     },
     {
@@ -55,10 +60,10 @@ export const products = [
         productSize: "32",
         features: ["Quantum Dot", "Dolby Atmos"],
         detailImages: [
-            localImage,
-            QLEDMini,
-            QLED,
-            UHD,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ]
     },
 
@@ -74,27 +79,27 @@ export const products = [
         resolution: "FHD/HD",
         productSize: "43",
         detailImages: [
-            QLED,
-            QLEDMini,
-            localImage,
-            UHD,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ]
     },
     {
         id: 4, name: "HD32E5500G Google TV Quantum Dot, HDR10+ & 120Hzs", price: "$4,999.00 - $6,999.00",
         image: [
-            UHD,
             QLED,
             QLEDMini,
             localImage,
+            UHD,
         ],
         productSize: "55",
         features: ["Quantum Dot", "Dolby Atmos","HDR10+","120Hzs"],
         detailImages: [
-            UHD,
-            QLED,
-            QLEDMini,
-            localImage,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ],
     },
     {
@@ -108,10 +113,10 @@ export const products = [
         features: ["Quantum Dot", "Dolby Atmos"],
         productSize: "32",
         detailImages: [
-            localImage,
-            QLEDMini,
-            QLED,
-            UHD,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ],
     },
     {
@@ -125,10 +130,10 @@ export const products = [
         features: ["Quantum Dot", "Dolby Atmos"],
         productSize: "32",
         detailImages: [
-            QLEDMini,
-            localImage,
-            QLED,
-            UHD,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ],
     },
     {
@@ -141,10 +146,10 @@ export const products = [
         productSize: "55",
         features: ["144 Hzs"],
         detailImages: [
-            QLEDMini,
-            localImage,
-            QLED,
-            UHD,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ],
     },
     {
@@ -154,10 +159,10 @@ export const products = [
             QLED,
             UHD,
         ], detailImages: [
-            QLEDMini,
-            localImage,
-            QLED,
-            UHD,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ], productSize: "43", features: ["Quantum Dot", "Dolby Atmos"],
     },
     {
@@ -171,11 +176,11 @@ export const products = [
             QLED,
             UHD,
         ], detailImages: [
-            QLED,
-            QLEDMini,
-            localImage,
-            QLED,
-            UHD,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
+            Image5
         ],
         productSize: "32",
         features: ["Quantum Dot", "Dolby Atmos"],
@@ -191,11 +196,10 @@ export const products = [
             localImage,
             QLED,
         ], detailImages: [
-            UHD,
-            QLED,
-            QLEDMini,
-            localImage,
-            QLED,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ]
     },
     {
@@ -211,10 +215,10 @@ export const products = [
         productSize: "65",
         featurelist: [],
         detailImages: [
-            QLED,
-            QLEDMini,
-            localImage,
-            UHD,
+            Image1,
+            Image2,
+            Image3,
+            Image4,
         ],
         overview: "The Skyworth Clarus Outdoor™ Partial Sun PS1 Series is purpose-built for outdoor entertainment, making it an excellent choice for patios, decks, and balconies. With its 4K UHD resolution, this TV ensures stunning visuals, whether you’re watching during the day or night.Specifications content goes here. You can list the important features or specifications of the product",
         specifications: "Specifications content goes here. You can list the important features or specifications of the product.",
