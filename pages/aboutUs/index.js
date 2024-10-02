@@ -8,6 +8,8 @@ import CustomTimeline from "../../components/AboutUs/CustomTimeline";
 import BrandValueGrid from "../../components/AboutUs/BrandValueGrid";
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
 import BackgrondImages from './../../assets/aboutImage.jpg'
+import AboutCard from "../../components/AboutUs/AboutCard";
+import AboutSection from "../../components/AboutUs/AboutSection";
 const sections = [
   {
     title: "Mission",
@@ -36,9 +38,10 @@ function AboutUs() {
         ))}
       </Grid>
       <AllStat />
-      < CustomTimeline />
+      <AboutSection />
+      {/* < CustomTimeline /> */}
       {/* <SkyworthSection/> */}
-      < BrandValueGrid />
+      {/* < BrandValueGrid /> */}
       <LeftAlignedBoxWithBackground backgroundImage={BackgrondImages} title={"SKYWORTH has grown to be one of the Top Global TV brands in the world."} description={"SKYWORTH won two awards from 2023-2024 Global CE Brands & Global TV Brands during CES. SKYWORTH consistently adheres to its original intention, committed to enabling consumers to deeply experience the charm of technology in their lives."} />
     </Box>
   );
