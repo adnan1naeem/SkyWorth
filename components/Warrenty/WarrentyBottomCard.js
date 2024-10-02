@@ -6,23 +6,22 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 const warrantyData = [
     {
         title: 'QLED Mini',
-        warranties: ['2 years warranty for all model'],
+        warranties: ['2 Years Parts warranty for QLED Mini all models and sizes', '2 Years Panel warranty for QLED Mini all models and sizes'],
     },
     {
         title: 'QLED',
         warranties: [
-            '2 years general warranty',
-            '3 years control panel warranty',
-            '6 years wash motor warranty',
+            '2 Years Parts warranty for QLED all models and sizes',
+            '2 Years Panel warranty for QLED all models and sizes',
         ],
     },
     {
         title: 'UHD',
-        warranties: ['1 year general warranty', '5 years compressor warranty'],
+        warranties: ['2 Years Parts warranty for UHD all models and sizes', '2 Years Panel warranty for UHD all models and sizes'],
     },
     {
         title: 'FHD/HD',
-        warranties: ['1 year general warranty', '5 years compressor warranty'],
+        warranties: ['2 Years Parts warranty for FHD/HD all models and sizes', '2 Years Panel warranty for FHD/HD all models and sizes'],
     },
 ];
 
@@ -85,16 +84,16 @@ const WarrantyCards = () => {
                 animate="visible"
                 style={{
                     display: 'grid',
-                    margin: isXL?'0px 100px':isLarge?'0px 1%':'0px',
+                    margin: isXL ? '0px 100px' : isLarge ? '0px 1%' : '0px',
                     gridTemplateColumns: isMobile
                         ? 'repeat(1, 1fr)'
                         : isMedium
-                        ? 'repeat(2, 1fr)'
-                        : isLarge
-                        ? 'repeat(3, 1fr)'
-                        : isXL
-                        ? 'repeat(4, 1fr)' // 4 columns for xl devices
-                        : 'repeat(4, 1fr)', // Default to 3 columns
+                            ? 'repeat(2, 1fr)'
+                            : isLarge
+                                ? 'repeat(3, 1fr)'
+                                : isXL
+                                    ? 'repeat(4, 1fr)' // 4 columns for xl devices
+                                    : 'repeat(4, 1fr)', // Default to 3 columns
                     gap: '20px',
                 }}
             >

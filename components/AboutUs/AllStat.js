@@ -1,13 +1,14 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Aboutbackground from './../../assets/Aboutbackground.jpg'
+import Aboutbackground from './../../assets/Aboutbackground.jpg';
+
 function AllStat() {
   const stats = [
-    { title: "2", text: "Listed SKYWORTH Company" },
-    { title: "20", text: "National high-tech enterprises" },
-    { title: "36", text: "Thousands Employees" },
-    { title: "136", text: "Billion Brand Value" },
-    { title: "39", text: "Billion Business Income" },
+    { title: "2", titleText: "Listed Companies", listText: ["Skyworth Group (00751.HK)", "Skyworth Digital (000810.SZ)"] },
+    { title: "20", titleText: "High Tech Enterprises", text: "Companies (Year 2022)", },
+    { title: "36", titleText: "Staff Size", text: "Thousands Staff",yearText: "(Year 2023)" },
+    { title: "136", titleText: "Total Revenue", text: "Billion CNY", yearText: "(Year 2023)" },
+    { title: "39", titleText: "Gross Profit", text: "Billion CNY", yearText: "(Year 2023)" },
   ];
 
   const styles = {
@@ -85,10 +86,24 @@ function AllStat() {
       fontWeight: "bold",
       fontSize: "45px",
     },
+    titleText: {
+      fontWeight: "300",
+      fontSize: "20px",
+    },
     text: {
       lineHeight: 1.7,
-      fontFamily:"Kanit",
-      width: "10rem",
+      fontFamily: "Kanit",
+      width: "11rem",
+    },
+    listText: {
+      lineHeight: 1.5,
+      fontFamily: "Kanit",
+      fontSize: "16px",
+      marginTop: "10px",
+    },
+    yearText: {
+      fontSize: "14px",
+      marginTop: "5px",
     },
   };
 
@@ -96,12 +111,31 @@ function AllStat() {
     <Box sx={styles.container}>
       {stats.map((stat, index) => (
         <Box key={index} sx={styles.statBox(index, stats.length)}>
+          <Typography sx={styles.titleText}>
+            {stat.titleText}
+          </Typography>
           <Typography variant="h6" component="h6" sx={styles.title}>
             {stat.title}
           </Typography>
-          <Typography variant="body1" sx={styles.text}>
-            {stat.text}
-          </Typography>
+          {stat.text && (
+            <Typography variant="body1" sx={styles.text}>
+              {stat.text}
+            </Typography>
+          )}
+          {stat.listText && (
+            <Box sx={styles.listText}>
+              {stat.listText.map((item, idx) => (
+                <Typography key={idx} variant="body2">
+                  {item}
+                </Typography>
+              ))}
+            </Box>
+          )}
+          {stat.yearText && (
+            <Typography variant="body2" sx={styles.yearText}>
+              {stat.yearText}
+            </Typography>
+          )}
         </Box>
       ))}
     </Box>

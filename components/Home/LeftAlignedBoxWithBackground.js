@@ -1,12 +1,12 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 
-const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, description,onClick,bordershown }) => {
+const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, description,onClick,Imageheight }) => {
     return (
         <Box
             sx={{
                 width: '100%',
-                height: '420px',
+                height: Imageheight?Imageheight:'420px',
                 backgroundImage: `url(${backgroundImage.src || backgroundImage})`,
                 background: 'linear-gradient(90deg, #000000fe, #0000007 49%, #00000002)',
                 backgroundSize: 'cover',
@@ -48,9 +48,9 @@ const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, desc
                         lineHeight: '1',
                     }}
                 >
-                    Unmatched quality and
+                    Unmatched Quality and
                     <br />
-                    unbeatable prices.
+                    Unbeatable Performance
                 </Typography>}
                 {description &&
                     <Typography

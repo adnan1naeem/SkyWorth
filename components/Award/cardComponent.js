@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Typography, Button, Container } from "@mui/material";
 import { styled } from "@mui/system";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const ZoomableImageContainer = styled(Box)({
   position: "relative",
@@ -166,9 +165,9 @@ const AwardSection = ({
           >
             {awardDescription}
           </Typography>
-          <CustomButton>
+          {buttonText&& <CustomButton>
             {buttonText || "Shop Now"}
-          </CustomButton>
+          </CustomButton>}
         </Box>
 
         <Box

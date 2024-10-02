@@ -108,16 +108,16 @@ const Navbar = () => {
                 <Link href="/product" onClick={closeMenu}>
                   ALL PRODUCTS
                 </Link>
-                <Link href="/product/3" onClick={closeMenu}>
+                <Link href={{ pathname: '/product', query: { title: 'QLED Mini'} }} onClick={closeMenu}>
                   QLED Mini
                 </Link>
-                <Link href="/product/5" onClick={closeMenu}>
+                <Link href={{ pathname: '/product', query: { title: 'QLED'} }} onClick={closeMenu}>
                   QLED
                 </Link>
-                <Link href="/product/6" onClick={closeMenu}>
+                <Link href={{ pathname: '/product', query: { title: 'UHD'} }} onClick={closeMenu}>
                   UHD
                 </Link>
-                <Link href="/product/11" onClick={closeMenu}>
+                <Link href={{ pathname: '/product', query: { title: 'FHD/HD'} }}  onClick={closeMenu}>
                   FHD/HD
                 </Link>
               </div>
@@ -137,39 +137,39 @@ const Navbar = () => {
                 </li>
                 <li
                   className={
-                    router.pathname === "/product/3" ? styles.menu : styles.drop
+                    router.pathname === "/product?title=QLED Mini" ? styles.menu : styles.drop
                   }
                 >
-                  <Link href="/product/3" onClick={closeMenu}>
+                  <Link href={{ pathname: '/product', query: { title: 'QLED Mini'} }} onClick={closeMenu}>
                     <TextNav label="QLED Mini" />
                   </Link>
                 </li>
                 <li
                   className={
-                    router.pathname === "/product/5"
+                    router.pathname === "/product?title=QLED"
                       ? styles.menu
                       : styles.drop
                   }
                 >
-                  <Link href="/product/5" onClick={closeMenu}>
+                  <Link href={{ pathname: '/product', query: { title: 'QLED'} }} onClick={closeMenu}>
                     <TextNav label="QLED" />
                   </Link>
                 </li>
                 <li
                   className={
-                    router.pathname === "/product/6" ? styles.menu : styles.drop
+                    router.pathname === "/product?title=UHD" ? styles.menu : styles.drop
                   }
                 >
-                  <Link href="/product/6" onClick={closeMenu}>
+                  <Link href={{ pathname: '/product', query: { title: 'UHD'} }} onClick={closeMenu}>
                     <TextNav label="UHD" />
                   </Link>
                 </li>
                 <li
                   className={
-                    router.pathname === "/product/11" ? styles.menu : styles.drop
+                    router.pathname === "/product?title=FHD/HD" ? styles.menu : styles.drop
                   }
                 >
-                  <Link href="/product/11" onClick={closeMenu}>
+                  <Link href={{ pathname: '/product', query: { title: 'FHD/HD'} }} onClick={closeMenu}>
                     <TextNav label="FHD/HD" />
                   </Link>
                 </li>
