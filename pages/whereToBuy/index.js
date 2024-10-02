@@ -4,7 +4,7 @@ import Cities from "./../../components/WhereToBuy/Cities";
 import BackgrondImages from './../../assets/select.jpg'
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
 import backgroundImage from '../../assets/backgroundImage.webp'
-import CentersNearby from "../../components/WhereToBuy/MapComponent";
+// import CentersNearby from "../../components/WhereToBuy/MapComponent";
 import StoreLocator from "../../components/WhereToBuy/Maplocator";
 function WhereToBuy() {
   return (
