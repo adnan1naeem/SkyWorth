@@ -35,8 +35,8 @@ const ProductGrid = () => {
     const matchesProductSize = selectedFilters.productSize.length === 0 ||
       selectedFilters.productSize.includes(product.productSize);
 
-    const matchesFeature = selectedFilters?.feature?.length === 0 ||
-      selectedFilters.feature.some((feature) => product?.features?.includes(feature));
+      const matchesFeature = selectedFilters.feature.length === 0 ||
+      selectedFilters.feature.every((feature) => product.features.includes(feature));
 
     return matchesResolution && matchesProductSize && matchesFeature;
   });

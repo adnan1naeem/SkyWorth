@@ -10,7 +10,7 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
         <Card
             sx={{
                 maxWidth: 345,
-                minHeight: { sm: "370px", md: '350px',lg:"420px",xl:'354px' },
+                minHeight: { sm: "250px", md: '300px',lg:"370px",xl:'404px' },
                 boxShadow: 'none',
                 position: 'relative',
                 overflow: 'hidden',
@@ -36,7 +36,7 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
                     image={product?.image[0]?.src}
                     alt={product.name}
                     sx={{
-                        height: '200px',
+                        height: 'auto',
                         width: '100%',
                         objectFit: 'contain',
                         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
@@ -83,7 +83,6 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
             </Box>
             <CardContent
                 sx={{
-                    padding: "10px 0px",
                     flexGrow: 1,
                     cursor: 'pointer',
                 }}

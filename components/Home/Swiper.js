@@ -12,7 +12,6 @@ import Image5 from './../../assets/SliderImage5.jpg';
 import { Box, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ChevronLeft';
 import ArrowForwardIcon from '@mui/icons-material/ChevronRight';
-import { SiTruenas } from 'react-icons/si';
 
 const ImageSwiper = () => {
   const [activeIndex, setActiveIndex] = useState(0);

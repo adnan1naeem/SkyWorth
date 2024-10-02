@@ -69,7 +69,7 @@ const TVProductCard = ({ title, description, image,OnClick }) => {
         {title}
       </Typography>
       <Typography sx={{
-        height: { md: "12vh", lg: "17vh", xl: "14vh", },
+        height: { md: "12vh", lg: "14vh", xl: "14vh", },
         fontWeight: 250,
         fontSize: '1.1rem',
       }} color="black">

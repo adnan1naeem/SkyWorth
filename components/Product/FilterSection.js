@@ -19,7 +19,7 @@ const FilterSection = ({ onFilterChange }) => {
     } else {
       updatedFilters[category].push(value);
     }
-    
+
     setSelectedFilters(updatedFilters);
     onFilterChange(updatedFilters);
   };
@@ -40,6 +40,7 @@ const FilterSection = ({ onFilterChange }) => {
       {filters.resolution.map((resolution) => (
         <FormControlLabel
           key={resolution}
+          style={{ display:'flex' }}
           control={
             <Checkbox
               checked={selectedFilters.resolution.includes(resolution)}
@@ -47,8 +48,10 @@ const FilterSection = ({ onFilterChange }) => {
               sx={{ padding: '4px' }}
             />
           }
-          label={resolution}
-          sx={{ display: 'block', fontSize: 20 }} 
+          label={ <Typography sx={{ fontSize: 18, fontFamily: 'Kanit',fontWeight:'300' }}>
+          {resolution}
+        </Typography>}
+          sx={{ display: 'block' }}
         />
       ))}
 
@@ -58,6 +61,7 @@ const FilterSection = ({ onFilterChange }) => {
       {filters.productSize.map((type) => (
         <FormControlLabel
           key={type}
+          style={{display:'flex'}}
           control={
             <Checkbox
               checked={selectedFilters.productSize.includes(type)}
@@ -65,8 +69,12 @@ const FilterSection = ({ onFilterChange }) => {
               sx={{ padding: '4px' }}
             />
           }
-          label={type}
-          sx={{ display: 'block', fontSize: 20 }} 
+          label={
+            <Typography sx={{ fontSize: 18, fontFamily: 'Kanit',fontWeight:'300' }}>
+              {type}
+            </Typography>
+          }
+          sx={{ display: 'block' }}
         />
       ))}
 
@@ -76,6 +84,7 @@ const FilterSection = ({ onFilterChange }) => {
       {filters.feature.map((feature) => (
         <FormControlLabel
           key={feature}
+          style={{ display:'flex' }}
           control={
             <Checkbox
               checked={selectedFilters.feature.includes(feature)}
@@ -83,8 +92,10 @@ const FilterSection = ({ onFilterChange }) => {
               sx={{ padding: '4px' }}
             />
           }
-          label={feature}
-          sx={{ display: 'block', fontSize: 20 }} 
+          label={ <Typography sx={{ fontSize: 18, fontFamily: 'Kanit',fontWeight:'300' }}>
+          {feature}
+        </Typography>}
+          sx={{ display: 'block', fontSize: 20, fontFamily: "Kanit" }}
         />
       ))}
     </Box>
