@@ -10,7 +10,7 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
         <Card
             sx={{
                 maxWidth: 345,
-                minHeight: { sm: "250px", md: '300px',lg:"370px",xl:'404px' },
+                minHeight: { sm: "250px", md: '370px',lg:"370px",xl:'404px' },
                 boxShadow: 'none',
                 position: 'relative',
                 overflow: 'hidden',
