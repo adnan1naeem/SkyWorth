@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 const tvProducts = [
   {
     title: 'QLED Mini',
-    description: 'OLED display technology delivers the best black levels, color highlights, and the widest viewing angle experience to every seat in the room.',
+    description: 'QLED Mini display technology delivers the best black levels, color highlights, and the widest viewing angle experience to every seat in the room.',
     image: Image1,
     buttonText: 'Shop OLED TVs',
   },
@@ -20,19 +20,19 @@ const tvProducts = [
   },
   {
     title: 'UHD',
-    description: 'Do more on your TV with voice. Ask Google to search 700,000+ movies and shows, get recommendations, and control smart home devices.',
+    description: 'Do more on your TV with voice. Ask Google to search 700,000+ movies and shows, get recommendations, control smart home devices, and more.',
     image: Image3,
     buttonText: 'Shop FHD TVs',
   },
   {
     title: 'FHD/HD',
-    description: 'Do more on your TV with voice. Ask Google to search 700,000+ movies and shows, get recommendations, and control smart home devices.',
+    description: 'Do more on your TV with voice. Ask Google to search 700,000+ movies and shows, get recommendations, control smart home devices, and more.',
     image: Image4,
     buttonText: 'Shop FHD TVs',
   }
 ];
 
-const TVProductCard = ({ title, description, image,OnClick }) => {
+const TVProductCard = ({ title, description, image, OnClick }) => {
   const router = useRouter();
   const handleCardClick = (title) => {
     router.push({
@@ -41,58 +41,58 @@ const TVProductCard = ({ title, description, image,OnClick }) => {
     });
 
   };
-  return(
-  <Card
-    sx={{
-      maxWidth: 335,
-      margin: 'auto',
-      boxShadow: 'none',
-      backgroundColor: 'transparent',
-      textAlign: 'center',
-    }}
-    onClick={()=>{handleCardClick(title)}}
-  >
-    <CardMedia
-      component="img"
-      height="auto"
-      image={image.src}
-      alt={title}
-      sx={{ objectFit: 'contain', padding: '16px', height: '200px' }}
-    />
-    <CardContent>
-      <Typography gutterBottom sx={{
-        fontSize: '1.5rem',
-        color: '#0c3034',
-        fontWeight: 400,
+  return (
+    <Card
+      sx={{
+        maxWidth: 335,
+        margin: 'auto',
+        boxShadow: 'none',
+        backgroundColor: 'transparent',
         textAlign: 'center',
-      }} component="div">
-        {title}
-      </Typography>
-      <Typography sx={{
-        height: "15vh",
-        fontWeight: 250,
-        fontSize: '1.1rem',
-      }} color="black">
-        {description}
-      </Typography>
-      <Button
-        variant="outlined"
-        sx={{
-          marginTop: '16px',
-          borderRadius: '10px',
-          padding: '15px 35px',
-          borderColor: 'black',
-          color: '#000',
-          '&:hover': {
-            backgroundColor: '#016AC8',
-            color: '#fff',
-          },
-        }}
-      >
-        View Product
-      </Button>
-    </CardContent>
-  </Card>
+      }}
+      onClick={() => { handleCardClick(title) }}
+    >
+      <CardMedia
+        component="img"
+        height="auto"
+        image={image.src}
+        alt={title}
+        sx={{ objectFit: 'contain', padding: '16px', height: '200px' }}
+      />
+      <CardContent>
+        <Typography gutterBottom sx={{
+          fontSize: '1.5rem',
+          color: '#0c3034',
+          fontWeight: 400,
+          textAlign: 'center',
+        }} component="div">
+          {title}
+        </Typography>
+        <Typography sx={{
+          minHeight: {xs:"16vh",lg:"22vh",xl:"15vh"},
+          fontWeight: 250,
+          fontSize: '1.1rem',
+        }} color="black">
+          {description}
+        </Typography>
+        <Button
+          variant="outlined"
+          sx={{
+            marginTop: '16px',
+            borderRadius: '10px',
+            padding: '15px 35px',
+            borderColor: 'black',
+            color: '#000',
+            '&:hover': {
+              backgroundColor: '#016AC8',
+              color: '#fff',
+            },
+          }}
+        >
+          View All Product
+        </Button>
+      </CardContent>
+    </Card>
   )
 };
 
@@ -100,25 +100,25 @@ const ResponsiveTVProductGrid = () => {
 
 
 
-  return(
-  <Container sx={{ marginTop: '50px' }} maxWidth={"xl"}>
-    <Typography sx={{
-      fontSize: '1.5rem',
-      color: '#0c3034',
-      fontWeight: 400,
-      textAlign: 'center',
-      textTransform: 'capitalize',
-    }} align="center" gutterBottom>
-      Choosing the right SKYWORTH TV for you.
-    </Typography>
-    <Grid container spacing={2} justifyContent={{ xs: "center" }}>
-      {tvProducts.map((product, index) => (
-        <Grid item margin={0} key={index}>
-          <TVProductCard {...product} OnClick={()=>handleCardClick()} />
-        </Grid>
-      ))}
-    </Grid>
-  </Container>
+  return (
+    <Container sx={{ marginTop: '50px' }} maxWidth={"xl"}>
+      <Typography sx={{
+        fontSize: '1.5rem',
+        color: '#0c3034',
+        fontWeight: 400,
+        textAlign: 'center',
+        textTransform: 'capitalize',
+      }} align="center" gutterBottom>
+        Choosing the right SKYWORTH TV for you
+      </Typography>
+      <Grid container spacing={2} justifyContent={{ xs: "center" }}>
+        {tvProducts.map((product, index) => (
+          <Grid item margin={0} key={index}>
+            <TVProductCard {...product} OnClick={() => handleCardClick()} />
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   )
 };
 

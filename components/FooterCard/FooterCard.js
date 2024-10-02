@@ -7,7 +7,7 @@ function FooterCard({...props}) {
     <Box >
       <Card
         sx={{
-          height: { sx: "17rem", sm: "15rem", md: "15rem", lg: "15rem" },
+          height: { sx: "12rem", sm: "10rem", md: "13rem", lg: "15rem" },
           width: { sx: "12rem", sm: "14rem", md: "16rem", lg: "18rem" },
           background: "none",
           boxShadow: "none",
@@ -19,7 +19,7 @@ function FooterCard({...props}) {
               color: "#ffffff",
               fontSize: "21px",
               fontWeight: 600,
-              paddingBottom: "10%",
+              paddingBottom: {xs:"3%",lg:"10%"},
               fontFamily: "Mont-Bold, Sans-serif",
             }}
           >
@@ -121,7 +121,7 @@ function FooterCard({...props}) {
               {props.text4}
             </Typography>
           </Link>
-          <Link
+        {props.text5&&  <Link
             style={{ textDecoration: "none" }}
             href={{ pathname: props.href_five }}
           >
@@ -143,7 +143,7 @@ function FooterCard({...props}) {
             >
               {props.text5}
             </Typography>
-          </Link>
+          </Link>}
         </CardContent>
       </Card>
     </Box>

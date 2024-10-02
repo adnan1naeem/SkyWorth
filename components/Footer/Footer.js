@@ -2,14 +2,14 @@ import { Box, IconButton, Typography } from "@mui/material";
 import React from "react";
 import FooterCard from "../FooterCard/FooterCard";
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Image from "next/image";
 
 function Footer() {
   return (
-    <Box sx={{ background: "#00224d", pt: "1%", pb: '30px', width: '100%', bottom: 0, borderTop:"20px solid #0263B2" }}>
+    <Box sx={{ background: "#00224d", pt: "1%", pb: '30px', width: '100%', bottom: 0, borderTop: "20px solid #0263B2" }}>
       <Box
         sx={{
           mt: "1%",
@@ -20,7 +20,7 @@ function Footer() {
           pb: "0.5%",
         }}
       >
-        <Box sx={{ display: "flex", flexWrap: "wrap", gap: { xs: "20px", md: "50px" }, justifyContent: "space-between", width: "100%" }}>
+        <Box sx={{ display: "flex",flexDirection: { xs: "column", sm: "column", md: "row" }, flexWrap: "wrap", gap: { xs: "20px", md: "50px" }, justifyContent: "space-between", width: "100%" }}>
           <Box>
             <FooterCard
               title="About"
@@ -37,7 +37,7 @@ function Footer() {
               <Image
                 src={require('./../../assets/skyworth-white-logo.svg')}
                 alt="Skyworth Logo"
-                width={120} 
+                width={120}
                 height={40}
                 style={{
                   alignSelf: "center",
@@ -58,7 +58,7 @@ function Footer() {
             href_four="/product/6"
             text5="FHD/HD"
             href_five="/product/11"
-            mt={{ xs: '10%', sm: 0 }}
+            mt={{ xs: '5%', sm: 0 }}
           />
           <Box>
             <FooterCard
@@ -75,10 +75,10 @@ function Footer() {
                 Our Social Media
               </Typography>
               <Box sx={{ display: "flex", gap: 2 }}>
-                <SocialIcon icon={<FacebookIcon/>} />
-                <SocialIcon icon={<TwitterIcon />} />
-                <SocialIcon icon={<InstagramIcon />} />
-                <SocialIcon icon={<YouTubeIcon />} />
+                <SocialIcon icon={<FacebookIcon />} />
+                <SocialIcon icon={<LinkedInIcon />} link={"https://www.linkedin.com/in/skyworth-pakistan-4b0829329/"}/>
+                <SocialIcon icon={<InstagramIcon />} link="https://www.instagram.com/844skyworth/?utm_source=qr&r=nametag" />
+                <SocialIcon icon={<YouTubeIcon />}  link={"https://www.youtube.com/@SkyworthPakistan"}/>
               </Box>
             </Box>
           </Box>
@@ -95,7 +95,7 @@ function Footer() {
           mt: 2
         }}
       >
-        <Box sx={{textAlign:'flex-start',width:'100%'}}>
+        <Box sx={{ textAlign: 'flex-start', width: '100%' }}>
           <Image
             src={require('./../../assets/skyworth-white-logo.svg')}
             alt="Skyworth Logo"
@@ -104,15 +104,15 @@ function Footer() {
           />
         </Box>
 
-        <Box sx={{ textAlign: 'start', width: "100%",marginTop:'20px' }}>
+        <Box sx={{ textAlign: 'start', width: "100%", marginTop: '20px' }}>
           <Typography variant="h6" sx={{ color: "#fff", mb: 2, fontSize: "21px", fontWeight: 600 }}>
             Our Social Media
           </Typography>
-          <Box sx={{ display: "flex", gap: 1,marginBottom:"10px", justifyContent:'start' }}>
+          <Box sx={{ display: "flex", gap: 1, marginBottom: "10px", justifyContent: 'start' }}>
             <SocialIcon icon={<FacebookIcon />} />
-            <SocialIcon icon={<TwitterIcon />} />
-            <SocialIcon icon={<InstagramIcon />} />
-            <SocialIcon icon={<YouTubeIcon />} />
+            <SocialIcon icon={<LinkedInIcon />} link={"https://www.linkedin.com/in/skyworth-pakistan-4b0829329/"}/>
+            <SocialIcon icon={<InstagramIcon />} link="https://www.instagram.com/844skyworth/?utm_source=qr&r=nametag" />
+            <SocialIcon icon={<YouTubeIcon />} link={"https://www.youtube.com/@SkyworthPakistan"}/>
           </Box>
         </Box>
       </Box>
@@ -125,7 +125,7 @@ function Footer() {
           flexWrap: "wrap",
           px: { xs: "8%", lg: "5.5%", xl: "16%" },
           pt: "2%",
-          placeContent:'center'
+          placeContent: 'center'
         }}
       >
         <Typography
@@ -146,19 +146,20 @@ function Footer() {
   );
 }
 
-// SocialIcon helper component for reusable styling
-const SocialIcon = ({ icon }) => (
-  <IconButton
-    sx={{
-      color: "#fff",
-      border: "1px solid #fff",
-      borderRadius: "50%",
-      height: {xs:40,md:40,lg:55},
-      width: {xs:40,md:40,lg:55},
-    }}
-  >
-    {icon}
-  </IconButton>
+const SocialIcon = ({ icon, link }) => (
+  <a href={link} target="_blank" rel="noopener noreferrer">
+    <IconButton
+      sx={{
+        color: "#fff",
+        border: "1px solid #fff",
+        borderRadius: "50%",
+        height: { xs: 40, md: 40, lg: 55 },
+        width: { xs: 40, md: 40, lg: 55 },
+      }}
+    >
+      {icon}
+    </IconButton>
+  </a>
 );
 
 export default Footer;

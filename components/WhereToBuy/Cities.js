@@ -7,7 +7,7 @@ import CityBox from "./CityBox";
 // Sample data for cities and their corresponding details
 const cityData = [
   {
-    city: "Kuala Lumpur",
+    city: "Lahore",
     branches: [
       {
         name: "EVERYBODY ELECTRICAL SDN. BHD.",
@@ -64,7 +64,7 @@ const cityData = [
     ],
   },
   {
-    city: "Selangor",
+    city: "Karachi",
     branches: [
       {
         name: "YU LEONG HOME APPLIANCES SDN BHD (AMPANG).",
@@ -80,7 +80,7 @@ const cityData = [
     ],
   },
   {
-    city: "Johor",
+    city: "Islamabad",
     branches: [
       {
         name: "U HOME ELECTRONIC.",
@@ -96,7 +96,7 @@ const cityData = [
     ],
   },
   {
-    city: "Johor",
+    city: "Rawalpindi",
     branches: [
       {
         name: "U HOME ELECTRONIC.",
@@ -112,7 +112,7 @@ const cityData = [
     ],
   },
   {
-    city: "Johor",
+    city: "Multan",
     branches: [
       {
         name: "U HOME ELECTRONIC.",
@@ -128,7 +128,7 @@ const cityData = [
     ],
   },
   {
-    city: "Johor",
+    city: "Faisalabad",
     branches: [
       {
         name: "U HOME ELECTRONIC.",
@@ -144,23 +144,7 @@ const cityData = [
     ],
   },
   {
-    city: "Johor",
-    branches: [
-      {
-        name: "U HOME ELECTRONIC.",
-        address:
-          "NO 15, JALAN PENDIDIKAN 8/2, TAMAN UNIVERSITI, 81300 SKUDAI, JOHOR.",
-        tel: "07-5626205",
-      },
-      {
-        name: "ENG HOCK ENTERPRISE",
-        address: "NO.71, JALAN MERIAM, 84000 MUAR, JOHOR.",
-        tel: "06-9537140 / 011-1145 1398",
-      },
-    ],
-  },
-  {
-    city: "Johor",
+    city: "Peshawar",
     branches: [
       {
         name: "U HOME ELECTRONIC.",

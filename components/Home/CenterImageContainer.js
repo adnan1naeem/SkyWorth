@@ -15,7 +15,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                 borderRadius: 2
             }}
         >
-            {heading && <Typography variant="h4" sx={{ fontWeight: 'light', padding: '10px',marginTop:'20px' }}  gutterBottom>
+            {heading && <Typography sx={{ fontWeight: '400', fontSize:"1.5rem", padding: '10px',marginTop:'20px' }}  gutterBottom>
                 {heading}
             </Typography>}
             {imageSrc && <Image
@@ -34,7 +34,7 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                     fontWeight: 400,
                     textAlign: 'center',
                     textTransform:'capitalize',
-                    marginTop: body2 ? '70px' : '20px',
+                    marginTop: body2 ? '70px' : '40px',
                     padding:{xs:"0px 10px",md:0}
                 }}
             >
@@ -46,8 +46,8 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                     width:  "80%",
                     fontWeight: 250,
                     fontSize: '1.1rem',
-                    textAlign: {xs:'left',md:'center'},
-                    marginTop: '10px',
+                    textAlign:'center',
+                    marginTop: '30px',
                     marginBottom: body2 ? 0 : '30px'
                 }}
             >
@@ -59,8 +59,8 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                     width:  "80%",
                     fontWeight: 250,
                     fontSize: '1.1rem',
-                    textAlign: {xs:'left',md:'center'},
-                    marginBottom: '30px'
+                    textAlign:'center',
+                    marginBottom: '35px'
                 }}
             >
                 {body2}
@@ -80,7 +80,8 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                     color: '#212121',
                     padding: '10px 20px',
                     '&:hover': {
-                        backgroundColor: '#CCCCCC20'
+                        backgroundColor: '#0263B2',
+                        color:"white",
                     }
                 }}
             >
