@@ -8,17 +8,22 @@ import { motion } from 'framer-motion';
 const sections = [
     {
         title: 'Address',
-        description: 'Block B, No.13, Jalan Pelukis U1/46, Temasya Industrial Park Seksyen U1, 40150 Shah Alam, Selangor Darul Ehsan, Malaysia.',
+        description: '26Km, Multan Road, Maraka, Lahore, Pakistan',
         icon: <BusinessIcon sx={{ height: 45, width: 45 }} />,
     },
     {
-        title: 'Contact Number',
-        description: 'Call our HQ at 1 800 888 123 (Toll Free)',
+        title: "Contact Number (Head Office)",
+        description: '92 42 111 600 6D0',
+        icon: <PhoneIcon sx={{ height: 45, width: 45 }} />,
+    },
+    {
+        title: "Contact Number (Customer Service)",
+        description: ['92 42 111 635 635', "92 42 800 111 635 (Toll Free)"],
         icon: <PhoneIcon sx={{ height: 45, width: 45 }} />,
     },
     {
         title: 'Email Address',
-        description: 'Email our team at service@skyworth.com.my',
+        description: 'info@skyworthpakistan.com',
         icon: <MailOutlineIcon sx={{ height: 45, width: 45 }} />,
     },
 ];
@@ -35,10 +40,10 @@ const textVariants = {
 
 function ContactBar({ title, description, icon }) {
     return (
-        <Grid item xs={6} sm={6} md={6} lg={3} sx={{ bgcolor: 'transparent', border: 'none' }}>
+        <Grid item xs={12} sm={6} md={4} lg={4} sx={{ bgcolor: 'transparent', border: 'none',justifyContent:'center' }}>
             <Card sx={{ bgcolor: 'transparent', boxShadow: 'none', border: 'none' }}>
                 <CardContent sx={{ bgcolor: 'transparent', padding: 2 }}>
-                    <Stack direction="row" spacing={1}>
+                    <Stack direction="row" style={{justifyContent:'center'}} spacing={1}>
                         <motion.div variants={iconVariants} initial="hidden" whileInView="visible">
                             <Avatar
                                 sx={{
@@ -66,7 +71,15 @@ function ContactBar({ title, description, icon }) {
                             </motion.div>
                             <motion.div variants={textVariants} initial="hidden" whileInView="visible">
                                 <Typography fontFamily={"Kanit"} lineHeight={1.8} fontWeight={400} color={"#050505"} fontSize={12}>
-                                    {description}
+                                    {Array.isArray(description) ? (
+                                        <ul style={{ paddingLeft: '0px', margin: 0 }}>
+                                            {description.map((descItem, index) => (
+                                                <li key={index} style={{ listStyleType: 'none' }}>{descItem}</li>
+                                            ))}
+                                        </ul>
+                                    ) : (
+                                        <span>{description}</span>
+                                    )}
                                 </Typography>
                             </motion.div>
                         </Box>
@@ -79,12 +92,12 @@ function ContactBar({ title, description, icon }) {
 
 function ContactRow() {
     return (
-        <div style={{ backgroundColor: "#F4F7F9" }}>
-            <Container maxWidth="xl" sx={{ bgcolor: '#F4F7F9', py: 6 }}>
+        <div style={{ backgroundColor: "#F4F7F9",marginBottom:"60px" }}>
+            <Container maxWidth="xl" sx={{ bgcolor: '#F4F7F9', py: 6}}>
                 <Grid
                     container
-                    spacing={3}
-                    justifyContent="space-between"
+                    spacing={0}
+                    justifyContent="center"
                 >
                     {sections.map((section, index) => (
                         <ContactBar key={index} {...section} />

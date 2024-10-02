@@ -21,10 +21,9 @@ const FeedBackForm = () => {
     };
 
     return (
-        <Box sx={{ marginTop: '100px' }}>
+        <Box >
             <Box sx={{
                 padding: '20px',
-                marginTop: '50px',
                 margin: '0 auto',
                 borderRadius: '8px',
             }} maxWidth={"md"}>
@@ -56,7 +55,7 @@ const FeedBackForm = () => {
                                     />
                                     {errors.email && <Typography color="error">{errors.email.message}</Typography>}
                                 </Grid>
-                                <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.7 }} variants={animationVariants}>
+                                <Grid item xs={6} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.7 }} variants={animationVariants}>
                                     <TextInput
                                         required={true}
                                         label="Phone/Mobile"
@@ -67,10 +66,30 @@ const FeedBackForm = () => {
                                     />
                                     {errors.phone && <Typography color="error">{errors.phone.message}</Typography>}
                                 </Grid>
+                                <Grid item xs={6} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.7 }} variants={animationVariants}>
+                                    <TextInput
+                                        required={true}
+                                        label="Your City"
+                                        {...register('city', { required: 'City is required' })}
+                                        value={watch('city')}
+                                        onChange={(e) => setValue('city', e.target.value)}
+                                    />
+                                    {errors.city && <Typography color="error">{errors.city.message}</Typography>}
+                                </Grid>
+                                <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.3 }} variants={animationVariants}>
+                                    <TextInput
+                                        required={true}
+                                        label="Your Address"
+                                        {...register('address', { required: 'Your Address is required' })}
+                                        value={watch('address')}
+                                        onChange={(e) => setValue('address', e.target.value)}
+                                    />
+                                    {errors.address && <Typography color="error">{errors.address.message}</Typography>}
+                                </Grid>
                                 <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.0 }} variants={animationVariants}>
                                     <TextInput
                                         required={true}
-                                        label="Please drop your message here"
+                                        label="Your Feedback here"
                                         {...register('comments', { required: 'Comments are required' })}
                                         multiline
                                         rows={3}
@@ -79,41 +98,6 @@ const FeedBackForm = () => {
                                         onChange={(e) => setValue('comments', e.target.value)}
                                     />
                                     {errors.comments && <Typography color="error">{errors.comments.message}</Typography>}
-                                </Grid>
-                                <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.3 }} variants={animationVariants}>
-                                    <Typography variant="body2" sx={{ marginBottom: '4px', fontSize: 16, fontFamily: 'Kanit', fontWeight: '400', }}>
-                                        How did you find out about our brand?<span style={{ color: 'red' }}> *</span>
-                                    </Typography>
-                                    <Grid container direction="column" spacing={1}sx={{paddingLeft:'10px'}}>
-                                    {brandOptions.map((option, index) => (
-                                        <FormControlLabel
-                                            key={index}
-                                            control={
-                                                <Checkbox
-                                                    checked={watch('brandSource') === option}
-                                                    onChange={() => setValue('brandSource', option)}
-                                                />
-                                            }
-                                            label={option}
-                                        />
-                                    ))}
-                                    </Grid>
-                                    {errors.brandSource && <Typography color="error">{errors.brandSource.message}</Typography>}
-                                </Grid>
-                                <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.5 }} variants={animationVariants}>
-                                    <Typography variant="body2" sx={{ marginBottom: '4px', fontSize: 16, fontFamily: 'Kanit', fontWeight: '400', }}>
-                                        User Friendliness<span style={{ color: 'red' }}> *</span>
-                                    </Typography>
-                                    <Rating
-                                        name="simple-controlled"
-                                        value={watch('rating') || 0}
-                                        emptyIcon={<span style={{ color: '#D4D4D4' }}>★</span>}
-                                        sx={{ marginTop: '5px' }}
-                                        onChange={(event, newValue) => {
-                                            setValue('rating', newValue);
-                                        }}
-                                    />
-                                    {errors.rating && <Typography color="error">{errors.rating.message}</Typography>}
                                 </Grid>
                                 <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.7 }} variants={animationVariants}>
                                     <Button type="submit" sx={{
