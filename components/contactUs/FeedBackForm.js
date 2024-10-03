@@ -1,18 +1,48 @@
-import { Grid, Box, Button, Typography, Rating, FormControlLabel, Checkbox } from '@mui/material';
+import { Grid, Box, Button, Typography, Snackbar } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import TextInput from './../Warrenty/TextInput';
 import { motion, useInView } from 'framer-motion';
-import { brandOptions } from './contactData';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const FeedBackForm = () => {
     const tabContentRef = useRef(null);
     const isInView = useInView(tabContentRef, { once: true });
-
     const { register, handleSubmit, setValue, formState: { errors }, watch } = useForm();
 
-    const onSubmit = (data) => {
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
+    const [snackbarMessage, setSnackbarMessage] = useState('');
+
+    const handleSnackbarClose = () => {
+        setSnackbarOpen(false);
+    };
+
+    const onSubmit = async (data) => {
         console.log(data);
+        try {
+            const response = await fetch('/api/send-feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error('Error sending feedback');
+            }
+
+            const result = await response.json();
+            setSnackbarMessage(result.message); // Set success message
+            setSnackbarOpen(true); // Open Snackbar
+
+            // Reset form fields
+            for (const field in data) {
+                setValue(field, '');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send feedback, please try again later.'); // Optional: alert for failure
+        }
     };
 
     const animationVariants = {
@@ -21,7 +51,7 @@ const FeedBackForm = () => {
     };
 
     return (
-        <Box >
+        <Box>
             <Box sx={{
                 padding: '20px',
                 margin: '0 auto',
@@ -119,6 +149,14 @@ const FeedBackForm = () => {
                     </Grid>
                 </form>
             </Box>
+
+            <Snackbar
+                open={snackbarOpen}
+                autoHideDuration={6000}
+                onClose={handleSnackbarClose}
+                message={snackbarMessage}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }} 
+            />
         </Box>
     );
 };

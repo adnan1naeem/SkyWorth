@@ -13,7 +13,7 @@ function AboutCard({ image, descriptions }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Determine if the animation should be applied
-  const shouldAnimate = descriptions.length > 4;
+  const shouldAnimate = descriptions.length > 8;
 
   // Function to handle hover
   const handleMouseEnter = () => {
@@ -23,7 +23,7 @@ function AboutCard({ image, descriptions }) {
   return (
     <Card
       sx={{
-        width: { xs: '90%', sm: '70%', md: '100%', lg: '100%' }, 
+        width: { xs: '100%', sm: '100%', md: '100%', lg: '100%' }, 
         height: 'auto',
         margin: "auto",
         borderRadius: 0,

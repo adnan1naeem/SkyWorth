@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AboutCard from "./AboutCard"; // Adjust the import path as needed
 import data from './about.json'; // Import your JSON data
+import { Box } from "@mui/material";
 
 function AboutSection() {
   const [items, setItems] = useState([]);
@@ -24,7 +25,7 @@ function AboutSection() {
 
   const mediaQuery = `@media (max-width: 768px) {
     .about-section {
-      grid-template-columns: repeat(2, 1fr); // Two cards in a row on small screens
+      grid-template-columns: repeat(2, 1fr); 
     }
   }`;
 
@@ -39,7 +40,18 @@ function AboutSection() {
   }, []);
 
   return (
-    <div className="about-section" style={gridStyles}>
+    <Box
+      sx={{
+        display: "grid",
+        gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", lg: "1fr 1fr 1fr" },
+        gap: 2,
+        maxWidth: "1600px",
+        marginLeft: "auto",
+        marginRight: "auto",
+        padding: "0 16px", 
+        mb: '5%'
+      }}
+    >
       {items.map((item, index) => (
         <AboutCard 
           key={index}
@@ -47,7 +59,7 @@ function AboutSection() {
           descriptions={item.description.map(desc => desc)} 
         />
       ))}
-    </div>
+      </Box>
   );
 }
 
