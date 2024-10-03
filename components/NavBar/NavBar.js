@@ -18,6 +18,7 @@ const Navbar = () => {
   const [isArrowUp, setIsArrowUp] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(80);
+  const [searchTerm, setSearchTerm] = useState('');
   useEffect(() => {
     if (typeof window !== "undefined") {
       setIsWideScreen(window.innerWidth > 990);
@@ -69,6 +70,16 @@ const Navbar = () => {
     setIsSearchOpen(!isSearchOpen);
   };
   const handleCloseClick = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      // Redirect to the search page with the search term
+      router.push(`/search?query=${encodeURIComponent(searchTerm)}`);
+      setSearchTerm('')
+    }
+
     setIsSearchOpen(!isSearchOpen);
   };
   return (
@@ -269,41 +280,46 @@ const Navbar = () => {
         {isSearchOpen && <div className={styles.blurBackground} />}
         {isSearchOpen && (
           <div className={styles.searchContainer}>
-            <TextField
-              id="standard-basic"
-              label="Search"
-              variant="standard"
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      edge="end"
-                      onClick={handleCloseClick}
-                      aria-label="close"
-                      sx={{ backgroundColor: '#9c9a9a20', height: 35, width: 35, marginRight: '2px', marginBottom: '15px' }}
-                    >
-                      <CloseIcon />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-              sx={{
-                alignSelf: 'center',
-                width: '70%',
-                borderRadius: '8px',
-                fontSize: '16px',
-                '& .MuiInput-underline:before': {
-                  borderBottom: '2px solid #ccc',
-                },
-                '& .MuiInput-underline:after': {
-                  borderBottom: '2px solid #000',
-                },
-                '& .MuiInput-underline:hover:before': {
-                  borderBottom: '2px solid #000',
-                },
-              }}
-            />
-            <p className={styles.searchBottomText}>Hit enter to search or ESC to close</p>
+            <form onSubmit={handleSearchSubmit}>
+              <TextField
+                id="standard-basic"
+                label="Search"
+                variant="standard"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleSearchSubmit(e)} // Handle Enter key
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        edge="end"
+                        onClick={handleCloseClick}
+                        aria-label="close"
+                        sx={{ backgroundColor: '#9c9a9a20', height: 35, width: 35, marginRight: '2px', marginBottom: '15px' }}
+                      >
+                        <CloseIcon />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+                sx={{
+                  alignSelf: 'center',
+                  width: '70%',
+                  borderRadius: '8px',
+                  fontSize: '16px',
+                  '& .MuiInput-underline:before': {
+                    borderBottom: '2px solid #ccc',
+                  },
+                  '& .MuiInput-underline:after': {
+                    borderBottom: '2px solid #000',
+                  },
+                  '& .MuiInput-underline:hover:before': {
+                    borderBottom: '2px solid #000',
+                  },
+                }}
+              />
+              <p className={styles.searchBottomText}>Hit enter to search or ESC to close</p>
+            </form>
           </div>
         )}
       </Container>
