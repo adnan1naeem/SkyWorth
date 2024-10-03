@@ -35,7 +35,7 @@ function Footer() {
             />
             <Box sx={{ display: { xs: "none", lg: "block" }, padding:"16px", }}>
               <Image
-                src={require('./../../assets/skyworth-white-logo.svg')}
+                src={require('./../../assets/newlogo.svg')}
                 alt="Skyworth Logo"
                 width={120}
                 height={40}
@@ -96,7 +96,7 @@ function Footer() {
       >
         <Box sx={{ textAlign: 'flex-start', width: '100%' }}>
           <Image
-            src={require('./../../assets/skyworth-white-logo.svg')}
+            src={require('./../../assets/newlogo.svg')}
             alt="Skyworth Logo"
             width={120}
             height={40}
