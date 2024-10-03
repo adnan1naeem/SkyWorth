@@ -42,7 +42,7 @@ const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, desc
                     component="div"
                     sx={{
                         fontWeight: 'medium',
-                        fontSize: { xs: 40, sm: 40, md: 40, lg: 48 },
+                        fontSize: { xs: 28, sm: 32, md: 35, lg: 40 },
                         color: 'white',
                         marginBottom: '20px',
                         lineHeight: '1',

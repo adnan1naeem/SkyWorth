@@ -57,7 +57,7 @@ const TVProductCard = ({ title, description, image, OnClick }) => {
         height="auto"
         image={image.src}
         alt={title}
-        sx={{ objectFit: 'contain', padding: '16px', height: '200px' }}
+        sx={{ objectFit: 'contain', padding: {xs:'0px',md:"16px"}, height: '200px' }}
       />
       <CardContent>
         <Typography gutterBottom sx={{
@@ -69,9 +69,8 @@ const TVProductCard = ({ title, description, image, OnClick }) => {
           {title}
         </Typography>
         <Typography sx={{
-          minHeight: {xs:"16vh",lg:"22vh",xl:"15vh"},
           fontWeight: 250,
-          fontSize: '1.1rem',
+          fontSize: {xs:"1.0rem",md:'1.1rem'},
         }} color="black">
           {description}
         </Typography>
@@ -79,17 +78,19 @@ const TVProductCard = ({ title, description, image, OnClick }) => {
           variant="outlined"
           sx={{
             marginTop: '16px',
+
             borderRadius: '10px',
-            padding: '15px 35px',
+            padding: {xs:'15px 15px',md:'15px 35px'},
             borderColor: 'black',
             color: '#000',
+            fontSize: {xs:"0.8rem",md:'1rem'},
             '&:hover': {
               backgroundColor: '#016AC8',
               color: '#fff',
             },
           }}
         >
-          View All Product
+          View All Products
         </Button>
       </CardContent>
     </Card>
@@ -103,7 +104,7 @@ const ResponsiveTVProductGrid = () => {
   return (
     <Container sx={{ marginTop: '50px' }} maxWidth={"xl"}>
       <Typography sx={{
-        fontSize: '1.5rem',
+        fontSize: {xs:"1.38rem",md:'1.5rem'},
         color: '#0c3034',
         fontWeight: 400,
         textAlign: 'center',

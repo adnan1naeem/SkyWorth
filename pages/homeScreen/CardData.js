@@ -6,7 +6,7 @@ import CardComponent from './../../components/Home/CardComponent';
 const cardData = [
   { title: 'Product Selection', description: 'Skyworth products offer unmatched quality and performance. To make selection of any of the Skyworth TV according to your preference of technology and features please click below.', buttonText: 'View Products', route: '/product' },
   { title: 'Product Warranty', description: 'Click here for your product warranty registration and further to know more about warranty offerings according to product types.', buttonText: 'Click here', route: '/WarrentyPolicy' },
-  { title: 'Efficient Customer Service', description: 'Just let us know about any of your queries regarding product types, technologies and any of the features or if you need any help regarding product performance and working issues.', buttonText: 'Click here', route: '/CusomerSupport' }
+  { title: 'Efficient Customer Service', description: 'Just let us know about any of your queries regarding product types, technologies and any of the features or if you need any help regarding product performance and working issues.', buttonText: 'Click here', route: '/contactUs' }
 ];
 
 const ResponsiveTVProductGrid = () => {

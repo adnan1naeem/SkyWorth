@@ -17,7 +17,7 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isArrowUp, setIsArrowUp] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [navbarHeight, setNavbarHeight] = useState(100);
+  const [navbarHeight, setNavbarHeight] = useState(80);
   useEffect(() => {
     if (typeof window !== "undefined") {
       setIsWideScreen(window.innerWidth > 990);
@@ -38,9 +38,9 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setNavbarHeight(80);
+        setNavbarHeight(60);
       } else {
-        setNavbarHeight(100);
+        setNavbarHeight(80);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -251,7 +251,7 @@ const Navbar = () => {
                   position: "absolute",
                   right: 0,
                   marginRight: 25,
-                  top: navbarHeight==100?34:26,
+                  top: navbarHeight==80?24:20,
                   transition: "height 0.3s ease",
                 }}
               />
@@ -262,7 +262,7 @@ const Navbar = () => {
                   position: "absolute",
                   right: 70,
                   marginRight: 0,
-                  top: navbarHeight==100?34:26,
+                  top: navbarHeight==80?24:20,
                 }} onClick={toggleSearch} /> </>
           )}
         </div>

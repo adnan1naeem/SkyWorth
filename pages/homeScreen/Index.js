@@ -22,7 +22,7 @@ function HomeScreen() {
   return (
     <div >
       <ImageSlider />
-      <div style={{marginTop:'40px'}}>
+      <div style={{marginTop:{xs:'10px',md:'40px'}}}>
       <CenteredImageWithText
         text="SKYWORTH Pakistan is 100% hold by SKYWORTH Group."
         body="SKYWORTH was established in 1988, with the head office located within Shenzhen High Tech Industrial Park which is honored as “China’s silicon valley”, and has more than 40,000 employees."
@@ -35,7 +35,7 @@ function HomeScreen() {
       <Container maxWidth="xl" sx={{marginTop:'40px'}}>
         <CenteredImageWithText imageSrc={HomePage1} />
         <CenteredImageWithText
-          heading={"Personalize your TV"}
+          heading={"Personalize Your TV"}
           imageSrc={HomePage2}
           body="Simplify your entertainment experience with Android TV. Discover 700,000+* movies and shows in one place. Ask Google to control your TV with your voice. And cast your photos, videos, and music from devices to your TV easily with Chromecast built-in."
           ButtonText={"Learn More"}

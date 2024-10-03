@@ -118,7 +118,7 @@ const ImageSwiper = () => {
       </Swiper>
 
       <Box sx={{ position: 'absolute', top: 'calc(100% + 1%)', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <ArrowBackIcon fontSize='inherit' style={{ fontSize: '4rem', color: "#CCCCCC" }} onClick={handlePrevSlide} />
+        <ArrowBackIcon fontSize='inherit' sx={{ fontSize: {xs:"3rem",md:'4rem'}, color: "#CCCCCC" }} onClick={handlePrevSlide} />
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
           {slides.map((_, index) => (
             <div
@@ -138,7 +138,7 @@ const ImageSwiper = () => {
             />
           ))}
         </Box>
-        <ArrowForwardIcon fontSize='inherit' style={{ fontSize: '4rem', color: "#CCCCCC" }} onClick={handleNextSlide} />
+        <ArrowForwardIcon fontSize='inherit' sx={{ fontSize: {xs:"3rem",md:'4rem'}, color: "#CCCCCC" }} onClick={handleNextSlide} />
       </Box>
 
       <style jsx>{`

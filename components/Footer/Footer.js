@@ -33,7 +33,7 @@ function Footer() {
               text4="FAQ"
               href_four="/faq"
             />
-            <Box sx={{ display: { xs: "none", lg: "block" } }}>
+            <Box sx={{ display: { xs: "none", lg: "block" }, padding:"16px", }}>
               <Image
                 src={require('./../../assets/skyworth-white-logo.svg')}
                 alt="Skyworth Logo"
@@ -70,7 +70,7 @@ function Footer() {
               text3="Privacy Policy"
               href_three="/Privacy-Policy"
             />
-            <Box sx={{ display: { xs: "none", lg: "block" } }}>
+            <Box sx={{ display: { xs: "none", lg: "block" }, padding:"16px", }}>
               <Typography variant="h6" sx={{ color: "#fff", mb: 2, fontSize: "21px", fontWeight: 600 }}>
                 Our Social Media
               </Typography>
@@ -83,14 +83,13 @@ function Footer() {
             </Box>
           </Box>
         </Box>
-      </Box>
-      <Box
+        <Box
         sx={{
           display: { xs: "flex", lg: "none" },
           justifyContent: "space-between",
           flexDirection: { xs: "column", md: 'row' },
           flexWrap: "wrap",
-          px: { xs: "8.6%", lg: "5.7%", xl: "16.2%" },
+          padding:"16px",
           alignItems: "center",
           mt: 2
         }}
@@ -115,6 +114,7 @@ function Footer() {
             <SocialIcon icon={<YouTubeIcon />} link={"https://www.youtube.com/@SkyworthPakistan"}/>
           </Box>
         </Box>
+      </Box>
       </Box>
       <Box
         sx={{
