@@ -77,7 +77,7 @@ const Navbar = () => {
         <Link href="/">
           <Image
             className={styles.logo}
-            src={require("../../assets/newlogo.svg")}
+            src={require("../../assets/newlogoNavBar.svg")}
             alt=""
           />
         </Link>
