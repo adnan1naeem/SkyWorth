@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { products } from '../../components/Product/ProductData';
+import { products } from '../../components/Product/ProductData.json';
 import { Box, Container } from '@mui/material';
 import ProductDetail from '../../components/ProductDetail/ProductDetail';
 import RelatedProducts from '../../components/ProductDetail/RelatedProduct';

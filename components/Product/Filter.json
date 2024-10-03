@@ -1,0 +1,5 @@
+ {
+    "resolution": ["QLED MINI", "QLED", "UHD", "FHD/HD"],
+    "productSize": ["100", "85", "65", "55", "50", "43", "32"],
+    "feature": ["Quantum Dot", "Dolby Atmos", "Google TV", "HDR 10", "HDR10+", "144 Hzs", "120Hzs", "60Hzs"]
+}

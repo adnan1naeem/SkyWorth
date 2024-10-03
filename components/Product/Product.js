@@ -4,7 +4,7 @@ import TVImage from './../../assets/Product.webp';
 import BackgroundImageComponent from './BackgroundImageComponent';
 import Breadcrumb from '../BreadCrumb';
 import ProductCard from './ProductCard';
-import { products } from './ProductData';
+import { products } from './ProductData.json';
 import ProductModal from './ProductModal';
 import FilterSection from './FilterSection';
 import PaginationComponent from './PaginationComponent';

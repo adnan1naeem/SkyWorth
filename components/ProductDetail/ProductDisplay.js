@@ -21,7 +21,7 @@ const ProductDisplay = (product) => {
                         <CardMedia
                             component="img"
                             height="400"
-                            image={mainImage?.src}
+                            image={mainImage}
                             alt="Product Image"
                             sx={{ objectFit: 'cover' }}
                         />
@@ -31,7 +31,7 @@ const ProductDisplay = (product) => {
                             {data?.image?.map((img, index) => (
                                 <Grid item xs={2.4} key={index}>
                                     <img
-                                        src={img?.src}
+                                        src={img}
                                         alt={`Thumbnail ${index + 1}`}
                                         style={{
                                             width: '100%',

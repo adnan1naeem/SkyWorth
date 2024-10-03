@@ -60,7 +60,7 @@ const ProductModal = ({
                 <ArrowBackIosIcon sx={{paddingLeft:'4px'}}/>
               </IconButton>
               <img
-                src={selectedProduct.image[activeImageIndex]?.src}
+                src={selectedProduct.image[activeImageIndex]}
                 alt={selectedProduct.name}
                 style={{
                   width: '100%',
@@ -89,7 +89,7 @@ const ProductModal = ({
               {selectedProduct?.image?.map((image, index) => (
                 <Grid item key={index} sx={{ cursor: 'pointer' }}>
                   <ImageThumbnail
-                    image={image?.src}
+                    image={image}
                     isActive={activeImageIndex === index}
                     onClick={() => handleThumbnailClick(index)}
                   />

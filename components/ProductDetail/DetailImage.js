@@ -10,7 +10,7 @@ const DetailImages = ({ detailImages }) => {
             <Card sx={{ boxShadow: 'none', marginBottom: '30px' }}>
               <CardMedia
                 component="img"
-                image={image?.src}
+                image={image}
                 alt={`Detail Image ${index + 1}`}
                 sx={{ width: '100%', height: 'auto', objectFit: 'cover' }}
               />

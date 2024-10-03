@@ -54,7 +54,7 @@ const RelatedProducts = ({ products }) => {
                                 <CardMedia
                                     component="img"
                                     sx={{ width: 'auto', }}
-                                    image={product?.image[0]?.src}
+                                    image={product?.image[0]}
                                     alt={product.name}
                                 />
                                 <CardContent>

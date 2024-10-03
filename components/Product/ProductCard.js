@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardMedia, Typography, Button, Box } from '@mui/material';
-
 const ProductCard = ({ product, onClick, handleNavigation }) => {
     const [hover, setHover] = useState(false);
     const handleMouseEnter = () => setHover(true);
     const handleMouseLeave = () => setHover(false);
-
     return (
         <Card
             sx={{
@@ -33,7 +31,7 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
             >
                 <CardMedia
                     component="img"
-                    image={product?.image[0]?.src}
+                    image={product.image[0]}
                     alt={product.name}
                     sx={{
                         height: 'auto',
