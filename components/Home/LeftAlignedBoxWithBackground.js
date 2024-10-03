@@ -15,7 +15,7 @@ const LeftAlignedBoxWithBackground = ({ backgroundImage, buttonText, title, desc
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'flex-start',
-                paddingLeft: '10%',
+                paddingLeft: {xs:"5%",md:'10%'},
                
             }}
         >

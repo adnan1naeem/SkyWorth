@@ -28,7 +28,7 @@ function AboutCard({ image, descriptions }) {
         margin: "auto",
         borderRadius: 0,
         mt: 2,
-        mb: 2,
+        mb: 0,
         position: "relative",
         overflow: "hidden",
         "&:hover .overlay": {

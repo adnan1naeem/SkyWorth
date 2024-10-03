@@ -5,8 +5,8 @@ import Aboutbackground from './../../assets/Aboutbackground.jpg';
 function AllStat() {
   const stats = [
     { title: "2", titleText: "Listed Companies", listText: ["Skyworth Group (00751.HK)", "Skyworth Digital (000810.SZ)"] },
-    { title: "20", titleText: "High Tech Enterprises", text: "Companies (Year 2022)", },
-    { title: "36", titleText: "Staff Size", text: "Thousands Staff",yearText: "(Year 2023)" },
+    { title: "20", titleText: "High Tech Enterprises", text: "Companies",yearText: " (Year 2022)" },
+    { title: "36", titleText: "Staff Size", text: "Thousands Staff", yearText: "(Year 2023)" },
     { title: "136", titleText: "Total Revenue", text: "Billion CNY", yearText: "(Year 2023)" },
     { title: "39", titleText: "Gross Profit", text: "Billion CNY", yearText: "(Year 2023)" },
   ];
@@ -14,13 +14,13 @@ function AllStat() {
   const styles = {
     container: {
       position: "relative",
-      backgroundImage: `url(${Aboutbackground?.src})`, 
+      backgroundImage: `url(${Aboutbackground?.src})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
-      height: { xs: "165vh", md: "60vh", lg: "50vh" },
+      height: { xs: "172vh", md: "50vh", lg: "50vh" },
       display: "grid",
       gridTemplateColumns: {
-        xs: "1fr", 
+        xs: "1fr",
         sm: "repeat(2, 1fr)",
         md: "repeat(5, 1fr)",
       },
@@ -39,17 +39,8 @@ function AllStat() {
         backgroundColor: "rgba(0, 0, 0, 0.3)",
         zIndex: 1,
       },
-      "@media (max-width: 1100px)": {
-        gridTemplateColumns: "repeat(3, 1fr)", // 3 columns when screen width is less than 1100px
-      },
-      "@media (max-width: 768px)": {
-        gridTemplateColumns: "repeat(2, 1fr)", // 2 columns when screen width is less than 768px
-      },
-      "@media (max-width: 600px)": {
-        gridTemplateColumns: "1fr", // 1 column when screen width is less than 600px
-      },
     },
-    statBox: (index, length) => ({
+    statBox: (index) => ({
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -58,22 +49,9 @@ function AllStat() {
       padding: "20px",
       color: "white",
       zIndex: 2,
-      "&::before": {
-        content: '""',
-        display: { xs: "none", md: index === 0 ? "block" : "none" },
-        position: "absolute",
-        left: 0,
-        top: "50%",
-        transform: "translateY(-50%)",
-        height: "70%",
-        borderLeft: "2px solid white",
-      },
       "&::after": {
         content: '""',
-        display: {
-          xs: "none",
-          md: "block", // Ensures line appears after all items
-        },
+        display: index !== 4 ? {xs:"none",md:"block"} : "none", // Show line for all but the last item
         position: "absolute",
         right: 0,
         top: "50%",
@@ -87,13 +65,12 @@ function AllStat() {
       fontSize: "45px",
     },
     titleText: {
-      fontWeight: "300",
+      fontWeight: {xs:"600",md:"300"},
       fontSize: "20px",
     },
     text: {
       lineHeight: 1.7,
       fontFamily: "Kanit",
-      width: "11rem",
     },
     listText: {
       lineHeight: 1.5,
@@ -105,18 +82,25 @@ function AllStat() {
       fontSize: "14px",
       marginTop: "5px",
     },
+    contentWrapper: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      minHeight: "150px",
+    },
   };
 
   return (
     <Box sx={styles.container}>
       {stats.map((stat, index) => (
-        <Box key={index} sx={styles.statBox(index, stats.length)}>
-          <Typography sx={styles.titleText}>
-            {stat.titleText}
-          </Typography>
-          <Typography variant="h6" component="h6" sx={styles.title}>
-            {stat.title}
-          </Typography>
+        <Box key={index} sx={styles.statBox(index)}>
+          <Box sx={styles.contentWrapper}>
+            <Typography sx={styles.titleText}>{stat.titleText}</Typography>
+            <Typography variant="h6" component="h6" sx={styles.title}>
+              {stat.title}
+            </Typography>
+          </Box>
           {stat.text && (
             <Typography variant="body1" sx={styles.text}>
               {stat.text}

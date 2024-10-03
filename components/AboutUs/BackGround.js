@@ -14,8 +14,8 @@ const containerStyles = {
   mt: "20px",
   mb: "20px",
   overflow: "hidden",
-  pt: "65px",
-  pb: "65px",
+  pt: {xs:"30px",md:"65px"},
+  pb: {xs:"30px",md:"65px"},
 };
 
 const headingStyles = {
@@ -24,6 +24,7 @@ const headingStyles = {
   color: "#0069c8",
   fontFamily: "Kanit",
   lineHeight: 1.2,
+  fontSize: {xs:"1.38rem",md:'1.5rem'},
 };
 
 const subheadingStyles = {
@@ -33,6 +34,7 @@ const subheadingStyles = {
   lineHeight: 1.5,
   width: "90%",
   fontWeight: 250,
+  fontSize: {xs:"1.0rem",md:'1.1rem'},
 };
 
 const bodyTextStyles = {
@@ -42,6 +44,7 @@ const bodyTextStyles = {
   width: "90%",
   whiteSpace: 'pre-line',
   fontWeight: 250,
+  fontSize: {xs:"1.0rem",md:'1.1rem'},
 };
 
 function BackGround() {

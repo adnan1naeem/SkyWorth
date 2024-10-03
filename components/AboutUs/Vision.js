@@ -22,7 +22,7 @@ const headingStyles = {
 
 const paragraphStyles = {
   color: "black",
-  width: "20rem",
+  width: {xs:'15rem',sm:"20rem",md:'20rem'},
   lineHeight: 1.9,
   fontFamily:"Kanit",
   whiteSpace: 'pre-line',

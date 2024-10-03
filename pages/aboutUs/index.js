@@ -1,14 +1,11 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import Banner from "../../components/AboutUs/Banner";
 import BackGround from "../../components/AboutUs/BackGround";
 import Vision from "../../components/AboutUs/Vision";
 import AllStat from "../../components/AboutUs/AllStat";
-import CustomTimeline from "../../components/AboutUs/CustomTimeline";
-import BrandValueGrid from "../../components/AboutUs/BrandValueGrid";
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
 import BackgrondImages from './../../assets/aboutImage.jpg'
-import AboutCard from "../../components/AboutUs/AboutCard";
+import AboutImage from './../../assets/AboutMainImage.jpg';
 import AboutSection from "../../components/AboutUs/AboutSection";
 const sections = [
   {
@@ -28,9 +25,9 @@ const sections = [
 function AboutUs() {
   return (
     <Box>
-      <Banner />
+       <LeftAlignedBoxWithBackground title={" "} Imageheight={{xs:"400px",md:"500px"}} backgroundImage={AboutImage} />
       <BackGround />
-      <Grid container spacing={4} justifyContent={"center"} sx={{ padding: { xs: '20px', sm: '40px' } }}>
+      <Grid container spacing={4} justifyContent={"center"} sx={{ padding: { xs: '0px', sm: '40px' } }}>
         {sections.map((section, index) => (
           <Grid item spacing={3} key={index}>
             <Vision title={section.title} text={section.text} />

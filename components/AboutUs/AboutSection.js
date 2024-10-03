@@ -18,6 +18,7 @@ function AboutSection() {
     gridTemplateColumns: 'repeat(3, 1fr)', 
     gap: '16px', 
     padding: '16px',
+    marginBottom:"10px"
   };
 
 
