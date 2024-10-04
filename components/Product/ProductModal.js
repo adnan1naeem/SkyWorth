@@ -51,7 +51,7 @@ const ProductModal = ({
                   position: 'absolute',
                   top: '50%',
                   left: 0,
-                  transform: 'translateY(-10%)',
+                  transform: 'translateY(-50%)',
                   zIndex: 10,
                   bgcolor: 'rgba(0,0,0,0.5)',
                   color: 'white',
@@ -101,7 +101,7 @@ const ProductModal = ({
               id="product-modal-title"
               sx={{
                 fontWeight: 400,
-                fontSize: { xs: 25, sm: 30, md: 35, lg: 35 },
+                fontSize: { xs: "20px", sm: "25px", md: "35px", lg: "35px" },
                 lineHeight: 1,
                 width: '100%',
                 margin: '50px 10px 10px 10px',

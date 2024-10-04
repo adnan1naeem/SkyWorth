@@ -1,4 +1,4 @@
-import { Grid, Box, Button, Typography, } from "@mui/material";
+import { Grid, Box, Button, Typography, CircularProgress, } from "@mui/material";
 import { useForm } from "react-hook-form";
 import TextInput from "./../../components/Warrenty/TextInput";
 import SelectInput from "./../../components/Warrenty/SelectInput";
@@ -45,14 +45,14 @@ const Index = () => {
     watch,
   } = useForm();
   const [TermandCondition, setTermandCondition] = useState(true);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const handleLearnMore = () => {
     router.push("/product");
   };
   const onSubmit = async (data) => {
     console.log(data);
-
-    // Send the data to the API endpoint
+    setLoading(true);
     try {
       const response = await fetch("/api/send-warranty", {
         method: "POST",
@@ -64,20 +64,33 @@ const Index = () => {
 
       if (response.ok) {
         const result = await response.json();
-        alert(result.message); // Display success message
+        alert(result.message);
+        router.push('/WarrentyPolicy');
       } else {
         const error = await response.json();
-        alert(error.error || "Something went wrong!"); // Handle error
+        alert(error.error || "Something went wrong!");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("Error submitting form");
     }
+    finally {
+      setLoading(false);
+    }
   };
 
   const handleFileUpload = (name) => (event) => {
-    console.log(event, name);
-    setValue(name, event);
+    const file = event;
+    if (file) {
+      setValue(name, file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64String = reader.result;
+        console.log(base64String);
+        setValue(name, base64String);
+      };
+      reader.readAsDataURL(file);
+    }
   };
   const animationVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -119,7 +132,6 @@ const Index = () => {
     productModel &&
     serialNumber &&
     promotionalMaterials;
-  console.log("isFormComplete" + isFormComplete);
   return (
     <Box sx={{ marginTop: "100px" }}>
       <Image
@@ -132,64 +144,26 @@ const Index = () => {
         }}
       />
       <Box
-        sx={{
-          padding: "20px",
-          marginTop: "150px",
-          maxWidth: "1000px",
-          margin: "0 auto",
-          borderRadius: "8px",
-        }}
+        sx={{ padding: "20px", marginTop: "150px", maxWidth: "1000px", margin: "0 auto", borderRadius: "8px", }}
       >
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
-            <Grid
-              item
-              xs={12}
-              component={motion.div}
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
-              <h1
-                style={{
-                  fontFamily: "Kanit",
-                  fontWeight: "500",
-                  textAlign: "center",
-                }}
-              >
+            <Grid item xs={12} component={motion.div} transition={{ delay: 0.3 }} variants={animationVariants}>
+              <h1 style={{ fontFamily: "Kanit", fontWeight: "500", textAlign: "center", }}>
                 Warranty Registration Form
               </h1>
             </Grid>
 
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Full name as per IC"
                 {...register("fullName", { required: "Full name is required" })}
                 value={fullName}
                 onChange={(e) => setValue("fullName", e.target.value)}
               />
-              {errors.fullName && (
-                <Typography color="error">{errors.fullName.message}</Typography>
-              )}
+              {errors.fullName && (<Typography color="error">{errors.fullName.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Phone/Mobile"
                 {...register("phone", { required: "Phone is required" })}
@@ -200,36 +174,16 @@ const Index = () => {
                 <Typography color="error">{errors.phone.message}</Typography>
               )}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={4}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="IC Number"
                 {...register("icNumber", { required: "IC Number is required" })}
                 value={watch("icNumber")}
                 onChange={(e) => setValue("icNumber", e.target.value)}
               />
-              {errors.icNumber && (
-                <Typography color="error">{errors.icNumber.message}</Typography>
-              )}
+              {errors.icNumber && (<Typography color="error">{errors.icNumber.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={4}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Email address"
                 type="email"
@@ -241,16 +195,7 @@ const Index = () => {
                 <Typography color="error">{errors.email.message}</Typography>
               )}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={4}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Purchase date"
                 type="date"
@@ -260,39 +205,15 @@ const Index = () => {
                 value={purchaseDate}
                 onChange={(e) => setValue("purchaseDate", e.target.value)}
               />
-              {errors.purchaseDate && (
-                <Typography color="error">
-                  {errors.purchaseDate.message}
-                </Typography>
-              )}
+              {errors.purchaseDate && (<Typography color="error">{errors.purchaseDate.message}</Typography>)}
             </Grid>
 
-            <Grid
-              item
-              xs={12}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
-              <Typography
-                fontSize={18}
-                sx={{ fontFamily: "Kanit", fontWeight: "500" }}
-              >
+            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+              <Typography fontSize={18} sx={{ fontFamily: "Kanit", fontWeight: "500" }}>
                 Address
               </Typography>
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Address Line 1"
                 {...register("addressLine1", {
@@ -301,22 +222,9 @@ const Index = () => {
                 value={addressLine1}
                 onChange={(e) => setValue("addressLine1", e.target.value)}
               />
-              {errors.addressLine1 && (
-                <Typography color="error">
-                  {errors.addressLine1.message}
-                </Typography>
-              )}
+              {errors.addressLine1 && (<Typography color="error">{errors.addressLine1.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Address Line 2"
                 {...register("addressLine2")}
@@ -324,56 +232,25 @@ const Index = () => {
                 onChange={(e) => setValue("addressLine2", e.target.value)}
               />
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="City"
                 {...register("city", { required: "City is required" })}
                 value={city}
                 onChange={(e) => setValue("city", e.target.value)}
               />
-              {errors.city && (
-                <Typography color="error">{errors.city.message}</Typography>
-              )}
+              {errors.city && (<Typography color="error">{errors.city.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="State"
                 {...register("state", { required: "State is required" })}
                 value={state}
                 onChange={(e) => setValue("state", e.target.value)}
               />
-              {errors.state && (
-                <Typography color="error">{errors.state.message}</Typography>
-              )}
+              {errors.state && (<Typography color="error">{errors.state.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Postal code"
                 {...register("postalCode", {
@@ -382,22 +259,9 @@ const Index = () => {
                 value={watch("postalCode")}
                 onChange={(e) => setValue("postalCode", e.target.value)}
               />
-              {errors.postalCode && (
-                <Typography color="error">
-                  {errors.postalCode.message}
-                </Typography>
-              )}
+              {errors.postalCode && (<Typography color="error">{errors.postalCode.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <SelectInput
                 label="Country"
                 name="country"
@@ -406,19 +270,9 @@ const Index = () => {
                 onChange={(e) => setValue("country", e.target.value)}
                 required={true}
               />
-              {errors.country && (
-                <Typography color="error">{errors.country.message}</Typography>
-              )}
+              {errors.country && (<Typography color="error">{errors.country.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <RadioGroupInput
                 label="Gender"
                 {...register("gender", { required: "Gender is required" })}
@@ -429,19 +283,9 @@ const Index = () => {
                 value={gender}
                 onChange={(e) => setValue("gender", e.target.value)}
               />
-              {errors.gender && (
-                <Typography color="error">{errors.gender.message}</Typography>
-              )}
+              {errors.gender && (<Typography color="error">{errors.gender.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <CheckboxGroup
                 label="How did you find out about our brand?"
                 options={brandOptions}
@@ -452,21 +296,9 @@ const Index = () => {
                 value={brandSource}
                 onChange={(e) => setValue("brandSource", e.target.value)}
               />
-              {errors.brandSource && (
-                <Typography color="error">
-                  {errors.brandSource.message}
-                </Typography>
-              )}
+              {errors.brandSource && (<Typography color="error">{errors.brandSource.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <RadioGroupInput
                 label="Item Category"
                 {...register("itemCategory", {
@@ -476,22 +308,9 @@ const Index = () => {
                 value={itemCategory}
                 onChange={(e) => setValue("itemCategory", e.target.value)}
               />
-              {errors.itemCategory && (
-                <Typography color="error">
-                  {errors.itemCategory.message}
-                </Typography>
-              )}
+              {errors.itemCategory && (<Typography color="error">{errors.itemCategory.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Product Model"
                 {...register("productModel", {
@@ -500,22 +319,9 @@ const Index = () => {
                 value={productModel}
                 onChange={(e) => setValue("productModel", e.target.value)}
               />
-              {errors.productModel && (
-                <Typography color="error">
-                  {errors.productModel.message}
-                </Typography>
-              )}
+              {errors.productModel && (<Typography color="error">{errors.productModel.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Serial Number"
                 {...register("serialNumber", {
@@ -524,51 +330,21 @@ const Index = () => {
                 value={serialNumber}
                 onChange={(e) => setValue("serialNumber", e.target.value)}
               />
-              {errors.serialNumber && (
-                <Typography color="error">
-                  {errors.serialNumber.message}
-                </Typography>
-              )}
+              {errors.serialNumber && (<Typography color="error">{errors.serialNumber.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <FileUpload
                 label="Upload Warranty Card"
                 onChange={handleFileUpload("warrantyCard")}
               />
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <FileUpload
                 label="Upload Purchase Receipt"
                 onChange={handleFileUpload("purchaseReceipt")}
               />
             </Grid>
-            <Grid
-              item
-              xs={12}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <RadioGroupInput
                 label="Do you wish to receive promotional materials from Skyworth?"
                 {...register("promotionalMaterials", {
@@ -583,20 +359,10 @@ const Index = () => {
                   { value: "No", label: "No" },
                 ]}
               />
-              {errors.promotionalMaterials && (
-                <Typography color="error">
-                  {errors.promotionalMaterials.message}
-                </Typography>
+              {errors.promotionalMaterials && (<Typography color="error">{errors.promotionalMaterials.message}</Typography>
               )}
             </Grid>
-            <Grid
-              item
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <CheckboxGroup
                 label="You agree to the terms and conditions shared in this form"
                 {...register("termsAccepted", {
@@ -610,11 +376,7 @@ const Index = () => {
                 }}
                 singleOption={true}
               />
-              {errors.termsAccepted && (
-                <Typography color="error">
-                  {errors.termsAccepted.message}
-                </Typography>
-              )}
+              {errors.termsAccepted && (<Typography color="error">{errors.termsAccepted.message}</Typography>)}
             </Grid>
             <Grid
               item
@@ -625,26 +387,30 @@ const Index = () => {
               transition={{ delay: 0.3 }}
               variants={animationVariants}
             >
-              <Button
-                type="submit"
-                onClick={handleSubmit}
-                variant="contained"
-                disabled={
-                  isFormComplete == undefined ? true : false || TermandCondition
-                }
-                sx={{
-                  background: "#1a7efb",
-                  height: 53,
-                  color: "white",
-                  marginBottom: "20px",
-                  "&:hover": {
-                    background: "#0069CB",
-                  },
-                }}
-                fullWidth
-              >
+              {loading ?
+              <Box sx={{textAlign:'center'}}>
+                 <CircularProgress />
+              </Box> :
+                <Button
+                  type="submit"
+                  onClick={handleSubmit}
+                  variant="contained"
+                  disabled={
+                    isFormComplete == undefined ? true : false || TermandCondition
+                  }
+                  sx={{
+                    background: "#1a7efb",
+                    height: 53,
+                    color: "white",
+                    marginBottom: "20px",
+                    "&:hover": {
+                      background: "#0069CB",
+                    },
+                  }}
+                  fullWidth
+                >
                 Submit
-              </Button>
+                </Button>}
             </Grid>
           </Grid>
         </form>
