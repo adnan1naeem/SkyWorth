@@ -1,17 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box } from "@mui/material";
-import Question from "./Question"; // Adjust the path as necessary
+import Question from "./Question";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
-import questionsData from "./QuestionData"; // Adjust the path as necessary
+import questionsData from "./QuestionData";
+import { useRouter } from "next/router";
 
-function QuestionList({ title }) {
+function QuestionList() {
+  const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOption, setSortOption] = useState("default");
+  const [filteredQuestions, setFilteredQuestions] = useState([]);
   const questionsPerPage = 9;
 
-  // Get the relevant questions based on the title
-  const questions = questionsData[title] || []; // Default to empty array if title not found
+  const { title } = router.query;
+  console.log(title)
+  useEffect(() => {
+    if (title && questionsData[title]) {
+      setFilteredQuestions(questionsData[title]);
+    } else {
+      setFilteredQuestions([]);
+    }
+  }, [title]);
 
   // Handle page change
   const handleChange = (event, value) => {
@@ -24,7 +34,7 @@ function QuestionList({ title }) {
   };
 
   // Sort the questions based on the selected option
-  const sortedQuestions = [...questions].sort((a, b) => {
+  const sortedQuestions = [...filteredQuestions].sort((a, b) => {
     if (sortOption === "a-z") {
       return a.text.localeCompare(b.text);
     } else if (sortOption === "popularity") {
@@ -51,7 +61,6 @@ function QuestionList({ title }) {
         padding: 2,
       }}
     >
-      {/* Dropdown for Sorting */}
       <Box sx={{ display: "flex", justifyContent: "flex-end", marginBottom: 3 }}>
         <select value={sortOption} onChange={handleSortChange} style={{ padding: '8px', fontSize: '14px' }}>
           <option value="default">Default</option>
@@ -60,18 +69,20 @@ function QuestionList({ title }) {
           <option value="views">Sort by Views</option>
         </select>
       </Box>
-
-      {/* Display Questions */}
-      {currentQuestions.map((question, index) => (
-        <Question key={index} text={question.text} description={question.des} title={title} />
-      ))}
+      {currentQuestions.length > 0 ? (
+        currentQuestions.map((question, index) => (
+          <Question key={index} text={question.text} description={question.des} title={title} />
+        ))
+      ) : (
+        <p>No questions found for this category.</p>
+      )}
 
       {/* Pagination */}
-      {questions.length > questionsPerPage ? (
+      {filteredQuestions?.length > questionsPerPage && (
         <>
           <Stack spacing={2} sx={{ marginTop: 6, mb: 3 }}>
             <Pagination
-              count={Math.ceil(questions.length / questionsPerPage)}
+              count={Math.ceil(filteredQuestions.length / questionsPerPage)}
               page={currentPage}
               onChange={handleChange}
               shape="rounded"
@@ -80,8 +91,6 @@ function QuestionList({ title }) {
           </Stack>
           <Box sx={{ mb: 7 }} /> {/* Margin bottom after pagination */}
         </>
-      ) : (
-        <Box sx={{ mb: 7 }} /> // Margin bottom if no pagination
       )}
     </Box>
   );

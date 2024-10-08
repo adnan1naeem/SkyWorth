@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Box, TextField, IconButton, Paper, Tooltip, Typography, Modal, Button, MenuItem, Select, FormControl, InputLabel } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
+import { useNavigate } from "react-router-dom"; // import useNavigate
 import TextInput from "../Warrenty/TextInput";
+import { useRouter } from "next/router";
 
 const styles = {
   container: {
@@ -47,7 +49,7 @@ const styles = {
     boxShadow: "0 2px 10px rgba(0, 0, 0, 0.2)",
     width: "20vh",
     textAlign: "center",
-    height: 'auto',
+    height: "auto",
   },
   tooltipText: {
     fontSize: "1rem",
@@ -77,9 +79,14 @@ function Search() {
   const [searchClicked, setSearchClicked] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [category, setCategory] = useState('');
+  const [searchText, setSearchText] = useState('');
+ const router=useRouter()
 
   const handleSearchClick = () => {
     setSearchClicked(true);
+    if (searchText) {
+      router.push(`/kbSection?title=${encodeURIComponent(searchText)}`);
+    }
   };
 
   const handleTooltipClick = () => {
@@ -94,14 +101,23 @@ function Search() {
     setCategory(event.target.value);
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter" && searchText) {
+      router?.push(`/kbSection?title=${encodeURIComponent(searchText)}`);
+    }
+  };
+
   return (
     <Box sx={styles.container}>
       <Paper elevation={3} sx={styles.searchBar(isFocused)}>
         <TextField
           fullWidth
           placeholder="Search"
+          value={searchText} // bind input to state
+          onChange={(e) => setSearchText(e.target.value)} // update search text
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
+          onKeyPress={handleKeyPress} // handle Enter key press
           InputProps={{
             sx: {
               border: "none",
@@ -138,12 +154,9 @@ function Search() {
           </IconButton>
         </Paper>
       </Tooltip>
-
-
       <Modal open={openModal} onClose={handleCloseModal} sx={styles.modal}>
         <Paper sx={styles.modalPaper}>
-         
-      <TextInput label ="Question/Title:" name="Question/Title:"/>
+          <TextInput label="Question/Title:" name="Question/Title:" />
           <TextField
             fullWidth
             variant="outlined"

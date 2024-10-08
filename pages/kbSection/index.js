@@ -5,7 +5,6 @@ import QuestionList from "../../components/kbSection/QuestionList";
 import { useRouter } from 'next/router';
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
 import BackgrondImages from './../../assets/select.jpg'
-import Banner from "../../components/AboutUs/Banner";
 import AboutImage from './../../assets/AboutMainImage.jpg';
 function KbSection() {
   const router = useRouter();

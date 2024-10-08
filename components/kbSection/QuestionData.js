@@ -1,6 +1,6 @@
 // questions.js
 const questionsData = {
-  "QELD Mini": [
+  "QLED MINI" : [
       {
         text: "If found static charges built up on the TV casing?",
         popularity: 5,
