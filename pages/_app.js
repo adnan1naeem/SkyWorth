@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div>
       <Navbar />
-      <Box sx={{mt:'5%'}}>
+      <Box sx={{mt:'4%'}}>
       <Component {...pageProps} />
       </Box>
 

@@ -7,7 +7,7 @@ const ZoomableImageContainer = styled(Box)({
   overflow: "hidden",
   width: "100%",
   height: "100%",
-  marginTop: '14%',
+  alignContent:'center',
 });
 
 const ZoomableImage = styled("img")({
@@ -26,43 +26,44 @@ const CustomButton = styled(Button)(({ theme }) => ({
   backgroundColor: '#0069c8',
   color: '#fff',
   position: 'relative',
-  padding: '10px 50px ',
+  padding: '10px 25px ',
   textTransform: 'none',
   fontSize: '16px',
-  fontWeight: 'bold',
+  fontFamily:'Kanit',
+  fontWeight: '250',
   display: 'flex',
-  alignItems: 'center',
+  borderRadius:0,
   overflow: 'hidden',
-  '&::before': {
-    content: '""',
-    position: 'absolute',
-    left: '20px',
-    bottom: '50%',
-    width: '20px',
-    height: '2px',
-    backgroundColor: '#fff',
-    transition: 'width 0.3s ease',
-  },
-  '&::after': {
-    content: '"→"',
-    position: 'absolute',
-    left: '-20px',
-    bottom: '25%',
-    opacity: 0,
-    transition: 'left 0.4s ease, opacity 0.3s ease',
-    color: '#fff',
-    fontSize: '16px',
-  },
-  '&:hover::before': {
-    width: '0',
-  },
-  '&:hover::after': {
-    left: '10px',
-    opacity: 1,
-  },
-  '&:hover': {
-    backgroundColor: '#0056b3',
-  },
+  // '&::before': {
+  //   content: '""',
+  //   position: 'absolute',
+  //   left: '20px',
+  //   bottom: '50%',
+  //   width: '20px',
+  //   height: '2px',
+  //   backgroundColor: '#fff',
+  //   transition: 'width 0.3s ease',
+  // },
+  // '&::after': {
+  //   content: '"→"',
+  //   position: 'absolute',
+  //   left: '-20px',
+  //   bottom: '25%',
+  //   opacity: 0,
+  //   transition: 'left 0.4s ease, opacity 0.3s ease',
+  //   color: '#fff',
+  //   fontSize: '16px',
+  // },
+  // '&:hover::before': {
+  //   width: '0',
+  // },
+  // '&:hover::after': {
+  //   left: '10px',
+  //   opacity: 1,
+  // },
+  // '&:hover': {
+  //   backgroundColor: '#0056b3',
+  // },
 }));
 
 const AwardSection = ({
@@ -98,7 +99,7 @@ const AwardSection = ({
       }}
     >
       <Container
-        maxWidth="lg"
+        maxWidth="xl"
         sx={{
           display: "flex",
           flexDirection: { xs: "column-reverse", md: flexDirection || "row" },
@@ -165,7 +166,7 @@ const AwardSection = ({
           >
             {awardDescription}
           </Typography>
-          {buttonText&& <CustomButton>
+          {buttonText&& <CustomButton href="/product">
             {buttonText || "Shop Now"}
           </CustomButton>}
         </Box>

@@ -2,27 +2,25 @@ import React from 'react';
 import AwardSection from './../../components/Award/cardComponent';
 import Image1 from './../../assets/awardImage1.jpg';
 import Image2 from './../../assets/awardImage2.jpg';
-import Image3 from './../../assets/awardImage3.jpg';
-import Image4 from './../../assets/awardImage4.jpg';
 import Image5 from './../../assets/Image5.jpg';
 import Image6 from './../../assets/awardImage6.jpg';
+import Image7 from './../../assets/awardImage6.png';
+import Image8 from './../../assets/AwardImage7.png';
 import { Box } from '@mui/material';
-import Retailer from '../../components/WhereToBuy/Retailer';
+import BackgrondImages from './../../assets/backgroundImage.jpg'
+import LeftAlignedBoxWithBackground from '../../components/Home/LeftAlignedBoxWithBackground';
 const App = () => {
   return (
     <Box>
-     <Retailer
-        title="AWARD" 
-        description="Discover the recognition and milestones that define our commitment to excellence and innovation. We’re grateful for this accolade and look forward to continuing to exceed expectations and set new standards in our field." 
-      />
+      <LeftAlignedBoxWithBackground backgroundImage={BackgrondImages} title={"SKYWORTH has grown to be one of the Top Global TV brands in the world."} description={"SKYWORTH won two awards from 2023-2024 Global CE Brands & Global TV Brands during CES. SKYWORTH consistently adheres to its original intention, committed to enabling consumers to deeply experience the charm of technology in their lives."} />
       <AwardSection
-        bgColor="#f5f5f5"
+        bgColor="#FFFFFF"
         flexDirection="row-reverse"
         awardImage={Image1?.src}
-        awardYear="2018"
-        awardTitle="CHINA TOP 10 WASHING MACHINE EXPORT AWARD"
-        awardDescription="The China Top 10 Washing Machine Export Award is a prestigious award that recognizes the achievements of Chinese companies in the export of washing machines. It is a testament to the country’s growing capabilities in this field."
-        // buttonText="Learn More"
+        awardYear="2020 - 2023"
+        awardTitle="LEADING BRAND IN TOP QUALITY MANAGEMENT AWARD"
+        awardDescription="The Leading Brand in Top Quality Management Award is a prestigious award that recognizes the achievements of companies in quality management. It is a testament to the company's commitment to excellence in quality management."
+        buttonText="View All Products"
       />
       <AwardSection
         bgColor="black"
@@ -31,43 +29,34 @@ const App = () => {
         awardYear="2022 – 2025"
         awardTitle="AAAA GRADE GOOD STANDARDIZING PRACTICE AWARD"
         awardDescription="The AAAA Grade Good Standardizing Practice Award is a prestigious award that recognizes the achievements of Chinese companies in standardization. It is a testament to the country’s growing capabilities in this field."
-        // buttonText="Shop Now"
+        buttonText="View All Products"
       />
       <AwardSection
-        bgColor="#f5f5f5"
+        bgColor="#FFFFFF"
         flexDirection="row-reverse"
-        awardImage={Image3?.src}
+        awardImage={Image7?.src}
         awardYear="2020 – 2023"
-        awardTitle="CHINA QUALITY INSPECTION AWARD"
-        awardDescription="The China Quality Inspection Award is a prestigious award that recognizes the achievements of quality inspection organizations. It is a testament to the organization’s commitment to excellence in quality inspection."
-        // buttonText="Shop Now"
+        awardTitle="CHINA QUALITY INSPECTIO AWARD"
+        awardDescription="The China Quality Inspection Award is a prestigious award that recognizes the achievements of quality inspection organizations. It is a testament to the organization's commitment to excellence in quality inspection."
+        buttonText="View All Products"
       />
       <AwardSection
         bgColor="black"
         flexDirection="row"
-        awardImage={Image4?.src}
+        awardImage={Image8?.src}
         awardYear="2020 – 2023"
         awardTitle="CONSUMER GOOD QUALITY REPUTATION AWARD"
         awardDescription="The Consumer Good Quality Reputation Award is a prestigious award that recognizes the achievements of consumer goods companies. It is a testament to the company’s commitment to excellence in product quality and reputation."
-        // buttonText="Shop Now"
+        buttonText="View All Products"
       />
       <AwardSection
-        bgColor="#f5f5f5"
+        bgColor="#FFFFFF"
         flexDirection="row-reverse"
-        awardImage={Image3?.src}
-        awardYear="2020 – 2023"
-        awardTitle="LEADING BRAND IN TOP QUALITY MANAGEMENT AWARD"
-        awardDescription="The Leading Brand in Top Quality Management Award is a prestigious award that recognizes the achievements of companies in quality management. It is a testament to the company’s commitment to excellence in quality management."
-        // buttonText="Shop Now"
-      />
-      <AwardSection
-        bgColor="black"
-        flexDirection="row"
-        awardImage={Image2?.src}
-        awardYear="2020 – 2023"
-        awardTitle="CHINA QUALITY INSPECTION AWARD"
-        awardDescription="The China Quality Inspection Award in Design is a prestigious award that recognizes the achievements of Chinese companies in design. It is a testament to the country’s growing design capabilities."
-        // buttonText="Shop Now"
+        awardImage={Image6?.src}
+        awardYear="2019"
+        awardTitle="AlOT SMART TECHNOLOGY OF CHINA REFRIGERATOR INDUSTRY AWARD"
+        awardDescription="The AloT Smart Technology of China Refrigerator Industry Award is a prestigious award that recognizes the achievements of Chinese companies in the development of AloT smart technology for refrigerators. It is a testament to the country's growing technological capabilities in this field."
+        buttonText="View All Products"
       />
       <AwardSection
         bgColor="#f5f5f5"
@@ -76,7 +65,7 @@ const App = () => {
         awardYear="2019"
         awardTitle="RED STAR DESIGN AWARD"
         awardDescription="The Consumer Good Quality Reputation Award is a prestigious award that recognizes the achievements of consumer goods companies. It is a testament to the company’s commitment to excellence in product quality and reputation."
-        // buttonText="Shop Now"
+        buttonText="View All Products"
       />
       <AwardSection
         bgColor="black"
@@ -85,16 +74,7 @@ const App = () => {
         awardYear="2016"
         awardTitle="HI-TECH ENTERPRISE AWARD"
         awardDescription="The Hi-Tech Enterprise Award is a prestigious award that recognizes the achievements of Chinese high-tech companies. It is a testament to the country’s growing technological capabilities. The award also helps to promote Chinese high-tech to the world."
-        // buttonText="Shop Now"
-      />
-      <AwardSection
-        bgColor="#f5f5f5"
-        flexDirection="row-reverse"
-        awardImage={Image6?.src}
-        awardYear="2019"
-        awardTitle="AIoT SMART TECHNOLOGY OF CHINA REFRIGERATOR INDUSTRY AWARD"
-        awardDescription="The AIoT Smart Technology of China Refrigerator Industry Award is a prestigious award that recognizes the achievements of Chinese companies in the development of AIoT smart technology for refrigerators. It is a testament to the country’s growing technological capabilities in this field."
-        // buttonText="Shop Now"
+        buttonText="View All Products"
       />
     </Box>
   );
