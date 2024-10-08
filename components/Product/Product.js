@@ -82,7 +82,7 @@ const ProductGrid = () => {
         desc="Shop by size, clarity, contrast, and more when selecting the technology and TV that makes your space complete."
       />
       <Grid container spacing={4}>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={3} marginBottom={"100px"}>
           <FilterSection onFilterChange={setSelectedFilters} />
         </Grid>
         <Grid item xs={12} sm={9}>
@@ -97,12 +97,12 @@ const ProductGrid = () => {
               </Grid>
             ))}
           </Grid>
-          <PaginationComponent
+        {filteredProducts.length>0&&  <PaginationComponent
             page={page}
             onPageChange={handleChangePage}
             totalProducts={filteredProducts.length}
             productsPerPage={productsPerPage}
-          />
+          />}
         </Grid>
       </Grid>
       {selectedProduct && (

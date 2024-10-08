@@ -15,7 +15,7 @@ const BackgroundImageComponent = ({ src,title,desc }) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        marginBottom:'100px'
+        marginBottom:{xs:"50px",md:'100px'}
       }}
     >
       <Box sx={{ color: 'white', zIndex: 1,width:{xs:"90%",sm:"70%",md:'50%',lg:'35%'},marginLeft:'7%', }}>
