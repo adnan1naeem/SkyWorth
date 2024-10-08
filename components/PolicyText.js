@@ -20,7 +20,7 @@ const PrivacyPolicyText = ({
 }) => {
     return (
         <Box sx={{ textAlign: 'left' }}>
-            <Container maxWidth={termsOfServices?"md":"xl"}>
+            <Container maxWidth={termsOfServices ? "md" : "xl"}>
                 {breadcrumb && <Breadcrumb />}
                 <Box sx={{ mb: 6 }}>
                     <Typography variant="h1" fontSize={{ xs: '35px', lg: '48px' }} color={"#0c3034"} sx={{ mb: 2, textAlign: termsOfServices ? "center" : "left" }} fontWeight={300} fontFamily={"SKSans, sans-serif"}>
@@ -29,14 +29,51 @@ const PrivacyPolicyText = ({
                     <strong style={{ fontFamily: 'SKSans, sans-serif', fontWeight: 310, fontSize: '21px', marginBottom: "15px" }}>
                         {strongText}
                     </strong>
-                    {description1 && <Typography fontSize={{ lg: '21px' }} fontFamily={"SKSans, sans-serif"} sx={{ color: '#0c3034', marginBottom: "20px", fontWeight: 300 }}>
-                        {description1?.split('\n').map((line, index) => (
-                            <React.Fragment key={index}>
-                                {line}
-                                <br />
-                            </React.Fragment>
-                        ))}
-                    </Typography>}
+                    {description1 && (
+                        <Typography
+                            fontSize={{ lg: '21px' }}
+                            fontFamily={"SKSans, sans-serif"}
+                            sx={{ color: '#0c3034', marginBottom: "20px", fontWeight: 300 }}
+                        >
+                            {description1.split('\n').map((line, index) => (
+                                <React.Fragment key={index}>
+                                    {line.split(' ').map((word, wordIndex) => {
+                                        // Check if the word is a URL
+                                        const isUrl = word.startsWith('http');
+                                        // Check if the word is an email
+                                        const isEmail = /\S+@\S+\.\S+/.test(word);
+
+                                        if (isUrl) {
+                                            return (
+                                                <Link
+                                                    key={wordIndex}
+                                                    href={word}
+                                                    sx={{ color: '#0070D8', textDecoration: 'underline' }}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    {word}
+                                                </Link>
+                                            );
+                                        } else if (isEmail) {
+                                            return (
+                                                <Link
+                                                    key={wordIndex}
+                                                    href={`mailto:${word}`}
+                                                    sx={{ color: '#0070D8', textDecoration: 'underline' }}
+                                                >
+                                                    {word}
+                                                </Link>
+                                            );
+                                        } else {
+                                            return <React.Fragment key={wordIndex}>{word}{' '}</React.Fragment>;
+                                        }
+                                    })}
+                                    <br />
+                                </React.Fragment>
+                            ))}
+                        </Typography>
+                    )}
 
                     {description2 && (
                         <Typography fontSize={{ lg: '21px' }} fontFamily={"SKSans, sans-serif"} sx={{ color: '#0c3034', marginBottom: "20px", fontWeight: 300 }}>
