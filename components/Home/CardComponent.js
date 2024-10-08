@@ -6,7 +6,7 @@ const CardComponent = ({ title, description, buttonText, onClick }) => {
         <Card
             sx={{
                 width: '100%',
-                minHeight: { xs: "400px", sm: '540px', md: "500px",lg:"400px" },
+                minHeight: { xs: "400px", sm: '540px', md: "500px", lg: "400px" },
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -33,7 +33,12 @@ const CardComponent = ({ title, description, buttonText, onClick }) => {
                 </Typography>
             </CardContent>
             <Box sx={{ padding: '0 30px 30px' }}>
-                <Button onClick={onClick} variant="outlined" sx={{ fontFamily:"SKSans, sans-serif",fontSize:16,color:"#0c3034",textTransform: 'none',padding:'15px 35px',border:'0.5px solid black',borderRadius:'10px' }}>
+                <Button onClick={onClick} variant="outlined" sx={{
+                    fontFamily: "SKSans, sans-serif", fontSize: 16, color: "#0c3034", textTransform: 'none', padding: '15px 35px', border: '0.5px solid black', borderRadius: '10px', '&:hover': {
+                        backgroundColor: '#016AC8',
+                        color: '#fff',
+                    },
+                }}>
                     {buttonText}
                 </Button>
             </Box>

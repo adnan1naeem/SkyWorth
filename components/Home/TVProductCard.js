@@ -7,7 +7,7 @@ import Image4 from './../../assets/FHD.jpg';
 import { useRouter } from 'next/router';
 const tvProducts = [
   {
-    title: 'QLED Mini',
+    title: 'QLED MINI',
     description: 'QLED Mini display technology delivers the best black levels, color highlights, and the widest viewing angle experience to every seat in the room.',
     image: Image1,
     buttonText: 'Shop OLED TVs',
