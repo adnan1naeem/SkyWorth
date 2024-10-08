@@ -190,7 +190,7 @@ const styles = {
     },
     line: {
       width: "90%",
-      height: "0.3px",
+      height: "0.5px",
       backgroundColor: "rgba(0,0,0,.65)",
       margin: "10px auto",
       mt: "1.5%",

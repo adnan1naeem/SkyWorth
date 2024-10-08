@@ -7,7 +7,7 @@ const styles = {
       xs: "30vh",
       sm: "35vh",
       md: "40vh",
-
+      marginBottom:"20px"
     },
     width: {
       xs: "80vw",

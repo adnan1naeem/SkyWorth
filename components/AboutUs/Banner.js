@@ -4,8 +4,8 @@ import AboutImage from './../../assets/AboutMainImage.jpg';
 // Define styles as objects
 const bannerContainerStyles = {
   height: {
-    xs: "70vh",
-    lg: "60vh",
+    xs: "400px",
+    lg: "500px",
   
   },
   display: "flex",

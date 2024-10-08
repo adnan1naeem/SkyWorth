@@ -8,7 +8,7 @@ const Index = () => {
 
 
   return (
-    <Box sx={{ marginTop: { xs: '70px', md: "70px", lg: '90px' } }}>
+    <Box >
       <LeftAlignedBoxWithBackground title={" "} Imageheight={{xs:"400px",md:"500px"}} backgroundImage={contactImage} />
       <Box>
         <ContactRow />

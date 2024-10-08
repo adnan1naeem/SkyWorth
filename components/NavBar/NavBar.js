@@ -120,7 +120,7 @@ const Navbar = () => {
                   ALL PRODUCTS
                 </Link>
                 <Link href={{ pathname: '/product', query: { title: 'QLED Mini'} }} onClick={closeMenu}>
-                  QLED Mini
+                  QLED MINI
                 </Link>
                 <Link href={{ pathname: '/product', query: { title: 'QLED'} }} onClick={closeMenu}>
                   QLED

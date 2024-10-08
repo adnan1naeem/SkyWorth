@@ -3,7 +3,7 @@ import { Box, Grid, Typography, Container } from '@mui/material';
 import FAQCard from './FAQCard'; // import the above component
 
 const faqData = [
-  { title: 'QELD Mini', badgeNumber: 19 },
+  { title: 'QLED MINI', badgeNumber: 19 },
   { title: 'QLED', badgeNumber: 13 },
   { title: 'UHD', badgeNumber: 10 },
   { title: 'FHD / HD', badgeNumber: 10 },
@@ -12,7 +12,7 @@ const faqData = [
 const FAQList = () => {
   return (
     <Container maxWidth="lg" sx={{ maxWidth: '1600px', margin: '0 auto' }}>
-      <Box sx={{ mt: 10, mx: 2, mb: '10%' }}>
+      <Box sx={{ mt: 4, mx: 2, mb: '10%' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
           <Box
             sx={{
@@ -24,7 +24,7 @@ const FAQList = () => {
             }}
           />
           <Typography variant="h4" sx={{ color: '#4d4d4d', textAlign: 'center', fontSize: '28px' }}>
-            Browse All The FAQ
+            Browse All The FAQs
           </Typography>
           <Box
             sx={{

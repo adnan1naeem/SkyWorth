@@ -1,13 +1,12 @@
 import React from "react";
 import { Box } from "@mui/material";
-import Retailer from "./../../components/WhereToBuy/Retailer";
 import Search from "../../components/Faq/Search";
 import FAQList from "../../components/Faq/FAQList";
 import Refrig from "../../components/Faq/Refrig";
 import BackgrondImages from './../../assets/select.jpg'
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
 import { useRouter } from 'next/router';
-import Banner from "../../components/AboutUs/Banner";
+import AboutImage from './../../assets/AboutMainImage.jpg';
 
 function Faq() {
   const router = useRouter();
@@ -16,23 +15,19 @@ function Faq() {
   };
   return (
     <Box>
-    <Banner />
-      {/* <Retailer
-        title="FAQ"
-        description="Find your frequently asked questions here"
-      /> */}
+      <LeftAlignedBoxWithBackground title={" "} Imageheight={{ xs: "400px", md: "500px" }} backgroundImage={AboutImage} />
       <Search />
       <FAQList />
       <Refrig />
-      <Box sx={{mt:3}}>
-      <LeftAlignedBoxWithBackground
-        bordershown={true}
-        backgroundImage={BackgrondImages}
-        buttonText={"View All SKYWORTH TVs"}
-        onClick={handleLearnMore}
-      />
+      <Box sx={{ mt: 3 }}>
+        <LeftAlignedBoxWithBackground
+          bordershown={true}
+          backgroundImage={BackgrondImages}
+          buttonText={"View All SKYWORTH TVs"}
+          onClick={handleLearnMore}
+        />
       </Box>
-      
+
       {/* <Machine/>
       <Freezer/> */}
     </Box>

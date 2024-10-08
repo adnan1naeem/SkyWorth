@@ -50,7 +50,7 @@ function Footer() {
             title="Product"
             text1="All Products"
             href_one="/product"
-            text2="QLED Mini"
+            text2="QLED MINI"
             href_two="/product/3"
             text3="QLED"
             href_three="/product/5"

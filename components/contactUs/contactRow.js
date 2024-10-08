@@ -43,7 +43,7 @@ function ContactBar({ title, description, icon }) {
         <Grid item xs={12} sm={6} md={4} lg={4} sx={{ bgcolor: 'transparent', border: 'none',justifyContent:'center' }}>
             <Card sx={{ bgcolor: 'transparent', boxShadow: 'none', border: 'none' }}>
                 <CardContent sx={{ bgcolor: 'transparent', padding: 2 }}>
-                    <Stack direction="row" style={{justifyContent:'center'}} spacing={1}>
+                    <Stack direction="row" spacing={1} sx={{justifyContent: { xs: 'flex-start', md: 'center' }}}>
                         <motion.div variants={iconVariants} initial="hidden" whileInView="visible">
                             <Avatar
                                 sx={{
@@ -65,12 +65,15 @@ function ContactBar({ title, description, icon }) {
                                     color={"#7A7B7C"}
                                     component="div"
                                     gutterBottom
+                                    sx={{textAlign: { xs: 'left', md: 'left' }}}
                                 >
                                     {title}
                                 </Typography>
                             </motion.div>
                             <motion.div variants={textVariants} initial="hidden" whileInView="visible">
-                                <Typography fontFamily={"Kanit"} lineHeight={1.8} fontWeight={400} color={"#050505"} fontSize={12}>
+                                <Typography fontFamily={"Kanit"} lineHeight={1.8} fontWeight={400} color={"#050505"} fontSize={12}
+                                    sx={{textAlign: { xs: 'left', md: 'left' }}}
+                                >
                                     {Array.isArray(description) ? (
                                         <ul style={{ paddingLeft: '0px', margin: 0 }}>
                                             {description.map((descItem, index) => (
