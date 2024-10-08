@@ -8,7 +8,7 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
         <Card
             sx={{
                 maxWidth: 345,
-                minHeight: { sm: "220px", md: '350px',lg:"400px",xl:'300px' },
+                minHeight: { sm: "220px", md: '330px',lg:"300px",xl:'300px' },
                 boxShadow: 'none',
                 position: 'relative',
                 overflow: 'hidden',
@@ -87,7 +87,7 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
             >
                 <Typography 
                     sx={{
-                        fontSize: { md: "20px", lg: "24px" }, 
+                        fontSize: { md: "20px", lg: "22px" }, 
                         textAlign: 'left', 
                         fontFamily: 'Kanit', 
                         fontWeight: '300',
