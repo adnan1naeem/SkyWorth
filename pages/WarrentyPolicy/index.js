@@ -133,7 +133,7 @@ const Index = () => {
     serialNumber &&
     promotionalMaterials;
   return (
-    <Box sx={{ marginTop: "100px" }}>
+    <Box sx={{ marginTop:{xs:"70px",md: "0px"} }}>
       <Image
         src={HomePage1}
         alt="Centered"
@@ -144,7 +144,7 @@ const Index = () => {
         }}
       />
       <Box
-        sx={{ padding: "20px", marginTop: "150px", maxWidth: "1000px", margin: "0 auto", borderRadius: "8px", }}
+        sx={{ padding: {xs:"10px 20px",md:"20px"}, maxWidth: "1000px", margin: "0 auto", borderRadius: "8px", }}
       >
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
