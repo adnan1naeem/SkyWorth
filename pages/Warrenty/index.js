@@ -6,13 +6,10 @@ import Warranty from './Warrenty.json'
 function Index() {
   return (
     <div>
-      <Container maxWidth="xl">
-        <Breadcrumb paddingTop={{ xs: '25%', sm: '18%', md: '12%', lg: '5%' }} />
-      </Container>
-      <Box sx={{ marginTop: '3%' }}></Box>
-
+      <Box paddingTop={{ xs: '20%', sm: '15%', md: '8%', lg: '5%' }}></Box>
       {Warranty?.map((item, index) => (
         <PrivacyPolicyText
+          termsOfServices={true}
           key={index}
           heading={item.heading}
           description1={item.description1}

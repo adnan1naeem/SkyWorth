@@ -20,18 +20,22 @@ const PrivacyPolicyText = ({
 }) => {
     return (
         <Box sx={{ textAlign: 'left' }}>
-            <Container maxWidth={termsOfServices ? "md" : "xl"}>
+            <Container maxWidth={"xl"}>
                 {breadcrumb && <Breadcrumb />}
                 <Box sx={{ mb: 6 }}>
-                    <Typography variant="h1" fontSize={{ xs: '35px', lg: '48px' }} color={"#0c3034"} sx={{ mb: 2, textAlign: termsOfServices ? "center" : "left" }} fontWeight={300} fontFamily={"SKSans, sans-serif"}>
-                        {heading}
-                    </Typography>
-                    <strong style={{ fontFamily: 'SKSans, sans-serif', fontWeight: 310, fontSize: '21px', marginBottom: "15px" }}>
-                        {strongText}
-                    </strong>
+                    {heading &&
+                        <Typography variant="h1" fontSize={{ xs: '35px', lg: '45px' }} color={"#0c3034"} sx={{ mb: 2, textAlign: termsOfServices ? "center" : "left" }} fontWeight={300} fontFamily={"SKSans, sans-serif"}>
+                            {heading}
+                        </Typography>}
+                    {strongText &&
+                        <Typography sx={{ mb: 1 }}>
+                            <strong style={{ fontFamily: 'SKSans, sans-serif', fontWeight: 500, fontSize: '21px', }}>
+                                {strongText}
+                            </strong>
+                        </Typography>}
                     {description1 && (
                         <Typography
-                            fontSize={{ lg: '21px' }}
+                            fontSize={{ lg: '17px' }}
                             fontFamily={"SKSans, sans-serif"}
                             sx={{ color: '#0c3034', marginBottom: "20px", fontWeight: 300 }}
                         >
@@ -137,7 +141,7 @@ const PrivacyPolicyText = ({
                     )}
                     {contactInfo && (
                         <Box sx={{ mt: 2 }}>
-                            <Typography sx={{ color: '#0c3034', fontSize: { lg: '21px' }, fontWeight: 300 }}>
+                            <Typography sx={{ color: '#0c3034', fontSize: { lg: '17px' }, fontWeight: 300 }}>
                                 {contactInfo.split('support@skyworthusa.com')[0]}
                                 <Link
                                     href="mailto:support@skyworthusa.com"
@@ -151,7 +155,7 @@ const PrivacyPolicyText = ({
                             </Typography>
                         </Box>
                     )}
-                    {mexcio && <Typography sx={{ color: '#0c3034', fontSize: { lg: '21px' }, fontWeight: 300 }}>
+                    {mexcio && <Typography sx={{ color: '#0c3034', fontSize: { lg: '17px' }, fontWeight: 300 }}>
                         For Mexico, please call
                         <Link
                             href={`tel:${55 - 5037 - 1598}`} // Make the phone number clickable
@@ -176,7 +180,7 @@ const PrivacyPolicyText = ({
                             servicioskyworth@dish.com.mx
                         </Link>
                     </Typography>}
-                    {USA && <Typography sx={{ color: '#0c3034', fontSize: { lg: '21px' }, fontWeight: 300 }}>
+                    {USA && <Typography sx={{ color: '#0c3034', fontSize: { lg: '17px' }, fontWeight: 300,}}>
                         For U.S.A & Canada, please call
                         <Link
                             href={`tel:${1 - 888 - 606 - 3212}`} // Make the phone number clickable
@@ -201,7 +205,7 @@ const PrivacyPolicyText = ({
                             servicioskyworth@dish.com.mx
                         </Link>
                     </Typography>}
-                    {textwithLink && <Typography fontSize={{ lg: '21px' }} fontFamily={"SKSans, sans-serif"} sx={{ color: '#0c3034', marginBottom: "20px", fontWeight: 300 }}>
+                    {textwithLink && <Typography fontSize={{ lg: '17px' }} fontFamily={"SKSans, sans-serif"} sx={{ color: '#0c3034', marginBottom: "20px", fontWeight: 300 }}>
                         {textwithLink}
                         <Link
                             href={link}
@@ -212,7 +216,6 @@ const PrivacyPolicyText = ({
                             here
                         </Link>.
                     </Typography>}
-
                 </Box>
             </Container>
         </Box>

@@ -35,7 +35,7 @@ function HomeScreen() {
       <Container maxWidth="xl" sx={{marginTop:'40px'}}>
         <CenteredImageWithText imageSrc={HomePage1} />
         <CenteredImageWithText
-          heading={"Personalize Your TV with Upgradeable Google Licensed Orient Google TV"}
+          heading={"Personalize Your TV with Skyworth Google TV"}
           imageSrc={HomePage2}
           body="Simplify your entertainment experience with Android TV. Discover 700,000+* movies and shows in one place. Ask Google to control your TV with your voice. And cast your photos, videos, and music from devices to your TV easily with Chromecast built-in."
           ButtonText={"Learn More"}

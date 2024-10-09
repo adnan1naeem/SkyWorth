@@ -165,7 +165,7 @@ const Navbar = () => {
                   }
                 >
                   <Link href={{ pathname: '/product', query: { title: 'QLED Mini'} }} onClick={closeMenu}>
-                    <TextNav label="QLED Mini" />
+                    <TextNav label="QLED MINI" />
                   </Link>
                 </li>
                 <li
