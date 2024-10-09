@@ -72,6 +72,19 @@ const Navbar = () => {
   const handleCloseClick = () => {
     setIsSearchOpen(!isSearchOpen);
   };
+  useEffect(() => {
+    const handleEscKeyPress = (event) => {
+      if (event.key === 'Escape') {
+        handleCloseClick();
+      }
+    };
+    if (isSearchOpen) {
+      document.addEventListener('keydown', handleEscKeyPress);
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscKeyPress);
+    };
+  }, [isSearchOpen, handleCloseClick]);
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
