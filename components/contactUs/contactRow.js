@@ -95,7 +95,7 @@ function ContactBar({ title, description, icon }) {
 
 function ContactRow() {
     return (
-        <div style={{ backgroundColor: "#F4F7F9",marginBottom:"60px" }}>
+        <Box sx={{ backgroundColor: "#F4F7F9",marginBottom:{xs:"0px",md:"60px"} }}>
             <Container maxWidth="xl" sx={{ bgcolor: '#F4F7F9', py: 6}}>
                 <Grid
                     container
@@ -107,7 +107,7 @@ function ContactRow() {
                     ))}
                 </Grid>
             </Container>
-        </div>
+        </Box>
     );
 }
 

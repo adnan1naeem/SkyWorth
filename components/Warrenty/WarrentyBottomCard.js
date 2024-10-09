@@ -67,6 +67,7 @@ const WarrantyCards = () => {
                     fontFamily: 'Kanit',
                     fontWeight: '400',
                     mb: 7,
+                    fontSize:{xs:"1.68rem",md:'2rem'},
                     padding: {
                         xs: '0px 2%',
                         sm: '0px 20%',

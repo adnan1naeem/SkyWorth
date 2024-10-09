@@ -136,7 +136,7 @@ const FeedBackForm = () => {
                                         color: 'white',
                                         borderRadius: 0,
                                         width: { xs: '100%', md: '30%' },
-                                        marginBottom: '100px',
+                                        marginBottom: {xs:"40px",md:'100px'},
                                         '&:hover': {
                                             background: '#0069CB',
                                         },

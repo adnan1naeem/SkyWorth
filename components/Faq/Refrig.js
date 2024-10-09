@@ -36,6 +36,7 @@ const Refrig = () => {
             mb: 3,
             fontWeight: "bold",
             color: "white",
+            fontSize:{xs:"1.68rem",md:'2.1rem'},
             mt: "6%",
             ml: "1%",
             mb: "4%",
