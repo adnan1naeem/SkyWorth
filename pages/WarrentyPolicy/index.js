@@ -14,9 +14,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 const countries = [
-  { label: "Malaysia", value: "Malaysia" },
-  { label: "United States", value: "United States" },
-  { label: "Canada", value: "Canada" },
+  { label: "Pakistan", value: "Pakistan" },
 ];
 
 const brandOptions = [
@@ -42,6 +40,7 @@ const Index = () => {
     handleSubmit,
     setValue,
     formState: { errors },
+    reset,
     watch,
   } = useForm();
   const [TermandCondition, setTermandCondition] = useState(true);
@@ -65,7 +64,8 @@ const Index = () => {
       if (response.ok) {
         const result = await response.json();
         alert(result.message);
-        router.push('/WarrentyPolicy');
+        reset();
+        window.location.reload();
       } else {
         const error = await response.json();
         alert(error.error || "Something went wrong!");

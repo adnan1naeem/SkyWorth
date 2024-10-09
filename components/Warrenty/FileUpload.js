@@ -9,33 +9,45 @@ import {
 import { Close as CloseIcon } from "@mui/icons-material";
 
 const FileUpload = ({ label, onChange, required }) => {
-  const [imageUrl, setImageUrl] = useState(null); 
-  const [fileName, setFileName] = useState(""); 
-  const [uploadProgress, setUploadProgress] = useState(100); 
+  const [imageUrl, setImageUrl] = useState(null);
+  const [fileName, setFileName] = useState("");
+  const [fileSize, setFileSize] = useState(0);
+  const [uploadProgress, setUploadProgress] = useState(100);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const fileInputRef = useRef(); 
+  const fileInputRef = useRef();
 
   const handleChange = (event) => {
     const file = event?.target?.files[0];
     if (file) {
+      const fileSizeInKB = file.size / 1024;
+      if (fileSizeInKB > 400) {
+        setErrorMessage("File size should not exceed 400KB");
+        return;
+      } else {
+        setErrorMessage("");
+      }
+
       const reader = new FileReader();
       reader.onload = () => {
         setImageUrl(reader.result);
-        setFileName(file.name); 
+        setFileName(file.name);
+        setFileSize(fileSizeInKB.toFixed(2));
         if (onChange) {
           onChange(file);
         }
       };
       reader.readAsDataURL(file);
-      setUploadProgress(100); 
+      setUploadProgress(100);
     }
   };
 
   const handleRemoveImage = () => {
-    setImageUrl(null); 
-    setFileName(""); 
+    setImageUrl(null);
+    setFileName("");
+    setFileSize(0);
     setUploadProgress(0);
-    fileInputRef.current.value = ""; 
+    fileInputRef.current.value = "";
   };
 
   const uniqueId = `file-upload-${label.replace(/\s+/g, "-").toLowerCase()}`;
@@ -89,8 +101,8 @@ const FileUpload = ({ label, onChange, required }) => {
           sx={{
             display: "flex",
             alignItems: "center",
-            border: "1px solid #ccc", // Border around the container
-            borderRadius: "8px", // Optional: rounded corners
+            border: "1px solid #ccc",
+            borderRadius: "8px",
             padding: "10px",
             position: "relative",
           }}
@@ -122,19 +134,19 @@ const FileUpload = ({ label, onChange, required }) => {
                 mt: "0.5%",
                 backgroundColor: "#f3f3f3",
                 "& .MuiLinearProgress-bar": {
-                  backgroundColor: "#1976d2", // Customize progress bar color
+                  backgroundColor: "#1976d2",
                 },
               }}
             />
 
             <Typography variant="body2" mt={1}>
-              100% Completed 422.2KB
+              100% Completed - {fileSize}KB
             </Typography>
           </Box>
           <IconButton
             sx={{
               marginLeft: "10px",
-              padding: "4px", // Reduce padding to make the icon smaller
+              padding: "4px",
               backgroundColor: "none",
               borderRadius: "50%",
               position: "absolute",
@@ -148,6 +160,11 @@ const FileUpload = ({ label, onChange, required }) => {
             <CloseIcon fontSize="small" />
           </IconButton>
         </Box>
+      )}
+      {errorMessage && (
+        <Typography color="error" variant="body2" mt={1}>
+          {errorMessage}
+        </Typography>
       )}
     </Box>
   );
