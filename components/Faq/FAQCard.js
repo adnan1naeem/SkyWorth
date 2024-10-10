@@ -8,6 +8,7 @@ const FAQCard = ({ title }) => {
 
   return (
     <Box
+    href={`/kbSection?title=${encodeURIComponent(title)}`}
       sx={{
         border: "1px solid #e0e0e0",
         borderRadius: "4px",

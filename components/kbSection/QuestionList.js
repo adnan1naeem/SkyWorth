@@ -14,26 +14,38 @@ function QuestionList() {
   const questionsPerPage = 9;
 
   const { title } = router.query;
-  console.log(title)
+  const searchQuestions = (keyword) => {
+    const results = [];
+
+    Object.keys(questionsData).forEach((category) => {
+      const matchingQuestions = questionsData[category].filter((question) =>
+        question.text.toLowerCase().includes(keyword.toLowerCase())
+      );
+      results.push(...matchingQuestions);
+    });
+
+    return results;
+  };
+
   useEffect(() => {
     if (title && questionsData[title]) {
       setFilteredQuestions(questionsData[title]);
+    } else if (title) {
+      const searchResults = searchQuestions(title);
+      setFilteredQuestions(searchResults);
     } else {
       setFilteredQuestions([]);
     }
   }, [title]);
 
-  // Handle page change
   const handleChange = (event, value) => {
     setCurrentPage(value);
   };
 
-  // Handle sorting
   const handleSortChange = (event) => {
     setSortOption(event.target.value);
   };
 
-  // Sort the questions based on the selected option
   const sortedQuestions = [...filteredQuestions].sort((a, b) => {
     if (sortOption === "a-z") {
       return a.text.localeCompare(b.text);
@@ -42,11 +54,10 @@ function QuestionList() {
     } else if (sortOption === "views") {
       return b.views - a.views;
     } else {
-      return 0; // Default sorting
+      return 0;
     }
   });
 
-  // Slice questions for pagination
   const currentQuestions = sortedQuestions.slice(
     (currentPage - 1) * questionsPerPage,
     currentPage * questionsPerPage
@@ -74,10 +85,8 @@ function QuestionList() {
           <Question key={index} text={question.text} description={question.des} title={title} />
         ))
       ) : (
-        <p>No questions found for this category.</p>
+        <p>No questions found for this search.</p>
       )}
-
-      {/* Pagination */}
       {filteredQuestions?.length > questionsPerPage && (
         <>
           <Stack spacing={2} sx={{ marginTop: 6, mb: 3 }}>
@@ -89,7 +98,7 @@ function QuestionList() {
               variant="outlined"
             />
           </Stack>
-          <Box sx={{ mb: 7 }} /> {/* Margin bottom after pagination */}
+          <Box sx={{ mb: 7 }} />
         </>
       )}
     </Box>
