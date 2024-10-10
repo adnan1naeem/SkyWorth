@@ -8,7 +8,7 @@ import FileUpload from "./../../components/Warrenty/FileUpload";
 import { motion } from "framer-motion";
 import WarrantyCards from "../../components/Warrenty/WarrentyBottomCard";
 import BackgrondImages from "./../../assets/select.jpg";
-import HomePage1 from "./../../assets/AboutImage2.jpg";
+import HomePage1 from "./../../assets/homePage1.jpg";
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
 import Image from "next/image";
 import { useRouter } from "next/router";

@@ -200,7 +200,14 @@ const Navbar = () => {
               </ul>
             )}
           </div>
-
+          {/* <li className={router.pathname === "/whereToBuy" ? styles.menu : ""}>
+            <Link href="/whereToBuy" onClick={closeMenu}>
+              <TextNav
+                label="WHERE TO BUY"
+                isActive={router.pathname === "/whereToBuy"}
+              />
+            </Link>
+          </li> */}
           <li className={router.pathname === "/aboutUs" ? styles.menu : ""}>
             <Link href="/aboutUs" onClick={closeMenu}>
               <TextNav
@@ -209,11 +216,11 @@ const Navbar = () => {
               />
             </Link>
           </li>
-          <li className={router.pathname === "/whereToBuy" ? styles.menu : ""}>
-            <Link href="/whereToBuy" onClick={closeMenu}>
+          <li className={router.pathname === "/media" ? styles.menu : ""}>
+            <Link href="/media" onClick={closeMenu}>
               <TextNav
-                label="WHERE TO BUY"
-                isActive={router.pathname === "/whereToBuy"}
+                label="MEDIA"
+                isActive={router.pathname === "/media"}
               />
             </Link>
           </li>

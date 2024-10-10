@@ -9,18 +9,34 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <Box sx={{ background: "#00224d", pt: "1%", pb: '30px', width: '100%', bottom: 0, borderTop: "20px solid #0263B2" }}>
+    <Box sx={{ background: "#00224d", pt: "1%", width: '100%', bottom: 0, borderTop: "20px solid #0263B2" }}>
       <Box
         sx={{
           mt: "1%",
           display: "flex",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          px: { xs: "8%", lg: "5.5%", xl: "16%" },
+          px: { xs: "8%", lg: "5.5%",  },//xl: "16%"
           pb: "0.5%",
         }}
       >
-        <Box sx={{ display: "flex",flexDirection: { xs: "column", sm: "column", md: "row" }, flexWrap: "wrap", gap: { xs: "20px", md: "50px" }, justifyContent: "space-between", width: "100%" }}>
+         <Box sx={{ width:'100%',textAlign: 'center',display:{xs:"block",md:'none'},paddingTop:"12px",marginBottom:'20px'}}>
+            <Image
+              src={require('./../../assets/newlogo.svg')}
+              alt="Skyworth Logo"
+              width={120}
+              height={40}
+            />
+          </Box>
+        <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row", md: "row" }, flexWrap: "wrap", gap: { xs: "20px", md: "50px" }, justifyContent: "space-between", width: "100%" }}>
+          <Box sx={{ textAlign: 'flex-start',display:{xs:"none",md:'block'},paddingTop:"12px"}}>
+            <Image
+              src={require('./../../assets/newlogo.svg')}
+              alt="Skyworth Logo"
+              width={120}
+              height={40}
+            />
+          </Box>
           <Box>
             <FooterCard
               title="About"
@@ -33,18 +49,6 @@ function Footer() {
               text4="FAQ"
               href_four="/faq"
             />
-            <Box sx={{ display: { xs: "none", lg: "block" }, padding:"16px", }}>
-              <Image
-                src={require('./../../assets/newlogo.svg')}
-                alt="Skyworth Logo"
-                width={120}
-                height={40}
-                style={{
-                  alignSelf: "center",
-                  mb: "20px",
-                }}
-              />
-            </Box>
           </Box>
           <FooterCard
             title="Product"
@@ -63,58 +67,38 @@ function Footer() {
           <Box>
             <FooterCard
               title="Service & Support"
-              text1="Where to Buy"
-              href_one="/whereToBuy"
+              text1="Media"
+              href_one="/media"
               text2="Warranty Information"
               href_two="/Warrenty"
               text3="Privacy Policy"
               href_three="/Privacy-Policy"
             />
-            <Box sx={{ display: { xs: "none", lg: "block" }, padding:"16px", }}>
+            <Box sx={{ padding: "0px 16px", }}>
               <Typography variant="h6" sx={{ color: "#fff", mb: 2, fontSize: "21px", fontWeight: 600 }}>
                 Our Social Media
               </Typography>
-              <Box sx={{ display: "flex", gap: 2 }}>
+              <Box sx={{ display: "flex", gap: { xs: 1, md: 2 } }}>
                 <SocialIcon icon={<FacebookIcon />} />
-                <SocialIcon icon={<LinkedInIcon />} link={"https://www.linkedin.com/in/skyworth-pakistan-4b0829329/"}/>
+                <SocialIcon icon={<LinkedInIcon />} link={"https://www.linkedin.com/in/skyworth-pakistan-4b0829329/"} />
                 <SocialIcon icon={<InstagramIcon />} link="https://www.instagram.com/844skyworth/?utm_source=qr&r=nametag" />
-                <SocialIcon icon={<YouTubeIcon />}  link={"https://www.youtube.com/@SkyworthPakistan"}/>
+                <SocialIcon icon={<YouTubeIcon />} link={"https://www.youtube.com/@SkyworthPakistan"} />
               </Box>
             </Box>
           </Box>
         </Box>
         <Box
-        sx={{
-          display: { xs: "flex", lg: "none" },
-          justifyContent: "space-between",
-          flexDirection: { xs: "column", md: 'row' },
-          flexWrap: "wrap",
-          padding:"16px",
-          alignItems: "center",
-          mt: 2
-        }}
-      >
-        <Box sx={{ textAlign: 'flex-start', width: '100%' }}>
-          <Image
-            src={require('./../../assets/newlogo.svg')}
-            alt="Skyworth Logo"
-            width={120}
-            height={40}
-          />
+          sx={{
+            display: { xs: "flex", lg: "none" },
+            justifyContent: "space-between",
+            flexDirection: { xs: "column", md: 'row' },
+            flexWrap: "wrap",
+            padding: "16px",
+            alignItems: "center",
+            mt: 2
+          }}
+        >
         </Box>
-
-        <Box sx={{ textAlign: 'start', width: "100%", marginTop: '20px' }}>
-          <Typography variant="h6" sx={{ color: "#fff", mb: 2, fontSize: "21px", fontWeight: 600 }}>
-            Our Social Media
-          </Typography>
-          <Box sx={{ display: "flex", gap: 1, marginBottom: "10px", justifyContent: 'start' }}>
-            <SocialIcon icon={<FacebookIcon />} />
-            <SocialIcon icon={<LinkedInIcon />} link={"https://www.linkedin.com/in/skyworth-pakistan-4b0829329/"}/>
-            <SocialIcon icon={<InstagramIcon />} link="https://www.instagram.com/844skyworth/?utm_source=qr&r=nametag" />
-            <SocialIcon icon={<YouTubeIcon />} link={"https://www.youtube.com/@SkyworthPakistan"}/>
-          </Box>
-        </Box>
-      </Box>
       </Box>
       <Box
         sx={{
@@ -124,7 +108,6 @@ function Footer() {
           justifyContent: "space-between",
           flexWrap: "wrap",
           px: { xs: "8%", lg: "5.5%", xl: "16%" },
-          pt: "2%",
           placeContent: 'center'
         }}
       >
@@ -132,6 +115,8 @@ function Footer() {
           sx={{
             color: "white",
             fontWeight: 400,
+            height:'60px',
+            alignContent:'center',
             fontSize: "14px",
             fontFamily: "Mont-Regular, Sans-serif",
             "@media (min-width: 1200px) and (max-width: 1300px)": {

@@ -2,31 +2,31 @@ import React from 'react';
 import { Grid, Card, CardMedia, CardContent, Typography, Button, Container } from '@mui/material';
 import Image1 from './../../assets/QLED-mini.jpg';
 import Image2 from './../../assets/QLED.jpg';
-import Image3 from './../../assets/UHD.jpg';
+import Image3 from './../../assets/TV_UHD_Home.jpg';
 import Image4 from './../../assets/FHD.jpg';
 import { useRouter } from 'next/router';
 const tvProducts = [
   {
     title: 'QLED MINI',
-    description: 'QLED Mini display technology delivers the best black levels, color highlights, and the widest viewing angle experience to every seat in the room.',
+    description: 'The Skyworth QLED Mini series delivers a top-tier viewing experience with vivid colors, enhanced brightness, best black levels and the widest viewing angle experience to every seat in the room',
     image: Image1,
     buttonText: 'Shop OLED TVs',
   },
   {
     title: 'QLED',
-    description: 'Experience true colors with SKYWORTH HDR technology that renders high contrast images, deep black levels, and bright color highlights.',
+    description: 'The Skyworth QLED series offers true colors brilliance and exceptional brightness, for more intuitive viewing experience',
     image: Image2,
     buttonText: 'Shop 4K TVs',
   },
   {
     title: 'UHD',
-    description: 'Do more on your TV with voice. Ask Google to search 700,000+ movies and shows, get recommendations, control smart home devices, and more.',
+    description: 'The Skyworth UHD series elevates your entertainment with a stunning display, brightness and clarity for the more intuitive viewing experience.',
     image: Image3,
     buttonText: 'Shop FHD TVs',
   },
   {
     title: 'FHD/HD',
-    description: 'Do more on your TV with voice. Ask Google to search 700,000+ movies and shows, get recommendations, control smart home devices, and more.',
+    description: 'The Skyworth FHD/HD series redefines your viewing experience with its stunning colors and full HD crystal-clear clarity',
     image: Image4,
     buttonText: 'Shop FHD TVs',
   }
@@ -49,6 +49,9 @@ const TVProductCard = ({ title, description, image, OnClick }) => {
         boxShadow: 'none',
         backgroundColor: 'transparent',
         textAlign: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100%',
       }}
       onClick={() => { handleCardClick(title) }}
     >
@@ -57,9 +60,9 @@ const TVProductCard = ({ title, description, image, OnClick }) => {
         height="auto"
         image={image.src}
         alt={title}
-        sx={{ objectFit: 'contain', padding: {xs:'0px',md:"16px"}, height: '200px' }}
+        sx={{ objectFit: 'contain', padding: {xs: '0px', md: "16px"}, height: '200px' }}
       />
-      <CardContent>
+      <CardContent sx={{ flex: 1 }}>
         <Typography gutterBottom sx={{
           fontSize: '1.5rem',
           color: '#0c3034',
@@ -70,41 +73,38 @@ const TVProductCard = ({ title, description, image, OnClick }) => {
         </Typography>
         <Typography sx={{
           fontWeight: 250,
-          fontSize: {xs:"1.0rem",md:'1.1rem'},
+          fontSize: { xs: "1.0rem", md: '1.1rem' },
         }} color="black">
           {description}
         </Typography>
-        <Button
-          variant="outlined"
-          sx={{
-            marginTop: '16px',
-
-            borderRadius: '10px',
-            padding: {xs:'15px 15px',md:'15px 35px'},
-            borderColor: 'black',
-            color: '#000',
-            fontSize: {xs:"0.8rem",md:'1rem'},
-            '&:hover': {
-              backgroundColor: '#016AC8',
-              color: '#fff',
-            },
-          }}
-        >
-          View All Products
-        </Button>
       </CardContent>
+      <Button
+        variant="outlined"
+        sx={{
+          marginTop: '16px',
+          borderRadius: '10px',
+          padding: { xs: '15px 15px', md: '15px 35px' },
+          borderColor: 'black',
+          color: '#000',
+          margin:"0px 40px",
+          fontSize: { xs: "0.8rem", md: '1rem' },
+          '&:hover': {
+            backgroundColor: '#016AC8',
+            color: '#fff',
+          },
+        }}
+      >
+        View All Products
+      </Button>
     </Card>
-  )
+  );
 };
 
 const ResponsiveTVProductGrid = () => {
-
-
-
   return (
     <Container sx={{ marginTop: '50px' }} maxWidth={"xl"}>
       <Typography sx={{
-        fontSize: {xs:"1.38rem",md:'1.5rem'},
+        fontSize: { xs: "1.38rem", md: '1.5rem' },
         color: '#0c3034',
         fontWeight: 400,
         textAlign: 'center',
@@ -115,12 +115,12 @@ const ResponsiveTVProductGrid = () => {
       <Grid container spacing={2} justifyContent={{ xs: "center" }}>
         {tvProducts.map((product, index) => (
           <Grid item margin={0} key={index}>
-            <TVProductCard {...product} OnClick={() => handleCardClick()} />
+            <TVProductCard {...product} />
           </Grid>
         ))}
       </Grid>
     </Container>
-  )
+  );
 };
 
 export default ResponsiveTVProductGrid;
