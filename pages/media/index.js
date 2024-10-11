@@ -5,10 +5,12 @@ import backgroundImage from '../../assets/backgroundImage.webp';
 import topImage from '../../assets/backgroundImage.jpg';
 import { useRouter } from "next/router";
 import VideoCards from "../../components/media/videocard";
-
+import BackgrondImages from './../../assets/select.jpg'
 function WhereToBuy() {
   const router = useRouter();
-  
+  const handleLearnMore=()=>{
+    router.push('/product');
+  }
   return (
     <Box>
       <LeftAlignedBoxWithBackground 
@@ -19,14 +21,7 @@ function WhereToBuy() {
         backgroundImage={topImage} 
       />
       <VideoCards />
-      <LeftAlignedBoxWithBackground
-        Imageheight={{ xs: "400px", lg: '600px' }}
-        title={"Can't find a store near you?"}
-        description={"Shop by series online and get your TV shipped straight to your home."}
-        buttonText={"Shop SKYWORTH TVs"}
-        backgroundImage={backgroundImage}
-        onClick={() => { router.push('/product') }} 
-      />
+      <LeftAlignedBoxWithBackground bordershown={true} backgroundImage={BackgrondImages} buttonText={"View All SKYWORTH TVs"} onClick={handleLearnMore}/>
     </Box>
   );
 }
