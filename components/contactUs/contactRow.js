@@ -13,7 +13,7 @@ const sections = [
     },
     {
         title: "Contact Number (Head Office)",
-        description: '92 42 111 600 6D0',
+        description: '92 42 111 111 660',
         icon: <PhoneIcon sx={{ height: 45, width: 45 }} />,
     },
     {
@@ -24,6 +24,11 @@ const sections = [
     {
         title: 'Email Address',
         description: 'info@skyworthpakistan.com',
+        icon: <MailOutlineIcon sx={{ height: 45, width: 45 }} />,
+    },
+    {
+        title: 'Email Address',
+        description: 'help@skyworthpakistan.com',
         icon: <MailOutlineIcon sx={{ height: 45, width: 45 }} />,
     },
 ];

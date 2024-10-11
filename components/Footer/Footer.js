@@ -24,19 +24,24 @@ function Footer() {
             <Image
               src={require('./../../assets/newlogo.svg')}
               alt="Skyworth Logo"
-              width={120}
+              width={220}
               height={40}
             />
+           <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,marginTop:'10px'}}>Orient Electronics</Typography>
+           <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,}}>20km, Multan Road, Lahore Pakistan</Typography>
           </Box>
         <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row", md: "row" }, flexWrap: "wrap", gap: { xs: "20px", md: "50px" }, justifyContent: "space-between", width: "100%" }}>
-          <Box sx={{ textAlign: 'flex-start',display:{xs:"none",md:'block'},paddingTop:"12px"}}>
+          <Box sx={{ textAlign: 'flex-start',flexDirection:'row',display:{xs:"none",md:'block'},paddingTop:"12px"}}>
             <Image
               src={require('./../../assets/newlogo.svg')}
               alt="Skyworth Logo"
-              width={120}
+              width={220}
               height={40}
             />
+             <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,marginTop:'10px'}}>Orient Electronics</Typography>
+             <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,}}>20km, Multan Road, Lahore Pakistan</Typography>
           </Box>
+         
           <Box>
             <FooterCard
               title="About"
@@ -75,9 +80,6 @@ function Footer() {
               href_three="/Privacy-Policy"
             />
             <Box sx={{ padding: "0px 16px", }}>
-              <Typography variant="h6" sx={{ color: "#fff", mb: 2, fontSize: "21px", fontWeight: 600 }}>
-                Our Social Media
-              </Typography>
               <Box sx={{ display: "flex", gap: { xs: 1, md: 2 } }}>
                 <SocialIcon icon={<FacebookIcon />} />
                 <SocialIcon icon={<LinkedInIcon />} link={"https://www.linkedin.com/in/skyworth-pakistan-4b0829329/"} />
@@ -138,8 +140,8 @@ const SocialIcon = ({ icon, link }) => (
         color: "#fff",
         border: "1px solid #fff",
         borderRadius: "50%",
-        height: { xs: 40, md: 40, lg: 55 },
-        width: { xs: 40, md: 40, lg: 55 },
+        height: { xs: 40, md: 40, lg: 40 },
+        width: { xs: 40, md: 40, lg: 40 },
       }}
     >
       {icon}

@@ -112,9 +112,9 @@ const ResponsiveTVProductGrid = () => {
       }} align="center" gutterBottom>
         Choosing the right SKYWORTH TV for you
       </Typography>
-      <Grid container spacing={2} justifyContent={{ xs: "center" }}>
+      <Grid container spacing={2} justifyContent={{ xs: "center", }}>
         {tvProducts.map((product, index) => (
-          <Grid item margin={0} key={index}>
+          <Grid item margin={0} sx={{marginBottom:'20px'}} key={index}>
             <TVProductCard {...product} />
           </Grid>
         ))}

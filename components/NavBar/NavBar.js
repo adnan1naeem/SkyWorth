@@ -124,8 +124,10 @@ const Navbar = () => {
               className={styles.dropbtn}
               onClick={toggleDropdown}
             >
+              <Link href="/product" style={{display: "flex"}}>
               <TextNav label="PRODUCT" />
               <ArrowDropDownIcon style={{ marginLeft: '2px',fill:'black' }} />
+              </Link>
             </li>
             {isWideScreen && (
               <div className={styles["dropdown-content"]}>
