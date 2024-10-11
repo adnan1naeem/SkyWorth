@@ -8,13 +8,13 @@ import { useRouter } from 'next/router';
 const tvProducts = [
   {
     title: 'QLED MINI',
-    description: 'The Skyworth QLED Mini series delivers a top-tier viewing experience with vivid colors, enhanced brightness, best black levels and the widest viewing angle experience to every seat in the room',
+    description: 'The Skyworth QLED Mini series delivers a top-tier viewing experience with vivid colors, enhanced brightness, best black levels and the widest viewing angle experience to every seat in the room.',
     image: Image1,
     buttonText: 'Shop OLED TVs',
   },
   {
     title: 'QLED',
-    description: 'The Skyworth QLED series offers true colors brilliance and exceptional brightness, for more intuitive viewing experience',
+    description: 'The Skyworth QLED series offers true colors brilliance and exceptional brightness, for more intuitive viewing experience.',
     image: Image2,
     buttonText: 'Shop 4K TVs',
   },
@@ -26,7 +26,7 @@ const tvProducts = [
   },
   {
     title: 'FHD/HD',
-    description: 'The Skyworth FHD/HD series redefines your viewing experience with its stunning colors and full HD crystal-clear clarity',
+    description: 'The Skyworth FHD/HD series redefines your viewing experience with its stunning colors and full HD crystal-clear clarity.',
     image: Image4,
     buttonText: 'Shop FHD TVs',
   }
