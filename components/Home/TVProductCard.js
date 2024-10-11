@@ -14,7 +14,7 @@ const tvProducts = [
   },
   {
     title: 'QLED',
-    description: 'The Skyworth QLED series offers true colors brilliance and exceptional brightness, for more intuitive viewing experience.',
+    description: 'The Skyworth QLED series offers true colors brilliance at any brightness level ranging from dark to very bright scenes.',
     image: Image2,
     buttonText: 'Shop 4K TVs',
   },
