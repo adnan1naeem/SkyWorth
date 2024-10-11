@@ -24,9 +24,9 @@ function HomeScreen() {
       <ImageSlider />
       <div style={{marginTop:{xs:'10px',md:'40px'}}}>
       <CenteredImageWithText
-        text="SKYWORTH Pakistan is 100% hold by SKYWORTH Group"
-        body="SKYWORTH Pakistan is a joint venture between Skyworth China and Orient Electronics, for the licensed manufacturing, sales, distribution and marketing of Skyworth product portfolio in Pakistan."
-        body2="SKYWORTH was established in 1988, with the head office located within Shenzhen High Tech Industrial Park which is honored as “China’s silicon valley”, and has more than 40,000 employees. SKYWORTH is a large-scale high-tech corporation mainly engaged in the development and manufacturing of consumer electronics, display devices, digital set top boxes, security monitors, network communication, semi-conductors, refrigerators, washing machines, cell phones and LED lighting etc."
+        text="SKYWORTH Pakistan is a joint venture between Skyworth China and Orient Electronics"
+        text2={"for the licensed manufacturing, sales, distribution and marketing of Skyworth product portfolio in Pakistan."}
+        body2={`SKYWORTH was established in 1988, with the head office located within Shenzhen High Tech Industrial Park which is honored as "China's silicon valley", and has more than 40,000 employees. SKYWORTH is a large-scale high-tech corporation mainly engaged in the development and manufacturing of consumer electronics, display devices, digital set top boxes, security monitors, network communication, semi-conductors, refrigerators, washing machines, cell phones and LED lighting etc.`}
         ButtonText={"Read More"}
         onClick={handleReadMoreClick}
       />

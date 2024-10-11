@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
-const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, heading,onClick }) => {
+const CenteredImageWithText = ({ imageSrc, text, text2, body, body2, ButtonText, heading, onClick }) => {
 
     return (
         <Box
@@ -38,6 +38,17 @@ const CenteredImageWithText = ({ imageSrc, text, body, body2, ButtonText, headin
                 }}
             >
                 {text}
+            </Typography>}
+            {text2 && <Typography
+                sx={{
+                    width: { xs: "90%", md: "80%" },
+                    fontWeight: 250,
+                    fontSize: { xs: "1.0rem", md: '1.1rem' },
+                    textAlign: 'center',
+                    marginBottom: '10px'
+                }}
+            >
+                {text2}
             </Typography>}
             {body && <Typography
                 component="div"
