@@ -1,0 +1,38 @@
+{
+    "countries": [
+      { "label": "Pakistan", "value": "Pakistan" }
+    ],
+    "resolution": [
+      { "label": "QLED MINI", "value": "QLED MINI" },
+      { "label": "QLED", "value": "QLED" },
+      { "label": "UHD", "value": "UHD" },
+      { "label": "FHD/HD", "value": "FHD/HD" }
+    ],
+    "productSize": [
+      { "label": "100", "value": "100" },
+      { "label": "85", "value": "85" },
+      { "label": "65", "value": "65" },
+      { "label": "55", "value": "55" },
+      { "label": "50", "value": "50" },
+      { "label": "43", "value": "43" },
+      { "label": "32", "value": "32" }
+    ],
+    "City": [
+      { "label": "Lahore", "value": "Lahore" },
+      { "label": "Faisalabad", "value": "Faisalabad" },
+      { "label": "Multan", "value": "Multan" },
+      { "label": "Islamabad", "value": "Islamabad" },
+      { "label": "Karachi", "value": "Karachi" }
+    ],
+    "brandOptions": [
+      "Television",
+      "Billboard",
+      "Social media",
+      "Promotional videos",
+      "Search engines",
+      "Customers testimonials",
+      "Peer referral",
+      "Others"
+    ]
+  }
+  

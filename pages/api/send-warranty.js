@@ -11,20 +11,22 @@ export default async function handler(req, res) {
       fullName,
       email,
       phone,
-      icNumber,
+      cnicNumber,
       purchaseDate,
       addressLine1,
-      addressLine2,
       state,
-      postalCode,
+      area,
+      city,
       country,
       gender,
+      size,
+      type,
       brandSource,
-      itemCategory,
       productModel,
       serialNumber,
       promotionalMaterials,
       purchaseReceipt,
+      shop,
       warrantyCard,
     } = req.body;
 
@@ -44,17 +46,19 @@ export default async function handler(req, res) {
         Name: ${fullName}
         Email: ${email}
         Phone: ${phone}
-        IC Number: ${icNumber}
+        IC Number: ${cnicNumber}
         Purchase Date: ${purchaseDate}
-        Address Line 1: ${addressLine1}
-        Address Line 2: ${addressLine2}
-        State: ${state}
-        Postal Code: ${postalCode}
+        Address: ${addressLine1}
         Country: ${country}
+        Area: ${area}
+        State: ${state}
+        City: ${city}
+        LED Size: ${size}
+        LED Type: ${type}
         Gender: ${gender}
         Brand Source: ${brandSource}
-        Item Category: ${itemCategory}
         Product Model: ${productModel}
+        From Where Did you Buy: ${shop}
         Serial Number: ${serialNumber}
         Promotional Materials: ${promotionalMaterials}
       `,

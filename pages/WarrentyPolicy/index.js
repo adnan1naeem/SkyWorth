@@ -13,42 +13,15 @@ import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWi
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
-
-const countries = [
-  { label: "Pakistan", value: "Pakistan" },
-];
-const resolution = [
-  { label: "QLED MINI", value: "QLED MINI" },
-  { label: "QLED", value: "QLED" },
-  { label: "UHD", value: "UHD" },
-  { label: "FHD/HD", value: "FHD/HD" },
-]
-const productSize = [
-  { label: "100", value: "100" },
-  { label: "85", value: "85" },
-  { label: "65", value: "65" },
-  { label: "55", value: "55" },
-  { label: "50", value: "50" },
-  { label: "43", value: "43" }, { label: "32", value: "32" }]
-const City = [
-  { label: "Lahore", value: "Lahore" },
-  { label: "Faisalabad", value: "Faisalabad" },
-  { label: "Multan", value: "Multan" },
-  { label: "Islamabad", value: "Islamabad" },
-  { label: "Karachi", value: "Karachi" },
-];
-const brandOptions = [
-  "Television",
-  "Billboard",
-  "Social media",
-  "Promotional videos",
-  "Search engines",
-  "Customers testimonials",
-  "Peer referral",
-  "Others",
-];
+import {
+  CitySelect,
+  CountrySelect,
+  StateSelect,
+} from "react-country-state-city";
+import "react-country-state-city/dist/react-country-state-city.css";
+import data from './data.json';
 const Index = () => {
-
+  const { resolution, productSize, brandOptions } = data;
   const {
     register,
     handleSubmit,
@@ -59,6 +32,8 @@ const Index = () => {
   } = useForm();
   const [TermandCondition, setTermandCondition] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [countryid, setCountryid] = useState(0);
+  const [stateid, setstateid] = useState(0);
   const router = useRouter();
   const handleLearnMore = () => {
     router.push("/product");
@@ -112,11 +87,12 @@ const Index = () => {
   };
   const fullName = watch("fullName");
   const phone = watch("phone");
-  const cninNumber = watch("cninNumber");
+  const cnicNumber = watch("cnicNumber");
   const email = watch("email");
   const purchaseDate = watch("purchaseDate");
   const addressLine1 = watch("addressLine1");
   const city = watch("city");
+  const state = watch("state");
   const country = watch("country");
   const gender = watch("gender");
   const brandSource = watch("brandSource");
@@ -132,7 +108,7 @@ const Index = () => {
   const isFormComplete =
     fullName &&
     phone &&
-    cninNumber &&
+    cnicNumber &&
     email &&
     purchaseDate &&
     addressLine1 &&
@@ -142,8 +118,9 @@ const Index = () => {
     brandSource &&
     productModel &&
     serialNumber &&
+    state &&
     area &&
-    type && 
+    type &&
     size &&
     shop &&
     promotionalMaterials;
@@ -193,8 +170,8 @@ const Index = () => {
               <TextInput
                 label="CNIC Number"
                 {...register("cnicNumber", { required: "CNIC Number is required" })}
-                value={cninNumber}
-                onChange={(e) => setValue("cninNumber", e.target.value)}
+                value={cnicNumber}
+                onChange={(e) => setValue("cnicNumber", e.target.value)}
               />
               {errors.cnicNumber && (<Typography color="error">{errors.cnicNumber.message}</Typography>)}
             </Grid>
@@ -240,17 +217,15 @@ const Index = () => {
               {errors.addressLine1 && (<Typography color="error">{errors.addressLine1.message}</Typography>)}
             </Grid>
             <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <SelectInput
-                label="City"
-                name="city"
-                options={City}
-                value={city}
-                onChange={(e) => setValue("city", e.target.value)}
-                required={true}
+              <Typography sx={{ fontSize: 16, fontFamily: 'kanit' }}>Country</Typography>
+              <CountrySelect
+                onChange={(e) => { setValue("country", e?.name); setCountryid(e.id) }}
+                style={{ height: "34px",border:"0px solid #ccc",fontFamily:'kanit' }}
+                placeHolder="Select Country"
               />
-              {errors.city && (<Typography color="error">{errors.city.message}</Typography>)}
+              {errors.country && (<Typography color="error">{errors.country.message}</Typography>)}
             </Grid>
-            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+            <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
                 label="Area/Society"
                 {...register("area", {
@@ -261,16 +236,28 @@ const Index = () => {
               />
               {errors.area && (<Typography color="error">{errors.area.message}</Typography>)}
             </Grid>
-            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <SelectInput
-                label="Country"
-                name="country"
-                options={countries}
-                value={country}
-                onChange={(e) => setValue("country", e.target.value)}
-                required={true}
+            <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+              <Typography sx={{ fontSize: 16, fontFamily: 'kanit' }}>State</Typography>
+              <StateSelect
+                countryid={countryid}
+                onChange={(e) => { setValue("state", e?.name); setstateid(e.id) }}
+                style={{ height: "34px",border:"0px solid #ccc",fontFamily:'kanit' }}
+                placeHolder="Select State"
               />
-              {errors.country && (<Typography color="error">{errors.country.message}</Typography>)}
+              {errors.state && (<Typography color="error">{errors.state.message}</Typography>)}
+            </Grid>
+            <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+            <Typography sx={{ fontSize: 16, fontFamily: 'kanit' }}>City</Typography>
+              <CitySelect
+                countryid={countryid}
+                stateid={stateid}
+                autoComplete="off"
+                onChange={(e) => {
+                  setValue("city", e?.name);
+                }}
+                style={{ height: "34px",border:"0px solid #ccc",fontFamily:'kanit' }}
+                placeHolder="Select City"
+              />
             </Grid>
             <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <SelectInput
@@ -406,37 +393,13 @@ const Index = () => {
               />
               {errors.termsAccepted && (<Typography color="error">{errors.termsAccepted.message}</Typography>)}
             </Grid>
-            <Grid
-              item
-              xs={12}
-              component={motion.div}
-              initial="hidden"
-              animate="visible"
-              transition={{ delay: 0.3 }}
-              variants={animationVariants}
-            >
+            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               {loading ?
                 <Box sx={{ textAlign: 'center' }}>
                   <CircularProgress />
                 </Box> :
-                <Button
-                  type="submit"
-                  onClick={handleSubmit}
-                  variant="contained"
-                  disabled={
-                    isFormComplete == undefined ? true : false || TermandCondition
-                  }
-                  sx={{
-                    background: "#1a7efb",
-                    height: 53,
-                    color: "white",
-                    marginBottom: "20px",
-                    "&:hover": {
-                      background: "#0069CB",
-                    },
-                  }}
-                  fullWidth
-                >
+                <Button type="submit" onClick={handleSubmit} variant="contained" disabled={isFormComplete == undefined ? true : false || TermandCondition}
+                  sx={{background: "#1a7efb",height: 53,color: "white",marginBottom: "20px","&:hover": {background: "#0069CB"}}} fullWidth>
                   Submit
                 </Button>}
             </Grid>
@@ -453,5 +416,4 @@ const Index = () => {
     </Box>
   );
 };
-
 export default Index;
