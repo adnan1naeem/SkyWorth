@@ -46,7 +46,8 @@ const ImageSwiper = () => {
   return (
     <Box sx={{ 
       position: 'relative', 
-      width: { xs: '100%', sm: '100%', md: '100%', lg: '100%' }, 
+      width: { xs: '100%', sm: '100%', md: '100%', lg: '95%' }, 
+      margin:'auto',
       marginTop: { xs: '15%', sm: '10%', md: '5%', lg: '3%' }
     }}>
       <Swiper
@@ -152,7 +153,7 @@ const ImageSwiper = () => {
               swiperRef.current.slideTo(index);
             }}
             style={{
-              width: '3%',
+              width: '2%',
               height: '4px',
               margin: '0 5px',
               cursor: 'pointer',
