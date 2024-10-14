@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "name": "QLED Mini 65X8700G Google TV",
+      "name": "QLED MINI 65X8700G Google TV",
       "price": "$1,199.00 - $1,599.00",
       "overview": "The Skyworth QLED Mini series delivers a top-tier viewing experience with vivid colors, enhanced brightness, and crystal-clear clarity from every angle. Its sleek, slim-bezel design enhances the visual appeal, offering a stunningly immersive display. Powered by Google TV, you can effortlessly access your favorite apps, movies, and shows. With built-in Google Assistant and a Bluetooth voice remote, controlling your TV and managing tasks is as easy as speaking a command. Sit back, relax, and dive into endless entertainment with the perfect combination of technology and style.",
       "specifications": "Specifications content goes here. You can list the important features or specifications of the product.",
@@ -54,7 +54,7 @@
     },
     {
       "id": 2,
-      "name": "QLED Mini 75X8700G Google TV",
+      "name": "QLED MINI 75X8700G Google TV",
       "price": "$3,499.00 - $5,499.00",
       "image": [
         "./../../assets/QLED-mini.jpg",
@@ -102,7 +102,7 @@
     },
     {
       "id": 3,
-      "name": "QLED Mini 100Q7800G Google TV",
+      "name": "QLED MINI 100Q7800G Google TV",
       "price": "$3,499.00 - $5,499.00",
       "featurelist": [
         "Resolution: UHD(3840*2160)",

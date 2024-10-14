@@ -6,8 +6,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 function Footer() {
+  const router=useRouter()
   return (
     <Box sx={{ background: "#00224d", pt: "1%", width: '100%', bottom: 0, borderTop: "20px solid #0263B2" }}>
       <Box
@@ -53,6 +55,11 @@ function Footer() {
               href_three="/contactUs"
               text4="FAQ"
               href_four="/faq"
+              onLinkClick={(href) => {
+                if (href) {
+                    router.push(href);
+                }
+            }}
             />
           </Box>
           <Box>
@@ -61,15 +68,20 @@ function Footer() {
             text1="All Products"
             href_one="/product"
             text2="QLED MINI"
-            href_two="/product/3"
+            href_two={`/product?title=QLED%20MINI`}
             text3="QLED"
-            href_three="/product/5"
+            href_three={`/product?title=QLED`}
             text4="UHD"
-            href_four="/product/6"
+            href_four={`/product?title=UHD`}
             text5="FHD/HD"
-            href_five="/product/11"
+            href_five={`/product?title=FHD/HD`}
+            onLinkClick={(href) => {
+                if (href) {
+                    router.push(href);
+                }
+            }}
             mt={{ xs: '5%', sm: 0 }}
-          />
+        />
           </Box>
           <Box>
             <FooterCard
@@ -80,6 +92,11 @@ function Footer() {
               href_two="/Warrenty"
               text3="Privacy Policy"
               href_three="/Privacy-Policy"
+              onLinkClick={(href) => {
+                if (href) {
+                    router.push(href);
+                }
+            }}
             />
             <Box sx={{ padding: "0px 16px", }}>
               <Box sx={{ display: "flex", gap: { xs: 1, md: 2 } }}>

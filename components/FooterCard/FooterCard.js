@@ -1,36 +1,33 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
-import Link from "next/link";
 
-function FooterCard({ ...props }) {
+function FooterCard({ onLinkClick, ...props }) {
   return (
-    <Box >
+    <Box>
       <Card
         sx={{
-          // width: { sx: "12rem", sm: "14rem", md: "16rem", lg: "18rem" },
-          // height: { sx: "12rem", sm: "10rem", md: "13rem", lg: "15rem" },
           background: "none",
           boxShadow: "none",
         }}
       >
         <CardContent sx={{ display: "flex", flexDirection: "column" }}>
-          {props?.title &&<Typography
-            sx={{
-              color: "#ffffff",
-              fontSize: "21px",
-              fontWeight: 600,
-              paddingBottom: { xs: "3%", lg:props.title=="Service & Support"?'5%':props.title=="About"?"7%": "10%" },
-              fontFamily: "Mont-Bold, Sans-serif",
-            }}
-          >
-            {props.title}
-          </Typography>}
-
-          {props?.text1 && <Link
-            style={{ textDecoration: "none" }}
-            href={{ pathname: props.href_one }}
-          >
+          {props?.title && (
             <Typography
+              sx={{
+                color: "#ffffff",
+                fontSize: "21px",
+                fontWeight: 600,
+                paddingBottom: { xs: "3%", lg: props.title === "Service & Support" ? '5%' : props.title === "About" ? "7%" : "10%" },
+                fontFamily: "Mont-Bold, Sans-serif",
+              }}
+            >
+              {props.title}
+            </Typography>
+          )}
+
+          {props?.text1 && (
+            <Typography
+              onClick={() => onLinkClick(props.href_one)}
               sx={{
                 mt: props.mt,
                 color: "#ffffff",
@@ -48,13 +45,11 @@ function FooterCard({ ...props }) {
             >
               {props.text1}
             </Typography>
-          </Link>}
+          )}
 
-          {props?.text2 &&<Link
-            style={{ textDecoration: "none" }}
-            href={{ pathname: props.href_two }}
-          >
+          {props?.text2 && (
             <Typography
+              onClick={() => onLinkClick(props.href_two)}
               sx={{
                 color: "#ffffff",
                 marginTop: "5px",
@@ -72,13 +67,11 @@ function FooterCard({ ...props }) {
             >
               {props.text2}
             </Typography>
-          </Link>}
+          )}
 
-          {props?.text3 &&<Link
-            style={{ textDecoration: "none" }}
-            href={{ pathname: props.href_three }}
-          >
+          {props?.text3 && (
             <Typography
+              onClick={() => onLinkClick(props.href_three)}
               sx={{
                 color: "#ffffff",
                 marginTop: "5px",
@@ -96,13 +89,11 @@ function FooterCard({ ...props }) {
             >
               {props.text3}
             </Typography>
-          </Link>}
+          )}
 
-          {props?.text4 && <Link
-            style={{ textDecoration: "none" }}
-            href={{ pathname: props.href_four }}
-          >
+          {props?.text4 && (
             <Typography
+              onClick={() => onLinkClick(props.href_four)}
               sx={{
                 color: "#ffffff",
                 marginTop: "5px",
@@ -120,12 +111,11 @@ function FooterCard({ ...props }) {
             >
               {props.text4}
             </Typography>
-          </Link>}
-          {props.text5 && <Link
-            style={{ textDecoration: "none" }}
-            href={{ pathname: props.href_five }}
-          >
+          )}
+
+          {props.text5 && (
             <Typography
+              onClick={() => onLinkClick(props.href_five)}
               sx={{
                 color: "#ffffff",
                 marginTop: "5px",
@@ -143,7 +133,7 @@ function FooterCard({ ...props }) {
             >
               {props.text5}
             </Typography>
-          </Link>}
+          )}
         </CardContent>
       </Card>
     </Box>
