@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Box, TextField, IconButton, Paper, Tooltip, Typography, Modal, Button, MenuItem, Select, FormControl, InputLabel } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
-import { useNavigate } from "react-router-dom"; // import useNavigate
-import TextInput from "../Warrenty/TextInput";
 import { useRouter } from "next/router";
 
 const styles = {
@@ -80,6 +78,12 @@ function Search() {
   const [openModal, setOpenModal] = useState(false);
   const [category, setCategory] = useState('');
   const [searchText, setSearchText] = useState('');
+  const [formData, setFormData] = useState({
+    title: '',
+    email: '',
+    details: '',
+  });
+  const [formErrors, setFormErrors] = useState({});
  const router=useRouter()
 
   const handleSearchClick = () => {
@@ -100,10 +104,57 @@ function Search() {
   const handleCategoryChange = (event) => {
     setCategory(event.target.value);
   };
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
   const handleKeyPress = (event) => {
     if (event.key === "Enter" && searchText) {
       router?.push(`/kbSection?title=${encodeURIComponent(searchText)}`);
+    }
+  };
+
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.title) errors.title = "Title is required";
+    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Valid email is required";
+    }
+    if (!category) errors.category = "Category is required";
+    if (!formData.details) errors.details = "Details are required";
+    return errors;
+  };
+
+  const handleSubmit = async () => {
+    const errors = validateForm();
+    setFormErrors(errors);
+    if (Object.keys(errors).length === 0) {
+      try {
+        const response = await fetch("/api/faq-question", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title: formData.title,
+            email: formData.email,
+            category,
+            details: formData.details,
+          }),
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          alert(result.message);
+          setFormData({ title: '', email: '', details: '' });
+          setCategory('');
+          setOpenModal(false);
+        } else {
+          const error = await response.json();
+          alert(error.error || "Something went wrong!");
+        }
+      } catch (error) {
+        alert("Error submitting form");
+      }
     }
   };
 
@@ -113,11 +164,11 @@ function Search() {
         <TextField
           fullWidth
           placeholder="Search"
-          value={searchText} // bind input to state
-          onChange={(e) => setSearchText(e.target.value)} // update search text
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
-          onKeyPress={handleKeyPress} // handle Enter key press
+          onKeyPress={handleKeyPress}
           InputProps={{
             sx: {
               border: "none",
@@ -156,15 +207,29 @@ function Search() {
       </Tooltip>
       <Modal open={openModal} onClose={handleCloseModal} sx={styles.modal}>
         <Paper sx={styles.modalPaper}>
-          <TextInput label="Question/Title:" name="Question/Title:" />
+          <TextField
+            fullWidth
+            variant="outlined"
+            label="Question/Title"
+            name="title"
+            value={formData.title}
+            onChange={handleInputChange}
+            error={!!formErrors.title}
+            helperText={formErrors.title}
+            sx={styles.textField}
+          />
           <TextField
             fullWidth
             variant="outlined"
             label="Email"
-            placeholder="Enter your Email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            error={!!formErrors.email}
+            helperText={formErrors.email}
             sx={styles.textField}
           />
-          <FormControl variant="outlined" sx={styles.formControl}>
+          <FormControl variant="outlined" sx={styles.formControl} error={!!formErrors.category}>
             <InputLabel>Select a Category</InputLabel>
             <Select
               value={category}
@@ -176,18 +241,25 @@ function Search() {
               <MenuItem value="white">White</MenuItem>
               <MenuItem value="blue">Blue</MenuItem>
             </Select>
+            {formErrors.category && (
+              <Typography color="error">{formErrors.category}</Typography>
+            )}
           </FormControl>
           <TextField
             fullWidth
             variant="outlined"
             label="Answer/Details"
-            placeholder="Details"
+            name="details"
+            value={formData.details}
+            onChange={handleInputChange}
+            error={!!formErrors.details}
+            helperText={formErrors.details}
             multiline
             rows={4}
             sx={styles.textField}
           />
           <Box display="flex" justifyContent="flex-start">
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" onClick={handleSubmit}>
               Submit
             </Button>
           </Box>

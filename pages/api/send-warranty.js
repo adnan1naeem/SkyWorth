@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: email,
       to: "mhassan@techtiz.co",
-      subject: `New Feedback from ${fullName}`,
+      subject: `Warrenty Detail from ${fullName}`,
       text: `
         Name: ${fullName}
         Email: ${email}

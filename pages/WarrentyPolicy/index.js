@@ -13,10 +13,30 @@ import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWi
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
+
 const countries = [
   { label: "Pakistan", value: "Pakistan" },
 ];
-
+const resolution = [
+  { label: "QLED MINI", value: "QLED MINI" },
+  { label: "QLED", value: "QLED" },
+  { label: "UHD", value: "UHD" },
+  { label: "FHD/HD", value: "FHD/HD" },
+]
+const productSize = [
+  { label: "100", value: "100" },
+  { label: "85", value: "85" },
+  { label: "65", value: "65" },
+  { label: "55", value: "55" },
+  { label: "50", value: "50" },
+  { label: "43", value: "43" }, { label: "32", value: "32" }]
+const City = [
+  { label: "Lahore", value: "Lahore" },
+  { label: "Faisalabad", value: "Faisalabad" },
+  { label: "Multan", value: "Multan" },
+  { label: "Islamabad", value: "Islamabad" },
+  { label: "Karachi", value: "Karachi" },
+];
 const brandOptions = [
   "Television",
   "Billboard",
@@ -27,14 +47,8 @@ const brandOptions = [
   "Peer referral",
   "Others",
 ];
-
-const itemCategories = [
-  { label: "QLED Mini", value: "QLED Mini" },
-  { label: "QLED", value: "QLED" },
-  { label: "UHD", value: "UHD" },
-  { label: "FHD/HD", value: "FHD/HD" },
-];
 const Index = () => {
+
   const {
     register,
     handleSubmit,
@@ -98,42 +112,43 @@ const Index = () => {
   };
   const fullName = watch("fullName");
   const phone = watch("phone");
-  const icNumber = watch("icNumber");
+  const cninNumber = watch("cninNumber");
   const email = watch("email");
   const purchaseDate = watch("purchaseDate");
   const addressLine1 = watch("addressLine1");
-  const addressLine2 = watch("addressLine2");
   const city = watch("city");
-  const state = watch("state");
-  const postalCode = watch("postalCode");
   const country = watch("country");
   const gender = watch("gender");
   const brandSource = watch("brandSource");
-  const itemCategory = watch("itemCategory");
   const productModel = watch("productModel");
   const serialNumber = watch("serialNumber");
   const promotionalMaterials = watch("promotionalMaterials");
+  const area = watch("area");
+  const type = watch("type");
+  const size = watch("size");
+  const shop = watch("shop")
+
 
   const isFormComplete =
     fullName &&
     phone &&
-    icNumber &&
+    cninNumber &&
     email &&
     purchaseDate &&
     addressLine1 &&
-    addressLine2 &&
     city &&
-    state &&
-    postalCode &&
     country &&
     gender &&
     brandSource &&
-    itemCategory &&
     productModel &&
     serialNumber &&
+    area &&
+    type && 
+    size &&
+    shop &&
     promotionalMaterials;
   return (
-    <Box sx={{ marginTop:{xs:"70px",md: "0px"} }}>
+    <Box sx={{ marginTop: { xs: "70px", md: "0px" } }}>
       <Image
         src={HomePage1}
         alt="Centered"
@@ -144,7 +159,7 @@ const Index = () => {
         }}
       />
       <Box
-        sx={{ padding: {xs:"10px 20px",md:"20px"}, maxWidth: "1000px", margin: "0 auto", borderRadius: "8px", }}
+        sx={{ padding: { xs: "10px 20px", md: "20px" }, maxWidth: "1000px", margin: "0 auto", borderRadius: "8px", }}
       >
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
@@ -156,7 +171,7 @@ const Index = () => {
 
             <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
-                label="Full name as per IC"
+                label="Full name as per CNIC"
                 {...register("fullName", { required: "Full name is required" })}
                 value={fullName}
                 onChange={(e) => setValue("fullName", e.target.value)}
@@ -176,12 +191,12 @@ const Index = () => {
             </Grid>
             <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
-                label="IC Number"
-                {...register("icNumber", { required: "IC Number is required" })}
-                value={watch("icNumber")}
-                onChange={(e) => setValue("icNumber", e.target.value)}
+                label="CNIC Number"
+                {...register("cnicNumber", { required: "CNIC Number is required" })}
+                value={cninNumber}
+                onChange={(e) => setValue("cninNumber", e.target.value)}
               />
-              {errors.icNumber && (<Typography color="error">{errors.icNumber.message}</Typography>)}
+              {errors.cnicNumber && (<Typography color="error">{errors.cnicNumber.message}</Typography>)}
             </Grid>
             <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
@@ -213,9 +228,9 @@ const Index = () => {
                 Address
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+            <Grid item xs={12} sm={8} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
-                label="Address Line 1"
+                label="Address"
                 {...register("addressLine1", {
                   required: "Address Line 1 is required",
                 })}
@@ -224,42 +239,27 @@ const Index = () => {
               />
               {errors.addressLine1 && (<Typography color="error">{errors.addressLine1.message}</Typography>)}
             </Grid>
-            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <TextInput
-                label="Address Line 2"
-                {...register("addressLine2")}
-                value={addressLine2}
-                onChange={(e) => setValue("addressLine2", e.target.value)}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <TextInput
+            <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+              <SelectInput
                 label="City"
-                {...register("city", { required: "City is required" })}
+                name="city"
+                options={City}
                 value={city}
                 onChange={(e) => setValue("city", e.target.value)}
+                required={true}
               />
               {errors.city && (<Typography color="error">{errors.city.message}</Typography>)}
             </Grid>
             <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
-                label="State"
-                {...register("state", { required: "State is required" })}
-                value={state}
-                onChange={(e) => setValue("state", e.target.value)}
-              />
-              {errors.state && (<Typography color="error">{errors.state.message}</Typography>)}
-            </Grid>
-            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <TextInput
-                label="Postal code"
-                {...register("postalCode", {
-                  required: "Postal code is required",
+                label="Area/Society"
+                {...register("area", {
+                  required: "Area is required",
                 })}
-                value={watch("postalCode")}
-                onChange={(e) => setValue("postalCode", e.target.value)}
+                value={area}
+                onChange={(e) => setValue("area", e.target.value)}
               />
-              {errors.postalCode && (<Typography color="error">{errors.postalCode.message}</Typography>)}
+              {errors.area && (<Typography color="error">{errors.area.message}</Typography>)}
             </Grid>
             <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <SelectInput
@@ -272,43 +272,27 @@ const Index = () => {
               />
               {errors.country && (<Typography color="error">{errors.country.message}</Typography>)}
             </Grid>
-            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <RadioGroupInput
-                label="Gender"
-                {...register("gender", { required: "Gender is required" })}
-                options={[
-                  { value: "Male", label: "Male" },
-                  { value: "Female", label: "Female" },
-                ]}
-                value={gender}
-                onChange={(e) => setValue("gender", e.target.value)}
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+              <SelectInput
+                label="LED Size"
+                name="type"
+                options={productSize}
+                value={type}
+                onChange={(e) => setValue("type", e.target.value)}
+                required={true}
               />
-              {errors.gender && (<Typography color="error">{errors.gender.message}</Typography>)}
+              {errors.type && (<Typography color="error">{errors.type.message}</Typography>)}
             </Grid>
-            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <CheckboxGroup
-                label="How did you find out about our brand?"
-                options={brandOptions}
-                {...register("brandSource", {
-                  validate: (value) =>
-                    value?.length > 0 || "Select at least one option",
-                })}
-                value={brandSource}
-                onChange={(e) => setValue("brandSource", e.target.value)}
+            <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+              <SelectInput
+                label="LED Type"
+                name="size"
+                options={resolution}
+                value={size}
+                onChange={(e) => setValue("size", e.target.value)}
+                required={true}
               />
-              {errors.brandSource && (<Typography color="error">{errors.brandSource.message}</Typography>)}
-            </Grid>
-            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <RadioGroupInput
-                label="Item Category"
-                {...register("itemCategory", {
-                  required: "Item Category is required",
-                })}
-                options={itemCategories}
-                value={itemCategory}
-                onChange={(e) => setValue("itemCategory", e.target.value)}
-              />
-              {errors.itemCategory && (<Typography color="error">{errors.itemCategory.message}</Typography>)}
+              {errors.size && (<Typography color="error">{errors.size.message}</Typography>)}
             </Grid>
             <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
@@ -346,9 +330,53 @@ const Index = () => {
             </Grid>
             <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <RadioGroupInput
+                label="Gender"
+                {...register("gender", { required: "Gender is required" })}
+                options={[
+                  { value: "Male", label: "Male" },
+                  { value: "Female", label: "Female" },
+                ]}
+                value={gender}
+                onChange={(e) => setValue("gender", e.target.value)}
+              />
+              {errors.gender && (<Typography color="error">{errors.gender.message}</Typography>)}
+            </Grid>
+            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+              <CheckboxGroup
+                label="How did you find out about our brand?"
+                options={brandOptions}
+                {...register("brandSource", {
+                  validate: (value) =>
+                    value?.length > 0 || "Select at least one option",
+                })}
+                value={brandSource}
+                onChange={(e) => setValue("brandSource", e.target.value)}
+              />
+              {errors.brandSource && (<Typography color="error">{errors.brandSource.message}</Typography>)}
+            </Grid>
+            <Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+              <RadioGroupInput
+                label="From Where Did You Buy?"
+                {...register("shop", {
+                  required: "Please Select One Option",
+                })}
+                value={shop}
+                onChange={(e) =>
+                  setValue("shop", e.target.value)
+                }
+                options={[
+                  { value: "Dealer Shop", label: "Dealer Shop" },
+                  { value: "Modern Trade / Large Format Stores", label: "Modern Trade / Large Format Stores" },
+                  { value: "Online Store", label: "Online Store" },
+                ]}
+              />
+              {errors.shop && (<Typography color="error">{errors.shop.message}</Typography>
+              )}
+            </Grid><Grid item xs={12} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+              <RadioGroupInput
                 label="Do you wish to receive promotional materials from Skyworth?"
                 {...register("promotionalMaterials", {
-                  required: "Please select Yes or No",
+                  required: "Please Select Yes or No",
                 })}
                 value={promotionalMaterials}
                 onChange={(e) =>
@@ -388,9 +416,9 @@ const Index = () => {
               variants={animationVariants}
             >
               {loading ?
-              <Box sx={{textAlign:'center'}}>
-                 <CircularProgress />
-              </Box> :
+                <Box sx={{ textAlign: 'center' }}>
+                  <CircularProgress />
+                </Box> :
                 <Button
                   type="submit"
                   onClick={handleSubmit}
@@ -409,7 +437,7 @@ const Index = () => {
                   }}
                   fullWidth
                 >
-                Submit
+                  Submit
                 </Button>}
             </Grid>
           </Grid>
