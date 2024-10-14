@@ -35,7 +35,7 @@ const FilterSection = ({ onFilterChange }) => {
     return (
         <Box marginLeft={{ md: '0px', lg: '30px' }}>
             <Typography sx={{ fontSize: 20, fontWeight: '250', fontFamily: 'Kanit', mb: 1 }}>
-                Filter by Resolution
+                Screen Resolution
             </Typography>
             {filters.resolution.map((resolution) => (
                 <FormControlLabel
@@ -45,6 +45,7 @@ const FilterSection = ({ onFilterChange }) => {
                         <Checkbox
                             checked={selectedFilters.resolution.includes(resolution)}
                             onChange={() => handleFilterChange('resolution', resolution)}
+                            size='small'
                             sx={{ padding: '4px' }}
                         />
                     }
@@ -56,7 +57,7 @@ const FilterSection = ({ onFilterChange }) => {
             ))}
 
             <Typography sx={{ fontSize: 20, fontWeight: '250', fontFamily: 'Kanit', mb: 1, mt: 2 }}>
-                Filter by Product Size
+                Product Size
             </Typography>
             {filters.productSize.map((type) => (
                 <FormControlLabel
@@ -66,7 +67,10 @@ const FilterSection = ({ onFilterChange }) => {
                         <Checkbox
                             checked={selectedFilters.productSize.includes(type)}
                             onChange={() => handleFilterChange('productSize', type)}
-                            sx={{ padding: '4px' }}
+                            size='small'
+                            sx={{
+                                padding: '4px',
+                            }}
                         />
                     }
                     label={
@@ -79,7 +83,7 @@ const FilterSection = ({ onFilterChange }) => {
             ))}
 
             <Typography sx={{ fontSize: 20, fontWeight: '250', fontFamily: 'Kanit', mb: 1, mt: 2 }}>
-                Filter by Feature
+                Features
             </Typography>
             {filters.feature.map((feature) => (
                 <FormControlLabel
@@ -89,6 +93,7 @@ const FilterSection = ({ onFilterChange }) => {
                         <Checkbox
                             checked={selectedFilters.feature.includes(feature)}
                             onChange={() => handleFilterChange('feature', feature)}
+                            size='small'
                             sx={{ padding: '4px' }}
                         />
                     }

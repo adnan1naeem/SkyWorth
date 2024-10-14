@@ -35,7 +35,6 @@ const ProductDetailPage = ({product}) => {
                         >
                             <Tab label="Product Overview" sx={{ fontSize: { xs: 10, md: 14 }, fontWeight: 500 }} />
                             <Tab label="Specifications" sx={{ fontSize: { xs: 10, md: 14 }, fontWeight: 500 }} />
-                            <Tab label="Downloads" sx={{ fontSize: { xs: 10, md: 14 }, fontWeight: 500 }} />
                         </Tabs>
 
                         <Box sx={{ padding: '16px 30px', borderLeft: '1px solid #e0e0e0', borderRight: '1px solid #e0e0e0', background: 'white', borderBottom: '1px solid #e0e0e0', flex: 1 }}>
@@ -49,25 +48,16 @@ const ProductDetailPage = ({product}) => {
                                     {product?.specifications}
                                 </Typography>
                             )}
-                            {tabValue === 2 && (
-                                <Typography variant="body1" fontSize={'14px'} fontWeight={"300"}  paragraph>
-                                    {product?.downloads}
-                                </Typography>
-                            )}
                         </Box>
                     </Paper>
                 </Grid>
-                <Grid item xs={12} md={6} sx={{ paddingRight: { md: 0, lg: '7%' } }}>
-                    <Typography variant="body2" sx={{ textAlign: 'center' }}>
-                        <Link href="#" underline="none" color="inherit" sx={{ marginRight: '8px', fontSize: '14px', }} fontWeight={"300"}>
-                            Free Shipping & Returns
+                <Grid item xs={12} md={6} sx={{ paddingRight: { md: 0, lg: '7%' },marginTop:"20px" }}>
+                    <Typography variant="body2">
+                        <Link href="/WarrentyPolicy" underline="none" color="inherit" sx={{ marginX: '8px', fontSize: '14px' }} fontWeight={"300"}>
+                            Warranty
                         </Link>
                         |
-                        <Link href="#" underline="none" color="inherit" sx={{ marginX: '8px', fontSize: '14px' }} fontWeight={"300"}>
-                            One Year Warranty
-                        </Link>
-                        |
-                        <Link href="#" underline="none" color="inherit" sx={{ marginLeft: '8px', fontSize: '14px' }} fontWeight={"300"}>
+                        <Link href="/contactUs" underline="none" color="inherit" sx={{ marginLeft: '8px', fontSize: '14px' }} fontWeight={"300"}>
                             Support Center
                         </Link>
                     </Typography>

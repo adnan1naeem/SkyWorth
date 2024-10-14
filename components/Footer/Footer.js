@@ -27,18 +27,18 @@ function Footer() {
               width={220}
               height={40}
             />
-           <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,marginTop:'10px'}}>Orient Electronics</Typography>
+           <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,marginTop:'15px'}}>Orient Electronics</Typography>
            <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,}}>20km, Multan Road, Lahore Pakistan</Typography>
           </Box>
         <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row", md: "row" }, flexWrap: "wrap", gap: { xs: "20px", md: "50px" }, justifyContent: "space-between", width: "100%" }}>
-          <Box sx={{ textAlign: 'flex-start',flexDirection:'row',display:{xs:"none",md:'block'},paddingTop:"12px"}}>
+          <Box sx={{ textAlign: 'flex-start',flexDirection:'row',display:{xs:"none",md:'block'},paddingTop:"20px"}}>
             <Image
               src={require('./../../assets/newlogo.svg')}
               alt="Skyworth Logo"
               width={220}
               height={40}
             />
-             <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,marginTop:'10px'}}>Orient Electronics</Typography>
+             <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,marginTop:'15px'}}>Orient Electronics</Typography>
              <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,}}>20km, Multan Road, Lahore Pakistan</Typography>
           </Box>
          
@@ -55,6 +55,7 @@ function Footer() {
               href_four="/faq"
             />
           </Box>
+          <Box>
           <FooterCard
             title="Product"
             text1="All Products"
@@ -69,6 +70,7 @@ function Footer() {
             href_five="/product/11"
             mt={{ xs: '5%', sm: 0 }}
           />
+          </Box>
           <Box>
             <FooterCard
               title="Service & Support"

@@ -77,7 +77,7 @@ const WarrantyCards = () => {
                     },
                 }}
             >
-                Below are the warranty details of TV and HA:
+                Below are the warranty details of TV:
             </Typography>
             <motion.div
                 variants={containerVariants}

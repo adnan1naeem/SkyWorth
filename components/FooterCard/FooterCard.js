@@ -19,7 +19,7 @@ function FooterCard({ ...props }) {
               color: "#ffffff",
               fontSize: "21px",
               fontWeight: 600,
-              paddingBottom: { xs: "3%", lg: "10%" },
+              paddingBottom: { xs: "3%", lg:props.title=="Service & Support"?'5%':props.title=="About"?"7%": "10%" },
               fontFamily: "Mont-Bold, Sans-serif",
             }}
           >

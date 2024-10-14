@@ -22,7 +22,6 @@ function HomeScreen() {
   return (
     <div >
       <ImageSlider />
-      <div style={{marginTop:{xs:'10px',md:'40px'}}}>
       <CenteredImageWithText
         text="SKYWORTH Pakistan is a joint venture between Skyworth China and Orient Electronics"
         text2={"for the licensed manufacturing, sales, distribution and marketing of Skyworth product portfolio in Pakistan."}
@@ -30,14 +29,13 @@ function HomeScreen() {
         ButtonText={"Read More"}
         onClick={handleReadMoreClick}
       />
-      </div>
       <TVProductCard />
       <Container maxWidth="xl" sx={{marginTop:'40px'}}>
         <CenteredImageWithText imageSrc={HomePage1} />
         <CenteredImageWithText
           heading={"Personalize Your TV with Skyworth Google TV"}
           imageSrc={HomePage2}
-          body="Simplify your entertainment experience with Android TV. Discover 700,000+* movies and shows in one place. Ask Google to control your TV with your voice. And cast your photos, videos, and music from devices to your TV easily with Chromecast built-in."
+          body="Simplify your entertainment experience with Android TV. Discover 700,000+ movies and shows in one place. Ask Google to control your TV with your voice. And cast your photos, videos, and music from devices to your TV easily with Chromecast built-in."
           ButtonText={"Learn More"}
           onClick={handleLearnMore}
         />

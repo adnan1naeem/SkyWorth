@@ -33,7 +33,7 @@ const CenteredImageWithText = ({ imageSrc, text, text2, body, body2, ButtonText,
                     fontWeight: 400,
                     textAlign: 'center',
                     textTransform:'capitalize',
-                    marginTop: body2 ?{xs:"70px",md:'100px'} : '40px',
+                    marginTop: body2 ?{xs:"30px",md:'40px'} : '40px',
                     padding:{xs:"0px 10px",md:0}
                 }}
             >

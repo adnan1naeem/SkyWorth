@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Grid, Container } from '@mui/material';
-import TVImage from './../../assets/Product.webp';
+import TVImage from './../../assets/perfect-match.jpg';
 import BackgroundImageComponent from './BackgroundImageComponent';
 import Breadcrumb from '../BreadCrumb';
 import ProductCard from './ProductCard';
@@ -78,7 +78,7 @@ const ProductGrid = () => {
       <Breadcrumb paddingTop={{ xs: '25%', sm: '18%', md: '10%', lg: '5%', xl: '2%' }} />
       <BackgroundImageComponent
         src={TVImage}
-        title="Find the Perfect Match for Your Home"
+        title="Discover the Perfect Match!"
         desc="Shop by size, clarity, contrast, and more when selecting the technology and TV that makes your space complete."
       />
       <Grid container spacing={4}>

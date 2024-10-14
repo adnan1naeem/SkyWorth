@@ -19,8 +19,8 @@ const ImageSwiper = () => {
 
   const slides = [
     { image: Image1 },
-    { image: Image2 },
     { image: Image3 },
+    { image: Image2 },
     { image: Image4 },
     { image: Image5 },
   ];
@@ -46,8 +46,7 @@ const ImageSwiper = () => {
   return (
     <Box sx={{ 
       position: 'relative', 
-      width: { xs: '100%', sm: '100%', md: '100%', lg: '95%' }, 
-      margin: 'auto', 
+      width: { xs: '100%', sm: '100%', md: '100%', lg: '100%' }, 
       marginTop: { xs: '15%', sm: '10%', md: '5%', lg: '3%' }
     }}>
       <Swiper
@@ -116,29 +115,52 @@ const ImageSwiper = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <Box sx={{ position: 'absolute', top: 'calc(100% + 1%)', width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <ArrowBackIcon fontSize='inherit' sx={{ fontSize: {xs:"3rem",md:'4rem'}, color: "#CCCCCC" }} onClick={handlePrevSlide} />
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              onClick={() => {
-                setActiveIndex(index);
-                swiperRef.current.slideTo(index);
-              }}
-              style={{
-                width: '3%',
-                height: '4px',
-                margin: '0 5px',
-                cursor: 'pointer',
-                backgroundColor: index === activeIndex ? '#007bff' : '#e0e0e0',
-                transition: 'background-color 0.3s ease',
-              }}
-            />
-          ))}
-        </Box>
-        <ArrowForwardIcon fontSize='inherit' sx={{ fontSize: {xs:"3rem",md:'4rem'}, color: "#CCCCCC" }} onClick={handleNextSlide} />
+      <ArrowBackIcon 
+        fontSize='inherit' 
+        sx={{
+          display:{xs:"none",md:"block"},
+          fontSize: { xs: "2rem", md: '3rem' }, 
+          color: "#CCCCCC", 
+          position: 'absolute', 
+          top: '43%', 
+          left: '10px', 
+          zIndex:2,
+          cursor: 'pointer'
+        }} 
+        onClick={handlePrevSlide} 
+      />
+      <ArrowForwardIcon 
+        fontSize='inherit' 
+        sx={{
+          display:{xs:"none",md:"block"},
+          fontSize: { xs: "2rem", md: '3rem' }, 
+          color: "#CCCCCC", 
+          position: 'absolute', 
+          top: '43%', 
+          right: '10px', 
+          zIndex:2,
+          cursor: 'pointer'
+        }} 
+        onClick={handleNextSlide} 
+      />
+      <Box sx={{ position: 'absolute',zIndex:2, bottom: {xs:'15px',md:"30px"}, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        {slides.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => {
+              setActiveIndex(index);
+              swiperRef.current.slideTo(index);
+            }}
+            style={{
+              width: '3%',
+              height: '4px',
+              margin: '0 5px',
+              cursor: 'pointer',
+              backgroundColor: index === activeIndex ? '#007bff' : '#e0e0e0',
+              transition: 'background-color 0.3s ease',
+            }}
+          />
+        ))}
       </Box>
 
       <style jsx>{`

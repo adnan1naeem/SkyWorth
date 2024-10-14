@@ -9,13 +9,16 @@
       { "label": "FHD/HD", "value": "FHD/HD" }
     ],
     "productSize": [
-      { "label": "100", "value": "100" },
-      { "label": "85", "value": "85" },
-      { "label": "65", "value": "65" },
-      { "label": "55", "value": "55" },
-      { "label": "50", "value": "50" },
-      { "label": "43", "value": "43" },
-      { "label": "32", "value": "32" }
+      { "label": "100 inches", "value": "100 inches" },
+      { "label": "86 inches", "value": "86 inches" },
+      { "label": "85 inches", "value": "85 inches" },
+      { "label": "75 inches", "value": "75 inches" },
+      { "label": "65 inches", "value": "65 inches" },
+      { "label": "55 inches", "value": "55 inches" },
+      { "label": "50 inches", "value": "50 inches" },
+      { "label": "43 inches", "value": "43 inches" },
+      { "label": "40 inches", "value": "40 inches" },
+      { "label": "32 inches", "value": "32 inches" }
     ],
     "City": [
       { "label": "Lahore", "value": "Lahore" },

@@ -12,7 +12,7 @@ import HomePage1 from "./../../assets/homePage1.jpg";
 import LeftAlignedBoxWithBackground from "../../components/Home/LeftAlignedBoxWithBackground";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   CitySelect,
   CountrySelect,
@@ -22,6 +22,25 @@ import "react-country-state-city/dist/react-country-state-city.css";
 import data from './data.json';
 const Index = () => {
   const { resolution, productSize, brandOptions } = data;
+  const countryDetails = {
+    capital: "Islamabad",
+    currency: "PKR",
+    currency_name: "Pakistani rupee",
+    currency_symbol: "₨",
+    emoji: "🇵🇰",
+    id: 167,
+    iso2: "PK",
+    iso3: "PAK",
+    latitude: "30.00000000",
+    longitude: "70.00000000",
+    name: "Pakistan",
+    native: "Pakistan",
+    numeric_code: "586",
+    phone_code: 92,
+    region: "Asia",
+    subregion: "Southern Asia",
+    tld: ".pk"
+  };
   const {
     register,
     handleSubmit,
@@ -32,7 +51,7 @@ const Index = () => {
   } = useForm();
   const [TermandCondition, setTermandCondition] = useState(true);
   const [loading, setLoading] = useState(false);
-  const [countryid, setCountryid] = useState(0);
+  const [countryid, setCountryid] = useState(167);
   const [stateid, setstateid] = useState(0);
   const router = useRouter();
   const handleLearnMore = () => {
@@ -219,8 +238,13 @@ const Index = () => {
             <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <Typography sx={{ fontSize: 16, fontFamily: 'kanit' }}>Country</Typography>
               <CountrySelect
+                defaultValue={country?false:countryDetails} 
                 onChange={(e) => { setValue("country", e?.name); setCountryid(e.id) }}
-                style={{ height: "34px",border:"0px solid #ccc",fontFamily:'kanit' }}
+                style={{ height: "34px", border: "0px solid #ccc", fontFamily: 'kanit',outline: 'none',boxShadow: 'none',
+                  '&:focus': {
+                    border: 'none',
+                    outline: 'none',
+                  } }}
                 placeHolder="Select Country"
               />
               {errors.country && (<Typography color="error">{errors.country.message}</Typography>)}
@@ -237,17 +261,21 @@ const Index = () => {
               {errors.area && (<Typography color="error">{errors.area.message}</Typography>)}
             </Grid>
             <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <Typography sx={{ fontSize: 16, fontFamily: 'kanit' }}>State</Typography>
+              <Typography sx={{ fontSize: 16, fontFamily: 'kanit' }}>Province</Typography>
               <StateSelect
                 countryid={countryid}
                 onChange={(e) => { setValue("state", e?.name); setstateid(e.id) }}
-                style={{ height: "34px",border:"0px solid #ccc",fontFamily:'kanit' }}
+                style={{ height: "34px", border: "0px solid #ccc", fontFamily: 'kanit',outline: 'none',boxShadow: 'none',
+                  '&:focus': {
+                    border: 'none',
+                    outline: 'none',
+                  } }}
                 placeHolder="Select State"
               />
               {errors.state && (<Typography color="error">{errors.state.message}</Typography>)}
             </Grid>
             <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-            <Typography sx={{ fontSize: 16, fontFamily: 'kanit' }}>City</Typography>
+              <Typography sx={{ fontSize: 16, fontFamily: 'kanit' }}>City</Typography>
               <CitySelect
                 countryid={countryid}
                 stateid={stateid}
@@ -255,7 +283,11 @@ const Index = () => {
                 onChange={(e) => {
                   setValue("city", e?.name);
                 }}
-                style={{ height: "34px",border:"0px solid #ccc",fontFamily:'kanit' }}
+                style={{ height: "34px", border: "0px solid #ccc", fontFamily: 'kanit',outline: 'none',boxShadow: 'none',
+                  '&:focus': {
+                    border: 'none',
+                    outline: 'none',
+                  } }}
                 placeHolder="Select City"
               />
             </Grid>
@@ -399,7 +431,7 @@ const Index = () => {
                   <CircularProgress />
                 </Box> :
                 <Button type="submit" onClick={handleSubmit} variant="contained" disabled={isFormComplete == undefined ? true : false || TermandCondition}
-                  sx={{background: "#1a7efb",height: 53,color: "white",marginBottom: "20px","&:hover": {background: "#0069CB"}}} fullWidth>
+                  sx={{ background: "#1a7efb", height: 53, color: "white", marginBottom: "20px", "&:hover": { background: "#0069CB" } }} fullWidth>
                   Submit
                 </Button>}
             </Grid>

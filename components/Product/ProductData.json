@@ -20,7 +20,7 @@
         "120Hzs"
       ],
       "resolution": "QLED MINI",
-      "productSize": "65",
+      "productSize": "65 inches",
       "description": "",
       "featurelist": [
         "Resolution: UHD(3840*2160)",
@@ -63,7 +63,7 @@
         "./../../assets/UHD.jpg"
       ],
       "resolution": "QLED MINI",
-      "productSize": "75",
+      "productSize": "75 inches",
       "featurelist": [
         "Resolution: UHD(3840*2160)",
         "WIFI: 802.11a/b/g/n/ac",
@@ -135,7 +135,7 @@
       ],
       "resolution": "QLED MINI",
       "overview": "The Skyworth QLED Mini series delivers a top-tier viewing experience with vivid colors, enhanced brightness, and crystal-clear clarity from every angle. Its sleek, slim-bezel design enhances the visual appeal, offering a stunningly immersive display. Powered by Google TV, you can effortlessly access your favorite apps, movies, and shows. With built-in Google Assistant and a Bluetooth voice remote, controlling your TV and managing tasks is as easy as speaking a command. Sit back, relax, and dive into endless entertainment with the perfect combination of technology and style.",
-      "productSize": "100",
+      "productSize": "100 inches",
       "features": [
         "Quantum Dot",
         "HDR10+",
@@ -181,13 +181,13 @@
         "Game Mode: Yes"
       ],
       "image": [
-        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/UHD.jpg"
       ],
       "resolution": "QLED",
-      "productSize": "50",
+      "productSize": "50 inches",
       "detailImages": [
         "./../../assets/SliderImage1.jpg",
         "./../../assets/SliderImage2.jpg",
@@ -201,13 +201,13 @@
       "overview": "The Skyworth QLED series offers an unparalleled visual experience with brilliant colors and exceptional brightness, all housed in a sleek, slim-bezel design. Powered by Google TV, it provides seamless access to your favorite apps, shows, and movies. With built-in Google Assistant and a Bluetooth voice remote, you can effortlessly control your entertainment and manage tasks hands-free, delivering a smarter, more intuitive viewing experience.",
       "price": "$4,999.00 - $6,999.00",
       "image": [
-        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/UHD.jpg"
       ],
       "resolution": "QLED",
-      "productSize": "55",
+      "productSize": "55 inches",
       "features": [
         "Quantum Dot",
         "HDR10+",
@@ -244,35 +244,37 @@
     },
     {
       "id": 6,
-      "name": "QLED 65Q6600G Google TV",
+      "name": "QLED 55Q7700G Google TV",
+      "price": "$3,499.00 - $5,499.00",
       "overview": "The Skyworth QLED series offers an unparalleled visual experience with brilliant colors and exceptional brightness, all housed in a sleek, slim-bezel design. Powered by Google TV, it provides seamless access to your favorite apps, shows, and movies. With built-in Google Assistant and a Bluetooth voice remote, you can effortlessly control your entertainment and manage tasks hands-free, delivering a smarter, more intuitive viewing experience.",
-      "price": "$239.00 - $569.99",
       "image": [
-        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/UHD.jpg"
       ],
       "resolution": "QLED",
+      "productSize": "55 inches",
       "featurelist": [
-        "Resolution: UHD (3840 x 2160)",
-        "WIFI: 802.11a/b/g/n",
+        "Resolution: UHD(3840*2160)",
+        "WIFI: 802.11a/b/g/n/ac",
         "HDMI: 3",
         "USB: 2",
         "Bluetooth: Yes / BT 5.1",
-        "HDR: HDR10+/HLG/Dolby Vision",
+        "HDR: HDR10/HLG/HDR10+/Dolby Vision",
         "HLG: Yes",
-        "Refresh Rate: 60 Hz",
+        "Refresh Rate: 144 Hz",
         "Dolby Vision Atmos: Yes",
         "Film Maker Mode: Yes",
-        "Number of Speakers: 2; Boxes",
+        "Number of Speakers: 5; Boxes",
         "Sound Technology: Dolby Audio",
         "Dolby Audio: Yes",
-        "Hands Free Voice Control: No",
+        "Hands Free Voice Control: Yes",
+        "Other Audio Features: Sub Woofer",
         "Number of Cores: Quad",
-        "Ram Capacity: 2GB",
-        "Storage Memory: 16GB",
-        "Google Assistant: Voice Remote / 8A",
+        "Ram Capacity: 3GB",
+        "Storage Memory: 32GB",
+        "Google Assistant: Voice Remote / 8C",
         "Screen Mirroring/chromecast: Yes",
         "Game Mode: Yes"
       ],
@@ -281,7 +283,6 @@
         "HDR10+",
         "120Hzs"
       ],
-      "productSize": "65",
       "detailImages": [
         "./../../assets/SliderImage1.jpg",
         "./../../assets/SliderImage2.jpg",
@@ -291,15 +292,16 @@
     },
     {
       "id": 7,
-      "name": "QLED 75Q6600G Google TV",
+      "name": "QLED 65Q6600G Google TV",
       "overview": "The Skyworth QLED series offers an unparalleled visual experience with brilliant colors and exceptional brightness, all housed in a sleek, slim-bezel design. Powered by Google TV, it provides seamless access to your favorite apps, shows, and movies. With built-in Google Assistant and a Bluetooth voice remote, you can effortlessly control your entertainment and manage tasks hands-free, delivering a smarter, more intuitive viewing experience.",
-      "price": "$259.99 - $379.99",
+      "price": "$239.00 - $569.99",
       "image": [
-        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/UHD.jpg"
       ],
+      "resolution": "QLED",
       "featurelist": [
         "Resolution: UHD (3840 x 2160)",
         "WIFI: 802.11a/b/g/n",
@@ -327,8 +329,7 @@
         "HDR10+",
         "120Hzs"
       ],
-      "resolution": "QLED",
-      "productSize": "75",
+      "productSize": "65 inches",
       "detailImages": [
         "./../../assets/SliderImage1.jpg",
         "./../../assets/SliderImage2.jpg",
@@ -338,17 +339,17 @@
     },
     {
       "id": 8,
-      "name": "QLED 55Q7700G Google TV",
-      "price": "$3,499.00 - $5,499.00",
+      "name": "QLED 65Q7700G Google TV",
       "overview": "The Skyworth QLED series offers an unparalleled visual experience with brilliant colors and exceptional brightness, all housed in a sleek, slim-bezel design. Powered by Google TV, it provides seamless access to your favorite apps, shows, and movies. With built-in Google Assistant and a Bluetooth voice remote, you can effortlessly control your entertainment and manage tasks hands-free, delivering a smarter, more intuitive viewing experience.",
+      "price": "$399.00",
       "image": [
-        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/UHD.jpg"
       ],
       "resolution": "QLED",
-      "productSize": "55",
+      "productSize": "65 inches",
       "featurelist": [
         "Resolution: UHD(3840*2160)",
         "WIFI: 802.11a/b/g/n/ac",
@@ -386,37 +387,34 @@
     },
     {
       "id": 9,
-      "name": "QLED 65Q7700G Google TV",
+      "name": "QLED 75Q6600G Google TV",
       "overview": "The Skyworth QLED series offers an unparalleled visual experience with brilliant colors and exceptional brightness, all housed in a sleek, slim-bezel design. Powered by Google TV, it provides seamless access to your favorite apps, shows, and movies. With built-in Google Assistant and a Bluetooth voice remote, you can effortlessly control your entertainment and manage tasks hands-free, delivering a smarter, more intuitive viewing experience.",
-      "price": "$399.00",
+      "price": "$259.99 - $379.99",
       "image": [
-        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/UHD.jpg"
       ],
-      "resolution": "QLED",
-      "productSize": "65",
       "featurelist": [
-        "Resolution: UHD(3840*2160)",
-        "WIFI: 802.11a/b/g/n/ac",
+        "Resolution: UHD (3840 x 2160)",
+        "WIFI: 802.11a/b/g/n",
         "HDMI: 3",
         "USB: 2",
         "Bluetooth: Yes / BT 5.1",
-        "HDR: HDR10/HLG/HDR10+/Dolby Vision",
+        "HDR: HDR10+/HLG/Dolby Vision",
         "HLG: Yes",
-        "Refresh Rate: 144 Hz",
+        "Refresh Rate: 60 Hz",
         "Dolby Vision Atmos: Yes",
         "Film Maker Mode: Yes",
-        "Number of Speakers: 5; Boxes",
+        "Number of Speakers: 2; Boxes",
         "Sound Technology: Dolby Audio",
         "Dolby Audio: Yes",
-        "Hands Free Voice Control: Yes",
-        "Other Audio Features: Sub Woofer",
+        "Hands Free Voice Control: No",
         "Number of Cores: Quad",
-        "Ram Capacity: 3GB",
-        "Storage Memory: 32GB",
-        "Google Assistant: Voice Remote / 8C",
+        "Ram Capacity: 2GB",
+        "Storage Memory: 16GB",
+        "Google Assistant: Voice Remote / 8A",
         "Screen Mirroring/chromecast: Yes",
         "Game Mode: Yes"
       ],
@@ -425,6 +423,8 @@
         "HDR10+",
         "120Hzs"
       ],
+      "resolution": "QLED",
+      "productSize": "75 inches",
       "detailImages": [
         "./../../assets/SliderImage1.jpg",
         "./../../assets/SliderImage2.jpg",
@@ -432,13 +432,14 @@
         "./../../assets/SliderImage4.jpg"
       ]
     },
+
     {
       "id": 10,
       "name": "QLED 75Q7700G Google TV",
       "overview": "The Skyworth QLED series offers an unparalleled visual experience with brilliant colors and exceptional brightness, all housed in a sleek, slim-bezel design. Powered by Google TV, it provides seamless access to your favorite apps, shows, and movies. With built-in Google Assistant and a Bluetooth voice remote, you can effortlessly control your entertainment and manage tasks hands-free, delivering a smarter, more intuitive viewing experience.",
       "price": "$4,999.00 - $6,999.00",
       "image": [
-        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/UHD.jpg"
@@ -451,7 +452,7 @@
         "./../../assets/SliderImage5.jpg"
       ],
       "resolution": "QLED",
-      "productSize": "65",
+      "productSize": "65 inches",
       "featurelist": [
         "Resolution: UHD(3840*2160)",
         "WIFI: 802.11a/b/g/n/ac",
@@ -483,107 +484,13 @@
     },
     {
       "id": 11,
-      "name": "UHD 50G6600G Google TV",
-      "overview": "The Skyworth UHD series elevates your entertainment with a stunning 50' 4K display and a sleek, bezel-less design that maximizes screen space for a truly immersive viewing experience. Its HDR10 technology enhances brightness and deepens dark tones, delivering vibrant colors and exceptional clarity for lifelike visuals. Powered by Google TV, you get seamless access to all your favorite apps, movies, and shows. Plus, with the built-in Google Assistant and a mic-enabled Bluetooth remote, you can control your entertainment hands-free, making your viewing experience smarter and better than ever.",
-      "price": "$239.00 - $569.99",
-      "featurelist": [
-        "Resolution: UHD (3840 x 2160)",
-        "WIFI: 802.11a/b/g/n",
-        "HDMI: 3",
-        "USB: 2",
-        "Bluetooth: Yes / BT 5.1",
-        "HDR: HDR10/HLG",
-        "HLG: Yes",
-        "Refresh Rate: 60 Hz",
-        "Dolby Vision Atmos: No",
-        "Film Maker Mode: Yes",
-        "Number of Speakers: 2; Boxes",
-        "Sound Technology: Dolby Audio",
-        "Dolby Audio: Yes",
-        "Hands Free Voice Control: No",
-        "Number of Cores: Quad",
-        "Ram Capacity: 2GB",
-        "Storage Memory: 16GB",
-        "Google Assistant: Voice Remote / 8A",
-        "Screen Mirroring/chromecast: Yes",
-        "Game Mode: Yes"
-      ],
-      "features": [
-        "Quantum Dot",
-        "HDR10+",
-        "120Hzs"
-      ],
-      "image": [
-        "./../../assets/QLED.jpg",
-        "./../../assets/QLED-mini.jpg",
-        "./../../assets/FHD.jpg",
-        "./../../assets/QLED.jpg"
-      ],
-      "detailImages": [
-        "./../../assets/SliderImage1.jpg",
-        "./../../assets/SliderImage2.jpg",
-        "./../../assets/SliderImage3.jpg",
-        "./../../assets/SliderImage4.jpg"
-      ],
-      "resolution": "UHD",
-      "productSize": "50"
-    },
-    {
-      "id": 12,
-      "name": "UHD 55G6600G Google TV",
-      "overview": "The Skyworth UHD series elevates your entertainment with a stunning 50' 4K display and a sleek, bezel-less design that maximizes screen space for a truly immersive viewing experience. Its HDR10 technology enhances brightness and deepens dark tones, delivering vibrant colors and exceptional clarity for lifelike visuals. Powered by Google TV, you get seamless access to all your favorite apps, movies, and shows. Plus, with the built-in Google Assistant and a mic-enabled Bluetooth remote, you can control your entertainment hands-free, making your viewing experience smarter and better than ever.",
-      "price": "$299.00 - $699.99",
-      "featurelist": [
-        "Resolution: UHD (3840 x 2160)",
-        "WIFI: 802.11a/b/g/n",
-        "HDMI: 3",
-        "USB: 2",
-        "Bluetooth: Yes / BT 5.1",
-        "HDR: HDR10/HLG",
-        "HLG: Yes",
-        "Refresh Rate: 60 Hz",
-        "Dolby Vision Atmos: No",
-        "Film Maker Mode: Yes",
-        "Number of Speakers: 2; Boxes",
-        "Sound Technology: Dolby Audio",
-        "Dolby Audio: Yes",
-        "Hands Free Voice Control: No",
-        "Number of Cores: Quad",
-        "Ram Capacity: 2GB",
-        "Storage Memory: 16GB",
-        "Google Assistant: Voice Remote / 8A",
-        "Screen Mirroring/chromecast: Yes",
-        "Game Mode: Yes"
-      ],
-      "features": [
-        "Quantum Dot",
-        "HDR10+",
-        "120Hzs"
-      ],
-      "image": [
-        "./../../assets/QLED.jpg",
-        "./../../assets/FHD.jpg",
-        "./../../assets/QLED-mini.jpg",
-        "./../../assets/UHD.jpg"
-      ],
-      "detailImages": [
-        "./../../assets/SliderImage1.jpg",
-        "./../../assets/SliderImage2.jpg",
-        "./../../assets/SliderImage3.jpg",
-        "./../../assets/SliderImage4.jpg"
-      ],
-      "resolution": "UHD",
-      "productSize": "55"
-    },
-    {
-      "id": 13,
       "name": "QLED 86Q7700G Google TV",
       "price": "$1,199.00 - $1,599.00",
       "overview": "The Skyworth QLED series offers an unparalleled visual experience with brilliant colors and exceptional brightness, all housed in a sleek, slim-bezel design. Powered by Google TV, it provides seamless access to your favorite apps, shows, and movies. With built-in Google Assistant and a Bluetooth voice remote, you can effortlessly control your entertainment and manage tasks hands-free, delivering a smarter, more intuitive viewing experience.",
       "specifications": "Specifications content goes here. You can list the important features or specifications of the product.",
       "downloads": "Downloads content goes here. Provide users with downloadable resources like manuals or software.",
       "image": [
-        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/UHD.jpg"
@@ -617,7 +524,7 @@
         "120Hzs"
       ],
       "resolution": "QLED",
-      "productSize": "65",
+      "productSize": "65 inches",
       "description": "",
       "detailImages": [
         "./../../assets/SliderImage1.jpg",
@@ -627,18 +534,113 @@
       ]
     },
     {
+      "id": 12,
+      "name": "UHD 50G6600G Google TV",
+      "overview": "The Skyworth UHD series elevates your entertainment with a stunning 50' 4K display and a sleek, bezel-less design that maximizes screen space for a truly immersive viewing experience. Its HDR10 technology enhances brightness and deepens dark tones, delivering vibrant colors and exceptional clarity for lifelike visuals. Powered by Google TV, you get seamless access to all your favorite apps, movies, and shows. Plus, with the built-in Google Assistant and a mic-enabled Bluetooth remote, you can control your entertainment hands-free, making your viewing experience smarter and better than ever.",
+      "price": "$239.00 - $569.99",
+      "featurelist": [
+        "Resolution: UHD (3840 x 2160)",
+        "WIFI: 802.11a/b/g/n",
+        "HDMI: 3",
+        "USB: 2",
+        "Bluetooth: Yes / BT 5.1",
+        "HDR: HDR10/HLG",
+        "HLG: Yes",
+        "Refresh Rate: 60 Hz",
+        "Dolby Vision Atmos: No",
+        "Film Maker Mode: Yes",
+        "Number of Speakers: 2; Boxes",
+        "Sound Technology: Dolby Audio",
+        "Dolby Audio: Yes",
+        "Hands Free Voice Control: No",
+        "Number of Cores: Quad",
+        "Ram Capacity: 2GB",
+        "Storage Memory: 16GB",
+        "Google Assistant: Voice Remote / 8A",
+        "Screen Mirroring/chromecast: Yes",
+        "Game Mode: Yes"
+      ],
+      "features": [
+        "Quantum Dot",
+        "HDR10+",
+        "120Hzs"
+      ],
+      "image": [
+        "./../../assets/TV_UHD_Home.jpg",
+        "./../../assets/QLED-mini.jpg",
+        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg"
+      ],
+      "detailImages": [
+        "./../../assets/SliderImage1.jpg",
+        "./../../assets/SliderImage2.jpg",
+        "./../../assets/SliderImage3.jpg",
+        "./../../assets/SliderImage4.jpg"
+      ],
+      "resolution": "UHD",
+      "productSize": "50 inches"
+    },
+    {
+      "id": 13,
+      "name": "UHD 55G6600G Google TV",
+      "overview": "The Skyworth UHD series elevates your entertainment with a stunning 50' 4K display and a sleek, bezel-less design that maximizes screen space for a truly immersive viewing experience. Its HDR10 technology enhances brightness and deepens dark tones, delivering vibrant colors and exceptional clarity for lifelike visuals. Powered by Google TV, you get seamless access to all your favorite apps, movies, and shows. Plus, with the built-in Google Assistant and a mic-enabled Bluetooth remote, you can control your entertainment hands-free, making your viewing experience smarter and better than ever.",
+      "price": "$299.00 - $699.99",
+      "featurelist": [
+        "Resolution: UHD (3840 x 2160)",
+        "WIFI: 802.11a/b/g/n",
+        "HDMI: 3",
+        "USB: 2",
+        "Bluetooth: Yes / BT 5.1",
+        "HDR: HDR10/HLG",
+        "HLG: Yes",
+        "Refresh Rate: 60 Hz",
+        "Dolby Vision Atmos: No",
+        "Film Maker Mode: Yes",
+        "Number of Speakers: 2; Boxes",
+        "Sound Technology: Dolby Audio",
+        "Dolby Audio: Yes",
+        "Hands Free Voice Control: No",
+        "Number of Cores: Quad",
+        "Ram Capacity: 2GB",
+        "Storage Memory: 16GB",
+        "Google Assistant: Voice Remote / 8A",
+        "Screen Mirroring/chromecast: Yes",
+        "Game Mode: Yes"
+      ],
+      "features": [
+        "Quantum Dot",
+        "HDR10+",
+        "120Hzs"
+      ],
+      "image": [
+        "./../../assets/TV_UHD_Home.jpg",
+        "./../../assets/FHD.jpg",
+        "./../../assets/QLED-mini.jpg",
+        "./../../assets/UHD.jpg"
+      ],
+      "detailImages": [
+        "./../../assets/SliderImage1.jpg",
+        "./../../assets/SliderImage2.jpg",
+        "./../../assets/SliderImage3.jpg",
+        "./../../assets/SliderImage4.jpg"
+      ],
+      "resolution": "UHD",
+      "productSize": "55 inches"
+    },
+
+    {
       "id": 14,
       "name": "UHD 65G6600G Google TV",
       "overview": "The Skyworth UHD series elevates your entertainment with a stunning 50' 4K display and a sleek, bezel-less design that maximizes screen space for a truly immersive viewing experience. Its HDR10 technology enhances brightness and deepens dark tones, delivering vibrant colors and exceptional clarity for lifelike visuals. Powered by Google TV, you get seamless access to all your favorite apps, movies, and shows. Plus, with the built-in Google Assistant and a mic-enabled Bluetooth remote, you can control your entertainment hands-free, making your viewing experience smarter and better than ever.",
       "price": "$3,499.00 - $5,499.00",
       "image": [
-        "./../../assets/QLED.jpg",
+        "./../../assets/TV_UHD_Home.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/FHD.jpg",
         "./../../assets/UHD.jpg"
       ],
       "resolution": "UHD",
-      "productSize": "65",
+      "productSize": "65 inches",
       "featurelist": [
         "Resolution: UHD (3840 x 2160)",
         "WIFI: 802.11a/b/g/n",
@@ -675,6 +677,53 @@
     },
     {
       "id": 15,
+      "name": "UHD 85G6600G Google TV",
+      "overview": "The Skyworth UHD series elevates your entertainment with a stunning 50' 4K display and a sleek, bezel-less design that maximizes screen space for a truly immersive viewing experience. Its HDR10 technology enhances brightness and deepens dark tones, delivering vibrant colors and exceptional clarity for lifelike visuals. Powered by Google TV, you get seamless access to all your favorite apps, movies, and shows. Plus, with the built-in Google Assistant and a mic-enabled Bluetooth remote, you can control your entertainment hands-free, making your viewing experience smarter and better than ever.",
+      "price": "$3,499.00 - $5,499.00",
+      "image": [
+        "./../../assets/TV_UHD_Home.jpg",
+        "./../../assets/QLED-mini.jpg",
+        "./../../assets/FHD.jpg",
+        "./../../assets/UHD.jpg"
+      ],
+      "resolution": "UHD",
+      "productSize": "85 inches",
+      "featurelist": [
+        "Resolution: UHD (3840 x 2160)",
+        "WIFI: 802.11a/b/g/n",
+        "HDMI: 3",
+        "USB: 2",
+        "Bluetooth: Yes / BT 5.1",
+        "HDR: HDR10/HLG",
+        "HLG: Yes",
+        "Refresh Rate: 60 Hz",
+        "Dolby Vision Atmos: No",
+        "Film Maker Mode: Yes",
+        "Number of Speakers: 2; Boxes",
+        "Sound Technology: Dolby Audio",
+        "Dolby Audio: Yes",
+        "Hands Free Voice Control: No",
+        "Number of Cores: Quad",
+        "Ram Capacity: 2GB",
+        "Storage Memory: 16GB",
+        "Google Assistant: Voice Remote / 8A",
+        "Screen Mirroring/chromecast: Yes",
+        "Game Mode: Yes"
+      ],
+      "features": [
+        "Quantum Dot",
+        "HDR10+",
+        "120Hzs"
+      ],
+      "detailImages": [
+        "./../../assets/SliderImage1.jpg",
+        "./../../assets/SliderImage2.jpg",
+        "./../../assets/SliderImage3.jpg",
+        "./../../assets/SliderImage4.jpg"
+      ]
+    },
+    {
+      "id": 16,
       "name": "HD 32E5500G Google TV",
       "price": "$399.00",
       "featurelist": [
@@ -706,111 +755,14 @@
       ],
       "overview": "This Skyworth series redefines your viewing experience with its stunning colors and crystal-clear clarity, all wrapped in a sleek, slim design. Powered by Google, this TV provides effortless access to your favorite apps and streaming services. With the built-in Google Assistant, you can easily control your TV, search for content, and manage tasks—all with just your voice. Whether you're enjoying movies, diving into gaming, or catching up on the latest shows, the Skyworth delivers smart entertainment at your fingertips.",
       "image": [
-        "./../../assets/UHD.jpg",
+        "./../../assets/FHD.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
         "./../../assets/FHD.jpg",
         "./../../assets/UHD.jpg"
       ],
       "resolution": "FHD/HD",
-      "productSize": "32",
-      "detailImages": [
-        "./../../assets/SliderImage1.jpg",
-        "./../../assets/SliderImage2.jpg",
-        "./../../assets/SliderImage3.jpg",
-        "./../../assets/SliderImage4.jpg"
-      ]
-    },
-    {
-      "id": 16,
-      "name": "FHD 43E5500G Google TV",
-      "price": "$1,199.00 - $1,599.00",
-      "overview": "This Skyworth series redefines your viewing experience with its stunning colors and crystal-clear clarity, all wrapped in a sleek, slim design. Powered by Google, this TV provides effortless access to your favorite apps and streaming services. With the built-in Google Assistant, you can easily control your TV, search for content, and manage tasks—all with just your voice. Whether you're enjoying movies, diving into gaming, or catching up on the latest shows, the Skyworth delivers smart entertainment at your fingertips.",
-      "specifications": "Specifications content goes here. You can list the important features or specifications of the product.",
-      "downloads": "Downloads content goes here. Provide users with downloadable resources like manuals or software.",
-      "image": [
-        "./../../assets/UHD.jpg",
-        "./../../assets/QLED.jpg",
-        "./../../assets/QLED-mini.jpg",
-        "./../../assets/FHD.jpg"
-      ],
-      "features": [
-        "Quantum Dot",
-        "HDR10+",
-        "120Hzs"
-      ],
-      "featurelist": [
-        "Resolution: FHD (1920 x 1080)",
-        "WIFI: 802.11a/b/g/n",
-        "HDMI: 2",
-        "USB: 2",
-        "Bluetooth: Yes / BT 5.0",
-        "HDR: HDR10/HLG",
-        "HLG: Yes",
-        "Refresh Rate: 60 Hz",
-        "Dolby Vision Atmos: No",
-        "Film Maker Mode: No",
-        "Number of Speakers: 2; Boxes",
-        "Sound Technology: Dolby Audio",
-        "Dolby Audio: Yes",
-        "Hands Free Voice Control: No",
-        "Number of Cores: Quad",
-        "Ram Capacity: 1.5GB",
-        "Storage Memory: 8GB",
-        "Google Assistant: Voice Remote / 8A",
-        "Screen Mirroring/chromecast: Yes",
-        "Game Mode: No"
-      ],
-      "resolution": "FHD/HD",
-      "productSize": "43",
-      "description": "",
-      "detailImages": [
-        "./../../assets/SliderImage1.jpg",
-        "./../../assets/SliderImage2.jpg",
-        "./../../assets/SliderImage3.jpg",
-        "./../../assets/SliderImage4.jpg"
-      ]
-    },
-    {
-      "id": 17,
-      "name": "FHD 40E5500G Google TV",
-      "price": "$3,499.00 - $5,499.00",
-      "overview": "This Skyworth series redefines your viewing experience with its stunning colors and crystal-clear clarity, all wrapped in a sleek, slim design. Powered by Google, this TV provides effortless access to your favorite apps and streaming services. With the built-in Google Assistant, you can easily control your TV, search for content, and manage tasks—all with just your voice. Whether you're enjoying movies, diving into gaming, or catching up on the latest shows, the Skyworth delivers smart entertainment at your fingertips.",
-      "image": [
-        "./../../assets/UHD.jpg",
-        "./../../assets/QLED.jpg",
-        "./../../assets/QLED-mini.jpg",
-        "./../../assets/FHD.jpg"
-      ],
-      "resolution": "FHD/HD",
-      "productSize": "40",
-      "featurelist": [
-        "Resolution: FHD (1920 x 1080)",
-        "WIFI: 802.11a/b/g/n",
-        "HDMI: 2",
-        "USB: 2",
-        "Bluetooth: Yes / BT 5.0",
-        "HDR: HDR10/HLG",
-        "HLG: Yes",
-        "Refresh Rate: 60 Hz",
-        "Dolby Vision Atmos: No",
-        "Film Maker Mode: No",
-        "Number of Speakers: 2; Boxes",
-        "Sound Technology: Dolby Audio",
-        "Dolby Audio: Yes",
-        "Hands Free Voice Control: No",
-        "Number of Cores: Quad",
-        "Ram Capacity: 1.5GB",
-        "Storage Memory: 8GB",
-        "Google Assistant: Voice Remote / 8A",
-        "Screen Mirroring/chromecast: Yes",
-        "Game Mode: No"
-      ],
-      "features": [
-        "Quantum Dot",
-        "HDR10+",
-        "120Hzs"
-      ],
+      "productSize": "32 inches",
       "detailImages": [
         "./../../assets/SliderImage1.jpg",
         "./../../assets/SliderImage2.jpg",
@@ -820,44 +772,94 @@
     },
     {
       "id": 18,
-      "name": "UHD 85G6600G Google TV",
-      "overview": "The Skyworth UHD series elevates your entertainment with a stunning 50' 4K display and a sleek, bezel-less design that maximizes screen space for a truly immersive viewing experience. Its HDR10 technology enhances brightness and deepens dark tones, delivering vibrant colors and exceptional clarity for lifelike visuals. Powered by Google TV, you get seamless access to all your favorite apps, movies, and shows. Plus, with the built-in Google Assistant and a mic-enabled Bluetooth remote, you can control your entertainment hands-free, making your viewing experience smarter and better than ever.",
+      "name": "FHD 40E5500G Google TV",
       "price": "$3,499.00 - $5,499.00",
+      "overview": "This Skyworth series redefines your viewing experience with its stunning colors and crystal-clear clarity, all wrapped in a sleek, slim design. Powered by Google, this TV provides effortless access to your favorite apps and streaming services. With the built-in Google Assistant, you can easily control your TV, search for content, and manage tasks—all with just your voice. Whether you're enjoying movies, diving into gaming, or catching up on the latest shows, the Skyworth delivers smart entertainment at your fingertips.",
       "image": [
+        "./../../assets/FHD.jpg",
         "./../../assets/QLED.jpg",
         "./../../assets/QLED-mini.jpg",
-        "./../../assets/FHD.jpg",
-        "./../../assets/UHD.jpg"
+        "./../../assets/FHD.jpg"
       ],
-      "resolution": "UHD",
-      "productSize": "85",
+      "resolution": "FHD/HD",
+      "productSize": "40 inches",
       "featurelist": [
-        "Resolution: UHD (3840 x 2160)",
+        "Resolution: FHD (1920 x 1080)",
         "WIFI: 802.11a/b/g/n",
-        "HDMI: 3",
+        "HDMI: 2",
         "USB: 2",
-        "Bluetooth: Yes / BT 5.1",
+        "Bluetooth: Yes / BT 5.0",
         "HDR: HDR10/HLG",
         "HLG: Yes",
         "Refresh Rate: 60 Hz",
         "Dolby Vision Atmos: No",
-        "Film Maker Mode: Yes",
+        "Film Maker Mode: No",
         "Number of Speakers: 2; Boxes",
         "Sound Technology: Dolby Audio",
         "Dolby Audio: Yes",
         "Hands Free Voice Control: No",
         "Number of Cores: Quad",
-        "Ram Capacity: 2GB",
-        "Storage Memory: 16GB",
+        "Ram Capacity: 1.5GB",
+        "Storage Memory: 8GB",
         "Google Assistant: Voice Remote / 8A",
         "Screen Mirroring/chromecast: Yes",
-        "Game Mode: Yes"
+        "Game Mode: No"
       ],
       "features": [
         "Quantum Dot",
         "HDR10+",
         "120Hzs"
       ],
+      "detailImages": [
+        "./../../assets/SliderImage1.jpg",
+        "./../../assets/SliderImage2.jpg",
+        "./../../assets/SliderImage3.jpg",
+        "./../../assets/SliderImage4.jpg"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "FHD 43E5500G Google TV",
+      "price": "$1,199.00 - $1,599.00",
+      "overview": "This Skyworth series redefines your viewing experience with its stunning colors and crystal-clear clarity, all wrapped in a sleek, slim design. Powered by Google, this TV provides effortless access to your favorite apps and streaming services. With the built-in Google Assistant, you can easily control your TV, search for content, and manage tasks—all with just your voice. Whether you're enjoying movies, diving into gaming, or catching up on the latest shows, the Skyworth delivers smart entertainment at your fingertips.",
+      "specifications": "Specifications content goes here. You can list the important features or specifications of the product.",
+      "downloads": "Downloads content goes here. Provide users with downloadable resources like manuals or software.",
+      "image": [
+        "./../../assets/FHD.jpg",
+        "./../../assets/QLED.jpg",
+        "./../../assets/QLED-mini.jpg",
+        "./../../assets/FHD.jpg"
+      ],
+      "features": [
+        "Quantum Dot",
+        "HDR10+",
+        "120Hzs"
+      ],
+      "featurelist": [
+        "Resolution: FHD (1920 x 1080)",
+        "WIFI: 802.11a/b/g/n",
+        "HDMI: 2",
+        "USB: 2",
+        "Bluetooth: Yes / BT 5.0",
+        "HDR: HDR10/HLG",
+        "HLG: Yes",
+        "Refresh Rate: 60 Hz",
+        "Dolby Vision Atmos: No",
+        "Film Maker Mode: No",
+        "Number of Speakers: 2; Boxes",
+        "Sound Technology: Dolby Audio",
+        "Dolby Audio: Yes",
+        "Hands Free Voice Control: No",
+        "Number of Cores: Quad",
+        "Ram Capacity: 1.5GB",
+        "Storage Memory: 8GB",
+        "Google Assistant: Voice Remote / 8A",
+        "Screen Mirroring/chromecast: Yes",
+        "Game Mode: No"
+      ],
+      "resolution": "FHD/HD",
+      "productSize": "43 inches",
+      "description": "",
       "detailImages": [
         "./../../assets/SliderImage1.jpg",
         "./../../assets/SliderImage2.jpg",

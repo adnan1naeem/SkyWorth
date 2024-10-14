@@ -13,7 +13,7 @@ const SelectInput = ({ label, name, value, onChange, options, required }) => (
       value={value}
       onChange={onChange}
       sx={{
-        backgroundColor: '#F5F5F5', // Light gray background
+        // backgroundColor: '#white', // Light gray background
         fontFamily:'Kanit',fontWeight:'500',
         '& .MuiOutlinedInput-root': {
           borderRadius: '10px',

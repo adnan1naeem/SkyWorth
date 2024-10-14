@@ -20,6 +20,7 @@ const CheckboxGroup = ({ label, options, selectedValues, onChange, required, tex
           <FormControlLabel
             control={
               <Checkbox
+                size='small'
                 checked={selectedValues}
                 onChange={(e) => onChange(e, options)}
               />
@@ -35,6 +36,7 @@ const CheckboxGroup = ({ label, options, selectedValues, onChange, required, tex
               key={option}
               control={
                 <Checkbox
+                  size='small'
                   value={option}
                   checked={selectedValues?.includes(option)}
                   onChange={onChange}
