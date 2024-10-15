@@ -14,7 +14,7 @@ const Product = () => {
     }
     
     return (
-        <Box sx={{ flex: 1,paddingTop:{xs:'10%',sm:'5%',md:'2%',lg:0} }}>
+        <Box sx={{ flex: 1, }}>
 
            <Box sx={{background:'#FAFAFA'}}>
            <Container component="section" maxWidth={"xl"}>

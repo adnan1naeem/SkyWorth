@@ -83,6 +83,7 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
                 sx={{
                     flexGrow: 1,
                     cursor: 'pointer',
+                    alignSelf:{xs:"center",md:'flex-start'}
                 }}
             >
                 <Typography 

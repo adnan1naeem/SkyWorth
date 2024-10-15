@@ -8,14 +8,13 @@ const BackgroundImageComponent = ({ src,title,desc }) => {
         position: 'relative',
         width: '100%',
         height: {xs:'300px',sm:'445px',md:'445px',lg:'445px'},
-        backgroundImage: `
-          linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),url(${src?.src})`,
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),url(${src?.src})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        marginBottom:{xs:"50px",md:'100px'}
+        marginBottom:{xs:"30px",md:'100px'}
       }}
     >
       <Box sx={{ color: 'white', zIndex: 1,width:{xs:"90%",sm:"70%",md:'50%',lg:'35%'},marginLeft:'7%', }}>

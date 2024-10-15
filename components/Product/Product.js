@@ -75,14 +75,14 @@ const ProductGrid = () => {
 
   return (
     <Container maxWidth="xl">
-      <Breadcrumb paddingTop={{ xs: '25%', sm: '18%', md: '10%', lg: '5%', xl: '2%' }} />
+      <Breadcrumb paddingTop={{ xs: '22%', sm: '18%', md: '10%', lg: '5%', xl: '2%' }} />
       <BackgroundImageComponent
         src={TVImage}
         title="Discover the Perfect Match!"
         desc="Shop by size, clarity, contrast, and more when selecting the technology and TV that makes your space complete."
       />
       <Grid container spacing={4}>
-        <Grid item xs={12} sm={3} marginBottom={"100px"}>
+        <Grid item xs={12} sm={3} marginBottom={{xs:"30px",md:"100px"}}>
           <FilterSection onFilterChange={setSelectedFilters} />
         </Grid>
         <Grid item xs={12} sm={9}>

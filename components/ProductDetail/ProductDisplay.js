@@ -13,7 +13,7 @@ const ProductDisplay = (product) => {
     return (
         <>
             <Container sx={{ maxWidth: '1200px', margin: { xs: 'none', md: 'none' } }}>
-                <Breadcrumb products={data} paddingTop={{ xs: '25%', sm: '18%', md: '10%', lg: '5%', xl: '6%' }} />
+                <Breadcrumb products={data} paddingTop={{ xs: '28%', sm: '18%', md: '10%', lg: '5%', xl: '6%' }} />
             </Container>
             <Grid container spacing={4} sx={{ maxWidth: '1200px', margin: { xs: 'none', md: '0px auto' }, padding: 2 }}>
                 <Grid item xs={12} md={6} sx={{ marginBottom: 2, paddingRight: { xs: 0, md: '32px' } }}>

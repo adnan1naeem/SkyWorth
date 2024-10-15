@@ -80,7 +80,6 @@ function Footer() {
                     router.push(href);
                 }
             }}
-            mt={{ xs: '5%', sm: 0 }}
         />
           </Box>
           <Box>
