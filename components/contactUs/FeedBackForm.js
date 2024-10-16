@@ -4,7 +4,7 @@ import TextInput from './../Warrenty/TextInput';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 
-const FeedBackForm = () => {
+const FeedBackForm = ({ id }) => {
     const tabContentRef = useRef(null);
     const isInView = useInView(tabContentRef, { once: true });
     const { register, handleSubmit, setValue, formState: { errors }, watch } = useForm();
@@ -51,7 +51,7 @@ const FeedBackForm = () => {
     };
 
     return (
-        <Box>
+        <Box id={id}>
             <Box sx={{
                 padding: '20px',
                 margin: '0 auto',

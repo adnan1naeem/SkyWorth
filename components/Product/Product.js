@@ -31,10 +31,11 @@ const ProductGrid = () => {
       selectedFilters.productSize.includes(product.productSize);
 
       const matchesFeature = selectedFilters.feature.length === 0 ||
-      selectedFilters.feature.every((feature) => product.features.includes(feature));
+      selectedFilters.feature.some((feature) => product.features.includes(feature));
 
     return matchesResolution && matchesProductSize && matchesFeature;
   });
+
 
   const paginatedProducts = filteredProducts.slice(
     (page - 1) * productsPerPage,

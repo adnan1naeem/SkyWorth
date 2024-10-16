@@ -40,8 +40,8 @@ const RelatedProducts = ({ products }) => {
     }
     return (
         <Box sx={{ padding: 4, marginBottom: '30px' }}>
-            <Typography fontSize={'26px'} sx={{ borderBottom: '1px solid #00000050', paddingBottom: '8px',marginBottom:'20px',fontWeight:300 }} gutterBottom>
-                Related Products
+            <Typography fontSize={'26px'} onClick={()=> router.push(`/product`)}  sx={{ borderBottom: '1px solid #00000050',cursor: 'pointer', paddingBottom: '8px',marginBottom:'20px',fontWeight:300 }} gutterBottom>
+                All Products
             </Typography>
             <Box display="flex" alignItems="center">
                 <IconButton onClick={handlePrev} sx={{ color: '#2969B0' }} disabled={startIndex === 0}>
@@ -50,14 +50,14 @@ const RelatedProducts = ({ products }) => {
                 <Grid container spacing={2}>
                     {products.slice(startIndex, startIndex + itemsPerPage).map((product, index) => (
                         <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
-                            <Card onClick={() => handleNavigation(product)} sx={{ display: 'flex', alignItems: { xs: "center", sm: 'center', md: "center", lg: "flex-start" }, flexDirection: { xs: "column", sm: 'column', md: 'column', lg: 'column' }, borderRadius: 0, boxShadow: 'none', marginBottom: 2 }}>
+                            <Card  sx={{ display: 'flex', alignItems: { xs: "center", sm: 'center', md: "center", lg: "flex-start" }, flexDirection: { xs: "column", sm: 'column', md: 'column', lg: 'column' }, borderRadius: 0, boxShadow: 'none', marginBottom: 2 }}>
                                 <CardMedia
                                     component="img"
-                                    sx={{ width: 'auto', }}
+                                    sx={{ width: 'auto',cursor: 'pointer'}}
                                     image={product?.image[0]}
                                     alt={product.name}
                                 />
-                                <CardContent>
+                                <CardContent sx={{alignSelf:'center',textAlign:'center'}}>
                                     <Typography fontSize={'16spx'} fontWeight={"400"} fontFamily={"Kanit"} sx={{ alignContent: 'center', paddingLeft: '5px',cursor: 'pointer' }} component="h2">
                                         {product.name}
                                     </Typography>
