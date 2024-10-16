@@ -67,7 +67,7 @@ const FeedBackForm = ({ id }) => {
                                 <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.3 }} variants={animationVariants}>
                                     <TextInput
                                         required={true}
-                                        label="Full name as per IC"
+                                        label="Full name as per CNIC"
                                         {...register('fullName', { required: 'Full name is required' })}
                                         value={watch('fullName')}
                                         onChange={(e) => setValue('fullName', e.target.value)}
@@ -88,7 +88,7 @@ const FeedBackForm = ({ id }) => {
                                 <Grid item xs={6} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.7 }} variants={animationVariants}>
                                     <TextInput
                                         required={true}
-                                        label="Phone/Mobile"
+                                        label="Mobile Number"
                                         type='number'
                                         {...register('phone', { required: 'Phone is required' })}
                                         value={watch('phone')}

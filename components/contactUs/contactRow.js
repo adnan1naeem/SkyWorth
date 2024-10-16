@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Grid, Typography, Card, CardContent, Avatar, Stack, Container, Box } from '@mui/material';
+import { Grid, Typography, Card, CardContent, Avatar, Stack, Container, Box, useMediaQuery } from '@mui/material';
 import BusinessIcon from '@mui/icons-material/Business';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -20,6 +20,11 @@ const sections = [
         title: "Contact Number (Customer Service)",
         description: ['92 42 111 635 635', "92 42 800 111 635 (Toll Free)"],
         icon: <PhoneIcon sx={{ height: 45, width: 45 }} />,
+    },
+    {
+        title: ' ',
+        description: '',
+        icon: ' ',
     },
     {
         title: 'Email Address',
@@ -45,10 +50,10 @@ const textVariants = {
 
 function ContactBar({ title, description, icon }) {
     return (
-        <Grid item xs={12} sm={6} md={4} lg={4} sx={{ bgcolor: 'transparent', border: 'none',justifyContent:'center' }}>
+        <Grid item xs={12} sm={6} md={4} lg={4} sx={{ bgcolor: 'transparent', border: 'none', justifyContent: 'flex-start' }}>
             <Card sx={{ bgcolor: 'transparent', boxShadow: 'none', border: 'none' }}>
                 <CardContent sx={{ bgcolor: 'transparent', padding: 2 }}>
-                    <Stack direction="row" spacing={1} sx={{justifyContent: { xs: 'flex-start', md: 'center' }}}>
+                    <Stack direction="row" spacing={1} sx={{ justifyContent: { xs: 'flex-start', md: 'flex-start' } }}>
                         <motion.div variants={iconVariants} initial="hidden" whileInView="visible">
                             <Avatar
                                 sx={{
@@ -70,14 +75,14 @@ function ContactBar({ title, description, icon }) {
                                     color={"#7A7B7C"}
                                     component="div"
                                     gutterBottom
-                                    sx={{textAlign: { xs: 'left', md: 'left' }}}
+                                    sx={{ textAlign: { xs: 'left', md: 'left' } }}
                                 >
                                     {title}
                                 </Typography>
                             </motion.div>
                             <motion.div variants={textVariants} initial="hidden" whileInView="visible">
                                 <Typography fontFamily={"Kanit"} lineHeight={1.8} fontWeight={400} color={"#050505"} fontSize={12}
-                                    sx={{textAlign: { xs: 'left', md: 'left' }}}
+                                    sx={{ textAlign: { xs: 'left', md: 'left' } }}
                                 >
                                     {Array.isArray(description) ? (
                                         <ul style={{ paddingLeft: '0px', margin: 0 }}>
@@ -99,16 +104,14 @@ function ContactBar({ title, description, icon }) {
 }
 
 function ContactRow() {
+    const isMdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
+
     return (
-        <Box sx={{ backgroundColor: "#F4F7F9",marginBottom:{xs:"0px",md:"60px"} }}>
-            <Container maxWidth="xl" sx={{ bgcolor: '#F4F7F9', py: 6}}>
-                <Grid
-                    container
-                    spacing={0}
-                    justifyContent="center"
-                >
+        <Box sx={{ backgroundColor: "#F4F7F9",  }}>
+            <Container maxWidth="xl" sx={{ bgcolor: '#F4F7F9', py: 6 }}>
+                <Grid container spacing={0}>
                     {sections.map((section, index) => (
-                        <ContactBar key={index} {...section} />
+                        index === 3 && !isMdUp ? null : <ContactBar key={index} {...section} />
                     ))}
                 </Grid>
             </Container>
