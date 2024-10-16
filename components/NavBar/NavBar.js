@@ -125,7 +125,7 @@ const Navbar = () => {
               onClick={toggleDropdown}
             >
               <Link href="/product" style={{display: "flex"}}>
-              <TextNav label="PRODUCT" />
+              <TextNav label="PRODUCTS" />
               <ArrowDropDownIcon style={{ marginLeft: '2px',fill:'black' }} />
               </Link>
             </li>

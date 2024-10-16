@@ -30,7 +30,7 @@ function Footer() {
               height={40}
             />
            <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,marginTop:'15px'}}>Orient Electronics</Typography>
-           <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,}}>20km, Multan Road, Lahore Pakistan</Typography>
+           <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,}}>26Km, Multan Road, Maraka, Lahore, Pakistan</Typography>
           </Box>
         <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row", md: "row" }, flexWrap: "wrap", gap: { xs: "20px", md: "50px" }, justifyContent: "space-between", width: "100%" }}>
           <Box sx={{ textAlign: 'flex-start',flexDirection:'row',display:{xs:"none",md:'block'},paddingTop:"20px"}}>
@@ -41,7 +41,7 @@ function Footer() {
               height={40}
             />
              <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,marginTop:'15px'}}>Orient Electronics</Typography>
-             <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,}}>20km, Multan Road, Lahore Pakistan</Typography>
+             <Typography sx={{ color: "#ffffff",fontSize: "15px",fontFamily: "Mont-Regular, Sans-serif",fontWeight: 250,}}>26Km, Multan Road, Maraka, Lahore, Pakistan</Typography>
           </Box>
          
           <Box>
@@ -64,7 +64,7 @@ function Footer() {
           </Box>
           <Box>
           <FooterCard
-            title="Product"
+            title="Products"
             text1="All Products"
             href_one="/product"
             text2="QLED MINI"
@@ -99,9 +99,9 @@ function Footer() {
             />
             <Box sx={{ padding: "0px 16px", }}>
               <Box sx={{ display: "flex", gap: { xs: 1, md: 2 } }}>
-                <SocialIcon icon={<FacebookIcon />} />
+                <SocialIcon icon={<FacebookIcon />} link={"https://www.facebook.com/people/Skyworth-Pakistan/61567136485017/"} />
                 <SocialIcon icon={<LinkedInIcon />} link={"https://www.linkedin.com/in/skyworth-pakistan-4b0829329/"} />
-                <SocialIcon icon={<InstagramIcon />} link="https://www.instagram.com/844skyworth/?utm_source=qr&r=nametag" />
+                <SocialIcon icon={<InstagramIcon />} link="https://www.instagram.com/skyworth_pakistan/profilecard/" />
                 <SocialIcon icon={<YouTubeIcon />} link={"https://www.youtube.com/@SkyworthPakistan"} />
               </Box>
             </Box>
@@ -144,7 +144,7 @@ function Footer() {
               ml: '-10%',
             },
           }}>
-          © 2024 SkyWorthPakistan
+            Copyright © 2024 SKYWORTH Pakistan. All rights reserved.
         </Typography>
       </Box>
     </Box>
