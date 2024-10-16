@@ -7,7 +7,7 @@ import Image6 from './../../assets/awardImage6.jpg';
 import Image7 from './../../assets/awardImage6.png';
 import Image8 from './../../assets/AwardImage7.png';
 import { Box } from '@mui/material';
-import BackgrondImages from './../../assets/backgroundImage.jpg'
+import BackgrondImages from './../../assets/bottom-1.jpg'
 import LeftAlignedBoxWithBackground from '../../components/Home/LeftAlignedBoxWithBackground';
 const App = () => {
   return (
