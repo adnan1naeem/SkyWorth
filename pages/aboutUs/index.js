@@ -10,7 +10,7 @@ import AboutSection from "../../components/AboutUs/AboutSection";
 const sections = [
   {
     title: "Mission",
-    text: "Dedicated to creating a better life for mankind",
+    text: "Dedicated to \ncreating a better life for mankind",
   },
   {
     title: "Vision",

@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Box, Typography } from "@mui/material";
+import { motion, useInView } from "framer-motion";
 import Aboutbackground from './../../assets/Aboutbackground.jpg';
 
 function AllStat() {
   const stats = [
     { title: "2", titleText: "Listed Companies", listText: ["Skyworth Group (00751.HK)", "Skyworth Digital (000810.SZ)"] },
-    { title: "20", titleText: "High Tech Enterprises", text: "Companies",yearText: " (Year 2022)" },
+    { title: "20", titleText: "High Tech Enterprises", text: "Companies", yearText: " (Year 2022)" },
     { title: "36", titleText: "Staff Size", text: "Thousands Staff", yearText: "(Year 2023)" },
     { title: "136", titleText: "Total Revenue", text: "Billion CNY", yearText: "(Year 2023)" },
     { title: "39", titleText: "Gross Profit", text: "Billion CNY", yearText: "(Year 2023)" },
   ];
+
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true });
 
   const styles = {
     container: {
@@ -51,7 +55,7 @@ function AllStat() {
       zIndex: 2,
       "&::after": {
         content: '""',
-        display: index !== 4 ? {xs:"none",md:"block"} : "none", // Show line for all but the last item
+        display: index !== 4 ? { xs: "none", md: "block" } : "none",
         position: "absolute",
         right: 0,
         top: "50%",
@@ -65,7 +69,7 @@ function AllStat() {
       fontSize: "45px",
     },
     titleText: {
-      fontWeight: {xs:"600",md:"300"},
+      fontWeight: { xs: "600", md: "300" },
       fontSize: "20px",
     },
     text: {
@@ -76,7 +80,6 @@ function AllStat() {
       lineHeight: 1.5,
       fontFamily: "Kanit",
       fontSize: "16px",
-      marginTop: "10px",
     },
     yearText: {
       fontSize: "14px",
@@ -87,39 +90,44 @@ function AllStat() {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      minHeight: "150px",
     },
   };
 
   return (
-    <Box sx={styles.container}>
+    <Box sx={styles.container} ref={containerRef}>
       {stats.map((stat, index) => (
         <Box key={index} sx={styles.statBox(index)}>
-          <Box sx={styles.contentWrapper}>
-            <Typography sx={styles.titleText}>{stat.titleText}</Typography>
-            <Typography variant="h6" component="h6" sx={styles.title}>
-              {stat.title}
-            </Typography>
-          </Box>
-          {stat.text && (
-            <Typography variant="body1" sx={styles.text}>
-              {stat.text}
-            </Typography>
-          )}
-          {stat.listText && (
-            <Box sx={styles.listText}>
-              {stat.listText.map((item, idx) => (
-                <Typography key={idx} variant="body2">
-                  {item}
-                </Typography>
-              ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+            transition={{ duration: 0.5, delay: index * 0.4 }}
+          >
+            <Box sx={styles.contentWrapper}>
+              <Typography sx={styles.titleText}>{stat.titleText}</Typography>
+              <Typography variant="h6" component="h6" sx={styles.title}>
+                {stat.title}
+              </Typography>
             </Box>
-          )}
-          {stat.yearText && (
-            <Typography variant="body2" sx={styles.yearText}>
-              {stat.yearText}
-            </Typography>
-          )}
+            {stat.text && (
+              <Typography variant="body1" sx={styles.text}>
+                {stat.text}
+              </Typography>
+            )}
+            {stat.listText && (
+              <Box sx={styles.listText}>
+                {stat.listText.map((item, idx) => (
+                  <Typography key={idx} variant="body2">
+                    {item}
+                  </Typography>
+                ))}
+              </Box>
+            )}
+            {stat.yearText && (
+              <Typography variant="body2" sx={styles.yearText}>
+                {stat.yearText}
+              </Typography>
+            )}
+          </motion.div>
         </Box>
       ))}
     </Box>
