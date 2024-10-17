@@ -19,7 +19,7 @@ function Faq() {
       <Search />
       <FAQList />
       <Refrig />
-      <Box sx={{ mt: 3 }}>
+      <Box sx={{ mt: 7 }}>
         <LeftAlignedBoxWithBackground
           bordershown={true}
           backgroundImage={BackgrondImages}

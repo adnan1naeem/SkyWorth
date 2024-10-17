@@ -18,7 +18,6 @@ const Refrig = () => {
       sx={{
         width: { lg: "100%" },
         margin: "0 auto",
-        mt: 4,
         p: 5,
         background: "linear-gradient(90deg,#000000 0%,#002e5f 100%)",
       }}

@@ -30,7 +30,7 @@ const FAQCard = ({ title }) => {
             position: "absolute",
             top: 0,
             right: 20,
-            backgroundColor: "red",
+            backgroundColor: "#0263B2",
             color: "white",
             padding: "14px 11px",
             clipPath: "polygon(100% 0%, 100% 100%, 50% 75%, 0 100%, 0 0)",
