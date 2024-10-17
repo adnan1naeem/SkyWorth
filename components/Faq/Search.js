@@ -11,8 +11,8 @@ const styles = {
     alignItems: "center",
     flexDirection: { xs: "row", sm: "row" },
     margin:"0px 10px",
-    marginTop: "5%",
-    marginBottom: "5%",
+    mt:7,
+    mb:7,
     position: "relative",
   },
   searchBar: (isFocused) => ({

@@ -107,8 +107,8 @@ function ContactRow() {
     const isMdUp = useMediaQuery((theme) => theme.breakpoints.up('md'));
 
     return (
-        <Box sx={{ backgroundColor: "#F4F7F9",  }}>
-            <Container maxWidth="xl" sx={{ bgcolor: '#F4F7F9', py: 6 }}>
+        <Box sx={{ backgroundColor: "#F4F7F9",mb:"14px"  }}>
+            <Container maxWidth="xl" sx={{ bgcolor: '#F4F7F9', padding:'48px 0px' }}>
                 <Grid container spacing={0}>
                     {sections.map((section, index) => (
                         index === 3 && !isMdUp ? null : <ContactBar key={index} {...section} />

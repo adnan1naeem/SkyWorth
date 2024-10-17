@@ -53,7 +53,7 @@ const FeedBackForm = ({ id }) => {
     return (
         <Box id={id}>
             <Box sx={{
-                padding: '20px',
+                padding: '29px 20px',
                 margin: '0 auto',
                 borderRadius: '8px',
             }} maxWidth={"md"}>
@@ -64,7 +64,7 @@ const FeedBackForm = ({ id }) => {
                         </Grid>
                         {isInView && (
                             <>
-                                <Grid item xs={12} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.3 }} variants={animationVariants}>
+                                <Grid item xs={12} style={{marginTop:'9px'}} component={motion.div} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.3 }} variants={animationVariants}>
                                     <TextInput
                                         required={true}
                                         label="Full name as per CNIC"
@@ -136,7 +136,7 @@ const FeedBackForm = ({ id }) => {
                                         color: 'white',
                                         borderRadius: 0,
                                         width: { xs: '100%', md: '30%' },
-                                        marginBottom: {xs:"40px",md:'100px'},
+                                        marginBottom: {xs:"40px",md:'50px'},
                                         '&:hover': {
                                             background: '#0069CB',
                                         },

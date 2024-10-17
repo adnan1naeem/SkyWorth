@@ -12,7 +12,7 @@ const faqData = [
 const FAQList = () => {
   return (
     <Container maxWidth="lg" sx={{ maxWidth: '1600px', margin: '0 auto' }}>
-      <Box sx={{ mt: 4, mx: 2, mb: 7 }}>
+      <Box sx={{ mx: 2, mb: 7 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
           <Box
             sx={{
@@ -38,7 +38,7 @@ const FAQList = () => {
         </Box>
 
         {/* FAQ Cards */}
-        <Grid container spacing={2} sx={{ mt: '5%' }}>
+        <Grid container spacing={2} sx={{ mt: 5 }}>
           {faqData.map((faq, index) => (
             <Grid item xs={12} sm={4} key={index} sx={{ display: 'flex', justifyContent: 'center' }}>
               <FAQCard title={faq.title} badgeNumber={faq.badgeNumber} />
