@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 // import Retailer from "../../components/WhereToBuy/Retailer";
 // import EventCard from "../../components/EventsNews/EventCard";
 // import EventList from "../../components/EventsNews/EventList";
-import BackgrondImages from './../../assets/backgroundImage.jpg'
+import BackgrondImages from './../../assets/bottom-1.jpg'
 import LeftAlignedBoxWithBackground from '../../components/Home/LeftAlignedBoxWithBackground';
 import { motion } from "framer-motion";
 function NewsEvents() {
