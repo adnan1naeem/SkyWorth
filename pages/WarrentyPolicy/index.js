@@ -155,7 +155,7 @@ const Index = () => {
         }}
       />
       <Box
-        sx={{ padding: { xs: "10px 20px", md: "20px" }, maxWidth: "1000px", margin: "0 auto", borderRadius: "8px", }}
+        sx={{ padding: { xs: "10px 20px", md: "20px" }, maxWidth: "1000px", margin: "0 auto", borderRadius: "8px" }}
       >
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={2}>
@@ -431,7 +431,7 @@ const Index = () => {
                   <CircularProgress />
                 </Box> :
                 <Button type="submit" onClick={handleSubmit} variant="contained" disabled={isFormComplete == undefined ? true : false || TermandCondition}
-                  sx={{ background: "#1a7efb", height: 53, color: "white", marginBottom: "20px", "&:hover": { background: "#0069CB" } }} fullWidth>
+                  sx={{ background: "#1a7efb", height: 53, color: "white", marginBottom: "10px", "&:hover": { background: "#0069CB" } }} fullWidth>
                   Submit
                 </Button>}
             </Grid>

@@ -102,7 +102,7 @@ const TVProductCard = ({ title, description, image, OnClick }) => {
 
 const ResponsiveTVProductGrid = () => {
   return (
-    <Container sx={{ marginTop: '50px' }} maxWidth={"xl"}>
+    <Container sx={{ marginTop: '56px' }} maxWidth={"xl"}>
       <Typography sx={{
         fontSize: { xs: "1.38rem", md: '1.5rem' },
         color: '#0c3034',

@@ -46,8 +46,8 @@ const ProductDisplay = (product) => {
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ paddingLeft: { xs: 0, md: 2 } }}>
-                    <Card sx={{ padding: { xs: 0, md: 2 }, boxShadow: 'none', background: 'transparent' }}>
-                        <CardContent sx={{ paddingLeft: 0 }}>
+                    <Card sx={{ padding: { xs: 0, md: '0px 16px' }, boxShadow: 'none', background: 'transparent' }}>
+                        <CardContent sx={{ padding: '0px 16px' }}>
                             <Typography sx={{ fontSize: { xs: "30px", sm: '35px', md: '40px', lg: '48px', }, lineHeight: 1, fontWeight: 300 }} gutterBottom>
                                 {data?.name}
                             </Typography>

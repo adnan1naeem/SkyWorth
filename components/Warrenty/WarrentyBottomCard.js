@@ -58,7 +58,7 @@ const WarrantyCards = () => {
     const isXL = useMediaQuery(theme.breakpoints.up('xl'));
 
     return (
-        <Box sx={{ p: 3, marginBottom: '2%' }}>
+        <Box sx={{ p: 3, marginBottom: '40px' }}>
             <Typography
                 variant="h4"
                 align="center"
@@ -66,7 +66,7 @@ const WarrantyCards = () => {
                     color: '#676767',
                     fontFamily: 'Kanit',
                     fontWeight: '400',
-                    mb: 7,
+                    mb: 5,
                     fontSize:{xs:"1.68rem",md:'2rem'},
                 }}
             >

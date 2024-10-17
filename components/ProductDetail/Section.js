@@ -19,7 +19,6 @@ const FeatureList = ({ features }) => {
                             margin: 0,
                             paddingLeft: 0,
                             fontSize: '16px',
-                            paddingTop: "10px",
                             listStyleType: 'none'
                         }}>
                             {feature.detail.split(',').map((detailItem, idx) => (
@@ -29,7 +28,7 @@ const FeatureList = ({ features }) => {
                             ))}
                         </ul>
                     ) : (
-                        <Typography variant="body1" style={{ color: '#5f5C5F', fontSize: 18, marginBottom: "5px",fontFamily:'kanit',fontWeight:'250',marginTop:'10px' }}>
+                        <Typography variant="body1" style={{ color: '#5f5C5F', fontSize: 18, marginBottom: "5px",fontFamily:'kanit',fontWeight:'250' }}>
                             {feature.detail}
                         </Typography>
                     )}

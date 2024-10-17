@@ -15,7 +15,7 @@ const CenteredImageWithText = ({ imageSrc, text, text2, body, body2, ButtonText,
                 borderRadius: 2
             }}
         >
-            {heading && <Typography sx={{ fontWeight: '400', fontSize: {xs:"1.38rem",md:'1.5rem'}, padding: '10px',marginTop:{xs:"30px",lg:'60px'},marginBottom:'10px',textAlign:'center' }}  gutterBottom>
+            {heading && <Typography sx={{ fontWeight: '400', fontSize: {xs:"1.38rem",md:'1.5rem'}, padding: '10px',marginTop:{xs:"30px",lg:'50px'},marginBottom:'10px',textAlign:'center' }}  gutterBottom>
                 {heading}
             </Typography>}
             {imageSrc && <Image
@@ -33,7 +33,7 @@ const CenteredImageWithText = ({ imageSrc, text, text2, body, body2, ButtonText,
                     fontWeight: 400,
                     textAlign: 'center',
                     textTransform:'capitalize',
-                    marginTop: body2 ?{xs:"30px",md:'40px'} : '40px',
+                    marginTop: body2 ?{xs:"30px",md:'60px'} : '60px',
                     padding:{xs:"0px 10px",md:0}
                 }}
             >
@@ -70,7 +70,7 @@ const CenteredImageWithText = ({ imageSrc, text, text2, body, body2, ButtonText,
                     fontWeight: 250,
                     fontSize: {xs:"1.0rem",md:'1.1rem'},
                     textAlign:'center',
-                    marginBottom: '35px'
+                    marginBottom: '25px'
                 }}
             >
                 {body2}

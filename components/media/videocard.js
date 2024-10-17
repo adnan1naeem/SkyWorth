@@ -29,8 +29,8 @@ const VideoCards = () => {
       sx={{ 
         margin: {md:"none",lg:'auto'}, // Center the grid and apply top/bottom margin
         paddingLeft: { xs: 2, sm: 3, md: 4 }, // Add some padding for smaller screens
-        paddingTop:"40px",
-        paddingBottom:"40px",
+        paddingTop:"55px",
+        paddingBottom:"70px",
         paddingRight: { xs: 2, sm: 3, md: 4 }, // Equal right padding
       }}
     >

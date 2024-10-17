@@ -30,7 +30,7 @@ function HomeScreen() {
         onClick={handleReadMoreClick}
       />
       <TVProductCard />
-      <Container maxWidth="xl" sx={{marginTop:'40px'}}>
+      <Container maxWidth="xl" sx={{marginTop:'46px'}}>
         <CenteredImageWithText imageSrc={HomePage1} />
         <CenteredImageWithText
           heading={"Personalize Your TV with Skyworth Google TV"}
@@ -40,7 +40,7 @@ function HomeScreen() {
           onClick={handleLearnMore}
         />
       </Container>
-      <Container maxWidth="xl" sx={{marginTop:"20px"}}>
+      <Container maxWidth="xl" sx={{marginTop:"30px",marginBottom:"28px"}}>
         <ResponsiveTVProductGrid />
       </Container>
       <LeftAlignedBoxWithBackground bordershown={true} backgroundImage={BackgrondImages} buttonText={"View All SKYWORTH TVs"} onClick={handleLearnMore}/>
