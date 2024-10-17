@@ -52,7 +52,7 @@ const ProductDisplay = (product) => {
                                 {data?.name}
                             </Typography>
                             <Typography sx={{ color: '#2969B0', fontSize: 18, fontWeight: 600 }} gutterBottom>
-                                Now Available :
+                            Salient Features :
                             </Typography>
                             {data?.description &&
                                 <Typography fontSize={14} gutterBottom>
