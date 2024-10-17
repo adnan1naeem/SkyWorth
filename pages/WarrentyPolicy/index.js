@@ -176,7 +176,7 @@ const Index = () => {
             </Grid>
             <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <TextInput
-                label="Phone/Mobile"
+                label="Mobile Number"
                 {...register("phone", { required: "Phone is required" })}
                 value={phone}
                 onChange={(e) => setValue("phone", e.target.value)}
@@ -250,17 +250,6 @@ const Index = () => {
               {errors.country && (<Typography color="error">{errors.country.message}</Typography>)}
             </Grid>
             <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
-              <TextInput
-                label="Area/Society"
-                {...register("area", {
-                  required: "Area is required",
-                })}
-                value={area}
-                onChange={(e) => setValue("area", e.target.value)}
-              />
-              {errors.area && (<Typography color="error">{errors.area.message}</Typography>)}
-            </Grid>
-            <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <Typography sx={{ fontSize: 16, fontFamily: 'kanit' }}>Province</Typography>
               <StateSelect
                 countryid={countryid}
@@ -290,6 +279,17 @@ const Index = () => {
                   } }}
                 placeHolder="Select City"
               />
+            </Grid>
+            <Grid item xs={12} sm={4} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
+              <TextInput
+                label="Area/Society"
+                {...register("area", {
+                  required: "Area is required",
+                })}
+                value={area}
+                onChange={(e) => setValue("area", e.target.value)}
+              />
+              {errors.area && (<Typography color="error">{errors.area.message}</Typography>)}
             </Grid>
             <Grid item xs={12} sm={6} component={motion.div} initial="hidden" animate="visible" transition={{ delay: 0.3 }} variants={animationVariants}>
               <SelectInput

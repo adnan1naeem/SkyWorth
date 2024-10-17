@@ -8,7 +8,7 @@ const FAQCard = ({ title }) => {
 
   return (
     <Box
-    href={`/kbSection?title=${encodeURIComponent(title)}`}
+      href={`/kbSection?title=${encodeURIComponent(title)}`}
       sx={{
         border: "1px solid #e0e0e0",
         borderRadius: "4px",
@@ -34,14 +34,15 @@ const FAQCard = ({ title }) => {
             color: "white",
             padding: "14px 11px",
             clipPath: "polygon(100% 0%, 100% 100%, 50% 75%, 0 100%, 0 0)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <Typography variant="body1" sx={{ fontSize: "16px" }}>
+          <Typography variant="body1" sx={{ fontSize: "16px", }}>
             {badgeNumber}
           </Typography>
         </Box>
-
-        {/* Title */}
         <Typography variant="body1" sx={{ mt: 5, color: "#808080" }}>
           {title}
         </Typography>

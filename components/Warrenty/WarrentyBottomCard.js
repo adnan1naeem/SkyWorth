@@ -68,13 +68,6 @@ const WarrantyCards = () => {
                     fontWeight: '400',
                     mb: 7,
                     fontSize:{xs:"1.68rem",md:'2rem'},
-                    padding: {
-                        xs: '0px 2%',
-                        sm: '0px 20%',
-                        md: '0px 20%',
-                        lg: '0px 30%',
-                        xl: '0px 34%',
-                    },
                 }}
             >
                 Below are the warranty details of TV:
@@ -117,7 +110,7 @@ const WarrantyCards = () => {
                                 border: '2px solid #ffffff00',
                                 boxShadow: 3,
                                 overflow: 'hidden',
-                                height: '230px',
+                                maxHeight: {xs:"270px",sm:'240px'},
                                 display: 'flex',
                                 flexDirection: 'column',
                                 padding: '20px',
