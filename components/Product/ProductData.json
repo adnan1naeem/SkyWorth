@@ -45,20 +45,20 @@
         "Subwoofer"
       ],
       "detailImages": [
-        "/assets/QLEDMINI/QLEDMINI1.png",
-        "/assets/QLEDMINI/QLEDMINI2.png",
-        "/assets/QLEDMINI/QLEDMINI3.png",
-        "/assets/QLEDMINI/QLEDMINI4.png",
-        "/assets/QLEDMINI/QLEDMINI5.png",
-        "/assets/QLEDMINI/QLEDMINI6.png",
-        "/assets/QLEDMINI/QLEDMINI7.png",
-        "/assets/QLEDMINI/QLEDMINI8.png",
-        "/assets/QLEDMINI/QLEDMINI9.png",
-        "/assets/QLEDMINI/QLEDMINI10.png",
-        "/assets/QLEDMINI/QLEDMINI11.png",
-        "/assets/QLEDMINI/QLEDMINI12.png",
-        "/assets/QLEDMINI/QLEDMINI13.png",
-        "/assets/QLEDMINI/QLEDMINI14.png"
+        "./../../assets/Banner/QLEDMini65X8700G/Image1.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image2.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image3.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image4.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image5.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image6.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image7.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image8.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image9.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image10.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image11.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image12.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image13.png",
+       "./../../assets/Banner/QLEDMini65X8700G/Image14.png"
       ]
     },
     {
@@ -104,20 +104,20 @@
       ],
       "overview": "The Skyworth QLED Mini series delivers a top-tier viewing experience with vivid colors, enhanced brightness, and crystal-clear clarity from every angle. Its sleek, slim-bezel design enhances the visual appeal, offering a stunningly immersive display. Powered by Google TV, you can effortlessly access your favorite apps, movies, and shows. With built-in Google Assistant and a Bluetooth voice remote, controlling your TV and managing tasks is as easy as speaking a command. Sit back, relax, and dive into endless entertainment with the perfect combination of technology and style.",
       "detailImages": [
-        "/assets/QLEDMINI/QLEDMINI1.png",
-        "/assets/QLEDMINI/QLEDMINI2.png",
-        "/assets/QLEDMINI/QLEDMINI3.png",
-        "/assets/QLEDMINI/QLEDMINI4.png",
-        "/assets/QLEDMINI/QLEDMINI5.png",
-        "/assets/QLEDMINI/QLEDMINI6.png",
-        "/assets/QLEDMINI/QLEDMINI7.png",
-        "/assets/QLEDMINI/QLEDMINI8.png",
-        "/assets/QLEDMINI/QLEDMINI9.png",
-        "/assets/QLEDMINI/QLEDMINI10.png",
-        "/assets/QLEDMINI/QLEDMINI11.png",
-        "/assets/QLEDMINI/QLEDMINI12.png",
-         "/assets/QLEDMINI/QLEDMINI13.png",
-          "/assets/QLEDMINI/QLEDMINI14.png"
+        "./../../assets/Banner/QLEDMini75X8700G/Image1.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image2.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image3.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image4.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image5.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image6.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image7.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image8.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image9.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image10.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image11.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image12.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image13.png",
+       "./../../assets/Banner/QLEDMini75X8700G/Image14.png"
       ]
     },
     {
@@ -164,20 +164,20 @@
         "120Hzs"
       ],
       "detailImages": [
-        "/assets/QLEDMINI/QLEDMINI1.png",
-        "/assets/QLEDMINI/QLEDMINI2.png",
-        "/assets/QLEDMINI/QLEDMINI3.png",
-        "/assets/QLEDMINI/QLEDMINI4.png",
-        "/assets/QLEDMINI/QLEDMINI5.png",
-        "/assets/QLEDMINI/QLEDMINI6.png",
-        "/assets/QLEDMINI/QLEDMINI7.png",
-        "/assets/QLEDMINI/QLEDMINI8.png",
-        "/assets/QLEDMINI/QLEDMINI9.png",
-        "/assets/QLEDMINI/QLEDMINI10.png",
-        "/assets/QLEDMINI/QLEDMINI11.png",
-        "/assets/QLEDMINI/QLEDMINI12.png",
-        "/assets/QLEDMINI/QLEDMINI13.png",
-        "/assets/QLEDMINI/QLEDMINI14.png"
+        "./../../assets/Banner/QLED100Q7800G/Image1.png",
+       "./../../assets/Banner/QLED100Q7800G/Image2.png",
+       "./../../assets/Banner/QLED100Q7800G/Image3.png",
+       "./../../assets/Banner/QLED100Q7800G/Image4.png",
+       "./../../assets/Banner/QLED100Q7800G/Image5.png",
+       "./../../assets/Banner/QLED100Q7800G/Image6.png",
+       "./../../assets/Banner/QLED100Q7800G/Image7.png",
+       "./../../assets/Banner/QLED100Q7800G/Image8.png",
+       "./../../assets/Banner/QLED100Q7800G/Image9.png",
+       "./../../assets/Banner/QLED100Q7800G/Image10.png",
+       "./../../assets/Banner/QLED100Q7800G/Image11.png",
+       "./../../assets/Banner/QLED100Q7800G/Image12.png",
+       "./../../assets/Banner/QLED100Q7800G/Image13.png",
+       "./../../assets/Banner/QLED100Q7800G/Image14.png"
       ]
     },
     {
@@ -222,18 +222,18 @@
       "resolution": "QLED",
       "productSize": "50 inches",
       "detailImages": [
-        "/assets/QLED1/QLED1.png",
-        "/assets/QLED1/QLED2.png",
-        "/assets/QLED1/QLED3.png",
-        "/assets/QLED1/QLED4.png",
-        "/assets/QLED1/QLED5.png",
-        "/assets/QLED1/QLED6.png",
-        "/assets/QLED1/QLED7.png",
-        "/assets/QLED1/QLED8.png",
-        "/assets/QLED1/QLED10.png",
-        "/assets/QLED1/QLED11.png",
-        "/assets/QLED1/QLED12.png",
-        "/assets/QLED1/QLED13.png"
+        "./../../assets/Banner/QLED6050Q6600G/Image1.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image2.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image3.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image4.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image5.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image6.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image7.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image8.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image9.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image10.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image11.png",
+       "./../../assets/Banner/QLED6050Q6600G/Image12.png"
       ]
     },
     {
@@ -278,18 +278,18 @@
         { "title": "Dimensions", "detail": "With stand (WxHxD) 1225.2*774*265.8, Without stand (WxHxD) 1225.2*721.9*93.1" }
       ],      
       "detailImages": [
-        "/assets/QLED1/QLED1.png",
-        "/assets/QLED1/QLED2.png",
-        "/assets/QLED1/QLED3.png",
-        "/assets/QLED1/QLED4.png",
-        "/assets/QLED1/QLED5.png",
-        "/assets/QLED1/QLED6.png",
-        "/assets/QLED1/QLED7.png",
-        "/assets/QLED1/QLED8.png",
-        "/assets/QLED1/QLED10.png",
-        "/assets/QLED1/QLED11.png",
-        "/assets/QLED1/QLED12.png",
-        "/assets/QLED1/QLED13.png"
+        "./../../assets/Banner/QLED6055Q6600G/Image1.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image2.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image3.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image4.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image5.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image6.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image7.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image8.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image9.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image10.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image11.png",
+       "./../../assets/Banner/QLED6055Q6600G/Image12.png"
       ]
     },
     {
@@ -335,21 +335,21 @@
         "144Hzs"
       ],
       "detailImages": [
-        "/assets/QLEDHigh/QLEDHigh1.png",
-        "/assets/QLEDHigh/QLEDHigh2.png",
-        "/assets/QLEDHigh/QLEDHigh3.png",
-        "/assets/QLEDHigh/QLEDHigh4.png",
-        "/assets/QLEDHigh/QLEDHigh5.png",
-        "/assets/QLEDHigh/QLEDHigh6.png",
-        "/assets/QLEDHigh/QLEDHigh7.png",
-        "/assets/QLEDHigh/QLEDHigh8.png",
-        "/assets/QLEDHigh/QLEDHigh9.png",
-        "/assets/QLEDHigh/QLEDHigh10.png",
-        "/assets/QLEDHigh/QLEDHigh11.png",
-        "/assets/QLEDHigh/QLEDHigh12.png",
-        "/assets/QLEDHigh/QLEDHigh13.png",
-        "/assets/QLEDHigh/QLEDHigh14.png",
-        "/assets/QLEDHigh/QLEDHigh15.png"
+        "./../../assets/Banner/QLED14455Q7700G/Image1.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image2.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image3.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image4.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image5.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image6.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image7.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image8.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image9.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image10.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image11.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image12.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image13.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image14.png",
+       "./../../assets/Banner/QLED14455Q7700G/Image15.png"
       ]
     },
     {
@@ -394,18 +394,18 @@
       ],
       "productSize": "65 inches",
       "detailImages": [
-        "/assets/QLED1/QLED1.png",
-        "/assets/QLED1/QLED2.png",
-        "/assets/QLED1/QLED3.png",
-        "/assets/QLED1/QLED4.png",
-        "/assets/QLED1/QLED5.png",
-        "/assets/QLED1/QLED6.png",
-        "/assets/QLED1/QLED7.png",
-        "/assets/QLED1/QLED8.png",
-        "/assets/QLED1/QLED10.png",
-        "/assets/QLED1/QLED11.png",
-        "/assets/QLED1/QLED12.png",
-        "/assets/QLED1/QLED13.png"
+        "./../../assets/Banner/QLED6065Q6600G/Image1.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image2.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image3.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image4.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image5.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image6.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image7.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image8.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image9.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image10.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image11.png",
+       "./../../assets/Banner/QLED6065Q6600G/Image12.png"
       ]
     },
     {
@@ -451,21 +451,21 @@
         "144Hzs"
       ],
       "detailImages": [
-        "/assets/QLEDHigh/QLEDHigh1.png",
-        "/assets/QLEDHigh/QLEDHigh2.png",
-        "/assets/QLEDHigh/QLEDHigh3.png",
-        "/assets/QLEDHigh/QLEDHigh4.png",
-        "/assets/QLEDHigh/QLEDHigh5.png",
-        "/assets/QLEDHigh/QLEDHigh6.png",
-        "/assets/QLEDHigh/QLEDHigh7.png",
-        "/assets/QLEDHigh/QLEDHigh8.png",
-        "/assets/QLEDHigh/QLEDHigh9.png",
-        "/assets/QLEDHigh/QLEDHigh10.png",
-        "/assets/QLEDHigh/QLEDHigh11.png",
-        "/assets/QLEDHigh/QLEDHigh12.png",
-        "/assets/QLEDHigh/QLEDHigh13.png",
-        "/assets/QLEDHigh/QLEDHigh14.png",
-        "/assets/QLEDHigh/QLEDHigh15.png"
+        "./../../assets/Banner/QLED14465Q7700G/Image1.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image2.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image3.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image4.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image5.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image6.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image7.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image8.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image9.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image10.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image11.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image12.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image13.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image14.png",
+       "./../../assets/Banner/QLED14465Q7700G/Image15.png"
       ]
     },
     {
@@ -510,18 +510,18 @@
       "resolution": "QLED",
       "productSize": "75 inches",
       "detailImages": [
-        "/assets/QLED1/QLED1.png",
-        "/assets/QLED1/QLED2.png",
-        "/assets/QLED1/QLED3.png",
-        "/assets/QLED1/QLED4.png",
-        "/assets/QLED1/QLED5.png",
-        "/assets/QLED1/QLED6.png",
-        "/assets/QLED1/QLED7.png",
-        "/assets/QLED1/QLED8.png",
-        "/assets/QLED1/QLED10.png",
-        "/assets/QLED1/QLED11.png",
-        "/assets/QLED1/QLED12.png",
-        "/assets/QLED1/QLED13.png"
+        "./../../assets/Banner/QLED6075Q6600G/Image1.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image2.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image3.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image4.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image5.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image6.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image7.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image8.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image9.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image10.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image11.png",
+       "./../../assets/Banner/QLED6075Q6600G/Image12.png"
       ]
     },
     {
@@ -535,21 +535,21 @@
          "./../../assets/LedInterface/QLED_Q7700G/Right.jpg"
       ],
       "detailImages": [
-        "/assets/QLEDHigh/QLEDHigh1.png",
-        "/assets/QLEDHigh/QLEDHigh2.png",
-        "/assets/QLEDHigh/QLEDHigh3.png",
-        "/assets/QLEDHigh/QLEDHigh4.png",
-        "/assets/QLEDHigh/QLEDHigh5.png",
-        "/assets/QLEDHigh/QLEDHigh6.png",
-        "/assets/QLEDHigh/QLEDHigh7.png",
-        "/assets/QLEDHigh/QLEDHigh8.png",
-        "/assets/QLEDHigh/QLEDHigh9.png",
-        "/assets/QLEDHigh/QLEDHigh10.png",
-        "/assets/QLEDHigh/QLEDHigh11.png",
-        "/assets/QLEDHigh/QLEDHigh12.png",
-        "/assets/QLEDHigh/QLEDHigh13.png",
-        "/assets/QLEDHigh/QLEDHigh14.png",
-        "/assets/QLEDHigh/QLEDHigh15.png"
+        "./../../assets/Banner/QLED14475Q7700G/Image1.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image2.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image3.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image4.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image5.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image6.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image7.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image8.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image9.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image10.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image11.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image12.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image13.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image14.png",
+       "./../../assets/Banner/QLED14475Q7700G/Image15.png"
       ],
       "resolution": "QLED",
       "productSize": "75 inches",
@@ -629,21 +629,21 @@
       "productSize": "86 inches",
       "description": "",
       "detailImages": [
-        "/assets/QLEDHigh/QLEDHigh1.png",
-        "/assets/QLEDHigh/QLEDHigh2.png",
-        "/assets/QLEDHigh/QLEDHigh3.png",
-        "/assets/QLEDHigh/QLEDHigh4.png",
-        "/assets/QLEDHigh/QLEDHigh5.png",
-        "/assets/QLEDHigh/QLEDHigh6.png",
-        "/assets/QLEDHigh/QLEDHigh7.png",
-        "/assets/QLEDHigh/QLEDHigh8.png",
-        "/assets/QLEDHigh/QLEDHigh9.png",
-        "/assets/QLEDHigh/QLEDHigh10.png",
-        "/assets/QLEDHigh/QLEDHigh11.png",
-        "/assets/QLEDHigh/QLEDHigh12.png",
-        "/assets/QLEDHigh/QLEDHigh13.png",
-        "/assets/QLEDHigh/QLEDHigh14.png",
-        "/assets/QLEDHigh/QLEDHigh15.png"
+        "./../../assets/Banner/QLED14486Q7700G/Image1.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image2.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image3.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image4.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image5.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image6.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image7.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image8.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image9.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image10.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image11.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image12.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image13.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image14.png",
+       "./../../assets/Banner/QLED14486Q7700G/Image15.png"
       ]
     },
     {
@@ -673,18 +673,18 @@
         "./../../assets/LedInterface/UHD/50_55G6600G/Right.jpg"
       ],
       "detailImages": [
-        "/assets/UHD/UHD1.png",
-        "/assets/UHD/UHD2.png",
-        "/assets/UHD/UHD3.png",
-        "/assets/UHD/UHD4.png",
-        "/assets/UHD/UHD5.png",
-        "/assets/UHD/UHD6.png",
-        "/assets/UHD/UHD7.png",
-        "/assets/UHD/UHD8.png",
-        "/assets/UHD/UHD10.png",
-        "/assets/UHD/UHD11.png",
-        "/assets/UHD/UHD12.png",
-        "/assets/UHD/UHD13.png"
+        "./../../assets/Banner/UHD50G6600G/Image1.png",
+       "./../../assets/Banner/UHD50G6600G/Image2.png",
+       "./../../assets/Banner/UHD50G6600G/Image3.png",
+       "./../../assets/Banner/UHD50G6600G/Image4.png",
+       "./../../assets/Banner/UHD50G6600G/Image5.png",
+       "./../../assets/Banner/UHD50G6600G/Image6.png",
+       "./../../assets/Banner/UHD50G6600G/Image7.png",
+       "./../../assets/Banner/UHD50G6600G/Image8.png",
+       "./../../assets/Banner/UHD50G6600G/Image9.png",
+       "./../../assets/Banner/UHD50G6600G/Image10.png",
+       "./../../assets/Banner/UHD50G6600G/Image11.png",
+       "./../../assets/Banner/UHD50G6600G/Image12.png"
       ],
       "resolution": "UHD",
       "productSize": "50 inches",
@@ -739,18 +739,18 @@
          "./../../assets/LedInterface/UHD/50_55G6600G/Right.jpg"
       ],
       "detailImages": [
-        "/assets/UHD/UHD1.png",
-        "/assets/UHD/UHD2.png",
-        "/assets/UHD/UHD3.png",
-        "/assets/UHD/UHD4.png",
-        "/assets/UHD/UHD5.png",
-        "/assets/UHD/UHD6.png",
-        "/assets/UHD/UHD7.png",
-        "/assets/UHD/UHD8.png",
-        "/assets/UHD/UHD10.png",
-        "/assets/UHD/UHD11.png",
-        "/assets/UHD/UHD12.png",
-        "/assets/UHD/UHD13.png"
+        "./../../assets/Banner/UHD55G6600G/Image1.png",
+       "./../../assets/Banner/UHD55G6600G/Image2.png",
+       "./../../assets/Banner/UHD55G6600G/Image3.png",
+       "./../../assets/Banner/UHD55G6600G/Image4.png",
+       "./../../assets/Banner/UHD55G6600G/Image5.png",
+       "./../../assets/Banner/UHD55G6600G/Image6.png",
+       "./../../assets/Banner/UHD55G6600G/Image7.png",
+       "./../../assets/Banner/UHD55G6600G/Image8.png",
+       "./../../assets/Banner/UHD55G6600G/Image9.png",
+       "./../../assets/Banner/UHD55G6600G/Image10.png",
+       "./../../assets/Banner/UHD55G6600G/Image11.png",
+       "./../../assets/Banner/UHD55G6600G/Image12.png"
       ],
       "resolution": "UHD",
       "productSize": "55 inches"
@@ -795,18 +795,18 @@
         { "title": "Dimensions", "detail": "With stand (WxHxD) 1445*272*907, Without stand (WxHxD) 1445*98*838" }
       ],      
       "detailImages": [
-        "/assets/UHD/UHD1.png",
-        "/assets/UHD/UHD2.png",
-        "/assets/UHD/UHD3.png",
-        "/assets/UHD/UHD4.png",
-        "/assets/UHD/UHD5.png",
-        "/assets/UHD/UHD6.png",
-        "/assets/UHD/UHD7.png",
-        "/assets/UHD/UHD8.png",
-        "/assets/UHD/UHD10.png",
-        "/assets/UHD/UHD11.png",
-        "/assets/UHD/UHD12.png",
-        "/assets/UHD/UHD13.png"
+        "./../../assets/Banner/UHD65G6600G/Image1.png",
+       "./../../assets/Banner/UHD65G6600G/Image2.png",
+       "./../../assets/Banner/UHD65G6600G/Image3.png",
+       "./../../assets/Banner/UHD65G6600G/Image4.png",
+       "./../../assets/Banner/UHD65G6600G/Image5.png",
+       "./../../assets/Banner/UHD65G6600G/Image6.png",
+       "./../../assets/Banner/UHD65G6600G/Image7.png",
+       "./../../assets/Banner/UHD65G6600G/Image8.png",
+       "./../../assets/Banner/UHD65G6600G/Image9.png",
+       "./../../assets/Banner/UHD65G6600G/Image10.png",
+       "./../../assets/Banner/UHD65G6600G/Image11.png",
+       "./../../assets/Banner/UHD65G6600G/Image12.png"
       ]
     },
     {
@@ -849,18 +849,18 @@
         "60Hzs"
       ],
       "detailImages": [
-        "/assets/UHD/UHD1.png",
-        "/assets/UHD/UHD2.png",
-        "/assets/UHD/UHD3.png",
-        "/assets/UHD/UHD4.png",
-        "/assets/UHD/UHD5.png",
-        "/assets/UHD/UHD6.png",
-        "/assets/UHD/UHD7.png",
-        "/assets/UHD/UHD8.png",
-        "/assets/UHD/UHD10.png",
-        "/assets/UHD/UHD11.png",
-        "/assets/UHD/UHD12.png",
-        "/assets/UHD/UHD13.png"
+        "./../../assets/Banner/UHD85G6600G/Image1.png",
+       "./../../assets/Banner/UHD85G6600G/Image2.png",
+       "./../../assets/Banner/UHD85G6600G/Image3.png",
+       "./../../assets/Banner/UHD85G6600G/Image4.png",
+       "./../../assets/Banner/UHD85G6600G/Image5.png",
+       "./../../assets/Banner/UHD85G6600G/Image6.png",
+       "./../../assets/Banner/UHD85G6600G/Image7.png",
+       "./../../assets/Banner/UHD85G6600G/Image8.png",
+       "./../../assets/Banner/UHD85G6600G/Image9.png",
+       "./../../assets/Banner/UHD85G6600G/Image10.png",
+       "./../../assets/Banner/UHD85G6600G/Image11.png",
+       "./../../assets/Banner/UHD85G6600G/Image12.png"
       ]
     },
     {
@@ -901,15 +901,15 @@
       "resolution": "FHD/HD",
       "productSize": "32 inches",
       "detailImages": [
-        "./../../assets/HDBanner/HDBanner1.png",
-        "./../../assets/HDBanner/HDBanner2.png",
-        "./../../assets/HDBanner/HDBanner3.png",
-        "./../../assets/HDBanner/HDBanner4.png",
-        "./../../assets/HDBanner/HDBanner5.png",
-        "./../../assets/HDBanner/HDBanner6.png",
-        "./../../assets/HDBanner/HDBanner8.png",
-        "./../../assets/HDBanner/HDBanner9.png",
-        "./../../assets/HDBanner/HDBanner10.png"
+       "./../../assets/Banner/HD32E5500G/Image1.png",
+       "./../../assets/Banner/HD32E5500G/Image2.png",
+       "./../../assets/Banner/HD32E5500G/Image3.png",
+       "./../../assets/Banner/HD32E5500G/Image4.png",
+       "./../../assets/Banner/HD32E5500G/Image5.png",
+       "./../../assets/Banner/HD32E5500G/Image6.png",
+       "./../../assets/Banner/HD32E5500G/Image7.png",
+       "./../../assets/Banner/HD32E5500G/Image8.png",
+       "./../../assets/Banner/HD32E5500G/Image9.png"
       ]
     },
     {
@@ -950,15 +950,15 @@
         {"title": "Dimensions","detail": "With stand (WxHxD) 892.0*564.6*214.4, Without stand (WxHxD) 892.0*510.6*74.8"}
       ],
       "detailImages": [
-        "./../../assets/HDBanner/FHD.png",
-        "./../../assets/HDBanner/HDBanner2.png",
-        "./../../assets/HDBanner/HDBanner3.png",
-        "./../../assets/HDBanner/HDBanner4.png",
-        "./../../assets/HDBanner/HDBanner5.png",
-        "./../../assets/HDBanner/HDBanner6.png",
-        "./../../assets/HDBanner/HDBanner8.png",
-        "./../../assets/HDBanner/HDBanner9.png",
-        "./../../assets/HDBanner/HDBanner10.png"
+       "./../../assets/Banner/FHD40E5500G/Image1.png",
+       "./../../assets/Banner/FHD40E5500G/Image2.png",
+       "./../../assets/Banner/FHD40E5500G/Image3.png",
+       "./../../assets/Banner/FHD40E5500G/Image4.png",
+       "./../../assets/Banner/FHD40E5500G/Image5.png",
+       "./../../assets/Banner/FHD40E5500G/Image6.png",
+       "./../../assets/Banner/FHD40E5500G/Image7.png",
+       "./../../assets/Banner/FHD40E5500G/Image8.png",
+       "./../../assets/Banner/FHD40E5500G/Image9.png"
       ]
     },
     {
@@ -1001,15 +1001,15 @@
       "productSize": "43 inches",
       "description": "",
       "detailImages": [
-        "./../../assets/HDBanner/FHD.png",
-        "./../../assets/HDBanner/HDBanner2.png",
-        "./../../assets/HDBanner/HBBanner11.png",
-        "./../../assets/HDBanner/HDBanner4.png",
-        "./../../assets/HDBanner/HDBanner5.png",
-        "./../../assets/HDBanner/HDBanner6.png",
-        "./../../assets/HDBanner/HDBanner8.png",
-        "./../../assets/HDBanner/HDBanner9.png",
-        "./../../assets/HDBanner/HDBanner10.png"
+       "./../../assets/Banner/FHD43E5500G/Image1.png",
+       "./../../assets/Banner/FHD43E5500G/Image2.png",
+       "./../../assets/Banner/FHD43E5500G/Image3.png",
+       "./../../assets/Banner/FHD43E5500G/Image4.png",
+       "./../../assets/Banner/FHD43E5500G/Image5.png",
+       "./../../assets/Banner/FHD43E5500G/Image6.png",
+       "./../../assets/Banner/FHD43E5500G/Image7.png",
+       "./../../assets/Banner/FHD43E5500G/Image8.png",
+       "./../../assets/Banner/FHD43E5500G/Image9.png"
       ]
     }
   ]
