@@ -80,7 +80,8 @@ const ProductCard = ({ product, onClick, handleNavigation }) => {
                         fontWeight: '300',
                         padding: '10px 30px',
                         '&:hover': {
-                            backgroundColor: '#CCCCCC20',
+                            backgroundColor: '#016AC8',
+                            color: '#fff',
                         },
                     }}
                 >

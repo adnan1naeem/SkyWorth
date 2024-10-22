@@ -10,7 +10,7 @@ const Breadcrumb = ({ paddingTop, products = [] }) => {
     <Box sx={{ paddingTop: paddingTop ? paddingTop : { xs: '25%', sm: '18%', md: '12%', lg: '12%' }, marginBottom: '20px', width: '100%', }}>
       <Breadcrumbs aria-label="breadcrumb" >
         <Link href="/" passHref>
-          <Typography sx={{ fontSize: "15px", fontFamily: 'SKSans, sans-serif', fontWeight: 300 }} color='#015ccb'>
+          <Typography sx={{ fontSize: "15px", fontFamily: 'SKSans, sans-serif', fontWeight: 300 }} color='#000000'>
             Home
           </Typography>
         </Link>

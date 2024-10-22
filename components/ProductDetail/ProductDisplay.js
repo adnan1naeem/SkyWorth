@@ -36,7 +36,7 @@ const ProductDisplay = (product) => {
                                         style={{
                                             width: '100%',
                                             cursor: 'pointer',
-                                            border: mainImage === img ? '2px solid blue' : 'none',
+                                            border: mainImage === img ? '2px solid #016AC8' : 'none',
                                         }}
                                         onClick={() => setMainImage(img)}
                                     />
@@ -51,7 +51,7 @@ const ProductDisplay = (product) => {
                             <Typography sx={{ fontSize: { xs: "30px", sm: '35px', md: '40px', lg: '48px', }, lineHeight: 1, fontWeight: 300 }} gutterBottom>
                                 {data?.name}
                             </Typography>
-                            <Typography sx={{ color: '#2969B0', fontSize: 18, fontWeight: 600 }} gutterBottom>
+                            <Typography sx={{ color: '#016AC8', fontSize: 18, fontWeight: 600 }} gutterBottom>
                             Salient Features :
                             </Typography>
                             {data?.description &&

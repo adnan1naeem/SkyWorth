@@ -15,7 +15,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A73*4 processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2 x 15W + 20W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1453*290*881, Without stand (WxHxD): 1453*88*845" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1453*290*881, Without stand (WxHxD) 1453*88*845" }
       ],
       "downloads": "Downloads content goes here. Provide users with downloadable resources like manuals or software.",
       "image": [
@@ -94,7 +94,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A73*4 processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2 x 15W + 20W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1675*330*1008, Without stand (WxHxD): 1675*88*973" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1675*330*1008, Without stand (WxHxD) 1675*88*973" }
       ],      
       "features": [
         "Dolby Atmos",
@@ -154,7 +154,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A73*4 processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 5 x 15W + 20W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 2414*342*1455, Without stand (WxHxD): 2238.5*1286*90.5" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 2414*342*1455, Without stand (WxHxD) 2238.5*1286*90.5" }
       ],      
       "features": [
         "Dolby Atmos",
@@ -212,7 +212,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A53*4-1.5GHz processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2x10W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1110.3*705.4*265.9, Without stand (WxHxD): 1110.3*650.6*90.5" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1110.3*705.4*265.9, Without stand (WxHxD) 1110.3*650.6*90.5" }
       ],      
       "image": [
         "./../../assets/LedInterface/QLED_Q6600G/Front.jpg",
@@ -275,7 +275,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A53*4-1.5GHz processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2x10W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1225.2*774*265.8, Without stand (WxHxD): 1225.2*721.9*93.1" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1225.2*774*265.8, Without stand (WxHxD) 1225.2*721.9*93.1" }
       ],      
       "detailImages": [
         "/assets/QLED1/QLED1.png",
@@ -326,7 +326,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A73*4 processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2 x 15W + 20W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1233*757*214, Without stand (WxHxD): 1233*722*87" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1233*757*214, Without stand (WxHxD) 1233*722*87" }
       ],      
       "features": [
         "Google TV",
@@ -384,7 +384,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A53*4-1.5GHz processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2x10W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1445*283*907, Without stand (WxHxD): 1445*97*838" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1445*283*907, Without stand (WxHxD) 1445*97*838" }
       ],      
       "features": [
         "Google TV",
@@ -442,7 +442,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A73*4 processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2 x 15W + 20W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1453*290*881, Without stand (WxHxD): 1453*88*845" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1453*290*881, Without stand (WxHxD) 1453*88*845" }
       ],      
       "features": [
         "Google TV",
@@ -499,7 +499,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A53*4-1.5GHz processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2x12W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1667.8*1034.2*335.2, Without stand (WxHxD): 1667.8*964.8*84.9" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1667.8*1034.2*335.2, Without stand (WxHxD) 1667.8*964.8*84.9" }
       ],      
       "features": [
         "Google TV",
@@ -575,7 +575,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A73*4 processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2 x 15W + 20W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1675*330*1008, Without stand (WxHxD): 1675*88*973" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1675*330*1008, Without stand (WxHxD) 1675*88*973" }
       ],      
       "features": [
         "Dolby Atmos",
@@ -599,7 +599,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A73*4 processor" },
         { "title": "Audio", "detail": "Dolby Atmos, 2 x 15W + 20W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1925*380*1144, Without stand (WxHxD): 1925*97*1109" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1925*380*1144, Without stand (WxHxD) 1925*97*1109" }
       ],
       "downloads": "Downloads content goes here. Provide users with downloadable resources like manuals or software.",
       "image": [
@@ -698,7 +698,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A53*4-1.5GHz processor" },
         { "title": "Audio", "detail": "Dolby Audio, 2x10W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1110*723.6*274, Without stand (WxHxD): 1110*647*80.4" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1110*723.6*274, Without stand (WxHxD) 1110*647*80.4" }
       ]
     },
     {
@@ -714,7 +714,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A53*4-1.5GHz processor" },
         { "title": "Audio", "detail": "Dolby Audio, 2x10W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1226.1*787.3*273.9, Without stand (WxHxD): 1226.1*720.7*81.2" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1226.1*787.3*273.9, Without stand (WxHxD) 1226.1*720.7*81.2" }
       ],      
       "overview": "The Skyworth UHD series elevates your entertainment with a stunning 50' 4K display and a sleek, bezel-less design that maximizes screen space for a truly immersive viewing experience. Its HDR10 technology enhances brightness and deepens dark tones, delivering vibrant colors and exceptional clarity for lifelike visuals. Powered by Google TV, you get seamless access to all your favorite apps, movies, and shows. Plus, with the built-in Google Assistant and a mic-enabled Bluetooth remote, you can control your entertainment hands-free, making your viewing experience smarter and better than ever.",
       "price": "$299.00 - $699.99",
@@ -792,7 +792,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A53*4-1.5GHz processor" },
         { "title": "Audio", "detail": "Dolby Audio, 2x10W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1445*272*907, Without stand (WxHxD): 1445*98*838" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1445*272*907, Without stand (WxHxD) 1445*98*838" }
       ],      
       "detailImages": [
         "/assets/UHD/UHD1.png",
@@ -841,7 +841,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A53*4-1.5GHz processor" },
         { "title": "Audio", "detail": "Dolby Audio, 2x15W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 1889.6*1162.4*386, Without stand (WxHxD): 1889.6*1079.5*91.1" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 1889.6*1162.4*386, Without stand (WxHxD) 1889.6*1079.5*91.1" }
       ],      
       "features": [
         "Google TV",
@@ -976,7 +976,7 @@
         { "title": "Color Technology", "detail": "RGB" },
         { "title": "Processor", "detail": "A55*4-1.5GHz processor" },
         { "title": "Audio", "detail": "Dolby Audio, 2x10W Speaker Output RMS" },
-        { "title": "Dimensions", "detail": "With stand (WxHxD): 954.5*611.3*214.4, Without stand (WxHxD): 954.5*558.6*75.4" }
+        { "title": "Dimensions", "detail": "With stand (WxHxD) 954.5*611.3*214.4, Without stand (WxHxD) 954.5*558.6*75.4" }
       ] ,
       "downloads": "Downloads content goes here. Provide users with downloadable resources like manuals or software.",
       "image": [

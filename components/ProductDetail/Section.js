@@ -72,7 +72,7 @@ const ProductDetailPage = ({ product }) => {
                                 '& .Mui-selected': {
                                     backgroundColor: 'white',
                                     color: 'blue',
-                                    borderTop: '3px solid blue',
+                                    borderTop: '3px solid #016AC8',
                                 },
                                 '& .MuiTab-root': {
                                     color: 'black',
@@ -123,7 +123,10 @@ const ProductDetailPage = ({ product }) => {
                                 Our experts are ready to help you with any questions you have.
                             </Typography>
                             <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'space-between', }}>
-                                <Button href='./../contactUs' sx={{ fontSize: { sm: '10px', md: '12px', lg: '14px' }, padding: { sm: '12px 30px' }, border: '1.5px solid #cccccc', color: '#00000090', borderRadius: 30, marginTop: '10px', alignSelf: 'center' }} fontFamily={'SKSans,sans-serif'}>
+                                <Button href='./../contactUs' sx={{ fontSize: { sm: '10px', md: '12px', lg: '14px' }, padding: { sm: '12px 30px' }, border: '1.5px solid #cccccc', color: '#00000090', borderRadius: 30, marginTop: '10px', alignSelf: 'center','&:hover': {
+                        backgroundColor: '#016AC8',
+                        color: '#fff',
+                    }, }} fontFamily={'SKSans,sans-serif'}>
                                     Contact Us
                                 </Button>
 
