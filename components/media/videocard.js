@@ -5,17 +5,7 @@ const videoData = [
   {
     title: 'Product Overview',
     description: 'Learn more about the features of our latest TV models.',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual video URLs
-  },
-  {
-    title: 'Setup Guide',
-    description: 'Follow this guide to set up your new SKYWORTH TV.',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual video URLs
-  },
-  {
-    title: 'Customer Reviews',
-    description: 'Hear what our customers have to say about SKYWORTH TVs.',
-    videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ', // Replace with actual video URLs
+    videoUrl: 'https://www.youtube.com/embed/f8LDczRg3ps', // Replace with actual video URLs
   },
 ];
 

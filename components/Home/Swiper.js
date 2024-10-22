@@ -9,6 +9,7 @@ import Image2 from './../../assets/SliderImage2.jpg';
 import Image3 from './../../assets/SliderImage3.jpg';
 import Image4 from './../../assets/SliderImage4.jpg';
 import Image5 from './../../assets/SliderImage5.jpg';
+import Image6 from './../../assets/SliderImage6.jpg';
 import { Box, Typography } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ChevronLeft';
 import ArrowForwardIcon from '@mui/icons-material/ChevronRight';
@@ -23,6 +24,7 @@ const ImageSwiper = () => {
     { image: Image2 },
     { image: Image4 },
     { image: Image5 },
+    { image: Image6 }
   ];
 
   const handleNextSlide = () => {

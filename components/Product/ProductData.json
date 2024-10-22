@@ -137,9 +137,9 @@
         "Subwoofer"
       ],
       "image": [
-        "./../../assets/LedInterface/QLED100/MainImage.jpg",
-        "./../../assets/LedInterface/QLED100/LeftImage.jpg",
-        "./../../assets/LedInterface/QLED100/RightImage.jpg"
+        "./../../assets/LedInterface/QLED100/Front.jpg",
+        "./../../assets/LedInterface/QLED100/Left.jpg",
+        "./../../assets/LedInterface/QLED100/Right.jpg"
       ],
       "resolution": "QLED",
       "overview": "The Skyworth QLED series delivers a top-tier viewing experience with vivid colors, enhanced brightness, and crystal-clear clarity from every angle. Its sleek, slim-bezel design enhances the visual appeal, offering a stunningly immersive display. Powered by Google TV, you can effortlessly access your favorite apps, movies, and shows. With built-in Google Assistant and a Bluetooth voice remote, controlling your TV and managing tasks is as easy as speaking a command. Sit back, relax, and dive into endless entertainment with the perfect combination of technology and style.",
