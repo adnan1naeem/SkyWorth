@@ -21,7 +21,7 @@
       "image": [
         "./../../assets/LedInterface/QLED_MINI_X8700G/front.jpg",
         "./../../assets/LedInterface/QLED_MINI_X8700G/left.jpg",
-         "./../../assets/LedInterface/QLED_MINI_X8700G/Right.jpg"
+         "./../../assets/LedInterface/QLED_MINI_X8700G/right.jpg"
       ],
       "features": [
         "Dolby Atmos",
@@ -68,7 +68,7 @@
       "image": [
         "./../../assets/LedInterface/QLED_MINI_X8700G/front.jpg",
         "./../../assets/LedInterface/QLED_MINI_X8700G/left.jpg",
-         "./../../assets/LedInterface/QLED_MINI_X8700G/Right.jpg"
+         "./../../assets/LedInterface/QLED_MINI_X8700G/right.jpg"
       ],
       "resolution": "QLED MINI",
       "productSize": "75 inches",
