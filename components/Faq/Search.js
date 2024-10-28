@@ -209,7 +209,7 @@ function Search() {
         <Paper sx={styles.modalPaper}>
         <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
           <Typography variant="h5" align="center" sx={{ flexGrow: 1 }}>Customer Support</Typography>
-          <CloseIcon onClick={()=>{}} sx={{ cursor: 'pointer' }} />
+          <CloseIcon onClick={handleCloseModal} sx={{ cursor: 'pointer' }} />
         </Box>
           <TextField
             fullWidth
