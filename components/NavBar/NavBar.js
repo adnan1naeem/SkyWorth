@@ -305,7 +305,7 @@ const Navbar = () => {
             <form onSubmit={handleSearchSubmit}>
               <TextField
                 id="standard-basic"
-                label="Search"
+                label="Search Products"
                 variant="standard"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}

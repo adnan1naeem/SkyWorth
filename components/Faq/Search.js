@@ -3,7 +3,7 @@ import { Box, TextField, IconButton, Paper, Tooltip, Typography, Modal, Button, 
 import SearchIcon from "@mui/icons-material/Search";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import { useRouter } from "next/router";
-
+import CloseIcon from '@mui/icons-material/Close';
 const styles = {
   container: {
     display: "flex",
@@ -60,7 +60,7 @@ const styles = {
   },
   modalPaper: {
     width: { xs: "80%", sm: "30%" },
-    padding: 2,
+    padding: 4,
     borderRadius: 4,
   },
   textField: {
@@ -207,6 +207,10 @@ function Search() {
       </Tooltip>
       <Modal open={openModal} onClose={handleCloseModal} sx={styles.modal}>
         <Paper sx={styles.modalPaper}>
+        <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+          <Typography variant="h5" align="center" sx={{ flexGrow: 1 }}>Customer Support</Typography>
+          <CloseIcon onClick={()=>{}} sx={{ cursor: 'pointer' }} />
+        </Box>
           <TextField
             fullWidth
             variant="outlined"

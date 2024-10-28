@@ -24,7 +24,8 @@
          "./../../assets/LedInterface/QLED_MINI_X8700G/right.jpg"
       ],
       "features": [
-        "Dolby Atmos",
+        "Dolby Vision & Atmos",
+        "Dolby Audio",
         "Google TV",
         "HDR10+",
         "144Hzs"
@@ -97,7 +98,8 @@
         { "title": "Dimensions", "detail": "With stand (WxHxD) 1675*330*1008, Without stand (WxHxD) 1675*88*973" }
       ],      
       "features": [
-        "Dolby Atmos",
+        "Dolby Vision & Atmos",
+        "Dolby Audio",
         "Google TV",
         "HDR10+",
         "144Hzs"
@@ -157,7 +159,8 @@
         { "title": "Dimensions", "detail": "With stand (WxHxD) 2414*342*1455, Without stand (WxHxD) 2238.5*1286*90.5" }
       ],      
       "features": [
-        "Dolby Atmos",
+        "Dolby Vision & Atmos",
+        "Dolby Audio",
         "Google TV",
         "HDR10+",
         "144Hzs",
@@ -186,8 +189,9 @@
       "overview": "The Skyworth QLED series offers an unparalleled visual experience with brilliant colors and exceptional brightness, all housed in a sleek, slim-bezel design. Powered by Google TV, it provides seamless access to your favorite apps, shows, and movies. With built-in Google Assistant and a Bluetooth voice remote, you can effortlessly control your entertainment and manage tasks hands-free, delivering a smarter, more intuitive viewing experience.",
       "price": "$399.00",
       "features": [
+        "Dolby Vision & Atmos",
         "Google TV",
-        "Dolby Atmos",
+        "Dolby Audio",
         "HDR10+",
         "60Hzs"
       ],
@@ -249,8 +253,9 @@
       "resolution": "QLED",
       "productSize": "55 inches",
       "features": [
+        "Dolby Vision & Atmos",
         "Google TV",
-        "Dolby Atmos",
+        "Dolby Audio",
         "HDR10+",
         "60Hzs"
       ],
@@ -329,8 +334,9 @@
         { "title": "Dimensions", "detail": "With stand (WxHxD) 1233*757*214, Without stand (WxHxD) 1233*722*87" }
       ],      
       "features": [
+        "Dolby Vision & Atmos",
         "Google TV",
-        "Dolby Atmos",
+        "Dolby Audio",
         "HDR10+",
         "144Hzs"
       ],
@@ -387,8 +393,9 @@
         { "title": "Dimensions", "detail": "With stand (WxHxD) 1445*283*907, Without stand (WxHxD) 1445*97*838" }
       ],      
       "features": [
+        "Dolby Vision & Atmos",
         "Google TV",
-        "Dolby Atmos",
+        "Dolby Audio",
         "HDR10+",
         "60Hzs"
       ],
@@ -445,8 +452,9 @@
         { "title": "Dimensions", "detail": "With stand (WxHxD) 1453*290*881, Without stand (WxHxD) 1453*88*845" }
       ],      
       "features": [
+        "Dolby Vision & Atmos",
         "Google TV",
-        "Dolby Atmos",
+        "Dolby Audio",
         "HDR10+",
         "144Hzs"
       ],
@@ -502,6 +510,7 @@
         { "title": "Dimensions", "detail": "With stand (WxHxD) 1667.8*1034.2*335.2, Without stand (WxHxD) 1667.8*964.8*84.9" }
       ],      
       "features": [
+        "Dolby Vision & Atmos",
         "Google TV",
         "Quantum Dot",
         "HDR10+",
@@ -578,7 +587,8 @@
         { "title": "Dimensions", "detail": "With stand (WxHxD) 1675*330*1008, Without stand (WxHxD) 1675*88*973" }
       ],      
       "features": [
-        "Dolby Atmos",
+        "Dolby Vision & Atmos",
+        "Dolby Audio",
         "Google TV",
         "HDR10+",
         "144Hzs"
@@ -620,7 +630,8 @@
         "Subwoofer"
       ],
       "features": [
-        "Dolby Atmos",
+        "Dolby Vision & Atmos",
+        "Dolby Audio",
         "Google TV",
         "HDR10+",
         "144Hzs"

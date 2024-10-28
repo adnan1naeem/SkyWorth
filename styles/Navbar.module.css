@@ -55,6 +55,7 @@
 }
 .searchIcon{
     display: flex;
+    cursor: pointer;
 }
 .services-menu {
     margin-top: -5%;

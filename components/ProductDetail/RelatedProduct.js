@@ -40,7 +40,7 @@ const RelatedProducts = ({ products }) => {
     }
     return (
         <Box sx={{ padding: 4, marginBottom: '30px' }}>
-            <Typography fontSize={'26px'} onClick={()=> router.push(`/product`)}  sx={{ borderBottom: '1px solid #00000050',cursor: 'pointer', paddingBottom: '8px',marginBottom:'20px',fontWeight:300 }} gutterBottom>
+            <Typography fontSize={'26px'} onClick={() => router.push(`/product`)} sx={{ borderBottom: '1px solid #00000050', cursor: 'pointer', paddingBottom: '8px', marginBottom: '20px', fontWeight: 300 }} gutterBottom>
                 All Products
             </Typography>
             <Box display="flex" alignItems="center">
@@ -50,26 +50,26 @@ const RelatedProducts = ({ products }) => {
                 <Grid container spacing={2}>
                     {products.slice(startIndex, startIndex + itemsPerPage).map((product, index) => (
                         <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
-                            <Card  sx={{ display: 'flex', alignItems: { xs: "center", sm: 'center', md: "center", lg: "flex-start" }, flexDirection: { xs: "column", sm: 'column', md: 'column', lg: 'column' }, borderRadius: 0, boxShadow: 'none', marginBottom: 2 }}>
+                            <Card sx={{ display: 'flex', alignItems: { xs: "center", sm: 'center', md: "center", lg: "flex-start" }, flexDirection: { xs: "column", sm: 'column', md: 'column', lg: 'column' }, borderRadius: 0, boxShadow: 'none', marginBottom: 2 }}>
                                 <CardMedia
                                     component="img"
-                                    sx={{ width: 'auto',cursor: 'pointer'}}
+                                    sx={{ width: 'auto', cursor: 'pointer' }}
                                     image={product?.image[0]}
                                     alt={product.name}
                                 />
-                                <CardContent sx={{alignSelf:'center',textAlign:'center'}}>
-                                    <Typography fontSize={'16spx'} fontWeight={"400"} fontFamily={"Kanit"} sx={{ alignContent: 'center', paddingLeft: '5px',cursor: 'pointer' }} component="h2">
+                                <CardContent sx={{ alignSelf: 'center', textAlign: 'center' }}>
+                                    <Typography fontSize={'16spx'} fontWeight={"400"} fontFamily={"Kanit"} sx={{ alignContent: 'center', paddingLeft: '5px', cursor: 'pointer' }} component="h2">
                                         {product.name}
                                     </Typography>
                                     <Button
                                         variant="outlined"
-                                        onClick={()=>handleNavigation(product)}
+                                        onClick={() => handleNavigation(product)}
                                         sx={{
                                             fontSize: '14px',
                                             borderRadius: '50px',
                                             borderWidth: '1px',
                                             borderColor: '#212121',
-                                            marginTop:"10px",
+                                            marginTop: "20px",
                                             textTransform: 'none',
                                             border: '0.7px solid black',
                                             backgroundColor: 'white',
@@ -78,7 +78,8 @@ const RelatedProducts = ({ products }) => {
                                             fontWeight: '300',
                                             padding: '10px 30px',
                                             '&:hover': {
-                                                backgroundColor: '#CCCCCC20',
+                                                backgroundColor: '#016AC8',
+                                                color: '#fff',
                                             },
                                         }}
                                     >
