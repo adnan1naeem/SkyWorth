@@ -65,6 +65,7 @@ function BackGround() {
       <Typography variant="h4" component="h1" sx={headingStyles}>
         SKYWORTH BACKGROUND
       </Typography>
+      
       <Typography variant="body1" sx={bodyTextStyles}>
         {isExpanded ? fullText : `${previewText}...`}
         <span

@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 const tvProducts = [
   {
     title: 'QLED MINI',
-    description: 'The Skyworth QLED Mini series delivers a top-tier viewing experience with vivid colors, enhanced brightness, best black levels and the widest viewing angle experience to every seat in the room.',
+    description: 'The Skyworth QLED Mini series delivers a top-tier viewing experience with vivid colors, enhanced brightness and best black levels.',
     image: Image1,
     buttonText: 'Shop OLED TVs',
   },
