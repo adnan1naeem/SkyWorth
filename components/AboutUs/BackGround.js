@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 const containerStyles = {
   display: "flex",
@@ -24,16 +24,31 @@ const headingStyles = {
   color: "#0069c8",
   fontFamily: "Kanit",
   lineHeight: 1.2,
-  fontSize: { xs: "1.38rem", md: '1.5rem' },
+  fontSize: { xs: "1.38rem", md: "1.5rem" },
 };
-
+const ButtonStyle={
+  fontSize: '16px',
+  borderRadius: '10px',
+  borderWidth: '1px',
+  borderColor: '#212121',
+  textTransform: 'none',
+  border: '0.7px solid black',
+  textAlign: 'center',
+  backgroundColor: 'white',
+  color: '#212121',
+  padding: '10px 20px',
+  '&:hover': {
+    backgroundColor: '#0263B2',
+    color: "white",
+  }
+}
 const subheadingStyles = {
   color: "#333",
   fontFamily: "Kanit",
   lineHeight: 1.5,
   width: "90%",
   fontWeight: 250,
-  fontSize: { xs: "1.0rem", md: '1.1rem' },
+  fontSize: { xs: "1.0rem", md: "1.5rem" },
 };
 
 const bodyTextStyles = {
@@ -41,15 +56,15 @@ const bodyTextStyles = {
   color: "#333",
   fontFamily: "Kanit",
   width: "90%",
-  whiteSpace: 'pre-line',
+  whiteSpace: "pre-line",
   fontWeight: 250,
-  fontSize: { xs: "1.0rem", md: '1.1rem' },
+  fontSize: { xs: "1.0rem", md: "1.1rem" },
 };
 
 function BackGround() {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const fullText = `SKYWORTH Pakistan is a joint venture between Skyworth China and Orient Electronics, for the licensed manufacturing, sales, distribution and marketing of Skyworth product portfolio in Pakistan.
+  const fullText = `for the licensed manufacturing, sales, distribution and marketing of Skyworth product portfolio in Pakistan.
 \nSKYWORTH was established in 1988, with the head office located within Shenzhen High Tech Industrial Park which is honored as “China’s Silicon Valley”,and has more than 40,000 employees.
 \nSKYWORTH is a large-scale high-tech corporation mainly engaged in the development and manufacturing of consumer electronics, display devices, digital set top boxes,security monitors, network communication, semi-conductors, refrigerators,washing machines, cell phones and LED lighting etc.\n\nIn 2000 SKYWORTH was listed on the main board of HK Stock Exchange (HK0751). After a development of more than 28 years, SKYWORTH has grown to be one of the Top Five Color TV brands in the world, a top brand in Chinese display industry market and is a top three global provider of the Android TV platform.
 \nSKYWORTH’s overseas TV products have been exported to more than 100 countries and regions, demonstrating the brand’s determination to bringing about market-leading display and AI technology in front of an international audience.
@@ -58,25 +73,29 @@ function BackGround() {
 \nDoubling down on R&D efforts and industrial upgrades in today’s 5G+8K era, SKYWORTH has strengthened its independent innovation capabilities and accelerated the development, deployment, and production of new technologies, products and business models in the industry. On a national level, SKYWORTH is also boosting the momentum of Shenzhen's ongoing transformation into a world-class 5G City, as part of China’s new infrastructure plan.
 \nFor SKYWORTH, 5G+8K technology will be our growth engine in the next 10 years. Under the leadership and efforts of next-generation SKYWORTH staff, I hope that SKYWORTH can harness the power of the Internet of Things and 5G technologies to interconnect products across different categories and platforms, elevating the brand to the next level and writing the next chapter in history.`;
 
-  const previewText = fullText.slice(0, 500); // Show the first 500 characters
+  const previewText = fullText.slice(0, 295); // Show the first 500 characters
 
   return (
     <Box sx={containerStyles}>
       <Typography variant="h4" component="h1" sx={headingStyles}>
         SKYWORTH BACKGROUND
       </Typography>
-      
+      <Typography variant="h4" component="h1" sx={subheadingStyles}>
+        SKYWORTH Pakistan is a joint venture between Skyworth China and Orient Electronics
+      </Typography>
       <Typography variant="body1" sx={bodyTextStyles}>
         {isExpanded ? fullText : `${previewText}...`}
-        <span
-          style={{ color: "#0069c8", cursor: "pointer" }}
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
-          {isExpanded ? " Read Less" : " Read More"}
-        </span>
       </Typography>
+      <Box mt={2}>
+        <Button
+          variant="outlined"
+          onClick={() => setIsExpanded(!isExpanded)}
+          sx={ButtonStyle}
+        >
+          {isExpanded ? "Read Less" : "Read More"}
+        </Button>
+      </Box>
     </Box>
   );
 }
-
 export default BackGround;

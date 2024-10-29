@@ -32,7 +32,6 @@ const CenteredImageWithText = ({ imageSrc, text, text2, body, body2, ButtonText,
                     color: '#0c3034',
                     fontWeight: 400,
                     textAlign: 'center',
-                    textTransform:'capitalize',
                     marginTop: body2 ?{xs:"30px",md:'60px'} : '60px',
                     padding:{xs:"0px 10px",md:0}
                 }}
@@ -66,7 +65,8 @@ const CenteredImageWithText = ({ imageSrc, text, text2, body, body2, ButtonText,
             {body2 && <Typography
                 component="div"
                 sx={{
-                    width:  {xs:"90%",md:"80%"},
+                    marginTop:'10px',
+                    width:  {xs:"90%",md:"65%",xl:'60%'},
                     fontWeight: 250,
                     fontSize: {xs:"1.0rem",md:'1.1rem'},
                     textAlign:'center',
