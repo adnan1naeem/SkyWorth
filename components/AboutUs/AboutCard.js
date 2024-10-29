@@ -5,17 +5,13 @@ import { keyframes } from '@mui/system';
 function AboutCard({ image, descriptions }) {
 
   const scrollAnimation = keyframes`
-    0% { transform: translateY(70%); }  
-    100% { transform: translateY(-100%); }  
+    0% { transform: translate3d(0, 70%, 0); }
+    100% { transform: translate3d(0, -100%, 0); }
   `;
 
-  // State to manage the current description index
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Determine if the animation should be applied
   const shouldAnimate = descriptions.length > 8;
 
-  // Function to handle hover
   const handleMouseEnter = () => {
     setCurrentIndex(0); 
   };
@@ -50,7 +46,6 @@ function AboutCard({ image, descriptions }) {
         }}
       />
 
-     
       <Box
         className="overlay"
         sx={{
@@ -59,12 +54,12 @@ function AboutCard({ image, descriptions }) {
           left: 0,
           width: "100%",
           height: "100%",
-          backgroundColor: "rgba(0, 0, 255, 0)", // Initial background color
-          opacity: 0, // Initially hidden
+          backgroundColor: "rgba(0, 0, 255, 0)", 
+          opacity: 0, 
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          transition: "opacity 0.5s ease, background-color 0.5s ease", // Smooth transition
+          transition: "opacity 0.5s ease, background-color 0.5s ease",
           overflow: "hidden",
         }}
       >
@@ -76,12 +71,11 @@ function AboutCard({ image, descriptions }) {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            animation: shouldAnimate ? `${scrollAnimation} 15s linear infinite` : 'none', 
+            animation: shouldAnimate ? `${scrollAnimation} 20s linear infinite` : 'none', 
             height: "100%",
             width: "100%",
-            padding: { xs: "10px", md: "20px" }, 
-            opacity: 1, 
-            transform: `translateY(-${currentIndex * (100 / descriptions.length)}%)`, 
+            padding: { xs: "10px", md: "20px" },
+            opacity: 1,
           }}
         >
           {descriptions.map((description, index) => (
@@ -91,7 +85,7 @@ function AboutCard({ image, descriptions }) {
               component="div"
               sx={{
                 textAlign: "center",
-                fontSize: { xs: "10px", md: "12px" }, 
+                fontSize: { xs: "10px", md: "12px" },
                 padding: "10px 0", 
                 color: "white",
               }}

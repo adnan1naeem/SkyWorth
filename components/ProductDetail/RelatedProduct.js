@@ -50,7 +50,7 @@ const RelatedProducts = ({ products }) => {
                 <Grid container spacing={2}>
                     {products.slice(startIndex, startIndex + itemsPerPage).map((product, index) => (
                         <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
-                            <Card sx={{ display: 'flex', alignItems: { xs: "center", sm: 'center', md: "center", lg: "flex-start" }, flexDirection: { xs: "column", sm: 'column', md: 'column', lg: 'column' }, borderRadius: 0, boxShadow: 'none', marginBottom: 2 }}>
+                            <Card sx={{ display: 'flex', alignItems: { xs: "center", sm: 'center', md: "center", lg: "flex-start" }, flexDirection: { xs: "column", sm: 'column', md: 'column', lg: 'column' }, borderRadius: 0, boxShadow: 'none', marginBottom: 2 }}  onClick={() => handleNavigation(product)}>
                                 <CardMedia
                                     component="img"
                                     sx={{ width: 'auto', cursor: 'pointer' }}
